@@ -15,7 +15,7 @@ declare namespace xlink = "http://www.w3.org/1999/xlink";
 declare variable $app:id {request:get-parameter('id', '')}; 
 
 (:~
- : Traverse main nav and "fix" links based on values in config.xml 
+ : Traverse main nav and "fix" links based on values in config.xml
 :)
 declare
     %templates:wrap
