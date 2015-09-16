@@ -48,8 +48,8 @@ declare function app:fix-links($nodes as node()*) {
 declare function app:get-rec($node as node(), $model as map(*), $coll as xs:string?) {
 if($app:id) then 
     let $id :=
-        if(contains(request:get-uri(),'http://syriaca.org/')) then $app:id
-        else if($coll = 'places') then concat('http://syriaca.org/place/',$app:id) 
+        if(contains(request:get-uri(),$global:base-uri)) then $app:id
+        else if($coll = 'places') then concat($global:data-root,'/place/',$app:id) 
         else $app:id
     return map {"data" := collection($global:data-root)//tei:idno[@type='URI'][. = $id]}
 else map {"data" := 'Page data'}    

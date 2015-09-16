@@ -10,4 +10,5 @@
     <target>logar</target>
     <prepare>pre-install.xql</prepare>
     <!--<finish>post-install.xql</finish>-->
+    <deployed>2015-09-16T11:12:30.994-04:00</deployed>
 </meta>
