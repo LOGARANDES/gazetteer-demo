@@ -3,23 +3,28 @@
     <!-- App title -->
     <title>Logar: Linked Open Gazetteer of the Andean Region</title>
     <!-- App description -->
-    <description></description>
+    <description/>
     <!-- Contact email -->
-    <contact></contact>
+    <contact/>
     <!-- Logo name (assumes path to logo is $app-root/resources/img/) -->
     <logo>logar.png</logo>
     <!-- Site URL -->
     <url>http://logar.edu</url>
-    <!-- Root of app for building dynamic links. Default is eXist app root -->
-    <nav-base>/exist/apps/geo</nav-base>
+    <!-- 
+        Root of app for building dynamic links. 
+        Default is eXist app root.
+        For production site will be blank, assuming url is http://logar.edu
+    -->
+    <nav-base>/exist/apps/logar</nav-base>
     <!-- eXist app root -->
-    <app-root>geo</app-root>
+    <app-root>logar</app-root>
     <!-- eXist app root for gazetteer data -->
     <data-root>logar-data</data-root>
     <!-- Base URI for identifiers in app data
-    http://logar.edu
+        needs to be changed next time data is run
+        http://logar.edu
     -->
-    <base_uri>http://logar.org/place</base_uri>
+    <base_uri>http://logar.org</base_uri>
     <!-- Map rendering -->
     <maps>
         <option selected="true">google</option>

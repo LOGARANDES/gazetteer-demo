@@ -26,7 +26,7 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 :)
 declare
     %rest:GET
-    %rest:path("/geo/api/geo/json")
+    %rest:path("/logar/api/geo/json")
     %rest:query-param("type", "{$type}", "")
     %rest:query-param("output", "{$output}", "json")
     %output:media-type("application/json")
@@ -51,7 +51,7 @@ function api:get-geo-json($type as xs:string*, $output as xs:string*) {
 :)
 declare
     %rest:GET
-    %rest:path("/geo/api/geo/kml")
+    %rest:path("/logar/api/geo/kml")
     %rest:query-param("type", "{$type}", "")
     %rest:query-param("output", "{$output}", "kml")
     %output:media-type("application/vnd.google-earth.kmz")
@@ -80,7 +80,7 @@ function api:get-geo-kml($type as xs:string*, $output as xs:string*) {
 :)
 declare
     %rest:GET
-    %rest:path("/geo/api/search")
+    %rest:path("/logar/api/search")
     %rest:query-param("q", "{$q}", "") 
     %rest:query-param("start", "{$start}", 1)
     %rest:query-param("perpage", "{$perpage}", 25)
@@ -106,7 +106,7 @@ return feed:build-atom-feed($hits, $start, $perpage, $q, $total)
 :)
 declare 
     %rest:GET
-    %rest:path("/geo/{$collection}/{$id}/tei")
+    %rest:path("/logar/{$collection}/{$id}/tei")
     %output:media-type("text/xml")
     %output:method("xml")
 function api:get-tei($collection as xs:string, $id as xs:string){
@@ -127,7 +127,7 @@ function api:get-tei($collection as xs:string, $id as xs:string){
 :)
 declare 
     %rest:GET
-    %rest:path("/geo/{$collection}/{$id}/atom")
+    %rest:path("/logar/{$collection}/{$id}/atom")
     %output:media-type("application/atom+xml")
     %output:method("xml")
 function api:get-atom-record($collection as xs:string, $id as xs:string){
@@ -171,7 +171,7 @@ function api:get-atom-feed($collection as xs:string, $start as xs:integer*, $per
 :)
 declare 
     %rest:GET
-    %rest:path("/geo/api/atom")
+    %rest:path("/logar/api/atom")
     %rest:query-param("start", "{$start}", 1)
     %rest:query-param("perpage", "{$perpage}", 25)
     %output:media-type("application/atom+xml")
