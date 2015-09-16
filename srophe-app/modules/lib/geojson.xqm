@@ -118,9 +118,7 @@ declare function geo:json-wrapper($geo-search as element()*, $type as xs:string*
  : @param $output indicates json or kml
 :)
 declare function geo:json-transform($geo-search as node()*, $type as xs:string*, $output as xs:string*){
-    (:transform:transform(geo:json-wrapper($geo-search, $type, $output), doc('../resources/xsl/geojson.xsl'),() ):)
     xqjson:serialize-json(geo:json-wrapper($geo-search, $type, $output))
-    (:$geo-search:)
 };
 
 (:~
@@ -138,9 +136,7 @@ declare function geo:build-leaflet-map($geo-search as node()*, $type as xs:strin
         <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"/>
         <script type="text/javascript" src="/exist/apps/srophe/resources/leaflet/leaflet.awesome-markers.js"/>
         <div id="map"/>
-        <div class="hint map pull-right">* {count($geo-search)} have coordinates and are shown on this map. 
-             <button class="btn btn-link" data-toggle="modal" data-target="#map-selection" id="mapFAQ">Read more...</button>
-        </div>
+        <div class="hint map pull-right">* {count($geo-search)} have coordinates and are shown on this map. </div>
         <script type="text/javascript">
             <![CDATA[
             var terrain = L.tileLayer('http://api.tiles.mapbox.com/v3/sgillies.map-ac5eaoks/{z}/{x}/{y}.png', {attribution: "ISAW, 2012"});
@@ -245,9 +241,7 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
     <div id="map-data" style="margin-bottom:3em;">
         <script src="http://maps.googleapis.com/maps/api/js">//</script>
         <div id="map"/>
-        <div class="hint map pull-right">* {count($geo-search)} have coordinates and are shown on this map. 
-             <button class="btn btn-link" data-toggle="modal" data-target="#map-selection" id="mapFAQ">Read more...</button>
-        </div>
+        <div class="hint map pull-right">* {count($geo-search)} have coordinates and are shown on this map. </div>
     
         <script type="text/javascript">
             <![CDATA[

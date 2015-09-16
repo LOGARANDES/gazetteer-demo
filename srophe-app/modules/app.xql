@@ -41,12 +41,6 @@ declare function app:fix-links($nodes as node()*) {
                 $node
 };
 
-(:
-subnav.xml
-:)
-declare %templates:wrap function app:get-nav($node as node(), $model as map(*)){
- doc($global:data-root || 'templates/subnav.xml')/child::*
-};
 (:~  
  : Simple get record function, get tei record based on idno
  : @param $app:id syriaca.org uri 
@@ -69,7 +63,7 @@ declare %templates:wrap function app:app-title($node as node(), $model as map(*)
 if($app:id) then
    global:tei2html($model("data")/ancestor::tei:TEI/descendant::tei:title[1]/text())
 else if($coll = 'places') then 'The Syriac Gazetteer'  
-else 'Syriaca.org: The Syriac Reference Portal '
+else $global:app-title
 };  
 
 (:~

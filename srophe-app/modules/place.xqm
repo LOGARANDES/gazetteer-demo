@@ -45,7 +45,7 @@ else map {"data" := 'Page data'}
 declare %templates:wrap function place:app-title($node as node(), $model as map(*)){
 if($place:id) then
    global:tei2html($model("data")/descendant::tei:placeName[1]/text())
-else 'The Syriac Gazetteer' 
+else $global:app-title 
 };  
 
 (:~

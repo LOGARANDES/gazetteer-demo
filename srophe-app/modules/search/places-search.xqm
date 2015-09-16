@@ -415,74 +415,7 @@ declare function places:search-form() {
                         </div>
                     </div>
                     <hr/>
-                    <div class="form-group">
-                        <label for="e" class="col-sm-2 col-md-3  control-label">Events: </label>
-                        <div class="col-sm-10 col-md-9 ">
-                            <input type="text" id="e" name="e" class="form-control"/>
-                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="eds" class="col-sm-2 col-md-3  control-label">Dates: </label>
-                        <div class="col-sm-10 col-md-9 form-inline">
-                            <input type="text" id="eds" name="eds" placeholder="Start Date" class="form-control"/>&#160;
-                            <input type="text" id="ede" name="ede" placeholder="End Date" class="form-control"/>
-                            <p class="hint" style="margin:.5em; color: grey; font-style:italic;">* Dates should be entered as YYYY or YYYY-MM-DD</p>
-                        </div>
-                    </div>
-                     <hr/>
-                     <!-- Attestations -->
-                     <div class="form-group">
-                        <label for="a" class="col-sm-2 col-md-3  control-label">Attestations: </label>
-                        <div class="col-sm-10 col-md-9 ">
-                            <input type="text" id="a" name="a" class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="ads" class="col-sm-2 col-md-3  control-label">Dates: </label>
-                        <div class="col-sm-10 col-md-9 form-inline">
-                            <input type="text" id="ads" name="ads" placeholder="Start Date" class="form-control"/>&#160;
-                            <input type="text" id="ade" name="ade" placeholder="End Date" class="form-control"/>
-                            <p class="hint" style="margin:.5em; color: grey; font-style:italic;">* Dates should be entered as YYYY or YYYY-MM-DD</p>
-                        </div>
-                    </div>
-                     <hr/>
-                     <!-- Confessions -->
-                      <div class="form-group">
-                        <label for="c" class="col-sm-2 col-md-3 control-label">Religious Communities: </label>
-                        <div class="col-sm-10 col-md-9">
-                            <select type="text" id="c" name="c" class="form-control">
-                                <option value="">-- Select --</option>
-                                {for $confession in doc('/db/apps/srophe/documentation/confessions.xml')//tei:item
-                                 return 
-                                 <option value="{$confession/child::tei:label}">
-                                 {
-                                    (for $confession-parent in $confession/ancestor::tei:item return '&#160;',
-                                     $confession/child::tei:label)
-                                 }
-                                 </option>
-                                }
-                            </select>
-                        </div>
-                      </div>
-                    <div class="form-group">
-                        <label for="cds" class="col-sm-2 col-md-3 control-label">Dates: </label>
-                        <div class="col-sm-10 col-md-9 form-inline">
-                            <input type="text" id="cds" name="cds" placeholder="Start Date" class="form-control"/>&#160;
-                            <input type="text" id="cde" name="cde" placeholder="End Date" class="form-control"/>
-                            <p class="hint" style="margin:.5em; color: grey; font-style:italic;">* Dates should be entered as YYYY or YYYY-MM-DD</p>
-                        </div>
-                    </div>
-                     <hr/>
-                     <!-- Existence -->
-                    <div class="form-group">
-                        <label for="existds" class="col-sm-2 col-md-3 control-label">Existence Dates: </label>
-                        <div class="col-sm-10 col-md-9 form-inline">
-                            <input type="text" id="existds" name="existds" placeholder="Start Date" class="form-control"/>&#160;
-                            <input type="text" id="existde" name="existde" placeholder="End Date" class="form-control"/>
-                            <p class="hint" style="margin:.5em; color: grey; font-style:italic;">* Dates should be entered as YYYY or YYYY-MM-DD</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-5">
                       <!-- Place Type -->
                     <div style="margin-top:1em; padding-left:.5em;">
@@ -511,14 +444,14 @@ declare function places:search-form() {
                                 <option value="unknown">unknown</option>
                             </select>
                         <hr/>
-                    <!-- Language -->
+                    <!-- Language 
                        <label class="control-label">Language: </label>
                         <div class="col-md-offset-1">
                             <input type="checkbox" name="en" value="en"/> English<br/>
                             <input type="checkbox" name="ar" value="ar"/> Arabic<br/>
                             <input type="checkbox" name="syr" value="syr"/> Syriac<br/>
                         </div>
-
+                    -->
                     </div>
                 </div>
             </div>

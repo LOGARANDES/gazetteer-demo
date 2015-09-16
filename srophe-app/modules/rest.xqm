@@ -147,7 +147,7 @@ function api:get-atom-record($collection as xs:string, $id as xs:string){
 :)
 declare 
     %rest:GET
-    %rest:path("/geo/api/{$collection}/atom")
+    %rest:path("/logar/api/{$collection}/atom")
     %rest:query-param("start", "{$start}", 1)
     %rest:query-param("perpage", "{$perpage}", 25)
     %output:media-type("application/atom+xml")
