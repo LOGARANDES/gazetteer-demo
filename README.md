@@ -1,5 +1,8 @@
-Syriaca.org: Gazetteer App 
+
+LOGAR
 =======
+An addaptation of Syriaca.org: Gazetteer App [https://github.com/srophe/gazetteer-demo]
+
 An eXist-db app for gazetteer data. 
 
 This repository is a subset of the Syriac.org app containing only code for the Gazetteer. Forked from [https://github.com/srophe/srophe-eXist-app] gazetteer branch.
