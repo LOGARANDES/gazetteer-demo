@@ -21,6 +21,7 @@ body {background-color:#385978;}
 .navbar-inner .container{height: 45px !important; padding-top:.5em; margin-left:.5em;}
 .brand {margin-top:-.75em; margin-left:40px;padding-left:0;}
 .brand img {margin-left:1.5em;padding-left:0;}
+.navbar-brand img {height:40px;}
 
 .navbar-inner .nav > li > a:hover, .advanced-search > a:hover {
         border-bottom: 4px solid #DDEAF1 !important;  
