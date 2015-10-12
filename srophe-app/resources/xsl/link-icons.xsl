@@ -164,8 +164,8 @@
                     </li>
                 </xsl:for-each>
                 <!-- Google map links -->
+                <!--
                 <xsl:for-each select="t:location[@type='gps']/t:geo">
-                    <!-- {$base}{$placeslevel} -->
                     <li>
                         <xsl:variable name="geoRef">
                             <xsl:variable name="coords" select="tokenize(normalize-space(.), '\s+')"/>
@@ -177,7 +177,7 @@
                             <img src="{$nav-base}/resources/img/gmaps-25.png" alt="The Google Maps icon" title="click to view {$link-title} on Google Maps"/> View in Google Maps</a>
                     </li>
                 </xsl:for-each>
-                
+                -->
                 <!-- TEI source link -->
                 <li>
                     <a href="{replace($resource-id,$base-uri,$nav-base)}/tei" rel="alternate" type="application/tei+xml">

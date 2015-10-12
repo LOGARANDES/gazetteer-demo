@@ -79,7 +79,6 @@
     <xsl:param name="app-root" select="'/db/apps/srophe'"/>
     <xsl:param name="nav-base" select="'/db/apps/srophe'"/>
     <xsl:param name="base-uri" select="'/db/apps/srophe'"/>
-    
     <xsl:param name="normalization">NFKC</xsl:param>
     <xsl:param name="editoruriprefix">http://syriaca.org/editors.xml#</xsl:param>
     <xsl:variable name="editorssourcedoc" select="concat($app-root,'/documentation/editors.xml')"/>
@@ -664,11 +663,16 @@
                     <ul>
                         <xsl:for-each select="child::*">
                             <li>
-                                <xsl:if test="@type">
-                                    <span class="srp-label">
-                                        <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
-                                    </span>
-                                </xsl:if>
+                                <xsl:choose>
+                                    <xsl:when test="@type">
+                                        <span class="srp-label">
+                                           <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
+                                        </span>
+                                    </xsl:when>
+                                    <xsl:when test="self::t:country">
+                                        <span class="srp-label">Country: </span>
+                                    </xsl:when>
+                                </xsl:choose>
                                 <xsl:apply-templates/>
                             </li>
                         </xsl:for-each>

@@ -103,7 +103,80 @@
                                 </xsl:if>
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:apply-templates mode="footnote"/>
+                                <!-- handle editors/authors and abbreviate as necessary -->
+                                <xsl:variable name="edited" select="if (t:editor[not(@role) or @role!='translator']) then true() else false()"/>
+                                <!-- count editors/authors  -->
+                                <xsl:variable name="rcount">
+                                    <xsl:choose>
+                                        <xsl:when test="t:author">
+                                            <xsl:value-of select="count(t:author)"/>
+                                        </xsl:when>
+                                        <xsl:when test="$edited">
+                                            <xsl:value-of select="count(t:editor[not(@role) or @role!='translator'])"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="count(t:author)"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:variable>
+                                <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
+                                <xsl:choose>
+                                    <xsl:when test="t:author">
+                                        <xsl:sequence select="local:emit-responsible-persons(t:author,'footnote',3)"/>
+                                    </xsl:when>
+                                    <xsl:when test="$edited">
+                                        <xsl:sequence select="local:emit-responsible-persons(t:editor[not(@role) or @role!='translator'],'footnote',3)"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:sequence select="local:emit-responsible-persons(t:author,'footnote',3)"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                                <xsl:if test="not(t:author)">
+                                    <xsl:if test="$edited">
+                                        <xsl:choose>
+                                            <xsl:when test="$rcount = 1">
+                                                <xsl:text> (ed.)</xsl:text>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:text> (eds.)</xsl:text>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:if>
+                                </xsl:if>
+                                <xsl:text>, </xsl:text>
+                                <!-- handle titles -->
+                                    <xsl:choose>
+                                        <xsl:when test="t:title[starts-with(@xml:lang,'en')]">
+                                            <xsl:apply-templates select="t:title[starts-with(@xml:lang,'en')]" mode="footnote"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:apply-templates select="t:title[1]" mode="footnote"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                <xsl:text>, </xsl:text>    
+                                <!-- handle translator, if present -->
+                                <xsl:if test="count(t:editor[@role='translator']) &gt; 0">
+                                    <xsl:text>, trans. </xsl:text>
+                                    <!-- Process translator using local function in helper-functions.xsl local:emit-responsible-persons -->
+                                    <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='translator'],'footnote',3)"/>
+                                </xsl:if>
+                                <xsl:apply-templates select="t:imprint" mode="footnote"/>
+                                
+                                <xsl:if test="t:pubPlace">
+                                    <xsl:text> </xsl:text>
+                                    <xsl:value-of select="t:pubPlace"/>
+                                    <xsl:text>: </xsl:text> 
+                                </xsl:if>
+                                <xsl:if test="t:publisher">
+                                    <xsl:value-of select="t:publisher"/>
+                                    <xsl:text>, </xsl:text>
+                                </xsl:if>
+                                <xsl:if test="t:citedRange">
+                                    <xsl:value-of select="t:citedRange/@unit"/>
+                                    <xsl:value-of select="t:citedRange"/>
+                                    <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                <!--<xsl:apply-templates mode="footnote"/>-->
                             </xsl:otherwise>
                         </xsl:choose>
                     </span>

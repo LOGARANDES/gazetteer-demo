@@ -69,10 +69,12 @@
         <xsl:apply-templates select="t:title[@level='m'][1]" mode="footnote"/>
     
     <!-- general editors -->
+        <xsl:if test="t:editor[@role='general']">
         <xsl:text>, eds. </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
         <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
         <xsl:text>,</xsl:text>
+        </xsl:if>
     
     <!-- publication date statement -->
         <xsl:text> entry published </xsl:text>
@@ -124,9 +126,11 @@
         <xsl:apply-templates select="t:title[@level='m'][1]" mode="biblist"/>
     
     <!-- general editors -->
+        <xsl:if test="t:editor[@role='general']">
         <xsl:text>, edited by </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
         <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
+        </xsl:if>
         <xsl:text>.</xsl:text>
     
     <!-- publication date statement -->
@@ -198,24 +202,28 @@
                     <xsl:text>, </xsl:text>
                     <xsl:value-of select="t:sponsor[1]"/>
                 </li>
-                <li>
-                    <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-                    <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='general'],'footnote')"/>
-                    <xsl:text>, editor</xsl:text>
-                    <xsl:if test="count(t:editor[@role='general'])&gt; 1">s</xsl:if>
-                    <xsl:text>, </xsl:text>
-                    <xsl:apply-templates select="t:title[@level='m'][1]" mode="footnote"/>
-                </li>
-                <li>
-                    <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-                    <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role= ('creator','contributor')],'biblist')"/>
-                    <xsl:text>, entry contributor</xsl:text>
-                    <xsl:if test="count(t:editor[@role='creator'])&gt; 1">s</xsl:if>
-                    <xsl:text>, </xsl:text>
-                    <xsl:text>“</xsl:text>
-                    <xsl:apply-templates select="t:title[@level='a'][1]" mode="footnote"/>
-                    <xsl:text>”</xsl:text>
-                </li>
+                <xsl:if test="t:editor[@role='general']">
+                    <li>
+                        <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
+                        <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='general'],'footnote')"/>
+                        <xsl:text>, editor</xsl:text>
+                        <xsl:if test="count(t:editor[@role='general'])&gt; 1">s</xsl:if>
+                        <xsl:text>, </xsl:text>
+                        <xsl:apply-templates select="t:title[@level='m'][1]" mode="footnote"/>
+                    </li>
+                </xsl:if>
+                <xsl:if test="t:editor[@role='contributor']">
+                    <li>
+                        <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
+                        <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role= ('creator','contributor')],'biblist')"/>
+                        <xsl:text>, entry contributor</xsl:text>
+                        <xsl:if test="count(t:editor[@role='creator'])&gt; 1">s</xsl:if>
+                        <xsl:text>, </xsl:text>
+                        <xsl:text>“</xsl:text>
+                        <xsl:apply-templates select="t:title[@level='a'][1]" mode="footnote"/>
+                        <xsl:text>”</xsl:text>
+                    </li>
+                </xsl:if>
             </ul>
         </div>
         <xsl:if test="t:respStmt">

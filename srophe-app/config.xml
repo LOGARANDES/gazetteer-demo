@@ -24,7 +24,7 @@
         needs to be changed next time data is run
         http://logar.edu
     -->
-    <base_uri>http://logar.org</base_uri>
+    <base_uri>http://logarandes.org</base_uri>
     <!-- Map rendering -->
     <maps>
         <option selected="true">google</option>
