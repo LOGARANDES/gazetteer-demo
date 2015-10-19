@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>La Ciudad de La Paz y Su Distrito</title>
+            <sponsor>LOGAR</sponsor>
+            <funder>The National Endowment for the Humanities</funder>
+            <principal>Steven Wernke</principal>
+            <principal>Jeremy Mumford</principal>
+            <respStmt>
+               <resp>TEI encoding by</resp>
+               <name>Ramona V. Romero</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPlace>
+            <place type="city-province">
+               <region>La ciudad de la Paz y su distrito</region>
+               <place type="corregimiento">
+                  <region>Corregimiento de Caracollo</region>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Caracollo</region>
+                     <note>encomendado en <persName>vasco arias de contreras</persName> como marido
+                        de <persName><roleName type="nobility">doña</roleName> Theresa de
+                           Vlloa</persName></note>
+                     <place type="reduccion">
+                        <settlement>Santiago de Mohosa</settlement>
+                        <population type="indios">
+                           <desc><num value="853">853</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="4378">4378</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de sicasica</region>
+                     <note>encomendado en <persName>Joan rrodriguez de soto</persName></note>
+                     <place type="reduccion">
+                        <settlement>san pedro y san pablo</settlement>
+                        <population type="indios">
+                           <desc><num value="572">572</num> yndio tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="2779">2779</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Hayohayo</region>
+                     <note>esta en <orgName>la rreal corona</orgName></note>
+                     <place type="reduccion">
+                        <settlement>sant saluador</settlement>
+                        <population type="indios">
+                           <desc><num value="572">572</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="2701">2701</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de calmarca</region>
+                     <note>la mitad esta en <orgName>la rreal corona</orgName> para la paga de los
+                        lanzas y la otra mitad en <persName>Joan rremon</persName></note>
+                     <place type="reduccion">
+                        <settlement>santiago</settlement>
+                        <population type="indios">
+                           <desc><num value="394">394</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="1832">1832</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de los quiruas de oyune</region>
+                     <population type="indios">
+                        <desc><num value="795">795</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="3580">3580</num> personas</desc>
+                     </population>
+                     <note>de la encomienda de <persName>Joan rremon</persName> y
+                              <persName><roleName type="nobility">don</roleName> Leon de
+                           atance</persName></note>
+                     <place type="reduccion">
+                        <settlement>santa maria de Palca</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>san Joseph de capaqui</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>sant Joan de yaco</settlement>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de los yngas de suri</region>
+                     <population type="indios">
+                        <desc><num value="164">164</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="727">727</num> personas</desc>
+                     </population>
+                     <note>de la encomienda de <persName><roleName type="nobility">Don</roleName>
+                           Garcia de aluarado</persName></note>
+                     <place type="reduccion">
+                        <settlement>san joan de suri</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>san Francisco de aycoata</settlement>
+                        <note>en este pueblo de aycoata ay reduzidos otros yndios de su magestad de
+                           vna parcialidad llamada camacoro</note>
+                     </place>
+                  </place>
+                  <place type="other">
+                     <settlement>El pueblo de Santa Barbara de yanacache</settlement>
+                     <settlement>sant pedro de lasa</settlement>
+                     <settlement>san barolome de chulumani</settlement>
+                     <note>en los quales ay rreduzidos <num value="200">duzientos</num> y tantos
+                        yndios de diversos encomenderos--de <placeName>la ciudad de la
+                           Paz</placeName></note>
+                  </place>
+                  <place type="other">
+                     <settlement>san pedro de coroyco</settlement>
+                     <note>de pocos yndios rreducidos alli de diferentes pueblos y repartimientos a
+                        los quales llaman mitimaes</note>
+                  </place>
+                  <place type="other">
+                     <settlement>el pueblo de san joan de cauari</settlement>
+                     <note>de otros yndios mitimaes</note>
+                  </place>
+                  <place type="other">
+                     <settlement>el pueblo de capinata</settlement>
+                     <settlement>el pueblo de ynquisuie</settlement>
+                     <settlement>el pueblo de collana y cocone</settlement>
+                     <note>todos los yndios mitimaes de diversos repartimientos e todos son
+                        poblezuelos pequeños</note>
+                  </place>
+               </place>
+               <place type="corregimiento">
+                  <region>Corregimiento de los yungas e provincia de Larecaxa</region>
+                  <place type="repartimiento">
+                     <region>El repartimiento de songochallana y chacap</region>
+                     <population type="indios">
+                        <desc><num value="362">362</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="1844">1844</num> personas</desc>
+                     </population>
+                     <note>encomendado end <persName><roleName type="nobility">Don</roleName> Garcia
+                           de aluarado</persName></note>
+                     <place type="reduccion">
+                        <settlement>san antonio de songo</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>sant joan de challana</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>san pedro de chacapa</settlement>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de larecaxa</region>
+                     <note>encomendado en <persName>Joan rremon</persName> y <persName>don leon de
+                           ayanz</persName></note>
+                     <note>En este <placeName>valle de larecaxa</placeName> ay otros tres pueblos
+                        que se llaman <placeName>trauaya</placeName> y
+                           <placeName>hilauaya</placeName> y <placeName>conbaya</placeName> en todos
+                        ay <num value="1200">mil y duzientos</num> yndios tributarios de diferentes
+                        repartimientios que acuden con sus tributos a sus cabeceras.</note>
+                     <place type="reduccion">
+                        <settlement>sorata</settlement>
+                        <population type="indios">
+                           <desc><num value="94">94</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="497">497</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Ambana</region>
+                     <population type="indios">
+                        <desc><num value="140">140</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="681">681</num> personas</desc>
+                     </population>
+                     <population type="indios">
+                        <desc><num value="400">quatroceintos</num> yndios mitimaes de diferentes
+                           repartimientos</desc>
+                     </population>
+                     <note>encomendado en <persName><roleName type="nobility">doña</roleName>
+                           beatriz bonifaz</persName> y <persName><roleName type="nobility"
+                              >doña</roleName> francisca de bolonia</persName></note>
+                     <place type="reduccion">
+                        <settlement>ambara</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>chuma</settlement>
+                        <population type="indios">
+                           <desc><num value="41">41</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="214">214</num> personas</desc>
+                        </population>
+                        <note>en este pueblo de chuma estan asimesmo rreducidos los yndios de ayata
+                           <!-- Is ayata a place name? --> encomendados en <persName><roleName
+                                 type="nobility">don</roleName> joan rramirez de
+                           vargas</persName></note>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Charaçana de la Provincia de los
+                        carauayas</region>
+                     <population type="indios">
+                        <desc><num value="683">683</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="3750">3750</num> personas</desc>
+                     </population>
+                     <population type="indios">
+                        <desc>otros <num value="300">trescientos</num> yndios tributarios de
+                           diuersos repartimientos</desc>
+                     </population>
+                     <note>de <orgName>la corona rreal</orgName> y consignados para las
+                        lanzas</note>
+                     <place type="reduccion">
+                        <settlement>san Joan de charazana</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>sant pedro mocomoco</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>sant miguel de vsadca</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>el pueblo de carijana</settlement>
+                     </place>
+                  </place>
+               </place>
+               <place type="corregimiento">
+                  <region>Corregimiento de los Pacaxes</region>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de callapa</region>
+                     <note>esta en <orgName>la corona real</orgName> y los tributos para la paga de
+                        los lanzas</note>
+                     <place type="reduccion">
+                        <settlement>callapa</settlement>
+                        <population type="indios">
+                           <desc><num value="1228">1228</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="6252">6252</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de caquingora</region>
+                     <population type="indios">
+                        <desc><num value="1615">1615</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="10078">10078</num> personas</desc>
+                     </population>
+                     <note>encomendado en <persName>Cristoval rramirez de montaluo</persName> y
+                              <persName><roleName type="nobility">doña</roleName> ana de
+                           mena</persName> por mitad</note>
+                     <place type="reduccion">
+                        <settlement>santa barbola</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>nuestra señora de Buenaesperanza</settlement>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de machaca la grande de la corona</region>
+                     <note>es patrimonio real</note>
+                     <place type="reduccion">
+                        <settlement>unnamed pueblo</settlement>
+                        <population type="indios">
+                           <desc><num value="1310">1310</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="6702">6702</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El repartimiento de machaca la chica</region>
+                     <note>de la encomnienda del <persName><roleName type="military"
+                              >capitan</roleName> joan rremon</persName></note>
+                     <place type="reduccion">
+                        <settlement>unnamed pueblo</settlement>
+                        <population type="indios">
+                           <desc><num value="802">802</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="3330">3330</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Viacha</region>
+                     <note>encomendado en <persName>Joan de rribas</persName> y <persName><roleName
+                              type="nobility">doña</roleName> Francisca de cabrera</persName> por
+                        mitad</note>
+                     <place type="reduccion">
+                        <settlement>sant agustin de viacha</settlement>
+                        <population type="indios">
+                           <desc><num value="855">855</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="3574">3574</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Tiaguanuco</region>
+                     <note>de la encomienda de <persName>luis de tapia</persName></note>
+                     <place type="reduccion">
+                        <settlement>san Pedro</settlement>
+                        <population type="indios">
+                           <desc><num value="868">868</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="4329">4329</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Guaqui</region>
+                     <note>encomendado en <persName><roleName type="nobility">doña</roleName> Joana
+                           de coronado</persName> la mitad y la otra mitad esta en <orgName>la rreal
+                           corona</orgName> para la consignacion de los lanzas</note>
+                     <place type="reduccion">
+                        <settlement>santiago</settlement>
+                        <population type="indios">
+                           <desc><num value="1286">1286</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="5800">5800</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de cacasyauire</region>
+                     <note>encomendado en el <persName><roleName type="military">capitan
+                           </roleName>Joan rremon</persName> y <persName>Francisco
+                           Rengifo</persName></note>
+                     <place type="reduccion">
+                        <settlement>la concepcion de la nueua toledo</settlement>
+                        <population type="indios">
+                           <desc><num value="1513">1513</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="8343">8343</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+               </place>
+               <place type="corregimiento">
+                  <region>Corregimiento de Llacxa de la provincia de Omasuyo</region>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de llacxa</region>
+                     <note>encomendado en Juan despinosa</note>
+                     <place type="reduccion">
+                        <settlement>nuestra señora de la concepcion</settlement>
+                        <population type="indios">
+                           <desc><num value="702">702</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="3401">3401</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de pucarani</region>
+                     <note>encomendado en <persName>Hernando cherinos</persName> y
+                              <persName><roleName type="nobility">doña</roleName> mencia de
+                           vargas</persName> por mitad</note>
+                     <place type="reduccion">
+                        <settlement>pucarani</settlement>
+                        <population type="indios">
+                           <desc><num value="1227">1227</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="5398">5398</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Guarina</region>
+                     <note>encomendado en <persName>Garcia gutierrez descobar</persName> e
+                           <persName>cosme de Guzman</persName> por mitad</note>
+                     <place type="reduccion">
+                        <settlement>la villa de merida</settlement>
+                        <population type="indios">
+                           <desc><num value="1419">1419</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="5904">5904</num> personas</desc>
+                        </population>
+                        <note>en este propio pueblo se rredugeron <population>
+                              <desc><num value="197">197</num> yndios trbutarios</desc>
+                           </population> del <placeName>rrepartimiento de yaya</placeName> de la
+                           encomienda del <persName><roleName type="military">capitan</roleName>
+                              joan rremon</persName></note>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El repartimiento de copacauana</region>
+                     <note>encomendado en <persName>Maria de salazar</persName> en qual tiene
+                        situados la compañia de los lanzas <measure><num value="2000">dos mil</num>
+                           pesos</measure>.</note>
+                     <place type="reduccion">
+                        <settlement>copacauana</settlement>
+                        <!-- text says "rreducidos en vn pueblo del propio nombre" -->
+                        <population type="indios">
+                           <desc><num value="1041">1041</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="4929">4929</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El repartimiento de achacache</region>
+                     <note>encomendado en <persName><roleName type="nobility">don</roleName> diego
+                           de zarate</persName> y <persName><roleName type="nobility">don</roleName>
+                           sancho zurbano</persName> por mitad</note>
+                     <place type="reduccion">
+                        <settlement>la villa de caceres</settlement>
+                        <population type="indios">
+                           <desc><num value="1713">1713</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="6608">6608</num> personas</desc>
+                        </population>
+                        <note>ansimesmo estan rreducidos en esta dicha villa los yndios tributarios
+                           del <placeName>rrepartimiento de quinquitara</placeName> de la encomienda
+                           del <persName><roleName type="military">capitan</roleName> joan
+                              rremon</persName> y <persName><roleName type="nobility">don</roleName>
+                              leon de ayanz</persName></note>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de carabuco</region>
+                     <note>fue de <persName><roleName type="nobility">doña</roleName> Marina
+                           munarrez</persName> nauarro esta en <orgName>la corona rreal</orgName> y
+                        sobre los tributos del fechas ciertas situaciones a la compañia de los
+                        lanzas y otras personas</note>
+                     <place type="reduccion">
+                        <settlement>carabuco</settlement>
+                        <!-- text says "rreducidos en vn pueblo llamado del propio nombre" -->
+                        <population type="indios">
+                           <desc><num value="727">727</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="3743">3743</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Guangasco</region>
+                     <note>fue de la dicha <persName sameAs="Doña Marina Munarrez Nauarro"><roleName
+                              type="nobility">doña</roleName> marina</persName> y agora estan en
+                           <orgName>la corona rreal</orgName> y los tributos estan consignados para
+                        la dicha cosignacion de los lanzas y otras situaciones como los de arriua
+                        por ser todo vn rrepartimiento</note>
+                     <place type="reduccion">
+                        <settlement>la villa de cangas</settlement>
+                        <population type="indios">
+                           <desc><num value="70">70</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="340">340</num> personas</desc>
+                        </population>
+                        <population type="indios">
+                           <desc><num value="151">151</num> yndios tributarios</desc>
+                        </population>
+                        <note>Y asimesmo se reduxeron en la dicha villa otros 151 yndios tributarios
+                           del <placeName>rrepartimiento de los ancoraymes encomendado</placeName>
+                           en vn menor hijo de <persName>ordoño de valencia</persName>.</note>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de chuquiabo</region>
+                     <note> encomendado en el <persName><roleName type="military">capitan</roleName>
+                           joan rremon</persName></note>
+                     <place type="reduccion">
+                        <settlement>san pedro y santiago de chuquiabo</settlement>
+                        <population type="indios">
+                           <desc><num value="436">quatrocientos y treynta y seys</num> yndios
+                              tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="2310">2310</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Guaycho</region>
+                     <place type="reduccion">
+                        <settlement>Guaycho</settlement>
+                        <!-- text says "rreducidos en vn pueblo del mesmo nombre" -->
+                        <population type="indios">
+                           <desc><num value="575">575</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="2510">2510</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+               </place>
+               <place type="corregimiento">
+                  <region>Corregimiento de Paucarcolla</region>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Moho y conima</region>
+                     <note>fue de <persName><roleName type="nobility">doña</roleName> Marina
+                           munarrez nauarro</persName> y aora esta en <orgName>la corona
+                           rreal</orgName> y los tributos de la consignacion de los lanzas y otras
+                        situaciones</note>
+                     <place type="reduccion">
+                        <settlement>san pedro de moho</settlement>
+                        <population type="indios">
+                           <desc><num value="185">185</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="2758">2758</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Vilque</region>
+                     <note>fue de la dicha <!-- reference to Doña Marina Munarrez Nauarro --></note>
+                     <place type="reduccion">
+                        <settlement>Vilque</settlement>
+                        <!-- text says "rreduzidos en vn pueblo del mesmo nombre" -->
+                        <population type="indios">
+                           <desc><num value="325">325</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="1272">1272</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Huancane</region>
+                     <note> de la encomienda de <persName>Joan Gonzalez</persName> e <persName>Joan
+                           Maldonado</persName> y de buendia por mitad</note>
+                     <place type="reduccion">
+                        <settlement>santiago</settlement>
+                        <population type="indios">
+                           <desc><num value="753">753</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="3094">3094</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de la pachica</region>
+                     <note>de la encomienda de <persName><roleName type="nobility">don</roleName>
+                           diego de Peralta</persName></note>
+                     <place type="reduccion">
+                        <settlement>san saluador</settlement>
+                        <population type="indios">
+                           <desc><num value="1303">1303</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="5370">5370</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de coata</region>
+                     <note>de la encomienda de <persName>Gabriel de encinas</persName></note>
+                     <place type="reduccion">
+                        <settlement>coata</settlement>
+                        <!-- text says rreduzidos en vn peublo del mesmo nombre -->
+                        <population type="indios">
+                           <desc><num value="448">448</num> yndios tributarios</desc>
+                        </population>
+                        <population type="personas">
+                           <desc><num value="1506">1506</num> personas</desc>
+                        </population>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El repartimiento de Paucarcolla</region>
+                     <population type="indios">
+                        <desc><num value="956">956</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="4576">4576</num> personas</desc>
+                     </population>
+                     <note>de la encomienda de <persName>pedro caxas de ayala</persName> y los
+                        lanzas</note>
+                     <place type="reduccion">
+                        <settlement>Paucarcolla</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>san Francisco de la Puna</settlement>
+                     </place>
+                  </place>
+                  <place type="repartimiento">
+                     <region>El rrepartimiento de Puno</region>
+                     <population type="indios">
+                        <desc><num value="983">983</num> yndios tributarios</desc>
+                     </population>
+                     <population type="personas">
+                        <desc><num value="4800">4800</num> personas</desc>
+                     </population>
+                     <note>encomendado en el <persName><roleName type="military">capitan</roleName>
+                           martin domos</persName></note>
+                     <place type="reduccion">
+                        <settlement>Puno</settlement>
+                     </place>
+                     <place type="reduccion">
+                        <settlement>Ycho</settlement>
+                     </place>
+                  </place>
+               </place>
+            </place>
+
+         </listPlace>
+      </body>
+   </text>
+</TEI>
