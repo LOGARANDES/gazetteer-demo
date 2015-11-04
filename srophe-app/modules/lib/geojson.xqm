@@ -27,8 +27,8 @@ declare function geo:build-json($geo as xs:string*,$id as xs:string*, $rec-type 
         <pair name="geometry"  type="object">
             <pair name="type"  type="string">Point</pair>
             <pair name="coordinates"  type="array">
-                <item type="number">{substring-after($geo,' ')}</item>
-                <item type="number">{substring-before($geo,' ')}</item>
+                <item type="number">{normalize-space(substring-after($geo,' '))}</item>
+                <item type="number">{normalize-space(substring-before($geo,' '))}</item>
             </pair>
         </pair>
         <pair name="properties"  type="object">
@@ -251,7 +251,6 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
             
             function initialize(){
                 map = new google.maps.Map(document.getElementById('map'), {
-                    maxZoom: 10,
                     center: new google.maps.LatLng(0,0),
                     mapTypeId: google.maps.MapTypeId.TERRAIN
                 });
