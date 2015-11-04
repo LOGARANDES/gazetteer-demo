@@ -652,11 +652,18 @@
                     <ul>
                         <xsl:for-each select="child::*">
                             <li>
-                                <xsl:if test="@type">
-                                    <span class="srp-label">
-                                        <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
-                                    </span>
-                                </xsl:if>
+                                <xsl:choose>
+                                    <xsl:when test="@type='municipality'">
+                                        <span class="srp-label">Pueblo: </span>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:if test="@type">
+                                        <span class="srp-label">
+                                            <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
+                                        </span>
+                                    </xsl:if>                         
+                                    </xsl:otherwise>
+                                </xsl:choose>
                                 <xsl:apply-templates/>
                             </li>
                         </xsl:for-each>
