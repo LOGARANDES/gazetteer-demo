@@ -82,8 +82,13 @@
             
             <!-- Google map links -->
             <xsl:for-each select="//descendant::t:location[@type='gps']/t:geo">
-                <!-- {$base}{$placeslevel}? -->
-                <a href="https://maps.google.com/maps?f=q&amp;hl=en&amp;z=4&amp;q={$resource-id}/atom">
+                <xsl:variable name="geoRef">
+                    <xsl:variable name="coords" select="tokenize(normalize-space(.), '\s+')"/>
+                    <xsl:value-of select="$coords[1]"/>
+                    <xsl:text>, </xsl:text>
+                    <xsl:value-of select="$coords[2]"/>
+                </xsl:variable>
+                <a href="https://maps.google.com/maps?q={$geoRef}+(name)&amp;z=10&amp;ll={$geoRef}">
                     <img src="{$nav-base}/resources/img/gmaps-25.png" alt="The Google Maps icon" title="click to view {$link-title} on Google Maps"/>
                 </a>
             </xsl:for-each>
@@ -164,20 +169,20 @@
                     </li>
                 </xsl:for-each>
                 <!-- Google map links -->
-                <!--
+                
                 <xsl:for-each select="t:location[@type='gps']/t:geo">
                     <li>
                         <xsl:variable name="geoRef">
                             <xsl:variable name="coords" select="tokenize(normalize-space(.), '\s+')"/>
-                            <xsl:value-of select="$coords[2]"/>
-                            <xsl:text>, </xsl:text>
                             <xsl:value-of select="$coords[1]"/>
+                            <xsl:text>, </xsl:text>
+                            <xsl:value-of select="$coords[2]"/>
                         </xsl:variable>
-                        <a href="https://maps.google.com/maps?f=q&amp;hl=en&amp;z=4&amp;q=http://syriaca.org/place/{$resource-id}/atom">
+                        <a href="https://maps.google.com/maps?q={$geoRef}+(name)&amp;z=10&amp;ll={$geoRef}">
                             <img src="{$nav-base}/resources/img/gmaps-25.png" alt="The Google Maps icon" title="click to view {$link-title} on Google Maps"/> View in Google Maps</a>
                     </li>
                 </xsl:for-each>
-                -->
+
                 <!-- TEI source link -->
                 <li>
                     <a href="{replace($resource-id,$base-uri,$nav-base)}/tei" rel="alternate" type="application/tei+xml">
@@ -238,11 +243,11 @@
                     <li>
                         <xsl:variable name="geoRef">
                             <xsl:variable name="coords" select="tokenize(normalize-space(.), '\s+')"/>
-                            <xsl:value-of select="$coords[2]"/>
-                            <xsl:text>, </xsl:text>
                             <xsl:value-of select="$coords[1]"/>
+                            <xsl:text>, </xsl:text>
+                            <xsl:value-of select="$coords[2]"/>
                         </xsl:variable>
-                        <a href="https://maps.google.com/maps?f=q&amp;hl=en&amp;z=4&amp;q={$resource-id}/atom">
+                        <a href="https://maps.google.com/maps?q={$geoRef}+(name)&amp;z=10&amp;ll={$geoRef}">
                             <img src="{$nav-base}/resources/img/gmaps-25.png" alt="The Google Maps icon" title="click to view {$title} on Google Maps"/> View in Google Maps</a>
                     </li>
                 </xsl:for-each>
