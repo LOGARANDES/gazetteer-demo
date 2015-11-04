@@ -56,9 +56,11 @@
     <xsl:template match="t:titleStmt" mode="cite-foot">
     <!-- creator(s) of the entry -->
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',2)"/>
-        <xsl:text>, </xsl:text>
-    
+        <xsl:if test="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',2)!=''">
+            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',2)"/>
+            <xsl:text>, </xsl:text>            
+        </xsl:if>
+
     <!-- title of the entry -->
         <xsl:text>“</xsl:text>
         <xsl:apply-templates select="t:title[@level='a'][1]" mode="footnote"/>
@@ -70,10 +72,10 @@
     
     <!-- general editors -->
         <xsl:if test="t:editor[@role='general']">
-        <xsl:text>, eds. </xsl:text>
+            <xsl:text>, eds. </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
-        <xsl:text>,</xsl:text>
+            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
+            <xsl:text>,</xsl:text>
         </xsl:if>
     
     <!-- publication date statement -->
@@ -113,8 +115,10 @@
     <xsl:template match="t:titleStmt" mode="cite-biblist">
     <!-- creator(s) of the entry -->
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',2)"/>
-        <xsl:text>, </xsl:text>
+        <xsl:if test="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',2) != ''">
+            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',2)"/>
+            <xsl:text>, </xsl:text>
+        </xsl:if>
     
     <!-- title of the entry -->
         <xsl:text>“</xsl:text>
@@ -127,9 +131,9 @@
     
     <!-- general editors -->
         <xsl:if test="t:editor[@role='general']">
-        <xsl:text>, edited by </xsl:text>
+            <xsl:text>, edited by </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
+            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
         </xsl:if>
         <xsl:text>.</xsl:text>
     
