@@ -15,7 +15,9 @@
  
 body {background-color:#385978;}
 #main {background-color:#999;}
-
+#main {margin: 0 auto; padding:0; border-top:1px solid #753C28;}
+.container{width:95%;}
+#content{padding-top:2em; background-color:white;}
 .navbar {border-bottom:4px solid #456889 !important;}
 .navbar-inner {border-bottom:.5em solid #456889 !important;}
 .navbar-inner .container{height: 45px !important; padding-top:.5em; margin-left:.5em;}
@@ -142,6 +144,10 @@ h4 {font-size: 1em; margin-top:1em;}
 
 .browse-map {margin:0;}
 .inline-map {margin-left:-2em; margin-bottom:1em;}
+/* Defualt map on place pages */
+#map {height: 350px;}
+.map-data {height:300px;}
+/* Large map on index page */
 .map-lg #map {height:90% !important;}
 .map-md #map {height:300px !important;}
 .map-sm #map {height:250px !important;} 
@@ -483,7 +489,7 @@ label.error {
     margin-left:-25%;  
 }
 */
-#map {height: 200px;}
+
 .transparent {
     /* default fallback */
     background: rgb(255, 255, 255) transparent;
@@ -525,4 +531,3 @@ pre {
 .api-param {width:20%}
 .api-desc {width:55%}
 .api-method {width:10%}
-

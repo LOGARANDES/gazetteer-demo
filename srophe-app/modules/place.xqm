@@ -110,14 +110,7 @@ let $type := string($model("data")//tei:place/@type)
 let $geo := $data//tei:geo[1]
 return 
     if($data//tei:geo) then 
-        <div class="row">
-            <div class="col-md-7">
-                {geo:build-map($geo,'','')}
-            </div>
-            <div class="col-md-5">
-                {place:type-details($data, $type)}
-            </div>    
-        </div>
+        (geo:build-map($geo,'',''),place:type-details($data, $type))
     else place:type-details($data, $type)
 };
 
