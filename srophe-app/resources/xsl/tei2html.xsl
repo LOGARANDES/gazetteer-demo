@@ -83,14 +83,13 @@
     <xsl:param name="editoruriprefix">http://syriaca.org/editors.xml#</xsl:param>
     <xsl:variable name="editorssourcedoc" select="concat($app-root,'/documentation/editors.xml')"/>
     <!--<xsl:param name="uribase">http://syriaca.org/</xsl:param>-->
-    <!-- Resource id -->
     <xsl:variable name="resource-id">
         <xsl:choose>
             <xsl:when test="string(/*/@id)">
                 <xsl:value-of select="string(/*/@id)"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="replace(/descendant::t:idno[@type='URI'][starts-with(.,$base-uri)][1],'/tei','')"/>
+                <xsl:value-of select="starts-with(//idno[@type='URI'],'http://syriaca.org/')"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
@@ -329,9 +328,6 @@
         <xsl:if test="t:confessions/t:state[@type='confession']">
             <div id="description">
                 <h3>Known Religious Communities</h3>
-                <p class="caveat">
-                    <em>This list is not necessarily exhaustive, and the order does not represent importance or proportion of the population. Dates do not represent starting or ending dates of a group's presence, but rather when they are attested. Instead, the list only represents groups for which Syriaca.org has source(s) and dates.</em>
-                </p>
                 <xsl:call-template name="confessions"/>
             </div>
         </xsl:if>
@@ -420,14 +416,6 @@
                         </li>
                     </xsl:for-each>
                 </ul>
-            </div>
-        </xsl:if>
-        <xsl:if test="@ana ='#syriaca-saint'">
-            <div>
-                <h3>Lives</h3>
-                <p>
-                    [Under preparation. Syriaca.org is preparing a database of Syriac saints lives, Biblioteca Hagiographica Syriaca Electronica, which will include links to lives for saints here.]
-                </p>
             </div>
         </xsl:if>
         
@@ -549,7 +537,8 @@
             <div id="sources">
                 <h3>Sources</h3>
                 <p>
-                    <small>Any information without attribution has been created following the Syriaca.org <a href="http://syriaca.org/documentation/">editorial guidelines</a>.</small>
+                    <small>Any information without attribution has been created following 
+                        the LOGAR editorial guidelines.</small>
                 </p>
                 <ul>
                     <!-- Bibliography elements are processed by bibliography.xsl -->
@@ -663,16 +652,11 @@
                     <ul>
                         <xsl:for-each select="child::*">
                             <li>
-                                <xsl:choose>
-                                    <xsl:when test="@type">
-                                        <span class="srp-label">
-                                           <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
-                                        </span>
-                                    </xsl:when>
-                                    <xsl:when test="self::t:country">
-                                        <span class="srp-label">Country: </span>
-                                    </xsl:when>
-                                </xsl:choose>
+                                <xsl:if test="@type">
+                                    <span class="srp-label">
+                                        <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
+                                    </span>
+                                </xsl:if>
                                 <xsl:apply-templates/>
                             </li>
                         </xsl:for-each>
