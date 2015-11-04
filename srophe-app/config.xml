@@ -5,11 +5,11 @@
     <!-- App description -->
     <description/>
     <!-- Contact email -->
-    <contact/>
+    <contact>s.wernke@vanderbilt.edu</contact>
     <!-- Logo name (assumes path to logo is $app-root/resources/img/) -->
     <logo>logar.png</logo>
     <!-- Site URL -->
-    <url>http://logar.org</url>
+    <url>http://logarandes.org</url>
     <!-- 
         Root of app for building dynamic links. 
         Default is eXist app root.
@@ -18,13 +18,13 @@
     <nav-base>/exist/apps/logar</nav-base>
     <!-- eXist app root -->
     <app-root>logar</app-root>
-    <!-- eXist app root for gazetteer data -->
+    <!-- Base URI for identifiers in app data -->
     <data-root>logar-data</data-root>
     <!-- Base URI for identifiers in app data
         needs to be changed next time data is run
         http://logar.edu
     -->
-    <base_uri>http://logar.org</base_uri>
+    <base_uri>http://logarandes.org</base_uri>
     <!-- Map rendering -->
     <maps>
         <option selected="true">google</option>
