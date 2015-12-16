@@ -1,7 +1,7 @@
 
 LOGAR
 =======
-An addaptation of Syriaca.org: Gazetteer App [https://github.com/srophe/gazetteer-demo]
+An adaptation of Syriaca.org: Gazetteer App [https://github.com/srophe/gazetteer-demo]
 
 An eXist-db app for gazetteer data. 
 
