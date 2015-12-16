@@ -1,5 +1,5 @@
 
-LOGAR
+LOGAR: Linked Online Gazetteer of the Andean Region
 =======
 An adaptation of Syriaca.org: Gazetteer App [https://github.com/srophe/gazetteer-demo]
 
