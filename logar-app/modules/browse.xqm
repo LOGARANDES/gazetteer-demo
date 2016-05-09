@@ -130,9 +130,13 @@ else
  : Full page map. 
 :)
 declare function browse:get-map($node as node(), $model as map(*)){
+    <div class="map-wrapper">
+    {browse:filter-map($node,$model)}
     <div class="col-md-12 map-lg">
-        {geo:build-map($model("browse-data")//tei:geo, '', '')}
+        {geo:build-map($model("browse-data")//tei:location[@type='gps']/tei:geo, '', '')}
     </div>
+    </div>
+    
 };
 
 declare function browse:filter-map($node as node(), $model as map(*)){
@@ -181,8 +185,8 @@ return
 declare function browse:get-data($node as node(), $model as map(*), $coll as xs:string*) as node()*{
 (
 if($browse:view = 'type') then
-        if($model("browse-refine")//tei:geo) then
-            <div class="map-sm inline-map well">{geo:build-map($model("browse-refine")//tei:geo, '', '')}</div>
+        if($model("browse-refine")//tei:location[@type='gps']) then
+            <div class="map-sm inline-map well">{geo:build-map($model("browse-refine")//tei:location[@type='gps']/tei:geo, '', '')}</div>
         else ()
 else (),
 for $data in $model("browse-refine")

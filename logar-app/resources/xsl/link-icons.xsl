@@ -52,17 +52,19 @@
      template: name=link-icons
      emit the link icons div and its contents
      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+    <xsl:param name="base-uri" select="'/db/apps/srophe'"/>
+    <xsl:variable name="resource-id" select="starts-with(//idno[@type='URI'],$base-uri)"/>
+    <xsl:variable name="link-title">
+        <xsl:choose>
+            <xsl:when test="//t:place">
+                <xsl:value-of select="//t:place/t:placeName[@xml:lang='en'][1]"/>
+            </xsl:when>
+            <xsl:when test="//t:person">
+                <xsl:value-of select="//t:person/t:persName[@xml:lang='en'][1]"/>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:variable>
     <xsl:template name="link-icons">
-        <xsl:variable name="link-title">
-            <xsl:choose>
-                <xsl:when test="//t:place">
-                    <xsl:value-of select="//t:place/t:placeName[@xml:lang='en'][1]"/>
-                </xsl:when>
-                <xsl:when test="//t:person">
-                    <xsl:value-of select="//t:person/t:persName[@xml:lang='en'][1]"/>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:variable>
         <div id="link-icons" class="col-md-4 text-right">
             <!-- Pleiades links -->
             <xsl:for-each select="//descendant::t:idno[contains(.,'pleiades')]">
@@ -113,100 +115,6 @@
      template: name=link-icons-text
      emit the link icons div and its contents as a bulleted list
      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <xsl:template name="link-icons-text">
-        <xsl:variable name="resource-id" select="tokenize(replace(//t:idno[contains(.,'syriaca')][1],'/tei',''),'/')[last()]"/>
-        <xsl:variable name="resource-uri">
-            <xsl:choose>
-                <xsl:when test="//t:place">
-                    <xsl:value-of select="concat('/place/',$resource-id)"/>
-                </xsl:when>
-                <xsl:when test="//t:person">
-                    <xsl:value-of select="concat('/persons/',$resource-id)"/>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="link-title">
-            <xsl:choose>
-                <xsl:when test="//t:place">
-                    <xsl:value-of select="//t:place/t:placeName[@xml:lang='en'][1]"/>
-                </xsl:when>
-                <xsl:when test="//t:person">
-                    <xsl:value-of select="//t:person/t:persName[@xml:lang='en'][1]"/>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:variable>
-        <div id="see-also" class="well">
-            <h3>See Also</h3>
-            <ul>
-                <xsl:for-each select="t:idno[contains(.,'csc.org.il')]">
-                    <li>
-                        <a href="{normalize-space(.)}"> "<xsl:value-of select="substring-before(substring-after(normalize-space(.),'sK='),'&amp;sT=')"/>" in the Comprehensive Bibliography on Syriac Christianity</a>
-                    </li>
-                </xsl:for-each>
-                <!--NOTE: TEMPORARY for demonstration -->
-                <xsl:for-each select="//t:idno[contains(.,'www.epigraphy.ca')]">
-                    <li>
-                        <a href="{normalize-space(.)}">1 Inscription from Mosul at the Canadian Centre for Epigraphic Documents</a>
-                    </li>
-                </xsl:for-each>
-                <!-- WorldCat Identities -->
-                <xsl:for-each select="t:idno[contains(.,'http://worldcat.org/identities')]">
-                    <li>
-                        <a href="{normalize-space(.)}"> "<xsl:value-of select="substring-after(.,'http://worldcat.org/identities/')"/>" in WorldCat Identities</a>
-                    </li>
-                </xsl:for-each>
-                <!-- VIAF -->
-                <xsl:for-each select="t:idno[contains(.,'http://viaf.org/')]">
-                    <li>
-                        <a href="{normalize-space(.)}">VIAF</a>
-                    </li>
-                </xsl:for-each>
-                <!-- Pleiades links -->
-                <xsl:for-each select="t:idno[contains(.,'pleiades')]">
-                    <li>
-                        <a href="{normalize-space(.)}">
-                            <img src="{$nav-base}/resources/img/circle-pi-25.png" alt="Image of the Greek letter pi in blue; small icon of the Pleiades project" title="click to view {$link-title} in Pleiades"/> View in Pleiades</a>
-                    </li>
-                </xsl:for-each>
-                <!-- Google map links -->
-                
-                <xsl:for-each select="t:location[@type='gps']/t:geo">
-                    <li>
-                        <xsl:variable name="geoRef">
-                            <xsl:variable name="coords" select="tokenize(normalize-space(.), '\s+')"/>
-                            <xsl:value-of select="$coords[1]"/>
-                            <xsl:text>, </xsl:text>
-                            <xsl:value-of select="$coords[2]"/>
-                        </xsl:variable>
-                        <a href="https://maps.google.com/maps?q={$geoRef}+(name)&amp;z=10&amp;ll={$geoRef}">
-                            <img src="{$nav-base}/resources/img/gmaps-25.png" alt="The Google Maps icon" title="click to view {$link-title} on Google Maps"/> View in Google Maps</a>
-                    </li>
-                </xsl:for-each>
-
-                <!-- TEI source link -->
-                <li>
-                    <a href="{replace($resource-id,$base-uri,$nav-base)}/tei" rel="alternate" type="application/tei+xml">
-                        <img src="{$nav-base}/resources/img/tei-25.png" alt="The Text Encoding Initiative icon" title="click to view the TEI XML source data for this place"/> TEI XML source data</a>
-                </li>
-                <!-- Atom format link -->
-                <li>
-                    <a href="{replace($resource-id,$base-uri,$nav-base)}/atom" rel="alternate" type="application/atom+xml">
-                        <img src="{$nav-base}/resources/img/atom-25.png" alt="The Atom format icon" title="click to view this data in Atom XML format"/> ATOM XML format
-                    </a>
-                </li>
-                <!-- Wikipedia links -->
-                <xsl:for-each select="t:idno[contains(.,'wikipedia')]">
-                    <xsl:variable name="get-title">
-                        <xsl:value-of select="replace(tokenize(.,'/')[last()],'_',' ')"/>
-                    </xsl:variable>
-                    <li>
-                        <a href="{.}">
-                            <img src="{$nav-base}/resources/img/Wikipedia-25.png" alt="The Wikipedia icon" title="click to view {$link-title} in Wikipedia"/> "<xsl:value-of select="$get-title"/>" in Wikipedia</a>
-                    </li>
-                </xsl:for-each>
-            </ul>
-        </div>
-    </xsl:template>
     <xsl:template name="link-icons-list">
         <xsl:param name="title"/>
         <div id="see-also" class="well">

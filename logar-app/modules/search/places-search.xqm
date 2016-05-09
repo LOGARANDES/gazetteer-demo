@@ -63,7 +63,7 @@ declare function places:place-name(){
  : @type full text query
 :)
 declare function places:type(){
-    if(exists($places:type) and $places:type != '') then string(concat("[descendant::tei:place/@type = '",common:clean-string($places:type),"']"))
+    if(exists($places:type) and $places:type != '') then string(concat("[descendant::tei:location/child::*/@type = '",common:clean-string($places:type),"']"))
     else '' 
 };
 
@@ -410,12 +410,22 @@ declare function places:search-form() {
                     <!-- Location --> 
                     <div class="form-group">
                         <label for="loc" class="col-sm-2 col-md-3  control-label">Location: </label>
-                        <div class="col-sm-10 col-md-9 ">
+                        <div class="col-md-6 ">
                             <input type="text" id="loc" name="loc" class="form-control"/>
                         </div>
+                        <div class="col-md-3">
+                             <select name="type" id="type" class="form-control">
+                                <option value="">- Select -</option>
+                                <option value="audiencia">Audiencia</option>
+                                <option value="ciudad">ciudad</option>
+                                <option value="corregimiento">Corregimiento</option>
+                                <option value="repartimiento">repartimiento</option>
+                                <option value="pueblo">Pueblo</option>
+                            </select>
+                         </div>
                     </div>
+                    
                     </div>
-
             </div>
         </div>
         <div class="pull-right">

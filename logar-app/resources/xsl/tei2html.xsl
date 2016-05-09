@@ -83,16 +83,8 @@
     <xsl:param name="editoruriprefix">http://syriaca.org/editors.xml#</xsl:param>
     <xsl:variable name="editorssourcedoc" select="concat($app-root,'/documentation/editors.xml')"/>
     <!--<xsl:param name="uribase">http://syriaca.org/</xsl:param>-->
-    <xsl:variable name="resource-id">
-        <xsl:choose>
-            <xsl:when test="string(/*/@id)">
-                <xsl:value-of select="string(/*/@id)"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="starts-with(//idno[@type='URI'],'http://syriaca.org/')"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
+    <xsl:variable name="resource-id" select="//t:idno[@type='URI'][contains(.,$base-uri)]"/>
+    
  <!-- =================================================================== -->
  <!-- TEMPLATES -->
  <!-- =================================================================== -->
@@ -597,7 +589,8 @@
                 <xsl:otherwise>
                     <xsl:choose>
                         <xsl:when test="t:geo">Coordinates: </xsl:when>
-                        <xsl:when test="@type"><xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: </xsl:when>
+                        <xsl:when test="@type">
+                            <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: </xsl:when>
                     </xsl:choose>
                     <ul>
                         <xsl:for-each select="child::*[not(self::t:note)]">

@@ -173,7 +173,7 @@ declare function facets:selected-facet-display(){
                     return 
                         if($facet-param = $facet) then ()
                         else concat('fq-',$facet-param),' ')
-    let $href := concat('?fq=',$new-fq,facets:url-params())
+    let $href := concat('?fq=',$new-fq,string-join(facets:url-params()))
     return 
         <span class="facet" title="Remove {$title}">
             <span class="label label-facet" title="{$title}">{$title} 

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/map.html" data-template-at="content">
     <div data-template="browse:get-all" data-template-coll="places" class="map-full" style="height:100%;width:100px;margin:0 auto; padding:0;">
-        <div data-template="browse:filter-map" data-template-coll="places"/>
-        <div data-template="browse:get-map" data-template-coll="places"/>
+        <div class="map-wrapper">
+            <div data-template="browse:filter-map" data-template-coll="places"/>
+            <div data-template="browse:get-map" data-template-coll="places"/>
+        </div>
     </div>
     <!--
     <div class="row">

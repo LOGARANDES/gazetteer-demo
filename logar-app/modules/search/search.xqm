@@ -210,7 +210,7 @@ return
  : @param $node search resuls with coords
 :)
 declare function search:build-geojson($node as node()*, $model as map(*)){
-let $geo-hits := $model("hits")//tei:geo
+let $geo-hits := $model("hits")//tei:location[@type='gps']/tei:geo
 return
     if(count($geo-hits) gt 0) then
          (

@@ -17,7 +17,7 @@ declare namespace html="http://www.w3.org/1999/xhtml";
 
 declare namespace transform="http://exist-db.org/xquery/transform";
 
-(:~  
+(:~ 
  : Parameters passed from the url 
  :)
 declare variable $place:id {request:get-parameter('id', '')};
@@ -102,9 +102,9 @@ declare function place:type-details($data, $type){
 declare %templates:wrap function place:location-details($node as node(), $model as map(*)){
 let $data := $model("data")
 let $type := string($model("data")//tei:place/@type)
-let $geo := $data//tei:geo[1]
+let $geo := $data//tei:location[@type='gps']/tei:geo
 return 
-    if($data//tei:geo) then 
+    if($data//tei:location[@type='gps']/tei:geo) then 
         (geo:build-map($geo,'',''),place:type-details($data, $type))
     else place:type-details($data, $type)
 };

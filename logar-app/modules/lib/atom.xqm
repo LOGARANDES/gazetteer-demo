@@ -67,7 +67,7 @@ declare function feed:format-dates($date as xs:string?) as xs:string?{
 declare function feed:get-entry($node as node()?) as element()?{ 
     let $rec := if($node/self::tei:TEI) then $node else $node/ancestor::tei:TEI
     let $subtitle := if($rec//tei:titleStmt/tei:title[2]) then concat(': ',$rec//tei:titleStmt/tei:title[2]) else ()
-    let $title := concat(string($rec//tei:titleStmt/tei:title[1]),$subtitle)
+    let $title := concat($rec//tei:titleStmt/tei:title[1]/text(),$subtitle)
     let $date := $node[1]//tei:publicationStmt[1]/tei:date[1]/text()
     let $rec-id := substring-before($rec//tei:idno[@type='URI'][starts-with(.,$global:base-uri)][1],'/tei')
     return 
@@ -89,9 +89,9 @@ declare function feed:build-entry($node as element()*) as element(entry){
     let $rec := if($node/self::tei:TEI) then $node else $node/ancestor::tei:TEI
     let $rec-id := substring-before($rec//tei:idno[@type='URI'][starts-with(.,$global:base-uri)][1],'/tei')
     let $subtitle := if($rec//tei:titleStmt/tei:title[2]) then concat(': ',$rec//tei:titleStmt/tei:title[2]) else ()
-    let $title := concat(string($rec//tei:titleStmt/tei:title[1]),$subtitle)
+    let $title := concat($rec//tei:titleStmt/tei:title[1]/text(),$subtitle)
     let $date := $rec//tei:publicationStmt[1]/tei:date[1]/text()
-    let $geo := if($rec//tei:geo) then <georss:point>{string($rec//tei:geo)}</georss:point> else ()         
+    let $geo := if($rec//tei:location[@type='gps']/tei:geo) then <georss:point>{$rec//tei:location[@type='gps']/tei:geo/text()}</georss:point> else ()         
     let $res-pers :=  
                 let $author-name := distinct-values($rec//tei:titleStmt/tei:editor) 
                 for $author in $author-name
