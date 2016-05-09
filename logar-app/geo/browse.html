@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/geo.html" data-template-at="content">
+    <div class="section">
+        <h1 class="title about">Browse Places</h1>
+        <!-- Calls xquery functions -->
+        <div data-template="browse:get-all" data-template-coll="places">
+            <div class="tabbable">
+                <!-- Browse Tabs -->
+                <ul class="nav nav-tabs" id="nametabs">
+                    <li data-template="browse:build-tabs-en"/>
+                    <!--<li data-template="browse:build-tabs-type"/>-->
+                    <li data-template="browse:build-tabs-map"/>
+                </ul>
+                <!-- Browse Content -->
+                <div class="tab-content" data-template="browse:get-narrow" data-template-coll="places">
+                    <div class="tab-pane active">
+                        <div class="row">
+                            <div data-template="browse:results-panel" data-template-coll="places"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="externals">
+            <h3>Other formats</h3>
+            <div data-template="browse:other-formats" data-template-coll="places"/>
+        </div>
+    </div>
+</div>
