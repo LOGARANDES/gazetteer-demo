@@ -1,6 +1,7 @@
 xquery version "3.0";
 
 module namespace global="http://syriaca.org/global";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace html="http://www.w3.org/1999/xhtml";
 
 declare variable $global:app-root := 
@@ -102,4 +103,12 @@ declare function global:display-recs-short-view($node, $lang) as node()*{
         <param name="lang" value="{$lang}"/>
     </parameters>
     )
+};
+
+(:
+ : Generic get record function
+:)
+declare function global:get-rec($id as xs:string){
+    for $rec in collection($global:data-root)//tei:idno[@type='URI'][. = $id]/ancestor::tei:TEI
+    return $rec  
 };
