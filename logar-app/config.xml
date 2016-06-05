@@ -15,7 +15,7 @@
         Default is eXist app root.
         For production site will be blank, assuming url is http://logar.edu
     -->
-    <nav-base>/exist/apps/logar</nav-base>
+    <nav-base>http://logarandes.org</nav-base>
     <!-- eXist app root -->
     <app-root>logar</app-root>
     <!-- Base URI for identifiers in app data -->
