@@ -30,14 +30,14 @@ declare
     %rest:query-param("type", "{$type}", "")
     %rest:query-param("output", "{$output}", "json")
     %output:media-type("application/json")
-    (:%output:method("json"):)
+    %output:method("json")
 function api:get-geo-json($type as xs:string*, $output as xs:string*) {
 (<rest:response> 
   <http:response status="200"> 
     <http:header name="Content-Type" value="application/json; charset=utf-8"/> 
   </http:response> 
 </rest:response>, 
-     api:get-geojson-node($type,$output)
+     api:get-geojson-node($type,$output)   
 ) 
 
 };
@@ -193,11 +193,7 @@ function api:get-atom-feed($start as xs:integer*, $perpage as xs:integer*){
  : Returns tei record for syriaca.org subcollections
 :)
 declare function api:get-tei-rec($collection as xs:string, $id as xs:string) as node()*{
-    let $collection-name := 
-        if($collection = 'place') then 'places'
-        else $collection
-    let $path := (xs:anyURI($global:data-root) || '/' || $collection-name || '/tei/' || $id ||'.xml')
-    return doc($path)/child::*
+    global:get-rec($id)
 };
 
 (:~
@@ -214,8 +210,8 @@ let $geo-map :=
             for $recs in util:eval($path) 
             return $recs 
         else collection($global:data-root || "/places/tei")//tei:place[@type=$type]//tei:geo
-    else collection($global:data-root || "/places/tei")//tei:geo
-return
-    if($output = 'json') then xqjson:serialize-json(geo:json-wrapper(($geo-map), $type, $output))
+    else collection($global:data-root || "/places/tei")//tei:location[@type='gps']/tei:geo
+return 
+    if($output = 'json') then geo:json-wrapper(($geo-map), $type, $output) (:xqjson:serialize-json(geo:json-wrapper(($geo-map), $type, $output)):)
     else geo:kml-wrapper(($geo-map), $type, $output)
 };

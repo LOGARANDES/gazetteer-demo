@@ -10,7 +10,7 @@ module namespace geo="http://syriaca.org/geojson";
 
 import module namespace xqjson="http://xqilla.sourceforge.net/lib/xqjson";
 import module namespace global="http://syriaca.org/global" at "global.xqm";
-
+declare namespace output="http://www.w3.org/2010/xslt-xquery-serialization";
 declare namespace json = "http://www.json.org";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare namespace transform="http://exist-db.org/xquery/transform";
@@ -22,34 +22,43 @@ declare namespace transform="http://exist-db.org/xquery/transform";
  : @param $rec-type place type
  : @param $title place title
 :)
-declare function geo:build-json($geo as xs:string, $id as xs:string*, $rec-type as xs:string*, $title as xs:string*, $rec-rel as xs:string*) as element(features){    
-    <item type="object">
-        <pair name="type" type="string">Feature</pair>
-        <pair name="geometry" type="object">
-            <pair name="type" type="string">Point</pair>
-            <pair name="coordinates"  type="array">
-                <item type="number">{substring-after($geo,' ')}</item>
-                <item type="number">{substring-before($geo,' ')}</item>
-            </pair>
-        </pair>
-        <pair name="properties"  type="object">
-            <pair name="uri" type="string">{replace($id,$global:base-uri,$global:nav-base)}</pair>
-            {(if($rec-type != '') then 
-                <pair name="placeType" type="string">{if($rec-type='open-water') then 'openWater' else $rec-type}</pair>            
-            else (),
-            if($rec-rel != '') then 
-                <pair name="relation" type="string">{$rec-rel}</pair>
-              else ())  
+declare function geo:build-json($geo as xs:string, $id as xs:string*, $rec-type as xs:string*, $title as xs:string*, $rec-rel as xs:string*, $count as xs:integer?) as element(features){    
+    <json:value>
+        {(if(count($count) = 1) then attribute {xs:QName("json:array")} {'true'} else())}
+        <type>Feature</type>
+        <geometry>
+            <type>Point</type>
+            <coordinates json:literal="true">{tokenize($geo,' ')[2]}</coordinates>
+            <coordinates json:literal="true">{tokenize($geo,' ')[1]}</coordinates>
+        </geometry>
+        <properties>
+            <uri>{replace($id,$global:base-uri,$global:nav-base)}</uri>
+            {
+              if($rec-rel != '') then 
+                <relation>{$rec-rel}</relation>
+              else ()  
             }
-            <pair name="name" type="string">
-                {(string($title),
-                if($rec-type != '') then 
-                  if($rec-type='open-water') then '- openWater' else concat(' - ',$rec-type)
-                else ())  
-                }
-            </pair>
-        </pair>
-    </item>
+            <name>{$title}</name>
+        </properties>
+    </json:value>
+    (:
+    
+    <json type="object">
+    <pair name="firstName" type="string">John</pair>
+    <pair name="lastName" type="string">Smith</pair>
+    <pair name="address" type="object">
+        <pair name="streetAddress" type="string">21 2nd Street</pair>
+        <pair name="city" type="string">New York</pair>
+        <pair name="state" type="string">NY</pair>
+        <pair name="postalCode" type="number">10021</pair>
+    </pair>
+    <pair name="phoneNumbers" type="array">
+        <item type="string">212 732-1234</item>
+        <item type="string">646 123-4567</item>
+    </pair>
+</json>
+
+    :)
 };
 
 (:~
@@ -60,15 +69,13 @@ declare function geo:build-json($geo as xs:string, $id as xs:string*, $rec-type 
  : @param $title place title
 :)
 declare function geo:build-kml($geo as xs:string, $id as xs:string*, $rec-type as xs:string*, $title as xs:string*) as element(features){
-    <kml xmlns="http://www.opengis.net/kml/2.2">
-        <Placemark>
-            <name>{$title} - {if($rec-type='open-water') then 'openWater' else $rec-type}</name>
+        <Placemark xmlns="http://www.opengis.net/kml/2.2" id="{$id}">
+            <name>{$title} {if($rec-type='open-water') then 'openWater' else $rec-type}</name>
             <description>{replace($id,$global:base-uri,$global:nav-base)}</description>
             <Point>
                 <coordinates>{replace($geo,' ',',')}</coordinates>
             </Point>
         </Placemark>
-    </kml>    
 };
 
 (:~
@@ -82,15 +89,12 @@ declare function geo:get-coordinates($geo-search as element()*, $type as xs:stri
     for $place-name in map:get($geo-map, 'geo-data')
     let $id := string($place-name/ancestor::tei:place/tei:idno[@type='URI'][starts-with(.,$global:base-uri)])
     let $rec-type := string($place-name/ancestor::tei:place/@type)
-    let $title := 
-        if($place-name/ancestor::tei:TEI/descendant::tei:titleStmt/tei:title[1]) then 
-            normalize-space(replace($place-name/ancestor::tei:TEI/descendant::tei:titleStmt/tei:title[1]/text(),'—',''))
-        else $place-name/ancestor::tei:body/descendant::*[contains(@syriaca-tags,'#syriaca-headword')][starts-with(@xml:lang,'en')][1]/text()
+    let $title := $place-name/ancestor::tei:TEI/descendant::tei:title[1]/text()
     let $geo := $place-name
     let $rel := string($place-name/ancestor::*:relation/@name)
     return
         if($output = 'kml') then geo:build-kml($geo,$id,$rec-type,$title)
-        else geo:build-json($geo,$id,$rec-type,$title,$rel)
+        else geo:build-json($geo,$id,$rec-type,$title,$rel,count($geo-search))
 };
 
 (:~
@@ -114,12 +118,13 @@ declare function geo:kml-wrapper($geo-search as element()*, $type as xs:string*,
  : @param $output indicates json or kml
 :)
 declare function geo:json-wrapper($geo-search as element()*, $type as xs:string*, $output as xs:string*) as element()*{
-    <json type="object">
-        <pair name="type" type="string">FeatureCollection</pair>
-        <pair name="features"  type="array">
+    <root>
+        <type>FeatureCollection</type>
+        <features>
             {geo:get-coordinates($geo-search,$type,$output)}
-        </pair>
-    </json>
+        </features>
+    </root>
+
 };
 
 (:~
@@ -129,7 +134,11 @@ declare function geo:json-wrapper($geo-search as element()*, $type as xs:string*
  : @param $output indicates json or kml
 :)
 declare function geo:json-transform($geo-search as node()*, $type as xs:string*, $output as xs:string*){
-    xqjson:serialize-json(geo:json-wrapper($geo-search, $type, $output))
+    (:xqjson:serialize-json(geo:json-wrapper($geo-search, $type, $output)):)
+    serialize(geo:json-wrapper($geo-search, $type, $output), 
+        <output:serialization-parameters>
+            <output:method>json</output:method>
+        </output:serialization-parameters>)
 };
 
 (:~
@@ -253,11 +262,10 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
     <div id="map-data" style="margin-bottom:3em;">
         <script src="http://maps.googleapis.com/maps/api/js">//</script>
         <div id="map"/>
-        <!--
         <div class="hint map pull-right">* {count($geo-search)} have coordinates and are shown on this map. 
              <button class="btn btn-link" data-toggle="modal" data-target="#map-selection" id="mapFAQ">Read more...</button>
         </div>
-        -->
+    
         <script type="text/javascript">
             <![CDATA[
             var map;
