@@ -263,7 +263,7 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
         <script src="http://maps.googleapis.com/maps/api/js">//</script>
         <div id="map"/>
         <div class="hint map pull-right">* {count($geo-search)} have coordinates and are shown on this map. 
-             <button class="btn btn-link" data-toggle="modal" data-target="#map-selection" id="mapFAQ">Read more...</button>
+            <!-- <button class="btn btn-link" data-toggle="modal" data-target="#map-selection" id="mapFAQ">Read more...</button>-->
         </div>
     
         <script type="text/javascript">
