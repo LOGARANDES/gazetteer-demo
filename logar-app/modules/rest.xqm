@@ -190,12 +190,17 @@ function api:get-atom-feed($start as xs:integer*, $perpage as xs:integer*){
      )
 };
 
+
 (:~
  : Returns tei record for syriaca.org subcollections
 :)
 declare function api:get-tei-rec($collection as xs:string, $id as xs:string) as node()*{
-    global:get-rec($id)
+    let $id :=
+        if(contains($id,$global:base-uri)) then $id
+        else concat($global:base-uri,'/place/',$id) 
+    return  global:get-rec($id)
 };
+
 
 (:~
  : Build selects coordinates
