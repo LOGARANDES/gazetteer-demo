@@ -32,7 +32,7 @@
     var synagogue = new L.LayerGroup();
     var temple = new L.LayerGroup();
     var unknown = new L.LayerGroup();
-    $.getJSON('/exist/apps/srophe/modules/geojson.xql',function(data){
+    $.getJSON('/exist/apps/logar/modules/geojson.xql',function(data){
           var geojson = L.geoJson(data, {
             onEachFeature: function (feature, layer){
             var type = feature.properties.placeType;

@@ -38,7 +38,7 @@ declare variable $repository-name    := 'Syriaca.org';
 declare variable $admin-email        := 'david.a.michelson@vanderbilt.edu';
 declare variable $hits-per-page      := 10;
 declare variable $earliest-datestamp := '2012-01-01';
-declare variable $_docs              := string("collection('/db/apps/srophe/data')//tei:TEI");
+declare variable $_docs              := string("collection('/db/apps/logar-data/data')//tei:TEI");
 declare variable $oai-domain         := 'syriaca.org';
 declare variable $id-scheme          := 'oai';
 

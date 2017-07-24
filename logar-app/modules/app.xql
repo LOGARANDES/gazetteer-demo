@@ -143,7 +143,7 @@ declare %templates:wrap function app:contact-form($node as node(), $model as map
                         </button>
                         <h2 class="modal-title" id="feedbackLabel">Corrections/Additions?</h2>
                     </div>
-                    <form action="/exist/apps/srophe/modules/email.xql" method="post" id="email" role="form">
+                    <form action="/exist/apps/logar/modules/email.xql" method="post" id="email" role="form">
                         <div class="modal-body" id="modal-body">
                             <input type="text" name="name" placeholder="Name" class="form-control" style="max-width:300px"/>
                             <br/>
