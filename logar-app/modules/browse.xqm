@@ -111,7 +111,8 @@ if($browse:view = 'type' or $browse:view = 'date') then
                  <ul>{browse:get-data($node,$model,$coll)}</ul>)
             else <h3>Select Date</h3>  
         else ()}</div>)
-else if($browse:view = 'map') then browse:get-map($node, $model)
+else if($browse:view = 'map') then 
+    <div style="height:100%;padding:0;margin-top:-3.5em;">{browse:get-map($node, $model)}</div>
 else 
     <div class="col-md-12">
         { (
@@ -130,11 +131,11 @@ else
  : Full page map. 
 :)
 declare function browse:get-map($node as node(), $model as map(*)){
-    <div class="map-wrapper">
-    {browse:filter-map($node,$model)}
-    <div class="col-md-12 map-lg">
-        {geo:build-map($model("browse-data")//tei:location[@type='gps']/tei:geo, '', '')}
-    </div>
+    <div class="map-wrapper" style="height:100%;">
+        {browse:filter-map($node,$model)}
+        <div class="map-lg">
+            {geo:build-map($model("browse-data")//tei:location[@type='gps']/tei:geo, '', '')}
+        </div>
     </div>
     
 };
