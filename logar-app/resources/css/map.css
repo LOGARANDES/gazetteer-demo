@@ -1,13 +1,12 @@
 /* Full page map styles */
 
 body, html, #main, #content, .map-lg, #map-data {
-  height: 100% !important;
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 } 
 body{ position: relative;}
-#map-data{margin-bottom:3em; height: 100%;} 
 #map{
     min-height: 500px;
     height: 100%;
