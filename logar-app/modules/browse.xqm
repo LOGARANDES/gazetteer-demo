@@ -131,10 +131,10 @@ else
 :)
 declare function browse:get-map($node as node(), $model as map(*)){
     <div class="map-wrapper">
-    {browse:filter-map($node,$model)}
-    <div class="col-md-12 map-lg">
-        {geo:build-map($model("browse-data")//tei:location[@type='gps']/tei:geo, '', '')}
-    </div>
+        {browse:filter-map($node,$model)}
+        <div class="map-lg">
+            {geo:build-map($model("browse-data")//tei:location[@type='gps']/tei:geo, '', '')}
+        </div>
     </div>
     
 };
