@@ -16,7 +16,7 @@ declare option exist:serialize "method=xml media-type=text/xml indent=yes";
 
 declare function local:recaptcha(){
 (: Need to use cryptographic module to decrypt environment variable, also need to run as admin to get environment variable. :)
-let $recapture-private-key := "ADD KEY" 
+let $recapture-private-key := "LciPDkUAAAAAG4O_jrVL_g7rBN0JR_wp6oAwlhN" 
 return 
     recap:validate($recapture-private-key, 
     request:get-parameter("g-recaptcha-response",()))
