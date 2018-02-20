@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>Syriaca.org Place Editor</title>
         <meta name="author" content="wsalesky at gmail.com"/>
@@ -200,10 +200,7 @@
                                 <div class="tab-content col-md-10 col-sm-9">
                                     <div class="tab-pane active" id="names">
                                         <h3>Names of Place 
-                                            <a class="togglelink link btn-sm btn-info pull-right" style="margin-top:0;"
-                                                data-toggle="collapse" 
-                                                data-target="#name-instructions" href="#name-instructions" 
-                                                data-text-swap="Show Instructions"> 
+                                            <a class="togglelink link btn-sm btn-info pull-right" style="margin-top:0;" data-toggle="collapse" data-target="#name-instructions" href="#name-instructions" data-text-swap="Show Instructions"> 
                                                 Instructions </a>
                                         </h3>
                                         <div class="collapse in alert alert-warning" id="name-instructions">
@@ -301,10 +298,7 @@
                                     </div>
                                     <div class="tab-pane" id="details">
                                         <h3>Locations
-                                            <a class="togglelink link btn-sm btn-info pull-right" style="margin-top:0;"
-                                                data-toggle="collapse" 
-                                                data-target="#location-instructions" href="#name-instructions" 
-                                                data-text-swap="Show Instructions"> 
+                                            <a class="togglelink link btn-sm btn-info pull-right" style="margin-top:0;" data-toggle="collapse" data-target="#location-instructions" href="#name-instructions" data-text-swap="Show Instructions"> 
                                                 Instructions </a>
                                         </h3>
                                         <div class="collapse in alert alert-warning" id="location-instructions">
@@ -404,10 +398,7 @@
                                     </div>
                                     <div class="tab-pane" id="sources">
                                         <h3>Sources
-                                            <a class="togglelink link btn-sm btn-info pull-right" style="margin-top:0;"
-                                                data-toggle="collapse" 
-                                                data-target="#location-instructions" href="#sources-instructions" 
-                                                data-text-swap="Show Instructions"> 
+                                            <a class="togglelink link btn-sm btn-info pull-right" style="margin-top:0;" data-toggle="collapse" data-target="#location-instructions" href="#sources-instructions" data-text-swap="Show Instructions"> 
                                                 Instructions </a>
                                         </h3>
                                         <div class="collapse in alert alert-warning" id="sources-instructions">
