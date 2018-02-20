@@ -319,10 +319,10 @@
                                                         <xf:label>Coordinates</xf:label>
                                                         <xf:hint>*Enter latitude then longitude, seperated by a space.</xf:hint>
                                                     </xf:input>
-                                                    <xf:input ref="tei:lat">
+                                                    <xf:input ref="tei:lat" class="input-sm">
                                                         <xf:label>Latitude</xf:label>
                                                     </xf:input>
-                                                    <xf:input ref="tei:long">
+                                                    <xf:input ref="tei:long" class="input-sm">
                                                         <xf:label>Longitude</xf:label>
                                                     </xf:input>
                                                     <span>
