@@ -361,8 +361,9 @@ declare %templates:wrap function place:contact($node as node(), $model as map(*)
                 <input type="hidden" name="id" value="{$place:id}"/>
                 <input type="hidden" name="place" value="{string($model("data")//tei:place/tei:placeName[1])}"/>
                 <!-- start reCaptcha API-->
-                <script src='https://www.google.com/recaptcha/api.js'></script>
-                <div class="g-recaptcha" data-sitekey="6LciPDkUAAAAAG4O_jrVL_g7rBN0JR_wp6oAwlhN"></div>
+                {if($global:recaptcha != '') then 
+                    (<script src='https://www.google.com/recaptcha/api.js'></script>,<div class="g-recaptcha" data-sitekey="{$global:recaptcha}"></div>)
+                else ()}
             </div>
             <div class="modal-footer">
                 <button class="btn btn-default" data-dismiss="modal">Close</button><input id="email-submit" type="submit" value="Send e-mail" class="btn"/>

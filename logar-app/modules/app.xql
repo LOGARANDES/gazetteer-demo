@@ -71,7 +71,7 @@ if($app:id) then
         if(contains(request:get-uri(),$global:base-uri)) then $app:id
         else if($coll = 'places') then concat($global:data-root,'/place/',$app:id) 
         else $app:id
-    return map {"data" := collection($global:data-root)//tei:idno[@type='URI'][. = $id]}
+    return map {"data" := collection($global:data-root)//tei:idno[@type='URI'][. = $app:id]}
 else map {"data" := 'Page data'}    
 };
 
@@ -123,6 +123,20 @@ declare function app:get-dc-metadata(){
     else ()
 };
 
+declare %templates:wrap function app:corrections($node as node(), $model as map(*), $collection as xs:string?){
+let $id := global:resolve-id()
+return         
+    <div class="modal fade srophe-modal-lg" tabindex="-1" role="dialog" aria-labelledby="correctionsLabel" id="corrections">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button><h2 class="modal-title" id="feedbackLabel">Corrections/Additions?</h2>
+                </div>
+                <iframe src="{$global:app-root}/forms/form.xq?form=srophe/place-additions.xml&amp;id={$id}" class="srophe-modal-lg"/>
+            </div>
+        </div>
+    </div>
+};
 
 (:~
  : Generic contact form can be added to any page by calling:
@@ -130,8 +144,7 @@ declare function app:get-dc-metadata(){
  : with a link to open it that looks like this: 
  : <button class="btn btn-default" data-toggle="modal" data-target="#feedback">CLink text</button>&#160;
 :)
-declare %templates:wrap function app:contact-form($node as node(), $model as map(*))
-{
+declare %templates:wrap function app:contact-form($node as node(), $model as map(*)){
     <div> 
         <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedbackLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -143,7 +156,7 @@ declare %templates:wrap function app:contact-form($node as node(), $model as map
                         </button>
                         <h2 class="modal-title" id="feedbackLabel">Corrections/Additions?</h2>
                     </div>
-                    <form action="/exist/apps/logar/modules/email.xql" method="post" id="email" role="form">
+                    <form action="{$global:app-root}/modules/email.xql" method="post" id="email" role="form">
                         <div class="modal-body" id="modal-body">
                             <input type="text" name="name" placeholder="Name" class="form-control" style="max-width:300px"/>
                             <br/>
@@ -153,12 +166,13 @@ declare %templates:wrap function app:contact-form($node as node(), $model as map
                             <br/>
                             <textarea name="comments" id="comments" rows="3" class="form-control" placeholder="Comments" style="max-width:500px"/>
                             <!-- start reCaptcha API-->
-                            <script src='https://www.google.com/recaptcha/api.js'></script>
-                            <div class="g-recaptcha" data-sitekey="6LciPDkUAAAAAG4O_jrVL_g7rBN0JR_wp6oAwlhN"></div>
+                            {if($global:recaptcha != '') then 
+                                <div class="g-recaptcha" data-sitekey="{$global:recaptcha}"></div>
+                            else ()}
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-default" data-dismiss="modal">Close</button>
-                            <input id="email-submit" type="submit" value="Send e-mail" class="btn"/>
+                            <input id="email-submit" type="submit" value="Send e-mail" class="btn btn-primary"/>
                         </div>
                   </form>
           </div>

@@ -199,10 +199,8 @@ let $syr-title :=
              else 'NA'  
 let $title := if($browse:view = 'syr') then $syr-title else $en-title
 let $browse-title := browse:build-sort-string($title)
-order by $browse-title collation "?lang=en&lt;syr&amp;decomposition=full"             
-return 
- if($browse:view = 'syr') then common:display-recs-short-view($data,'syr') 
- else common:display-recs-short-view($data,'')
+order by $browse-title             
+return common:display-recs-short-view($data,'')
 ) 
 };
  

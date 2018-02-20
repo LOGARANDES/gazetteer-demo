@@ -484,12 +484,50 @@ label.error {
     line-height:36px;
 
 } 
+
+.srophe-modal-lg .modal-dialog {
+  position:absolute;
+  top:50% !important;
+  transform: translate(0, -50%) !important;
+  -ms-transform: translate(0, -50%) !important;
+  -webkit-transform: translate(0, -50%) !important;
+  margin:auto 5%;
+  width:90%;
+  height:80%;
+}
+
+.srophe-modal-lg .modal-content {
+  min-height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0; 
+}
+
 /*
-.modal {
-    width: 50% !important; 
-    margin-left:-25%;  
+.srophe-modal-lg .modal-dialog {
+  width: 95%;
+  height: 95%;
+  margin: 0;
+  padding: 0;
+}
+
+.srophe-modal-lg .modal-content {
+  height: auto;
+  min-height: 95%;
+  border-radius: 0;
 }
 */
+.srophe-modal-lg iframe{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  overflow: scroll;
+};
 
 .transparent {
     /* default fallback */
