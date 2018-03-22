@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xf="http://www.w3.org/2002/xforms">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <head>
         <title>Syriaca.org Place Editor</title>
         <meta name="author" content="wsalesky at gmail.com"/>
@@ -22,17 +22,6 @@
                      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
                  };
                  //to use: getUrlParameter('id'); 
-                 
-                $("[data-toggle='collapse']").click(function(e) {
-                    var $this = $(this);
-                    var $icon = $this.find("span[class^='icon-chevron']");
-                
-                    if ($icon.hasClass('icon-chevron-right')) {
-                        $icon.removeClass('icon-chevron-right').addClass('icon-chevron-down');
-                    } else {
-                        $icon.removeClass('icon-chevron-down').addClass('icon-chevron-right');
-                    }
-                });
             ]]>
         </script>
         <xf:model id="m-place">
@@ -103,17 +92,16 @@
             <!-- Download -->
             <xf:submission id="s-download-xml" ref="instance('i-rec')" show="new" method="post" replace="all" action="form.xq?form=srophe/download.xml?type=download"/>
             <!-- Save -->
-            <xf:submission id="s-save" resource="services/submit.xql?type=save" ref="instance('i-rec')" replace="instance" instance="i-submission" method="post">
+            <xf:submission id="s-save-old" resource="services/submit.xql?type=save" ref="instance('i-rec')" replace="instance" instance="i-submission" method="post">
                 <xf:action ev:event="xforms-submit-done">
-                    <!--<xf:message>Yay! you saved the form. good job</xf:message>-->
                     <xf:message ref="instance('i-submission')//*:message"/>
                 </xf:action>
                 <xf:action ev:event="xforms-submit-error">
                     <xf:message ref="instance('i-submission')//*:message"/>
                 </xf:action>
             </xf:submission> 
-            <!-- Submit and merge user submissions from webstie  -->
-            <xf:submission id="s-merge" resource="services/submit.xql?type=merge" ref="instance('i-rec')" replace="instance" instance="i-submission" method="post">
+            
+            <xf:submission id="s-save" ref="instance('i-rec')" replace="instance" instance="i-submission" action="services/submit.xql?type=save" method="post">
                 <xf:action ev:event="xforms-submit-done">
                     <xf:message ref="instance('i-submission')//*:message"/>
                 </xf:action>
@@ -121,6 +109,7 @@
                     <xf:message ref="instance('i-submission')//*:message"/>
                 </xf:action>
             </xf:submission>
+             
             <!-- Get record for editing -->
             <xf:submission id="s-get-rec" method="get" ref="instance('i-rec')" replace="instance" instance="i-rec" serialization="none" mode="synchronous">
                 <xf:resource value="concat('services/get-rec.xql?id=',javascript:getUrlParameter('id'))"/>
@@ -458,7 +447,7 @@
                                                     <xf:trigger class="btn btn-default pull-right" appearance="minimal">
                                                         <xf:label>Save </xf:label>
                                                         <xf:action ev:event="DOMActivate">
-                                                            <xf:setvalue ref="instance('i-new-bibl')//tei:bibl[1]/@xml:id" value="concat('bibl','-',count(instance('i-rec')//tei:place//tei:bibl) + 1)"/>
+                                                            <xf:setvalue ref="instance('i-new-bibl')//tei:bibl[1]/@xml:id" value="concat('bib',substring-before(substring-after(instance('i-rec')//tei:idno[1],'/logarandes.org/place/'),'/tei'),'-',count(instance('i-rec')//tei:place//tei:bibl) + 1)"/>
                                                             <xf:insert ev:event="DOMActivate" ref="instance('i-rec')//tei:place/child::*" at="last()" position="after" origin="instance('i-new-bibl')//tei:bibl[1]"/>
                                                             <xf:setvalue ref="instance('i-new-bibl')//tei:bibl[1]" value="''"/>
                                                         </xf:action>

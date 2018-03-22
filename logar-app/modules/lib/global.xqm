@@ -24,7 +24,7 @@ declare variable $global:app-root :=
     ;
     
 (: Get repo.xml to parse global varaibles :)
-declare variable $global:get-repo := doc($global:app-root || '/repo.xml');
+declare variable $global:get-repo := doc($global:app-root || '/repo-config.xml');
 
 (: Get config.xml to parse gitsync, recaptcha and others :)
 declare variable $global:get-config := doc($global:app-root || '/config.xml');
