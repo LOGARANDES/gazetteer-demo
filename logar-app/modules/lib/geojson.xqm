@@ -274,6 +274,7 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
             
             function initialize(){
                 map = new google.maps.Map(document.getElementById('map'), {
+                    //maxZoom: 10,
                     center: new google.maps.LatLng(0,0),
                     mapTypeId: google.maps.MapTypeId.TERRAIN
                 });
@@ -305,18 +306,27 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
          			})(marker, data);
                     bounds.extend(latLng);
                 }
-                
-                map.fitBounds(bounds);
-                // Adjusts zoom for single items on the map
-                google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-                  if (this.getZoom() > 10) {
-                    this.setZoom(10);
-                  }
+                // This is needed to set the zoom after fitbounds, 
+                google.maps.event.addListener(map, 'zoom_changed', function() {
+                    zoomChangeBoundsListener = 
+                        google.maps.event.addListener(map, 'bounds_changed', function(event) {
+                            if (this.getZoom() > 10 && this.initialZoom == true) {
+                                // Change max/min zoom here
+                                this.setZoom(10);
+                                this.initialZoom = false;
+                            }
+                        google.maps.event.removeListener(zoomChangeBoundsListener);
+                    });
                 });
+                map.initialZoom = true;
+                map.fitBounds(bounds);
+                
+                //map.fitBounds(bounds);
+
             }
 
             google.maps.event.addDomListener(window, 'load', initialize)
-
+            
         ]]>
         </script>
          <div>
