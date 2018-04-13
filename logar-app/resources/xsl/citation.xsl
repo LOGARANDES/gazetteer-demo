@@ -55,8 +55,8 @@
     <xsl:template match="t:titleStmt" mode="cite-foot">
     <!-- creator(s) of the entry -->
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:if test="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',2)!=''">
-            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',2)"/>
+        <xsl:if test="local:emit-responsible-persons-all(t:editor[@role='creator'],'footnote')!=''">
+            <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='creator'],'footnote')"/>
             <xsl:text>, </xsl:text>            
         </xsl:if>
 
@@ -73,7 +73,7 @@
         <xsl:if test="t:editor[@role='general']">
             <xsl:text>, eds. </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
+            <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='general'],'footnote')"/>
             <xsl:text>,</xsl:text>
         </xsl:if>
     
@@ -96,7 +96,7 @@
         <xsl:value-of select="t:sponsor[1]"/>
         <xsl:text>, ed. </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:principal,'footnote',2)"/>
+        <xsl:sequence select="local:emit-responsible-persons-all(t:principal,'footnote')"/>
         <xsl:if test="following-sibling::t:principal">
             <xsl:text>, </xsl:text>
         </xsl:if>
@@ -114,8 +114,8 @@
     <xsl:template match="t:titleStmt" mode="cite-biblist">
     <!-- creator(s) of the entry -->
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:if test="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',2) != ''">
-            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',2)"/>
+        <xsl:if test="local:emit-responsible-persons-all(t:editor[@role='creator'],'biblist') != ''">
+            <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='creator'],'biblist')"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
     
@@ -132,7 +132,7 @@
         <xsl:if test="t:editor[@role='general']">
             <xsl:text>, edited by </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-            <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='general'],'footnote',2)"/>
+            <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='general'],'footnote')"/>
         </xsl:if>
         <xsl:text>.</xsl:text>
     
@@ -155,7 +155,7 @@
         <xsl:value-of select="t:sponsor[1]"/>
         <xsl:text>, edited by </xsl:text>
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:principal,'footnote',2)"/>
+        <xsl:sequence select="local:emit-responsible-persons-all(t:principal,'footnote')"/>
         <xsl:text>.</xsl:text>
         <xsl:text> </xsl:text>
         <a href="{$uri}">

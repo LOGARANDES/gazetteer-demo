@@ -121,13 +121,13 @@
                                 <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
                                 <xsl:choose>
                                     <xsl:when test="t:author">
-                                        <xsl:sequence select="local:emit-responsible-persons(t:author,'footnote',3)"/>
+                                        <xsl:sequence select="local:emit-responsible-persons-all(t:author,'footnote')"/>
                                     </xsl:when>
                                     <xsl:when test="$edited">
-                                        <xsl:sequence select="local:emit-responsible-persons(t:editor[not(@role) or @role!='translator'],'footnote',3)"/>
+                                        <xsl:sequence select="local:emit-responsible-persons-all(t:editor[not(@role) or @role!='translator'],'footnote')"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:sequence select="local:emit-responsible-persons(t:author,'footnote',3)"/>
+                                        <xsl:sequence select="local:emit-responsible-persons-all(t:author,'footnote')"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
                                 <xsl:if test="not(t:author)">
@@ -159,7 +159,7 @@
                                 <xsl:if test="count(t:editor[@role='translator']) &gt; 0">
                                     <xsl:text>, trans. </xsl:text>
                                     <!-- Process translator using local function in helper-functions.xsl local:emit-responsible-persons -->
-                                    <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='translator'],'footnote',3)"/>
+                                    <xsl:sequence select="local:emit-responsible-persons-all(t:editor[@role='translator'],'footnote')"/>
                                 </xsl:if>
                                 <xsl:apply-templates select="t:imprint" mode="footnote"/>
                                 <xsl:if test="t:pubPlace">
@@ -207,13 +207,13 @@
             </xsl:variable>
             <xsl:choose>
                 <xsl:when test="t:analytic/t:author">
-                    <xsl:sequence select="local:emit-responsible-persons(t:analytic/t:author,'footnote',3)"/>
+                    <xsl:sequence select="local:emit-responsible-persons-all(t:analytic/t:author,'footnote')"/>
                 </xsl:when>
                 <xsl:when test="$edited">
-                    <xsl:sequence select="local:emit-responsible-persons(t:analytic/t:editor[not(@role) or @role!='translator'],'footnote',3)"/>
+                    <xsl:sequence select="local:emit-responsible-persons-all(t:analytic/t:editor[not(@role) or @role!='translator'],'footnote')"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:sequence select="local:emit-responsible-persons(t:analytic/t:author,'footnote',3)"/>
+                    <xsl:sequence select="local:emit-responsible-persons-all(t:analytic/t:author,'footnote')"/>
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:if test="not(t:analytic/t:author)">
@@ -255,13 +255,13 @@
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
         <xsl:choose>
             <xsl:when test="t:monogr/t:author">
-                <xsl:sequence select="local:emit-responsible-persons(t:monogr/t:author,'footnote',3)"/>
+                <xsl:sequence select="local:emit-responsible-persons-all(t:monogr/t:author,'footnote')"/>
             </xsl:when>
             <xsl:when test="$edited">
-                <xsl:sequence select="local:emit-responsible-persons(t:monogr/t:editor[not(@role) or @role!='translator'],'footnote',3)"/>
+                <xsl:sequence select="local:emit-responsible-persons-all(t:monogr/t:editor[not(@role) or @role!='translator'],'footnote')"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:sequence select="local:emit-responsible-persons(t:monogr/t:author,'footnote',3)"/>
+                <xsl:sequence select="local:emit-responsible-persons-all(t:monogr/t:author,'footnote')"/>
             </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="not(t:monogr/t:author)">
@@ -293,7 +293,7 @@
         <xsl:if test="count(t:monogr[1]/t:editor[@role='translator']) &gt; 0">
             <xsl:text>, trans. </xsl:text>
             <!-- Process translator using local function in helper-functions.xsl local:emit-responsible-persons -->
-            <xsl:sequence select="local:emit-responsible-persons(t:monogr[1]/t:editor[@role='translator'],'footnote',3)"/>
+            <xsl:sequence select="local:emit-responsible-persons-all(t:monogr[1]/t:editor[@role='translator'],'footnote')"/>
         </xsl:if>
         <xsl:apply-templates select="t:monogr/t:imprint" mode="footnote"/>
     </xsl:template>
@@ -322,13 +322,13 @@
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
         <xsl:choose>
             <xsl:when test="t:monogr/t:author">
-                <xsl:sequence select="local:emit-responsible-persons(t:monogr/t:author,'biblist',3)"/>
+                <xsl:sequence select="local:emit-responsible-persons-all(t:monogr/t:author,'biblist')"/>
             </xsl:when>
             <xsl:when test="$edited">
-                <xsl:sequence select="local:emit-responsible-persons(t:monogr/t:editor[not(@role) or @role!='translator'],'biblist',3)"/>
+                <xsl:sequence select="local:emit-responsible-persons-all(t:monogr/t:editor[not(@role) or @role!='translator'],'biblist')"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:sequence select="local:emit-responsible-persons(t:monogr/t:author,'biblist',3)"/>
+                <xsl:sequence select="local:emit-responsible-persons-all(t:monogr/t:author,'biblist')"/>
             </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="not(t:monogr/t:author)">
