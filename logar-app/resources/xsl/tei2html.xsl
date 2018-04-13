@@ -949,7 +949,7 @@
     <xsl:template match="t:licence">
         <xsl:if test="@target">
             <a rel="license" href="{@target}">
-                <img alt="Creative Commons License" style="border-width:0" src="{$app-root}/resources/img/cc.png" height="18px"/>
+                <img alt="Creative Commons License" style="border-width:0" src="{$nav-base}/resources/img/cc.png" height="18px"/>
             </a>
         </xsl:if>
         <xsl:apply-templates/>
