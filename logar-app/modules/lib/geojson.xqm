@@ -274,7 +274,6 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
             
             function initialize(){
                 map = new google.maps.Map(document.getElementById('map'), {
-                    //maxZoom: 10,
                     center: new google.maps.LatLng(0,0),
                     mapTypeId: google.maps.MapTypeId.TERRAIN
                 });
@@ -321,12 +320,10 @@ declare function geo:build-google-map($geo-search as node()*, $type as xs:string
                 map.initialZoom = true;
                 map.fitBounds(bounds);
                 
-                //map.fitBounds(bounds);
-
             }
 
             google.maps.event.addDomListener(window, 'load', initialize)
-            
+
         ]]>
         </script>
          <div>
