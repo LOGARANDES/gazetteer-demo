@@ -206,8 +206,7 @@
                         <xsl:otherwise>
                             <xsl:value-of select="@when"/>
                         </xsl:otherwise>
-                    </xsl:choose>
-                    &#160; <xsl:value-of select="."/><br/>
+                    </xsl:choose>. <xsl:value-of select="."/><br/>
                 </xsl:for-each>
             </div>
         </xsl:if>
