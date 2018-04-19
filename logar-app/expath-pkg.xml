@@ -1,4 +1,4 @@
-<package xmlns="http://expath.org/ns/pkg" name="http://logarandes.org/logar" abbrev="logar" version="0.81" spec="1.0">
+<package xmlns="http://expath.org/ns/pkg" name="http://logarandes.org/logar" abbrev="logar" version="0.83" spec="1.0">
     <title>Logar: Linked Open Gazetteer of the Andean Region</title>
     <!-- TEI data -->
     <!--<dependency package="http://logarandes.org/logar-data"/>-->

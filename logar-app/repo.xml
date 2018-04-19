@@ -8,7 +8,5 @@
     <type>application</type>
     <target>logar</target>
     <prepare>pre-install.xql</prepare>
-    <!--<finish>post-install.xql</finish>-->
-    <permissions user="logar" group="logar" mode="rwxrwxr-x"/>
     <deployed>2018-02-20T09:49:34.345-05:00</deployed>
 </meta>
