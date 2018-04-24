@@ -63,7 +63,7 @@ else if(replace($exist:path, $exist:resource,'') =  ($exist:record-uris) or ends
             else $exist:path
         return 
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-                <forward url="{concat('/restxq/srophe', $path)}" absolute="yes"/>
+                <forward url="{concat('/restxq/logar', $path)}" absolute="yes"/>
             </dispatch>
     (: Special handling for collections with app-root that matches record-URI-pattern sends html pages to html, others are assumed to be records :)
     else if($exist:resource = ('index.html','search.html','browse.html','about.html','aggregate.html','factoid.html')) then 
@@ -84,12 +84,7 @@ else if(replace($exist:path, $exist:resource,'') =  ($exist:record-uris) or ends
     else 
         let $id := replace(xmldb:decode($exist:resource), "^(.*)\..*$", "$1")
         let $record-uri-root := replace($exist:path,$exist:resource,'')
-        let $html-path :=
-            if(contains($exist:path,'spear')) then 
-                if(matches($exist:resource,'^[0-9]+-[0-9]+')) then concat('/',$global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@app-root,'/factoid.html')  
-                else if(matches($exist:resource,'^[0-9]+')) then concat('/',$global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@app-root,'/aggregate.html')
-                else concat('/',$global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@app-root,'/record.html')
-            else concat('/',$global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@app-root,'/record.html')
+        let $html-path := concat('/',$global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@app-root,'/record.html')
         return
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
             <forward url="{$exist:controller}{$html-path}"></forward>
@@ -115,15 +110,15 @@ else if (contains($exist:path,'/api/')) then
     </dispatch>
     else if($exist:resource = 'oai') then
      <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{replace($exist:path,'/api/oai','/srophe/modules/oai.xql')}"/>
+        <forward url="{replace($exist:path,'/api/oai','/logar/modules/oai.xql')}"/>
      </dispatch>
     else if($exist:resource = 'sparql') then
      <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{replace($exist:path,'/api/sparql','/srophe/sparql/run-sparql.xql')}"/>
+        <forward url="{replace($exist:path,'/api/sparql','/logar/sparql/run-sparql.xql')}"/>
      </dispatch>
     else
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{concat('/restxq/srophe', $exist:path)}" absolute="yes"/>
+        <forward url="{concat('/restxq/logar', $exist:path)}" absolute="yes"/>
     </dispatch>
 
 else if ($exist:resource eq '' or ends-with($exist:path,"/")) then 

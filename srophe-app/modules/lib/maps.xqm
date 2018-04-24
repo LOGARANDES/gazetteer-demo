@@ -35,8 +35,7 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
         {
             if($total-count gt 0) then 
                <div class="hint map pull-right small">
-                * This map displays {count($nodes)} of {$total-count} places. Only places with coordinates in The Syriac Gazetteer are displayed. 
-                     <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#map-selection" id="mapFAQ">See why?</button>
+                * This map displays {count($nodes)} of {$total-count} places. 
                </div>
             else ()
             }
@@ -143,10 +142,7 @@ declare function maps:build-google-map($nodes as node()*){
     <div id="map-data" style="margin-bottom:3em;">
         <script src="http://maps.googleapis.com/maps/api/js">//</script>
         <div id="map"/>
-        <div class="hint map pull-right">* {count($nodes)} have coordinates and are shown on this map. 
-             <button class="btn btn-link" data-toggle="modal" data-target="#map-selection" id="mapFAQ">Read more...</button>
-        </div>
-    
+       <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
             <![CDATA[
             var map;
@@ -178,7 +174,7 @@ declare function maps:build-google-map($nodes as node()*){
          
          				// Attaching a click event to the current marker
          				google.maps.event.addListener(marker, "click", function(e) {
-         					infoWindow.setContent("<a href='" + data.properties.uri + "'>" + data.properties.name + " - " + data.properties.type + "</a>");
+         					infoWindow.setContent("<a href='" + data.properties.uri + "'>" + data.properties.name + "</a>");
          					infoWindow.open(map, marker);
          				});
          

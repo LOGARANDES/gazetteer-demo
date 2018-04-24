@@ -10,12 +10,7 @@ import module namespace maps="http://syriaca.org/maps" at "../lib/maps.xqm";
 import module namespace tei2html="http://syriaca.org/tei2html" at "../content-negotiation/tei2html.xqm";
 import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
 (: Search modules :)
-import module namespace persons="http://syriaca.org/persons" at "persons-search.xqm";
 import module namespace places="http://syriaca.org/places" at "places-search.xqm";
-import module namespace spears="http://syriaca.org/spears" at "spear-search.xqm";
-import module namespace bhses="http://syriaca.org/bhses" at "bhse-search.xqm";
-import module namespace bibls="http://syriaca.org/bibls" at "bibl-search.xqm";
-import module namespace ms="http://syriaca.org/ms" at "ms-search.xqm";
 
 import module namespace functx="http://www.functx.com";
 import module namespace templates="http://exist-db.org/xquery/templates" ;
@@ -43,29 +38,15 @@ declare variable $search:collection {request:get-parameter('collection', '') cas
 :)
 declare %templates:wrap function search:get-results($node as node(), $model as map(*), $collection as xs:string?, $view as xs:string?){
     let $coll := if($search:collection != '') then $search:collection else $collection
-    let $eval-string := 
-                        if($coll = ('sbd','q','authors','saints','persons')) then persons:query-string($coll)
-                        else if($coll ='spear') then spears:query-string()
-                        else if($coll = 'places') then places:query-string()
-                        else if($coll = ('bhse','nhsl','bible')) then bhses:query-string($collection)
-                        else if($coll = 'bibl') then bibls:query-string()
-                        else if($coll = 'manuscripts') then ms:query-string()
-                        else search:query-string($collection)
-                        
-    return map {"hits" := data:search($eval-string) }  
+    let $eval-string := search:query-string($collection)
+    let $hits := data:search($eval-string)
+    return map {"hits" := util:eval(concat("$hits",facet:facet-filter(facet-defs:facet-definition($collection)))) }  
 };
 
 (: for debugging :)
 declare function search:search-xpath($collection as xs:string?){
    let $coll := if($search:collection != '') then $search:collection else $collection
-    return
-                        if($coll = ('sbd','q','authors','saints','persons')) then persons:query-string($coll)
-                        else if($coll ='spear') then spears:query-string()
-                        else if($coll = 'places') then places:query-string()
-                        else if($coll = ('bhse','nhsl','bible')) then bhses:query-string($collection)
-                        else if($coll = 'bibl') then bibls:query-string()
-                        else if($coll = 'manuscripts') then ms:query-string()
-                        else search:query-string($collection)                    
+   return search:query-string($collection)                    
 };
 
 (:~   
@@ -163,7 +144,7 @@ declare function search:search-string(){
     for  $parameter in $parameters
     return 
         if(request:get-parameter($parameter, '') != '') then
-            if($parameter = 'start' or $parameter = 'sort-element') then ()
+            if($parameter = 'start' or $parameter = 'sort-element' or $parameter = 'fq') then ()
             else if($parameter = 'q') then 
                 (<span class="param">Keyword: </span>,<span class="match">{$search:q}&#160;</span>)
             else (<span class="param">{replace(concat(upper-case(substring($parameter,1,1)),substring($parameter,2)),'-',' ')}: </span>,<span class="match">{request:get-parameter($parameter, '')}&#160; </span>)    
@@ -177,13 +158,7 @@ declare function search:search-string(){
  : @param $collection passed from search page templates
 :)
 declare function search:search-string($collection as xs:string?){
-    if($collection = ('persons','authors','saints','sbd','q')) then persons:search-string()
-    else if($collection ='spear') then spears:search-string()
-    else if($collection = 'places') then places:search-string()
-    else if($collection = 'bhse') then bhses:search-string()
-    else if($collection = 'bibl') then bibls:search-string()
-    else if($collection = 'manuscripts') then ms:search-string()
-    else search:search-string()
+ search:search-string()
 };
 
 (:~ 
@@ -210,12 +185,12 @@ declare  %templates:wrap function search:pageination($node as node()*, $model as
  : @param $node search resuls with coords
 :)
 declare function search:build-geojson($node as node()*, $model as map(*)){
-let $data := $model("hits")//tei:rec
-let $geo-hits := $data//tei:geo
+let $data := $model("hits")
+let $geo-hits := $data/descendant::tei:geo
 return
     if(count($geo-hits) gt 0) then
          (
-         maps:build-map($data[descendant::tei:geo], count($data)),
+         maps:build-map($data[descendant::tei:geo], count($data[descendant::tei:geo])),
          <div>
             <div class="modal fade" id="map-selection" tabindex="-1" role="dialog" aria-labelledby="map-selectionLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -254,14 +229,7 @@ return
 :)
 declare %templates:wrap  function search:show-form($node as node()*, $model as map(*), $collection as xs:string?) {   
     if(exists(request:get-parameter-names())) then ''
-    else 
-        if($collection = ('persons','sbd','authors','q','saints')) then <div>{persons:search-form($collection)}</div>
-        else if($collection ='spear') then <div>{spears:search-form()}</div>
-        else if($collection ='manuscripts') then <div>{ms:search-form()}</div>
-        else if($collection = ('bhse','nhsl')) then <div>{bhses:search-form($collection)}</div>
-        else if($collection ='bibl') then <div>{bibls:search-form()}</div>
-        else if($collection ='places') then <div>{places:search-form()}</div> 
-        else <div>{search:search-form($collection)}</div>
+    else <div>{search:search-form($collection)}</div>
 };
 
 declare function search:show-grps($nodes, $p, $collection){
@@ -286,31 +254,20 @@ declare function search:show-rec($hit, $p, $collection){
                 </span>
              </div>
             <div class="col-md-11" style="margin-right:-1em; padding-top:.25em;">
-                {
-                    if(starts-with(request:get-parameter('author', ''),$global:base-uri)) then global:display-recs-short-view($hit,'',request:get-parameter('author', ''))
-                    else if($collection = 'spear') then 
-                        <div class="results-list inline">
-                            {
-                                if($hit/tei:title) then (' ', <a href="aggregate.html?id={replace($hit//tei:idno,'/tei','')}" class="syr-label">{string-join($hit/descendant-or-self::tei:title[1]/node(),' ')}</a>)
-                                else (
-                                        if($hit/tei:listRelation) then <span class="srp-label">[{concat(' ', functx:camel-case-to-words(substring-after($hit/tei:listRelation/tei:relation/@name,':'),' '))} relation] </span>
-                                        else if($hit/tei:listPerson) then <span class="srp-label">[Person factoid] </span>
-                                        else if($hit/tei:listEvent) then <span class="srp-label">[Event factoid] </span>
-                                        else (),
-                                        <a href="factoid.html?id={string($hit/@uri)}" class="syr-label">{
-                                            if($hit/descendant-or-self::tei:titleStmt) then $hit/descendant-or-self::tei:titleStmt[1]/text()
-                                            else if($hit/tei:listRelation) then 
-                                                <span> {rel:build-short-relationships($hit/tei:listRelation/tei:relation,'')}</span>
-                                            else substring(string-join($hit/child::*[1]/descendant-or-self::*/text(),' '),1,550)
-                                             }</a>
-                                      )}
-                        </div>  
-                        else if(request:get-parameter('relation', '') and $collection = 'spear') then 
-                            <a href="factoid.html?id={string($hit/@uri)}">{rel:relationship-sentence($hit/descendant::tei:relation)}</a>
-                        else tei2html:summary-view($hit, (), $hit/descendant::tei:idno[1])
-                    }
+                { tei2html:summary-view($hit, (), $hit/descendant::tei:idno[1]) }
             </div>
     </div>                   
+};
+
+declare function search:display-map($node as node()*, $model as map(*), $collection as xs:string?) {
+    <div xmlns="http://www.w3.org/1999/xhtml">{search:build-geojson($node,$model)}</div>
+};
+
+declare function search:display-facets($node as node()*, $model as map(*), $collection as xs:string?) {
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Browse by</h2>
+    <div >{facet:html-list-facets-as-buttons(facet:count($model("hits"), facet-defs:facet-definition($collection)/facet:facet-definition))}</div>
+</div>    
 };
 
 (:~ 
@@ -319,30 +276,21 @@ declare function search:show-rec($hit, $p, $collection){
 declare 
     %templates:default("start", 1)
 function search:show-hits($node as node()*, $model as map(*), $collection as xs:string?) {
-<div class="indent" id="search-results">
-    <div>{search:build-geojson($node,$model)}</div>
+<div class="indent" id="search-results" xmlns="http://www.w3.org/1999/xhtml">
     {
-        let $hits := $model("hits")
-        return 
-            if($collection = 'spear') then
-                for $hit at $p in subsequence($hits, $search:start, $search:perpage)
-                return search:show-rec($hit, $p, $collection)
-            else if($collection = 'subjects') then
-                for $hit at $p in subsequence($hits, $search:start, $search:perpage)
-                return search:show-rec($hit, $p, $collection)            
-            else
-                for $hit at $p in subsequence($hits, $search:start, $search:perpage)
-                return search:show-rec($hit, $p, $collection)
-            (:
-                let $tree := data:search-nested-view($model("hits"))
-                for $hit at $p in subsequence($tree, $search:start, $search:perpage)
-                let $id := $hit//tei:idno[1]
-                return
-                    <div class="results" style="border-bottom:1px dotted #eee; padding-top:.5em; padding-top:1em;">
-                        {search:show-grps(data:get-children($hits, $id[1]), $p, $collection)}
-                    </div>
-             :)       
-     } 
+            let $hits := $model("hits")
+            for $hit at $p in subsequence($hits, $search:start, $search:perpage)
+            let $id := replace($hit/descendant::tei:idno[1],'/tei','')
+            return 
+             <div class="row record" xmlns="http://www.w3.org/1999/xhtml" style="border-bottom:1px dotted #eee; padding-top:.5em">
+                 <div class="col-md-1" style="margin-right:-1em; padding-top:.25em;">        
+                     <span class="badge" style="margin-right:1em;">{$search:start + $p - 1}</span>
+                 </div>
+                 <div class="col-md-11" style="margin-right:-1em; padding-top:.25em;">
+                     {tei2html:summary-view(root($hit), '', $id)}
+                 </div>
+             </div>   
+   } 
 </div>
 };
 
@@ -420,84 +368,46 @@ return
  : Builds advanced search form
  :)
 declare function search:default-search-form() {   
-<form method="get" action="search.html" xmlns:xi="http://www.w3.org/2001/XInclude"  class="form-horizontal indent" role="form">
-    <h1 class="search-header">Search Syriaca.org (All Publications)</h1>
-    <p class="indent">More detailed search functions are available in each individual <a href="/">publication</a>.</p>
+<form method="get" action="search.html" class="form-horizontal" role="form">
+<h1>Advanced Search</h1>
     <div class="well well-small">
-          <button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#searchTips">
-                Search Help <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-            </button>&#160;
-            <xi:include href="{$global:app-root}/searchTips.html"/>
-        <div class="well well-small" style="background-color:white; margin-top:2em;">
+        <div class="well well-small" style="background-color:white;">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-10">
                 <!-- Keyword -->
                  <div class="form-group">
                     <label for="q" class="col-sm-2 col-md-3  control-label">Keyword: </label>
                     <div class="col-sm-10 col-md-9 ">
-                        <div class="input-group">
-                            <input type="text" id="qs" name="q" class="form-control keyboard"/>
-                            <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
-                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
-                                    </button>
-                                    {global:keyboard-select-menu('qs')}
-                            </div>
-                         </div> 
+                        <input type="text" id="q" name="q" class="form-control"/>
                     </div>
                   </div>
                     <!-- Place Name-->
                   <div class="form-group">
-                    <label for="placeName" class="col-sm-2 col-md-3  control-label">Place Name: </label>
+                    <label for="p" class="col-sm-2 col-md-3  control-label">Place Name: </label>
                     <div class="col-sm-10 col-md-9 ">
-                        <div class="input-group">
-                            <input type="text" id="placeName" name="placeName" class="form-control keyboard"/>
-                            <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
-                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
-                                    </button>
-                                    {global:keyboard-select-menu('placeName')}
-                            </div>
-                         </div>   
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="persName" class="col-sm-2 col-md-3  control-label">Person Name: </label>
-                    <div class="col-sm-10 col-md-9 ">
-                        <div class="input-group">
-                            <input type="text" id="persName" name="persName" class="form-control keyboard"/>
-                            <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
-                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
-                                    </button>
-                                    {global:keyboard-select-menu('persName')}
-                                
-                            </div>
-                         </div>   
+                        <input type="text" id="p" name="p" class="form-control"/>
                     </div>
                   </div>
-                <div class="form-group">
-                    <label for="titleInput" class="col-sm-2 col-md-3  control-label">Title: </label>
-                    <div class="col-sm-10 col-md-9 ">
-                        <div class="input-group">
-                            <input type="text" id="titleInput" name="title" class="form-control keyboard"/>
-                            <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
-                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
-                                    </button>
-                                    {global:keyboard-select-menu('titleInput')}
-                            </div>
-                         </div>   
+                    <!-- Location --> 
+                    <div class="form-group">
+                        <label for="loc" class="col-sm-2 col-md-3  control-label">Location: </label>
+                        <div class="col-md-6 ">
+                            <input type="text" id="loc" name="loc" class="form-control"/>
+                        </div>
+                        <div class="col-md-3">
+                             <select name="type" id="type" class="form-control">
+                                <option value="">- Select -</option>
+                                <option value="audiencia">Audiencia</option>
+                                <option value="ciudad">ciudad</option>
+                                <option value="corregimiento">Corregimiento</option>
+                                <option value="repartimiento">repartimiento</option>
+                                <option value="pueblo">Pueblo</option>
+                            </select>
+                         </div>
                     </div>
-                  </div>
-              <div class="form-group">
-                    <label for="uri" class="col-sm-2 col-md-3  control-label">Syriaca.org URI: </label>
-                    <div class="col-sm-10 col-md-9 ">
-                        <input type="text" id="uri" name="uri" class="form-control"/>
+                    
                     </div>
-               </div> 
-               </div>
-            </div>    
+            </div>
         </div>
         <div class="pull-right">
             <button type="submit" class="btn btn-info">Search</button>&#160;

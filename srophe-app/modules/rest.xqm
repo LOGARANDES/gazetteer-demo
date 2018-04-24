@@ -33,7 +33,7 @@ declare variable $api:repo {replace($global:app-root, '/db/apps/','')};
 :)
 declare
     %rest:GET
-    %rest:path("/srophe/api/geo/json")
+    %rest:path("/logar/api/geo/json")
     %rest:query-param("type", "{$type}", "")
     %rest:query-param("collection", "{$collection}", "")
 function api:coordinates($type as xs:string*, $collection as xs:string*) {
@@ -48,7 +48,7 @@ function api:coordinates($type as xs:string*, $collection as xs:string*) {
 :)
 declare
     %rest:GET
-    %rest:path("/srophe/api/geo/kml")
+    %rest:path("/logar/api/geo/kml")
     %rest:query-param("type", "{$type}", "")
     %rest:query-param("collection", "{$collection}", "")
 function api:coordinates($type as xs:string*, $collection as xs:string*) {
@@ -65,7 +65,7 @@ function api:coordinates($type as xs:string*, $collection as xs:string*) {
 :)
 declare
     %rest:GET
-    %rest:path("/srophe/api/search")
+    %rest:path("/logar/api/search")
     %rest:query-param("q", "{$q}", "")
     %rest:query-param("element", "{$element}", "")
     %rest:query-param("collection", "{$collection}", "")
@@ -132,7 +132,7 @@ function api:search(
 :)(:
 declare
     %rest:GET
-    %rest:path("/srophe/api/sparql")
+    %rest:path("/logar/api/sparql")
     %rest:query-param("query", "{$query}", "")
     %rest:query-param("format", "{$format}", "")
     %rest:header-param("Content-Type", "{$content-type}")
@@ -156,7 +156,7 @@ function api:coordinates($query as xs:string*, $format as xs:string*, $content-t
 (:
 declare
     %rest:POST('{$data}')
-    %rest:path("/srophe/api/sparql")
+    %rest:path("/logar/api/sparql")
     %rest:header-param("Content-Type", "{$content-type}")
 function api:data-serialize($data as item()*, $content-type as item()*) {
    (<rest:response> 
@@ -177,7 +177,7 @@ function api:data-serialize($data as item()*, $content-type as item()*) {
 :)
 declare
     %rest:GET
-    %rest:path("/srophe/api/data")
+    %rest:path("/logar/api/data")
     %rest:query-param("collection", "{$collection}", "")
     %rest:query-param("format", "{$format}", "")
     %rest:query-param("start", "{$start}", 1)
@@ -203,7 +203,7 @@ function api:data-dump(
 :)
 declare
     %rest:POST('{$data}')
-    %rest:path('/srophe/api/data/serialize')
+    %rest:path('/logar/api/data/serialize')
     %rest:header-param("Content-Type", "{$content-type}")
 function api:data-serialize($data as item()*, $content-type as item()*) {
    cntneg:content-negotiation($data, $content-type,())
@@ -217,7 +217,7 @@ function api:data-serialize($data as item()*, $content-type as item()*) {
   :)
 declare
     %rest:GET
-    %rest:path("/srophe/{$folder}/{$page}")
+    %rest:path("/logar/{$folder}/{$page}")
     %rest:header-param("Content-Type", "{$content-type}")
 function api:get-page($folder as xs:string?, $page as xs:string?, $content-type as item()*) {
     let $path := concat($folder,'/',$page)
@@ -243,7 +243,7 @@ function api:get-page($folder as xs:string?, $page as xs:string?, $content-type 
   :)
 declare
     %rest:GET
-    %rest:path("/srophe/{$folder}/{$page}/{$extension}")
+    %rest:path("/logar/{$folder}/{$page}/{$extension}")
     %rest:header-param("Content-Type", "{$content-type}")
 function api:get-page($folder as xs:string?, $page as xs:string?, $extension as xs:string, $content-type as item()*) {
     let $path := concat($folder,'/',$page,'.',$extension)

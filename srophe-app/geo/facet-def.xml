@@ -1,0 +1,37 @@
+<facets xmlns="http://expath.org/ns/facet">
+    <facet-definition name="Location">
+        <group-by>
+            <sub-path>descendant::tei:location/tei:region[@type='audiencia']/text()</sub-path>
+        </group-by>
+        <facet-definition name="corregimiento">
+            <group-by>
+                <sub-path>descendant::tei:location/tei:region[@type='corregimiento']/text()</sub-path>
+            </group-by>
+            <facet-definition name="repartimiento">
+                <group-by>
+                    <sub-path>descendant::tei:location/tei:region[@type='repartimiento']/tei:placeName[@type='standardized']/text()</sub-path>
+                </group-by>
+                <facet-definition name="ciudad">
+                    <group-by>
+                        <sub-path>descendant::tei:location/tei:region[@type='ciudad']/tei:placeName[@type='standardized']/text()</sub-path>
+                    </group-by>
+                    <facet-definition name="pueblo">
+                        <group-by>
+                            <sub-path>descendant::tei:location/tei:region[@type='pueblo']/tei:placeName[@type='standardized']/text()</sub-path>
+                        </group-by>
+                        <max-values show="20">40</max-values>
+                        <order-by direction="descending">count</order-by>
+                    </facet-definition>
+                    <max-values show="20">40</max-values>
+                    <order-by direction="descending">count</order-by>
+                </facet-definition>
+                <max-values show="20">40</max-values>
+                <order-by direction="descending">count</order-by>
+            </facet-definition>
+            <max-values show="20">40</max-values>
+            <order-by direction="descending">count</order-by>
+        </facet-definition>
+        <max-values show="20">40</max-values>
+        <order-by direction="ascending">count</order-by>
+    </facet-definition>
+</facets>

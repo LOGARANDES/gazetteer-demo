@@ -60,6 +60,29 @@ declare function app:display-rec($node as node(), $model as map(*), $collection 
  : Used by templating module, not needed if full record is being displayed 
 :)
 declare function app:h1($node as node(), $model as map(*)){
+    <div class="title">
+            <h1>{tei2html:tei2html($model("data")/descendant::tei:titleStmt[1]/tei:title[1])}</h1>
+            <!--
+            <span class="uri">
+                <button type="button" class="btn btn-default btn-xs" id="idnoBtn" data-clipboard-action="copy" data-clipboard-target="#syriaca-id">
+                    <span class="srp-label">URI</span>
+                </button>
+                <span id="syriaca-id">{replace($model("data")/descendant::tei:idno[1],'/tei','')}</span>
+                <script><![CDATA[
+                        var clipboard = new Clipboard('#idnoBtn');
+                        clipboard.on('success', function(e) {
+                        console.log(e);
+                        });
+                        
+                        clipboard.on('error', function(e) {
+                        console.log(e);
+                        });]]>
+                </script>   
+            </span>
+            -->
+        </div>
+ 
+ (:
  global:tei2html(
  <srophe-title xmlns="http://www.tei-c.org/ns/1.0">{(
     if($model("data")/descendant::*[@syriaca-tags='#syriaca-headword']) then
@@ -68,6 +91,7 @@ declare function app:h1($node as node(), $model as map(*)){
     $model("data")/descendant::tei:idno[1]
     )}
  </srophe-title>)
+ :)
 }; 
   
 (:~  
@@ -140,19 +164,25 @@ return
     else ()
 };
 
+
 (:~  
  : Display any TEI nodes passed to the function via the paths parameter
  : Used by templating module, defaults to tei:body if no nodes are passed. 
  : @param $paths comma separated list of xpaths for display. Passed from html page  
 :)
-declare function app:display-nodes($node as node(), $model as map(*), $paths as xs:string?){
+declare function app:display-nodes($node as node(), $model as map(*), $paths as xs:string?, $wrap as xs:string?){
     let $data := $model("data")
     return 
-        if($paths != '') then 
-            global:tei2html(
+        if($paths != '') then
+            if($wrap != '') then 
+                global:tei2html(element{xs:QName($wrap)} {
+                    for $p in $paths
+                    return util:eval(concat('$data',$p))
+                    })
+            else global:tei2html(
                     for $p in $paths
                     return util:eval(concat('$data',$p)))
-        else global:tei2html($model("data")/descendant::tei:body)
+        else global:tei2html($model("data")/descendant::tei:body)       
 }; 
 
 (:
@@ -313,7 +343,7 @@ declare function app:display-timeline($node as node(), $model as map(*)){
  : Return tei:body/descendant/tei:bibls for use in sources
 :)
 declare %templates:wrap function app:display-citation($node as node(), $model as map(*)){
-    global:tei2html(<citation xmlns="http://www.tei-c.org/ns/1.0">{$model("data")//tei:teiHeader | $model("data")//tei:bibl}</citation>) 
+    global:tei2html(<citation xmlns="http://www.tei-c.org/ns/1.0">{$model("data")//tei:teiHeader}</citation>) 
 
 };
 

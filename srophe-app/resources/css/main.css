@@ -1,269 +1,85 @@
 /* Application styles could go here */
-/**
- * Colors: 
- * Bllue: 456889
+/*
+ * Colors:
+ * Dark Blue: 456889
+ * Blue/grey: A2B1B9
+ * Light Blue: DDEAF1
+ * Dark Grey #333
+ * Light Grey (text): #999
  */
-/* Import Fonts CSS */ 
 
-@import url("syr-font-families.css");
-
-/* Dev only: corner ribbon */
-/* The ribbons */
-.corner-ribbon{
-  width: 200px;
-  background: #e43;
-  position: absolute;
-  top: 25px;
-  left: -50px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #f0f0f0;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-   z-index: 1500;
-}
-
-.corner-ribbon.sticky{
-  position: fixed;
-}
-
-.corner-ribbon.shadow{
-  box-shadow: 0 0 3px rgba(0,0,0,.3);
-}
-
-.corner-ribbon.top-left{
-  top: 25px;
-  left: -50px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.corner-ribbon.grey{background: #999; background-color: rgba(128,128,128, 0.75);}
-.corner-ribbon.blue{background: #39d;}
-
-.draft-info a{color:white;}
-#draft-info{
-  width: 410px;
-  position: absolute;
-  top: 45px;
-  left: -96px;
-  padding:1.5em 2em;
-  text-align: center;
-  letter-spacing: .75px;
-  color: #f0f0f0;
-  background: #999; background-color: rgba(128,128,128, 0.95);
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-   z-index: 1500;
-}
-   
+/* Import Font css */ 
 
 /* Main content blocks */
-body {font-family: arial, sans-serif; background-color:#385978;}
-#main { padding: 0; background-color:#999; }
-#content{background-color:white; padding-top: 50px;}
-
-/* Removed extra padding introduced by Bootstrap for rows. Was causing issues with background images */
-.row { margin-left: 0px; margin-right: 0px;}
-.container{width:95%; padding:0;}
-
-/* Adds a little extra padding around interior content, useful when for when nav wraps. */
-.interior-content {padding:0; padding-top: 50px;}
-.full-page {margin-top:0;}
-
-/* Navbar styles*/
+ 
+body {background-color:#385978;}
+#main {background-color:#999;}
+#main {margin: 0 auto; padding:0; border-top:1px solid #753C28;}
+.container{width:95%;}
+#content{padding-top:2em; background-color:white; margin:auto;}
 .navbar {border-bottom:4px solid #456889 !important;}
 .navbar-inner {border-bottom:.5em solid #456889 !important;}
 .navbar-inner .container{height: 45px !important; padding-top:.5em; margin-left:.5em;}
-.navbar-brand {margin-top:-.75em; padding-left:0; margin-left:0; margin-right:-2em;}
-.navbar-brand img {padding:0; margin:0; }
 .brand {margin-top:-.75em; margin-left:40px;padding-left:0;}
 .brand img {margin-left:1.5em;padding-left:0;}
+.navbar-brand img {height:40px;}
+
 .navbar-inner .nav > li > a:hover, .advanced-search > a:hover {
         border-bottom: 4px solid #DDEAF1 !important;  
 }
 .navbar-inner > .container > .nav > li.selected {border-bottom: 4px solid #E69849 !important; }
-.advanced-search > a {color:#999; text-decoration:none;}
+.navbar-brand {margin-top:-.2em; padding-left:0;}
+.navbar-brand img {padding-left:0; margin-left:-1em;}
 .navbar .advanced-search{margin-top:-.5em;}
 .navbar-form {overflow:hidden;}
-.keboard-btn {margin-left:-1em;}
 .navbar-input-group {
   font-size: 0px; /*removes whitespace between button and input*/
 }
-
-/*.navbar-form {max-width: 350px;}*/
-/* Nav submenus*/
-.dropdown-submenu {position: relative;}
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
+.navbar-input-group input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
+.navbar-input-group .btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 0px;
 }
-.dropdown-submenu:hover > a:after {
-  border-left-color: #fff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left > .dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-}
+.navbar-form{max-width: 250px;}
 
 /* Nav bar icons for submodules */
 .dropdown-menu li a{margin-left:.5em;}
-
-/* Used for dropdowns next to syriaca.org icon, so both icon and caret are "clickable" */
-.lonely-caret {margin-left:-2em; padding-left:0;}
-
 .nav-icons {
     background-position: left center;
     background-repeat: no-repeat;
-    text-indent:14px;
+    text-indent:12px;
 }
-
-.sub-menu .nav-icons{margin-left:2em;}
-
-.icon-container {display:inline-block; line-height:1.5em;}
-.submodule {margin-left:.75em;}
-.icon-nav {font-size:1.75em; display:inline-block; margin-right:.15em;}
-.icon-text {display:inline-block; margin-top:-.85em; vertical-align: middle; font-weight:500;}
-.nav-text {display:inline-block; line-height:1.5em; margin-top:.25em;}
-
-.banner-container {display:inline-block; line-height:2.5em;}
-.banner-icon {font-size:2.5em; display:inline-block; margin-right:.15em;}
-
- /*
- * font-family: Tahoma, Geneva, sans-serif;
- */
-.banner-text {color: #888; display:inline-block; margin-top:-.95em; vertical-align: middle; letter-spacing: -1px; font:1.35em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}
-
-/* Small Syrica.org icons images for submodules in nav menus */
+/* Small icons for submodules in nav menus */
 .geo-sm-icon {background-image: url(../img/icons-geo-sm.png);}
 .saints-sm-icon {background-image: url(../img/icons-saints-sm.png);}
 .persons-sm-icon {background-image: url(../img/icons-persons-sm.png);}
 .authors-sm-icon {background-image: url(../img/icons-authors-sm.png);}
 .spear-sm-icon {background-image: url(../img/icons-spear-sm.png);}
 .mss-sm-icon {background-image: url(../img/icons-mss-sm.png);}
-.bhse-sm-icon {background-image: url(../img/icons-bhse-sm.png);}
-.nhsl-sm-icon {background-image: url(../img/icons-nhsl-sm.png);}
-.q-sm-icon {background-image: url(../img/icons-q-sm.png);}
 .syriaca-sm-icon {background-image: url(../img/icons-syriaca-sm.png);}
-.rec-status {display:block; width:100% !important; margin-bottom:1em; padding:1em;}
-.info-btns {width:100%; margin-bottom:1em;}
 
-/* Banner styles index page (Colors and images are set by internal css for submodules) */
-.banner-index {
-    position:relative;
-    margin-top:0;
-    padding-top:0;
-	background-image:url('../img/resafa_arch.jpg');
-	background-size:cover;
-	background-position:center;
-	height:200px;
-    width:100%;
-}
-
-/* Bibl banner*/
-.banner-bibl {
-    position:relative;
-    margin-top:-1em;
-    padding-top:0;
-	background-image:url('../img/bibl-banner.png');
-	background-size:cover;
-	background-position:top;
-    height:250px;
-    width:100%;
-    border-bottom:4px solid #456889;
-}
-   
-/* Bibl banner*/
-.banner-bible {
-    position:relative;
-    margin-top:-1em;
-    padding-top:0;
-	background-image:url('../img/bible-banner.png');
-	background-size:cover;
-	background-position:top;
-    height:250px;
-    width:100%;
-    border-bottom:4px solid #456889;
-}
-
-.overlay {
-    font-weight:200;
-    background: rgb(34,34,34); /* for IE */
-    background: rgba(34,34,34,0.65);
-    color: white; 
-    display: inline;
-    padding: 1.5em;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-}
-
-/* Banner styles banner internal pages */
-.banner-interior {
-    position:relative;
-    padding-top:0;
-    border-bottom:4px solid #456889;
-	background-image:url('../img/resafa_arch.jpg');
-	background-size:cover;
-	background-position:center;
-	height:150px;
-    width:100%;
-    overflow-x: hidden; 
-} 
-
-/* Image citation styles */
-.img-credit{
-    position:absolute;
-    bottom:0;
-    right:0;
-    width:100%;
-    text-align:right;
-    font-size: smaller;
-    font-weight:200;
-    background: rgb(34,34,34); /* for IE */
-    background: rgba(34,34,34,0.55);
-    color: white; 
-    display: inline;
-    padding: 0.5em;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-}
-
-
-/* Footer styles */
 footer {text-align:center; color:white;}
 
-/* Simple background color styles */
-.grey {background-color:#eee;}
-.grey-dark {background-color:#ccc;}
-.white {background-color:white;}
-
-/* Block styles */
-.content-block {background-color:#ffffff !important;}
-.top-padding {margin-top:2em;}
-.block {display:block;}
-.banner {font-size: 24px; color:white; background-color:#456889; margin:0 0 1em 0; padding:.5em 1em;; border-bottom:4px solid #456889;}
-
 /* Typography */
-h1 {font-size:1.5em; margin:.25em 0 .25em 0; color:#456889; font-weight:500;}
+h1 {font-size:1.5em; margin:0 0 .25em 0; color:#456889; font-weight:500;}
+/*h2 {font-size:1.5em; margin:0 -1em; padding-left:8px; color:#E69849; font-weight:500;}*/
 h2 {font-size: 1.25em; margin:1em 0 .25em 0; padding-bottom:0; color:#999; font-weight:500;}
-h3 {font-size: 1.2em; margin:1em 0 .25em 0; padding-bottom:0; color:#333; font-weight:500;  padding-bottom:0; margin-bottom:1em;}
-h3.banner-solid {color:white;}
-h3.underline {color:#999; border-bottom:3px solid #456889; padding-bottom:-.75em; margin-bottom:1em; margin-top:0;}
+h3 {font-size: 1.2em; margin:1em 0 .25em 0; padding-bottom:0; color:#333; font-weight:500;}
+h3.underline {color:#333; border-bottom:3px solid #456889; padding-bottom:-.75em; margin-bottom:1em; margin-top:1em;}
 h4 {font-size: 1em; margin:0 0 .25em 0; padding-bottom:0; font-weight:bold;}
+
+.column1 h3{border-bottom:1px solid #999; padding-bottom:0; margin-bottom:1em;}
 h3.label {
     background-color:#ccc;
     line-height: 1.2em;
     font-size: 2em;
     float:left;
 }
+
 h3.syr{
     margin-right:.75em;
     margin-top:.5em;
@@ -271,74 +87,38 @@ h3.syr{
 }
 h4 {font-size: 1em; margin-top:1em;}
 
-.hi {background-color:yellow;}
-
-.white-link{color:white;}
-
-.white-link:focus, .white-link:active:focus, .white-link.active:focus {
-    outline: 0 none;
-    color:white;
-}
-
-.transparent {
-    /* default fallback */
-    background: rgb(255, 255, 255) transparent;
-    /* nice browsers */
-    background: rgba(255, 255, 255, 0.8);
-    
-}
-
-/* Table styles*/
-table {width:98% !important;border-collapse:collapse; font-size:1em; margin-top:1.5em;}
-th {
-    vertical-align:top;
-    padding-bottom:.25em;
-    padding-top:.25em;
-    padding-left:.5em;
-    padding-right:.5em;
-}
-td {
-    vertical-align:top;
-    padding-bottom:.75em;
-    padding-top:.75em;
-    padding-left:.5em;
-    padding-right:1.25em;
-}
-
 /* Lables */
 .get-syriac {font-size:.55em; margin-left:1em;vertical-align:super;font-weight:normal; color: rgb(0,136,204);display:none}
-.rel-label {font-size:1.05em; background-color:none; color:#666; font-weight:500; margin:0; padding:0;}
-.rel-list {padding:0; margin-left:1em;}
-.srp-label {background-color:none; color:#333; font-weight:500;}
-.sort-title {background-color:none; color:#666; font-weight:500; display:block; }
+.srp-label {background-color:none; color:#999999; font-weight:bold;}
 .textBox {display:block;}
-.caveat, .note {font-size: .785em; font-style:italic; margin-top:-.5em; padding-top:0;}
-.teiNote {display:block;}
+.caveat {font-size: .785em; font-style:italic; margin-top:-.5em; padding-top:0;}
 .title {border-bottom:2px solid #666666;margin-bottom:1em; margin-top:0;padding:0;}
 .about {padding-top: .5em; border-bottom:2px solid #666666;margin-bottom:1em;}
 .caption{text-align:center; font-size:.75em;color:grey;}
 .funding {margin:1em;}
 .no-logo {font-size:1.25em; font-weight:600; font-family:serif; color:#333; margin:1em;}
-.label, .badge {white-space: normal;}
+.about-tables {width:90% !important;border-collapse:collapse;}
 .about-tables td {
+    vertical-align:top;
+    padding-bottom:.75em;
+    padding-top:.75em;
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
+    
 }
 .well-white {background-color:white;}
-.section {background-color:white; margin:0 2em;}
+.section {background-color:white; padding:0 1em;}
 .left-padding{padding-left:1em;}
 .top-padding{padding-top:1em;}
 .right-padding{padding-right:1em;}
 .bottom-padding{padding-bottom:1em;}
-.indent{padding-left:1em;}
+
 /*.section ul {padding-left:0;}*/
 .section.type ul {padding-left:0;}
 
 /* Browse page styles */
 .syr-list{padding-right:7em; padding-top:2em; text-align: right;}
 .en-list{padding-left:5em; padding-top:2em;}
-
-.alpha-pages {margin-top:-1.85em;}
 .browse-alpha {border-bottom:1px solid #ccc; padding-left:1em; padding:0; margin-bottom:1em; text-align: justify;}
 
 .browse-alpha li + li {
@@ -348,31 +128,112 @@ td {
 .browse-alpha li.syr-menu + li.syr-menu {
     padding-left: .5em;
 }
-.browse-alpha li.ar-menu + li.ar-menu {
-    padding-left: .15em;
-}
+.browse-alpha li.selected a{padding:5px 5px 5px 3px; color:white !important;}
 
-.browse-alpha li.selected a{color:white; padding-right:.25em;}
 .nav-stacked > .active > a,
-    .nav-stacked > .active > a:hover {
+.nav-stacked > .active > a:hover {
       color: #000;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
       background-color: #eee;
       cursor: pointer;
     }
 
-.browse-map {margin:0;}
+/*.browse-map {margin:0;}*/
 .inline-map {margin-left:-2em; margin-bottom:1em;}
-.map-lg #map {height:500px !important;}
-.map-md #map {height:300px !important;}
-.map-sm #map {height:250px !important;}
-#map {height:325px !important;}
-.map-pop-title {display:block;font-weight:600; font-size:1.2em; margin-bottom:0; padding-bottom:0;}
-.map-pop-desc {display:block; padding:.5em;}
-.results-list {margin-left: 25px; border-bottom:1px dotted #eee; padding-top:.5em;}
-.results-list-desc{display:block;}
-.pers-label {background-color:#999; font-weight:400; margin-right:4px;}
-.results-list-desc .pers-label .footnote-refs,.results-list .footnote-refs, .relation .footnote-refs {display:none; visability:hidden;}
+/* Defualt map on place pages */
+.browse #map {    
+    min-height: 450px;
+    height: 95%;
+    width: 100%;
+    padding-top:0;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+.map-data {height:300px;}
+/* Large map on index page */
+#map {min-height: 350px; height: 95%; clear:both;}
+.browse-map {min-height: 450px; height: 95%; clear:both;}
+.map-lg > #map {height:90% !important;}
+.map-md > #map {height:300px !important;}
+.map-sm > #map {height:250px !important;} 
+
+.results-list {margin-left: 25px; border-bottom:1px dotted #eee; padding-top:.5em}
+.results-list-desc {display:block;}
+.results-list-desc .pers-label {background-color:#eee;}
+.results-list-desc .pers-label .footnote-refs {display:none;}
+/* footnote styles */
+.footnote-refs, .footnote-tgt {
+    font-size: .7em;
+    line-height: 0.5em;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+
+}
+.footnote-tgt {
+    margin-left:-1.5em;
+    padding-right:.5em;    
+}
+
+.anchor { 
+    position: relative; 
+    top:-75px !important;
+    visibility: hidden; 
+    }
+    
+.anchor:before {
+  content:"";
+  float: left;
+  height: 0px;
+}
+
+.title-monographic {
+	font-style: italic;
+}
+
+.heading-inline {
+	font-weight: bold;
+}
+
+/* styles for names */
+/*.placeName {
+ font-weight: bold;
+}*/
+
+/* styles for languages and scripts */
+
+:lang(en) {
+	font-family: arial, sans-serif;
+}
+
+:lang(syr),:lang(syc) {
+ font-family: "EstrangeloEdessa", "Estrangelo Edessa", Verdana, Arial, Helvetica, sans-serif;
+  /*font-size:large;*/
+  font-size:1.25em; 
+  line-height:1em;
+  
+}
+
+:lang(syr-Syrj), :lang(syc-Syrj) {
+ font-family: "SertoBatnan", "Serto Batnan", Verdana, Arial, Helvetica, sans-serif;
+  font-size:1.25em; 
+  line-height:1em;
+ 
+}
+
+:lang(syr-Syre), :lang(syc-Syre) {
+ font-family: "EastSyriacAdiabene", "East Syriac Adiabene", Verdana, Arial, Helvetica, sans-serif;
+ font-size:1.25em; 
+ line-height:1em;
+
+}
+
+:lang(ar) {
+ font-family: arial, sans-serif;
+ font-size:1.25em; 
+ line-height:1em;
+ 
+}
 
 /* Browse tabs and side menues */  	
 .tab-pane {
@@ -435,108 +296,9 @@ td {
 .type-content {padding:1em;}
 .type-nav {width: 85%;}
 
-/* Styles for record short view under relation div*/
-.relation {white-space: normal;}
-.relation .results-list-desc.uri{margin-left:0; }
-
-/* footnote styles */
-.footnote-refs, .footnote-tgt {
-    font-size: .7em;
-    line-height: 0.5em;
-    vertical-align: baseline;
-    position: relative;
-    top: -0.4em;
-
-}
-.footnote-tgt {
-    margin-left:-1.5em;
-    padding-right:.5em;    
-}
-
-/*.footnote-links {float:right; overflow:hidden; clear:right;}*/
-.footnote-icon {
-    padding-left:.5em; 
-    font-size:12px; 
-    line-height: 18px;
-    vertical-align: middle;
-    }
-.footnote-icon .glyphicon-book{
-    padding-left:.75em;
-    line-height: 18px;
-    font-size:16px;
-    margin-top: -0.25em;
-    vertical-align: middle;
-    }
-.bibl li{line-height: 1.5em;padding-bottom:.5em;}
-.bibl-links {padding:.25em; width:25px;}
-.anchor { 
-    display: block;
-    position: relative; 
-    top:-75px !important;
-    visibility: hidden; 
-    }
-    
-.anchor:before {
-  content:"";
-  float: left;
-  height: 0px;
-}
-.anchor:target + span.footnote-tgt{
-   background-color: #ffa;
-}
-.anchorHighlight {display:block; content:" "; background-color:yellow; border:1px solid red;}
-
-.heading-inline {
-	font-weight: bold;
-}
-
-
-/* Subject headings */
-.sh {margin-right:.5em; margin-bottom: .5em; line-height:14px; font-weight:normal;}
-.sh-search {text-decoration:none; color:white; margin-left:.5em;}
-.sh .placeName, .sh .pers-label {font-weight:normal; }
-
-.sh .footnote-refs{display:none;}
-
-/* styles for languages and scripts */
-:lang(en) {
-	font-family: arial, sans-serif;
-}
-
-:lang(syr),:lang(syc) {
- font-family: "EstrangeloEdessa", "Estrangelo Edessa", Verdana, Arial, Helvetica, sans-serif;
-  /*font-size:large;*/
-  font-size:1.25em; 
-  line-height:1em;
-  
-}
-
-:lang(syr-Syrj), :lang(syc-Syrj) {
- font-family: "SertoBatnan", "Serto Batnan", Verdana, Arial, Helvetica, sans-serif;
-  font-size:1.25em; 
-  line-height:1em;
- 
-}
-
-:lang(syr-Syre), :lang(syc-Syre) {
- font-family: "EastSyriacAdiabene", "East Syriac Adiabene", Verdana, Arial, Helvetica, sans-serif;
- font-size:1.25em; 
- line-height:1em;
-
-}
-
-:lang(ar) {
- font-family: arial, sans-serif;
- font-size:1.25em; 
- line-height:1em;
- 
-}
-
 
 /* link icon styles (inline) */
-.copy {font-size:1.125em; color:graytext; padding: .035em .2em; margin-right:1em; margin-bottom: 0; box-shadow: 2px 2px 2px #888888;}
-.copy-sm {font-size:.75em; color:graytext; padding: .02em .1em; margin-left:1em; margin-right:1em; margin-bottom: .25em; box-shadow: 2px 2px 2px #888888;}
-#link-icons{padding:0; margin-bottom:0;}
+#link-icons{padding:0; margin:0 0 -1em 0;}
 #link-icons a {
     display:inline-block; 
     padding-right: .5em; 
@@ -633,29 +395,13 @@ div[id|=place] > div:last-of-type {
 }
 
 /* Search styles */
-.search-header {margin-bottom: 1em;}
-.search-inner {margin-top:2em;}
-.search-results {margin-top:1em;}
-#search-results {border-top: 1px solid #eee; margin-top:1em; margin-bottom:1em;}
-
-/* Transparent styles for search box on home pages */
-.transparent-input{
-       color: white;
-       background-color: rgba(245, 245, 245, 0.2);
-       border:3px solid white !important;
-    }
-.transparent-input::-webkit-input-placeholder { color: white; font-size:large;font-weight:500; }
-.transparent-input:-moz-placeholder { color: white; font-size:large;font-weight:500; }
-.transparent-input::-moz-placeholder { color: white; font-size:large;font-weight:500; }
-.transparent-input:-ms-input-placeholder { color: white; font-size:large;font-weight:500; }
 
 .page-bottom .hit-count {display:none;}
-h3.paging {display:block;font-weight:500; color:#666;}
-.search-string{display:block;clear:both;}
+
 .match {
-    font-style:italic; color:gray;
+    font-style:italic; color:blue;
 }
-.param {font-weight:600; color:#666; padding-left:.5em;}
+.param {font-weight:bold;}
 
 .spinner {
   display: inline-block;
@@ -717,7 +463,16 @@ label.error {
   -webkit-font-smoothing: antialiased;
 }
 .feedback {margin-top:1em;}
-.documentation .panel-body ul { margin-left:0; padding-left: 1em;}
+
+/* -- leafletjs styles -- 
+.leaflet-control-layers-list {
+  max-height: 350px;
+  overflow: auto !important;
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+}*/
 
 .leaflet-control-layers-toggle:after{ 
     display:block;
@@ -734,57 +489,92 @@ label.error {
     line-height:36px;
 
 } 
+
+.srophe-modal-lg .modal-dialog {
+  position:absolute;
+  top:50% !important;
+  transform: translate(0, -50%) !important;
+  -ms-transform: translate(0, -50%) !important;
+  -webkit-transform: translate(0, -50%) !important;
+  margin:auto 5%;
+  width:90%;
+  height:80%;
+}
+
+.srophe-modal-lg .modal-content {
+  min-height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0; 
+}
+
 /*
-.modal {
-    width: 50% !important; 
-    margin-left:-25%;  
+.srophe-modal-lg .modal-dialog {
+  width: 95%;
+  height: 95%;
+  margin: 0;
+  padding: 0;
+}
+
+.srophe-modal-lg .modal-content {
+  height: auto;
+  min-height: 95%;
+  border-radius: 0;
 }
 */
-#map {height: 200px;}
+.srophe-modal-lg iframe{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  overflow: scroll;
+};
+
+.transparent {
+    /* default fallback */
+    background: rgb(255, 255, 255) transparent;
+    /* nice browsers */
+    background: rgba(255, 255, 255, 0.8);
+    
+}
 
 .citationinfo {padding:1em; color: #555; border-top:1px solid #666666; background-color:#eee; }
-.preferred-citation {font-size:1.2em;}
+#citation {display:none;}
 .hint{margin:.5em; color: grey; font-style:italic;}
-.uri {margin:0 0 1em; color: #999999;}
+.uri {margin:0 1em 1em; color: #999999;}
 p.single-space{padding:.25em;}
 .teiDocs {padding:.25em; border-bottom:1px solid #eee;}
 
-/* Citation styles */
-/*
-analytic
-monographic
-journal
-series
-unpublished
-*/
-.title-journal, .title-monographic{font-style:italic;}
-
-
 /* Facet styles */
+/*
+.facet-top {margin-top:.25em; 
+  border:1px solid #eee;
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3;
+}*/
+.facet-group-item {
+    padding:.25em;
+    line-height: 1em;
+}
+.facet-group-label {font-weight:600;}
 .label-facet {background-color:#eee; color:#666; font-weight:normal; margin:.25em; display:inline-block;}
-.facet-label {margin-left:.5em; display:block; text-align:left; white-space: normal;}
+.facet-label {margin-left:.5em; padding-left:.5em; display:block; text-align:left !important; }
+.facet-key {
+    border-borrom:1px solid #eee;
+    margin-left:.5em; padding:.5em 1em; display:block; 
+    }
 .facet .icon{margin-left:.25em;}
 
-/* Manuscripts */
-.msItem {margin:0 1em;}
-.msExtent {display:block; margin:0 1em;}
-
-.code-grp {width:100%;}
-.code {
-    text-align:left;
-    border:1px solid #ccc;
-	border-left: 11px solid #ccc;
-	overflow: auto;
-	max-width:inherit;
-    background-color: #F5F5F5;
-    width:90%;
-}
-/* API documentation */
+/*API documentation */
 pre code {
 	line-height: 1.6em;
 	font-size: 11px;
 	}
-	
 pre {
 	padding: 0.1em 0.5em 0.3em 0.7em;
 	border-left: 11px solid #ccc;
@@ -792,92 +582,11 @@ pre {
 	overflow: auto;
 	width: 93%;
 	max-width:inherit;
-	white-space: pre-wrap;       /* CSS 3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 	}
 	
-code.inline{
-    display:inline;
-	padding: 0.1em 0.5em 0.3em 0.7em;
-	border-left: 11px solid #ccc;
-	margin: 1.7em 0 1.7em 0.3em;
-	overflow: auto;
-	max-width:inherit;
-	white-space: pre-wrap;       /* CSS 3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-	}	
 .api-path {width:15%}
 .api-param {width:20%}
 .api-desc {width:55%}
 .api-method {width:10%}
-
-/* Dashboard styles */
-.huge {font-size:2.5em;}
-.dashboard  .panel-heading .glyphicon{font-size:3em; padding-top: .25em;}
-#dashboardOne h4.panel-title {color:#666; font-weight:500; font-size:1.25em;}
-
-/* TEST home page styles*/
-.sub-module {
-  margin: 1.5em;
-  overflow:hidden;
-  background:#eee; 
-  padding:1em;
-  width:250px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.geo { 
-  border-top:10px solid #753C28;
-}
-
-  /* Popover */
-  .tooltip {
-      padding:.25em;
-      overflow:visible;
-  }
-  .tooltip-inner {
-    padding:.25em;
-    padding-left:1.5em;
-    overflow:visible;
-    text-align:center;
-    }
-    
-#moreInfo #map-data {display:none;}
-
-/* new search */
-.mobile-submenu{display:none;}
-
-.group {padding-left:2.5em;}
-.results .record {padding-left:1em;}
-.short-relationships {display:block;}
-.wiki-page-link {font-weight:normal;}
-select.keyboardSelect {display:none;}
-
-/* Timeline title styles */
-.slider-item h3{font-size:1.25em !important;}
-.jump-menu {margin:1em;}
-.jump-menu .jump {margin-right:1em;}
-
-button.bibl-show {margin: .5em -1em;}
-.slide {font-weight:400;}
-.more-info a {font-weight:600; color:white;}
-
-/* Special styles for small screens */
-@media screen and (max-width: 480px) {
-.navbar-collapse, .dropdown-menu {float:none; width:100% !important;}
-.navbar-nav li {width:100% !important; float:none;}
-.mobile-submenu {
-    display: block;
-    float:left;
-    margin-left:3em;
-    }
-.caret {float:left; margin-left:.5em; margin-top:.5em;}    
-}
+.togglelink {clear:both;}
+/*glyphicon glyphicon-plus*/
