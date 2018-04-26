@@ -1,5 +1,8 @@
-Syriaca.org
+LOGAR: Linked Online Gazetteer of the Andean Region
 =======
+An adaptation of Syriaca.org: Gazetteer App [https://github.com/srophe/gazetteer-demo]
+
+##About Syriaca.org
 
 Application data for Syriaca.org [http://syriaca.org]: The Syriac Reference Portal
 All publications of Syriaca.org are made available online in a free and open format using the Creative Commons licenses.
