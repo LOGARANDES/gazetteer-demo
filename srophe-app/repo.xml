@@ -1,0 +1,12 @@
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Logar: Linked Open Gazetteer of the Andean Region</description>
+    <author>Syriaca.org</author>
+    <website>http://logarandes.org/</website>
+    <status>beta</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>logar</target>
+    <prepare>pre-install.xql</prepare>
+    <deployed>2018-04-19T14:52:33.617-04:00</deployed>
+</meta>

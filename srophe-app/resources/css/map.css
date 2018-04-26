@@ -1,0 +1,18 @@
+/* Full page map styles */
+
+body, html, #main, #content,.home-page, .map-lg, #map-data{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} 
+
+body{ position: relative;}
+
+.home-page #map{
+    min-height: 500px;
+    height: 90%;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
