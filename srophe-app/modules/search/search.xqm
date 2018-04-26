@@ -40,7 +40,8 @@ declare %templates:wrap function search:get-results($node as node(), $model as m
     let $coll := if($search:collection != '') then $search:collection else $collection
     let $eval-string := search:query-string($collection)
     let $hits := data:search($eval-string)
-    return map {"hits" := util:eval(concat("$hits",facet:facet-filter(facet-defs:facet-definition($collection)))) }  
+    let $path := concat("$hits",facet:facet-filter(facet-defs:facet-definition($collection)))
+    return map {"hits" := util:eval($path) }  
 };
 
 (: for debugging :)
@@ -230,16 +231,6 @@ return
 declare %templates:wrap  function search:show-form($node as node()*, $model as map(*), $collection as xs:string?) {   
     if(exists(request:get-parameter-names())) then ''
     else <div>{search:search-form($collection)}</div>
-};
-
-declare function search:show-grps($nodes, $p, $collection){
-    for $node in $nodes
-    return 
-        typeswitch($node)
-            case element(tei:grp) return 
-                <div class="indent group">{search:show-grps($node/node(),$p,$collection)}</div>
-            case element(tei:rec) return search:show-rec($node, $p,$collection)
-            default return search:show-grps($node/node(),$p,$collection)
 };
 
 declare function search:show-rec($hit, $p, $collection){

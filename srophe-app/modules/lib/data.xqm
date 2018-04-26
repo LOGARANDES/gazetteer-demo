@@ -66,14 +66,8 @@ let $collection-path :=
         if(global:collection-vars($collection)/@data-root != '') then concat('/',global:collection-vars($collection)/@data-root)
         else if($collection != '') then concat('/',$collection)
         else ()
-let $get-series :=  
-        if(global:collection-vars($collection)/@collection-URI != '') then string(global:collection-vars($collection)/@collection-URI)
-        else ()                             
-let $series-path := 
-        if($get-series != '') then concat("//tei:idno[. = '",$get-series,"'][ancestor::tei:seriesStmt]/ancestor::tei:TEI")
-        else '//tei:TEI'
 return         
-    concat("collection('",$global:data-root,$collection-path,"')",$series-path)
+    concat("collection('",$global:data-root,$collection-path,"')")
 };
 
 (:~
@@ -113,35 +107,37 @@ declare function data:get-browse-data($collection as xs:string*, $element as xs:
     let $sort := 
         if(request:get-parameter('sort', '') != '') then request:get-parameter('sort', '') 
         else if(request:get-parameter('sort-element', '') != '') then request:get-parameter('sort-element', '')
-        else ()        
-    let $hits := util:eval(concat(data:build-collection-path($collection),facet:facet-filter(facet-defs:facet-definition($collection)),data:lang-filter($element)))
+        else ()      
+    let $hits := util:eval(concat(data:build-collection-path($collection),facet:facet-filter(facet-defs:facet-definition($collection))))
     let $hits-main := $hits
     return 
         if(request:get-parameter('view', '') = 'all') then
-            for $hit in $hits-main/ancestor::tei:TEI/descendant::tei:titleStmt/tei:title[1]
-            order by global:build-sort-string(page:add-sort-options($hit,$sort),'') collation "?lang=en&amp;decomposition=standard"
-            return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$hit}">{$hit/ancestor::tei:TEI}</browse>
-    (: Generic options :) 
-        else if(request:get-parameter('alpha-filter', '') = 'ALL') then 
-                for $hit in $hits-main
-                let $title := global:build-sort-string($hit,$data:computed-lang)
-                order by $title
-                return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$hit}">{$hit/ancestor::tei:TEI}</browse>
-        else if(request:get-parameter('alpha-filter', '') != '') then 
-                for $hit in $hits-main[matches(substring(global:build-sort-string(.,$data:computed-lang),1,1),data:get-alpha-filter(),'i')]
-                let $title := global:build-sort-string($hit,$data:computed-lang)
-                order by $title
-                return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$hit}">{$hit/ancestor::tei:TEI}</browse>
-        else if(request:get-parameter('view', '') = 'numeric') then
-            for $hit in $hits-main/ancestor::tei:TEI/descendant::tei:idno[starts-with(.,$global:base-uri)][1]
-            let $rec-id := tokenize(replace($hit,'/tei|/source',''),'/')[last()]
-            order by xs:integer($rec-id)
-            return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$hit}">{$hit/ancestor::tei:TEI}</browse>    
-        else
-            for $hit in $hits-main
-            let $title := global:build-sort-string($hit,$data:computed-lang)
-            order by $title
-            return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$hit}">{$hit/ancestor-or-self::tei:TEI}</browse>
+                for $hit in $hits
+                let $title := $hit/descendant::tei:titleStmt/tei:title[1]
+                order by global:build-sort-string(page:add-sort-options($title,$sort),'')
+                return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$title}">{$hit}</browse>
+            (: Generic options :) 
+            else if(request:get-parameter('alpha-filter', '') = 'ALL') then 
+                    for $hit in $hits
+                    let $title := $hit/descendant::tei:titleStmt/tei:title[1]
+                    order by global:build-sort-string($title,$data:computed-lang)
+                    return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$title}">{$hit}</browse>
+            else if(request:get-parameter('alpha-filter', '') != '') then 
+                    for $hit in $hits[matches(substring(global:build-sort-string(descendant::tei:titleStmt/tei:title[1],$data:computed-lang),1,1),data:get-alpha-filter(),'i')]
+                    let $title := $hit/descendant::tei:titleStmt/tei:title[1]
+                    order by global:build-sort-string($title,$data:computed-lang)
+                    return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$title}">{$hit}</browse>
+            else if(request:get-parameter('view', '') = 'numeric') then
+                for $hit in $hits
+                let $id := $hit/descendant::tei:publicationStmt/tei:idno[starts-with(.,$global:base-uri)][1]
+                let $rec-id := tokenize(replace($id,'/tei|/source',''),'/')[last()]
+                order by xs:integer($rec-id)
+                return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$rec-id}">{$hit}</browse>    
+            else
+                for $hit in $hits
+                let $title := $hit/descendant::tei:titleStmt/tei:title[1]
+                order by global:build-sort-string($title,$data:computed-lang)
+                return <browse xmlns="http://www.tei-c.org/ns/1.0" sort-title="{$title}">{$hit}</browse>
 };
 
 (:

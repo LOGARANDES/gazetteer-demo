@@ -140,6 +140,7 @@ h4 {font-size: 1em; margin-top:1em;}
 
 /*.browse-map {margin:0;}*/
 .inline-map {margin-left:-2em; margin-bottom:1em;}
+
 /* Defualt map on place pages */
 .browse #map {    
     min-height: 450px;
@@ -156,6 +157,29 @@ h4 {font-size: 1em; margin-top:1em;}
 .map-lg > #map {height:90% !important;}
 .map-md > #map {height:300px !important;}
 .map-sm > #map {height:250px !important;} 
+
+/* Map overlay */
+.map-overlay
+{
+    position: fixed; /* Sit on top of the page content */
+    width: 25%; /* Full width (cover the whole page) */
+    max-height:400px;
+    overflow-y:scroll;
+    top: 70px; 
+    right: 50px;
+    /* default fallback */
+    background: rgb(255, 255, 255) transparent;
+    /* nice browsers */
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    border-radius: 20px;
+    padding:1em;
+    font-size: 12px;
+}
+.map-overlay .btn {font-size: 12px !important;}
+.map-overlay .filter-label {font-size: 14px !important; font-weight: 600; color:#333;}
+
+
 
 .results-list {margin-left: 25px; border-bottom:1px dotted #eee; padding-top:.5em}
 .results-list-desc {display:block;}

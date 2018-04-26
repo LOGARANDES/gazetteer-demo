@@ -1,6 +1,6 @@
 /* Full page map styles */
 
-body, html, #main, #content, .map-lg, #map-data {
+body, html, #main, #content,.home-page, .map-lg, #map-data{
   height: 100%;
   width: 100%;
   margin: 0;
@@ -9,50 +9,10 @@ body, html, #main, #content, .map-lg, #map-data {
 
 body{ position: relative;}
 
-#map{
+.home-page #map{
     min-height: 500px;
-    height: 95%;
+    height: 90%;
     width: 100%;
     margin-top: 50px;
     margin-bottom: 0;
 }
-
-#map-filter
-{
-    position: absolute; 
-    top: 50px; 
-    right: 0px; 
-    z-index: 99;
-}
-#showFilters{
-    margin-top:-1em;
-    padding:1em;
-    padding-top:2em;
-    width  : 300px;
-    max-height: 95% !important;
-    /*height : 380px;*/
-    background: white;
-}
-.dropSheet
-{
-    background-color/**/: #000000;
-    background-image/**/: none;
-    opacity: 0.95;
-    filter: alpha(opacity=50);
-}
-/** Leafletjs **/
-.leaflet-control-layers-toggle:after{ 
-    display:block;
-    content:"Map options";
-    font-size:small;
-    color:#000 ;
-    float:left;
-    margin-left:3em;
-}
-.leaflet-control-layers-toggle{ 
-    width:125px !important;
-    background-position: 3px 3px !important;
-    text-decoration:none;
-    line-height:36px;
-
-} 

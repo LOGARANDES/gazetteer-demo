@@ -465,6 +465,23 @@ declare function app:metadata($node as node(), $model as map(*)) {
     )
     else ()
 };
+ 
+
+(: Corrections form, uses XForms, make sure XSLTForms are installed in eXist. :)
+declare %templates:wrap function app:corrections($node as node(), $model as map(*), $collection as xs:string?){
+let $id := global:resolve-id()
+return         
+    <div class="modal fade srophe-modal-lg" tabindex="-1" role="dialog" aria-labelledby="correctionsLabel" id="corrections">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button><h2 class="modal-title" id="feedbackLabel">Corrections/Additions?</h2>
+                </div>
+                <!--<iframe src="{$global:nav-base}/forms/form.xq?form=srophe/place-additions.xml&amp;id={$id}" class="srophe-modal-lg"/>-->
+            </div>
+        </div>
+    </div>
+};
 
 (:~
  : Generic contact form can be added to any page by calling:

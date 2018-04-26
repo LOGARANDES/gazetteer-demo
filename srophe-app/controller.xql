@@ -54,12 +54,12 @@ else if (contains($exist:path, "/$shared/")) then
     </dispatch>
 
 (: Checks for any record uri patterns as defined in repo.xml :)    
-else if(replace($exist:path, $exist:resource,'') =  ($exist:record-uris) or ends-with($exist:path, ("/atom","/tei","/rdf","/ttl",'.tei','.atom','.rdf','.ttl'))) then
+else if(replace($exist:path, $exist:resource,'') =  ($exist:record-uris) or ends-with($exist:path, ("/atom","/tei","/rdf","/ttl","/geojson",'.tei','.atom','.rdf','.ttl',".geojson"))) then
     (: Sends to restxql to handle /atom, /tei,/rdf:)
-    if (ends-with($exist:path, ("/atom","/tei","/rdf","/ttl",'.tei','.atom','.rdf','.ttl'))) then
+    if (ends-with($exist:path, ("/atom","/tei","/rdf","/ttl","/geojson",'.tei','.atom','.rdf','.ttl',".geojson"))) then
         let $path := 
-            if(ends-with($exist:path, (".atom",".tei",".rdf",".ttl"))) then 
-                replace($exist:path, "\.(atom|tei|rdf|ttl)", "/$1")
+            if(ends-with($exist:path, (".atom",".tei",".rdf",".ttl",".geojson"))) then 
+                replace($exist:path, "\.(atom|tei|rdf|ttl|geojson)", "/$1")
             else $exist:path
         return 
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
