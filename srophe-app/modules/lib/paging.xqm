@@ -73,8 +73,8 @@ let $pagination-links :=
                     <p class="col-md-offset-1 hit-count">{$total-result-count} matches for {$search-string}</p>
                     <p class="col-md-offset-1 hit-count note">
                         You may wish to expand your search by using our advanced <a href="search.html">search functions</a> or by 
-                        using wildcard characters to increase results. See  
-                        <a href="#" data-toggle="collapse" data-target="#searchTips">search tips</a> for more details.
+                        using wildcard characters to increase results. 
+                        <!--See  <a href="#" data-toggle="collapse" data-target="#searchTips">search tips</a> for more details.-->
                     </p>        
                  </div>
              else ()
