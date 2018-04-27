@@ -477,7 +477,7 @@ return
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button><h2 class="modal-title" id="feedbackLabel">Corrections/Additions?</h2>
                 </div>
-                <!--<iframe src="{$global:nav-base}/forms/form.xq?form=srophe/place-additions.xml&amp;id={$id}" class="srophe-modal-lg"/>-->
+                <iframe src="{$global:nav-base}/forms/form.xq?form=srophe/place-additions.xml&amp;id={$id}" class="srophe-modal-lg"/>
             </div>
         </div>
     </div>
