@@ -144,7 +144,7 @@ declare function maps:build-google-map($nodes as node()*){
         <div id="map"/>
        <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
-            <![CDATA[
+          <![CDATA[
             var map;
                             
             var bounds = new google.maps.LatLngBounds();
@@ -174,7 +174,7 @@ declare function maps:build-google-map($nodes as node()*){
          
          				// Attaching a click event to the current marker
          				google.maps.event.addListener(marker, "click", function(e) {
-         					infoWindow.setContent("<a href='" + data.properties.uri + "'>" + data.properties.name + "</a>");
+         					infoWindow.setContent("<a href='" + data.properties.uri + "'>" + data.properties.name + " - " + data.properties.type + "</a>");
          					infoWindow.open(map, marker);
          				});
          
@@ -183,13 +183,20 @@ declare function maps:build-google-map($nodes as node()*){
                     bounds.extend(latLng);
                 }
                 
-                map.fitBounds(bounds);
-                // Adjusts zoom for single items on the map
-                google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-                  if (this.getZoom() > 10) {
-                    this.setZoom(10);
-                  }
+                // This is needed to set the zoom after fitbounds, 
+                google.maps.event.addListener(map, 'zoom_changed', function() {
+                    zoomChangeBoundsListener = 
+                        google.maps.event.addListener(map, 'bounds_changed', function(event) {
+                            if (this.getZoom() > 10 && this.initialZoom == true) {
+                                // Change max/min zoom here
+                                this.setZoom(10);
+                                this.initialZoom = false;
+                            }
+                        google.maps.event.removeListener(zoomChangeBoundsListener);
+                    });
                 });
+                map.initialZoom = true;
+                map.fitBounds(bounds);
             }
 
             google.maps.event.addDomListener(window, 'load', initialize)
