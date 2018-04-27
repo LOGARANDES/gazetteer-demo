@@ -177,7 +177,8 @@ h4 {font-size: 1em; margin-top:1em;}
     font-size: 12px;
 }
 .map-overlay .btn {font-size: 12px !important;}
-.map-overlay .filter-label {font-size: 14px !important; font-weight: 600; color:#333;}
+.map-overlay .filter-label {font-size: 14px !important; font-weight: 600; color:#666; margin:.5em;}
+#filterMap {margin:.75em;}
 
 
 
