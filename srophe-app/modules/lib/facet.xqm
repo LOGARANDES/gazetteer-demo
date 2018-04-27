@@ -155,25 +155,25 @@ declare function facet:hierarchical-logar($results as item()*, $facet-definition
     order by count($f)
     return 
         <key xmlns="http://expath.org/ns/facet" count="{count($f)}" value="{$facet-grp}" label="{$facet-grp}">
-           <facet xmlns="http://expath.org/ns/facet" name="corregimiento" show="20" max="40">
+           <facet xmlns="http://expath.org/ns/facet" name="Corregimiento" show="20" max="40">
            {
             for $f2 in $f[descendant::tei:region[@type='corregimiento']]
             group by $facet-grp2 := $f2/descendant::tei:region[@type='corregimiento'][1]/text()
-            order by count($f2)
+            order by $facet-grp2
             return 
                 <key xmlns="http://expath.org/ns/facet" count="{count($f2)}" value="{$facet-grp2}" label="{$facet-grp2}">
-                    <facet xmlns="http://expath.org/ns/facet" name="repartimiento" show="20" max="40">
+                    <facet xmlns="http://expath.org/ns/facet" name="Repartimiento" show="20" max="40">
                     {
                         for $f3 in $f2[descendant::tei:region[@type='repartimiento']]
                         group by $facet-grp3 := $f3/descendant::tei:region[@type='repartimiento'][1]/tei:placeName[@type="standardized"][1]/text()
-                        order by count($f3)
+                        order by $facet-grp3
                         return 
                             <key xmlns="http://expath.org/ns/facet" count="{count($f3)}" value="{$facet-grp3}" label="{$facet-grp3}">
-                                <facet xmlns="http://expath.org/ns/facet" name="pueblo" show="20" max="40">
+                                <facet xmlns="http://expath.org/ns/facet" name="Pueblo" show="20" max="40">
                                     {
                                     for $f4 in $f3[descendant::tei:settlement[@type='pueblo']]
                                     group by $facet-grp4 := $f4/descendant::tei:settlement[@type='pueblo'][1]/text()
-                                    order by count($f4)
+                                    order by $facet-grp4
                                     return
                                         <key xmlns="http://expath.org/ns/facet" count="{count($f4)}" value="{$facet-grp4}" label="{$facet-grp4}"/>
                                     }
@@ -234,13 +234,13 @@ declare function facet:facet-filter($facet-definitions as node()*)  as item()*{
         let $facet-name := substring-before($facet,':')
         let $facet-value := normalize-space(substring-after($facet,':'))
         return 
-            if($facet-name = 'corregimiento') then 
+            if($facet-name = 'Corregimiento') then 
                 concat('[descendant::tei:location/tei:region[@type="corregimiento"][normalize-space(.) = "',replace($facet-value,'"','""'),'"]',']')
-            else if($facet-name = 'repartimiento') then
+            else if($facet-name = 'Repartimiento') then
                 concat('[descendant::tei:location/tei:region[@type="repartimiento"]/tei:placeName[normalize-space(.) = "',replace($facet-value,'"','""'),'"]',']')
-            else if($facet-name = 'ciudad') then
+            else if($facet-name = 'Ciudad') then
                 concat('[descendant::tei:location/tei:region[@type="ciudad"][normalize-space() = "',replace($facet-value,'"','""'),'"]',']')
-            else if($facet-name = 'pueblo') then
+            else if($facet-name = 'Pueblo') then
                 concat('[descendant::tei:location/tei:settlement[@type="pueblo"][normalize-space() = "',replace($facet-value,'"','""'),'"]',']')
             else 
                 for $facet in $facet-definitions//facet:facet-definition[@name = $facet-name]
@@ -324,41 +324,23 @@ else ()
 
 (:~
  : HTML for each facet defined as facet-definition in facet-def.xml
+ { if($level eq 1) then <span class="facet-group-label">{string($facet/@name)}</span> else () }
 :)
 declare function facet:html-facet($facet as node()*, $count as xs:integer?, $level as xs:integer?){
     <div class="facet-grp">
-        { if($level eq 1) then <span class="facet-group-label">{string($facet/@name)}</span> else () }
-          <div class="facet-list show">
+        <span class="facet-group-label">{string($facet/@name)}</span>
+        <div class="facet-list show">
             {
                 for $key at $l in subsequence($facet/facet:key,1,$facet/@show)    
                 return facet:html-facet-key($facet, $key, $level)
              }
-          </div>
-          {
+        </div>
+        {
             if(count($facet/facet:key) gt xs:integer($facet/@show)) then
                 (<div>More facets</div>,
                 <a href="#">show more</a>)
             else()
           }
-          
-        <!--
-        <div class="facet-list show">{
-                for $key at $l in subsequence($facet/facet:key,1,$facet/@show)    
-                return facet:html-facet-key($facet, $key, $level)
-                }</div>
-            <div class="facet-list collapse" id="{concat('show',replace(string($facet/@name),' ',''))}">{
-                for $key at $l in subsequence($facet/facet:key,$facet/@show + 1,$facet/@max)
-                return facet:html-facet-key($facet, $key, $level)
-                }
-            </div>
-            {if($count gt ($facet/@show - 1)) then 
-                <a class="facet-label togglelink" 
-                data-toggle="collapse" 
-                data-target="#{concat('show',replace(string($facet/@name),' ',''))}" 
-                href="#{concat('show',replace(string($facet/@name),' ',''))}" 
-                data-text-swap="Less">More &#160;<i class="glyphicon glyphicon-circle-arrow-right"></i></a>
-            else()}
-            -->
     </div>
 };
 

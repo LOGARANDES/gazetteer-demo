@@ -1,6 +1,6 @@
 <facets xmlns="http://expath.org/ns/facet">
     <!-- hierarchical-logar -->
-    <facet-definition name="Location">
+    <facet-definition name="Audiencia">
         <group-by function="facet:hierarchical-logar">
             <sub-path>descendant::tei:location/tei:region[@type='audiencia'][1]</sub-path>
         </group-by>
