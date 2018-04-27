@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://expath.org/ns/pkg" name="http://syriaca.org/geo" abbrev="logar" version="1.36" spec="1.0">
+<package xmlns="http://expath.org/ns/pkg" name="http://syriaca.org/geo" abbrev="logar" version="1.38" spec="1.0">
     <title>Logar: Linked Open Gazetteer of the Andean Region</title>
 </package>
