@@ -153,12 +153,21 @@ h4 {font-size: 1em; margin-top:1em;}
 .map-data {height:300px;}
 /* Large map on index page */
 #map {min-height: 350px; height: 95%; clear:both;}
-.browse-map {min-height: 450px; height: 95%; clear:both;}
+.browse-map {min-height: 450px; height: 95%; clear:both; margin:0; padding:0; position: relative;}
 .map-lg > #map {height:90% !important;}
 .map-md > #map {height:300px !important;}
 .map-sm > #map {height:250px !important;} 
 
 /* Map overlay */
+.browse-map .map-overlay{
+    position: absolute; /* Sit on top of the page content */
+    width: 25%; /* Full width (cover the whole page) */
+    max-height:400px;
+    overflow-y:scroll;
+    top: 20px; 
+    float:right;
+}
+
 .map-overlay
 {
     position: fixed; /* Sit on top of the page content */
