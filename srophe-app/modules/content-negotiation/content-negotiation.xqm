@@ -18,12 +18,12 @@ module namespace cntneg="http://syriaca.org/cntneg";
  : @authored 2018-04-12
 :)
 
-import module namespace global="http://syriaca.org/global" at "global.xqm";
+import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
 (:
  : Syriaca.org content serialization modules.
  : Additional modules can be added. 
 :)
-import module namespace tei2ttl="http://syriaca.org/tei2ttl" at "tei2ttl.xqm";
+(:import module namespace tei2ttl="http://syriaca.org/tei2ttl" at "tei2ttl.xqm";:)
 import module namespace tei2rdf="http://syriaca.org/tei2rdf" at "tei2rdf.xqm";
 import module namespace tei2html="http://syriaca.org/tei2html" at "tei2html.xqm";
 import module namespace geojson="http://syriaca.org/geojson" at "geojson.xqm";
@@ -87,8 +87,8 @@ declare function cntneg:content-negotiation($data as item()*, $content-type as x
                     <output:media-type value='application/xml'/>
                 </output:serialization-parameters>
              </rest:response>, tei2rdf:rdf-output($data))
-        else if($flag = ('turtle','ttl')) then 
-            (<rest:response> 
+        else if($flag = ('turtle','ttl')) then <message>Not an available data format.</message>
+            (:(<rest:response> 
                 <http:response status="200"> 
                     <http:header name="Content-Type" value="text/plain; charset=utf-8"/>
                     <http:header name="method" value="text"/>
@@ -98,7 +98,7 @@ declare function cntneg:content-negotiation($data as item()*, $content-type as x
                     <output:method value='text'/>
                     <output:media-type value='text/plain'/>
                 </output:serialization-parameters>
-            </rest:response>, tei2ttl:ttl-output($data))
+            </rest:response>, tei2ttl:ttl-output($data)):)
         else if($flag = 'geojson') then 
             (<rest:response> 
                 <http:response status="200"> 

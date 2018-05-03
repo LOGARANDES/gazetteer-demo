@@ -4,7 +4,7 @@
         <group-by function="facet:hierarchical-logar">
             <sub-path>descendant::tei:location/tei:region[@type='audiencia'][1]</sub-path>
         </group-by>
-        <max-values show="20">40</max-values>
+        <max-values show="100">150</max-values>
         <order-by direction="ascending">count</order-by>
     </facet-definition>
     <!-- 

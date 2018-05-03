@@ -391,7 +391,7 @@ declare function app:cited($node as node(), $model as map(*)){
 (:~      
  : Return teiHeader info to be used in citation used for Syriaca.org bibl module
 :)
-declare %templates:wrap function app:d($node as node(), $model as map(*)){
+declare %templates:wrap function app:citation($node as node(), $model as map(*)){
     let $rec := $model("data")
     let $header := 
         <srophe-about xmlns="http://www.tei-c.org/ns/1.0">
