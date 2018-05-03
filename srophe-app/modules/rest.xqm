@@ -194,7 +194,8 @@ function api:data-dump(
                     collection($global:data-root || '/' || $collection)
                  else collection($global:data-root)
     let $request-format := if($format != '') then $format  else if($content-type) then $content-type else 'xml'
-    return cntneg:content-negotiation(subsequence($data, $start, $limit), $request-format,())
+    return cntneg:content-negotiation($data, $request-format,()) 
+    (:cntneg:content-negotiation(subsequence($data, $start, $limit), $request-format,()):)
 };
 
 (:

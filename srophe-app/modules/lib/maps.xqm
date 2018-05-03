@@ -81,7 +81,6 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
                                             var popupContent = 
                                             "<a href='" + feature.properties.uri + "' class='map-pop-title'>" +
                                             feature.properties.name + "</a>" + 
-                                            (feature.properties.type ? "Type: " + feature.properties.type : "") +
                                             (feature.properties.desc ? "<span class='map-pop-desc'>"+ feature.properties.desc +"</span>" : "");
                                             layer.bindPopup(popupContent);
                                             switch (feature.properties.type) {
@@ -174,7 +173,7 @@ declare function maps:build-google-map($nodes as node()*){
          
          				// Attaching a click event to the current marker
          				google.maps.event.addListener(marker, "click", function(e) {
-         					infoWindow.setContent("<a href='" + data.properties.uri + "'>" + data.properties.name + " - " + data.properties.type + "</a>");
+         					infoWindow.setContent("<a href='" + data.properties.uri + "'>" + data.properties.name + "</a>");
          					infoWindow.open(map, marker);
          				});
          
