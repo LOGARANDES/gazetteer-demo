@@ -358,15 +358,15 @@ declare function facet:html-facet-key($facet as node()*, $key as node()*, $level
         {if($key/facet:facet/facet:key) then
              <a class="expand togglelink" 
                 data-toggle="collapse" 
-                data-target="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
-                href="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
+                data-target="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/|,',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
+                href="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/|,',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
                 data-text-swap=" - "> + </a>
         else()}
         <a href="?{$new-fq}{facet:url-params()}" class="facet-key-label">
             {facet:get-label(string($key/@label))} <span class="count"> ({string($key/@count)})</span>
         </a>
         {if($key/facet:facet) then
-            <span id="show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" class="collapse">{
+            <span id="show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/|,',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" class="collapse">{
                 for $f in $key/facet:facet
                 let $count := count($f/facet:key)
                 let $level := count($f/ancestor-or-self::facet:facet)
