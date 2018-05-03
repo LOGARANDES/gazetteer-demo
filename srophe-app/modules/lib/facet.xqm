@@ -155,21 +155,21 @@ declare function facet:hierarchical-logar($results as item()*, $facet-definition
     order by count($f)
     return 
         <key xmlns="http://expath.org/ns/facet" count="{count($f)}" value="{$facet-grp}" label="{$facet-grp}">
-           <facet xmlns="http://expath.org/ns/facet" name="Corregimiento" show="20" max="40">
+           <facet xmlns="http://expath.org/ns/facet" name="Corregimiento" show="100" max="150">
            {
             for $f2 in $f[descendant::tei:region[@type='corregimiento']]
             group by $facet-grp2 := $f2/descendant::tei:region[@type='corregimiento'][1]/text()
             order by $facet-grp2
             return 
                 <key xmlns="http://expath.org/ns/facet" count="{count($f2)}" value="{$facet-grp2}" label="{$facet-grp2}">
-                    <facet xmlns="http://expath.org/ns/facet" name="Repartimiento" show="20" max="40">
+                    <facet xmlns="http://expath.org/ns/facet" name="Repartimiento" show="100" max="150">
                     {
                         for $f3 in $f2[descendant::tei:region[@type='repartimiento']]
                         group by $facet-grp3 := $f3/descendant::tei:region[@type='repartimiento'][1]/tei:placeName[@type="standardized"][1]/text()
                         order by $facet-grp3
                         return 
                             <key xmlns="http://expath.org/ns/facet" count="{count($f3)}" value="{$facet-grp3}" label="{$facet-grp3}">
-                                <facet xmlns="http://expath.org/ns/facet" name="Pueblo" show="20" max="40">
+                                <facet xmlns="http://expath.org/ns/facet" name="Pueblo" show="100" max="150">
                                     {
                                     for $f4 in $f3[descendant::tei:settlement[@type='pueblo']]
                                     group by $facet-grp4 := $f4/descendant::tei:settlement[@type='pueblo'][1]/text()
@@ -358,15 +358,15 @@ declare function facet:html-facet-key($facet as node()*, $key as node()*, $level
         {if($key/facet:facet/facet:key) then
              <a class="expand togglelink" 
                 data-toggle="collapse" 
-                data-target="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
-                href="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
+                data-target="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
+                href="#show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" 
                 data-text-swap=" - "> + </a>
         else()}
         <a href="?{$new-fq}{facet:url-params()}" class="facet-key-label">
             {facet:get-label(string($key/@label))} <span class="count"> ({string($key/@count)})</span>
         </a>
         {if($key/facet:facet) then
-            <span id="show{concat(replace(string($key/@label),'\s|-|\?|\[|\]',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" class="collapse">{
+            <span id="show{concat(replace(string($key/@label),'\s|-|\?|\[|\]|/',''),$key/@count,replace($key/facet:facet[1]/@name,' ',''))}" class="collapse">{
                 for $f in $key/facet:facet
                 let $count := count($f/facet:key)
                 let $level := count($f/ancestor-or-self::facet:facet)
