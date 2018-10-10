@@ -138,8 +138,10 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
  : Build Google maps
 :)
 declare function maps:build-google-map($nodes as node()*){
+    let $key := doc('config.xml')//*:map-key/text()
+    return
     <div id="map-data" style="margin-bottom:3em;">
-        <script src="http://maps.googleapis.com/maps/api/js">//</script>
+        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?{$key}client=&amp;v=quarterly&amp;callback=initMap"></script>
         <div id="map"/>
        <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
