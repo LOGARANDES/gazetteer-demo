@@ -146,7 +146,11 @@ declare function maps:build-google-map($nodes as node()*){
        <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
           <![CDATA[
-            var map;
+          function initMap() {} // now it IS a function and it is in global
+
+            $(() => {
+              initMap = function() {
+                var map;
                             
             var bounds = new google.maps.LatLngBounds();
             
@@ -201,6 +205,10 @@ declare function maps:build-google-map($nodes as node()*){
             }
 
             google.maps.event.addDomListener(window, 'load', initialize)
+              }
+            })
+            
+            
 
         ]]>
         </script>
