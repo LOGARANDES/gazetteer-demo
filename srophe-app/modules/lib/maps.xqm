@@ -138,7 +138,7 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
  : Build Google maps
 :)
 declare function maps:build-google-map($nodes as node()*){
-    let $key := doc('config.xml')//*:map-key/text()
+    let $key := doc($global:app-root || '/config.xml')//*:map-key/text()
     return
     <div id="map-data" style="margin-bottom:3em;">
         <div id="map"/>
