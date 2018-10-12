@@ -141,20 +141,15 @@ declare function maps:build-google-map($nodes as node()*){
     let $key := doc('config.xml')//*:map-key/text()
     return
     <div id="map-data" style="margin-bottom:3em;">
-        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?{$key}client=&amp;v=quarterly&amp;callback=initMap"></script>
         <div id="map"/>
        <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
           <![CDATA[
-          function initMap() {} // now it IS a function and it is in global
 
-            $(() => {
-              initMap = function() {
-                var map;
-                            
-            var bounds = new google.maps.LatLngBounds();
+            var map;
             
-            function initialize(){
+            function initMap(){
+                var bounds = new google.maps.LatLngBounds();
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: new google.maps.LatLng(0,0),
                     mapTypeId: google.maps.MapTypeId.TERRAIN
@@ -204,14 +199,11 @@ declare function maps:build-google-map($nodes as node()*){
                 map.fitBounds(bounds);
             }
 
-            google.maps.event.addDomListener(window, 'load', initialize)
-              }
-            })
-            
-            
+            //google.maps.event.addDomListener(window, 'load', initMap)
 
         ]]>
         </script>
+        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?{$key}client=&amp;v=quarterly&amp;callback=initMap"></script> 
          <div>
             <div class="modal fade" id="map-selection" tabindex="-1" role="dialog" aria-labelledby="map-selectionLabel" aria-hidden="true">
                 <div class="modal-dialog">
