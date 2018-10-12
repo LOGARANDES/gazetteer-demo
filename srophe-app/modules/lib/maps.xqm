@@ -203,7 +203,7 @@ declare function maps:build-google-map($nodes as node()*){
 
         ]]>
         </script>
-        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?{$key}client=&amp;v=quarterly&amp;callback=initMap"></script> 
+        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key={$key}&amp;callback=initMap"></script> 
          <div>
             <div class="modal fade" id="map-selection" tabindex="-1" role="dialog" aria-labelledby="map-selectionLabel" aria-hidden="true">
                 <div class="modal-dialog">
