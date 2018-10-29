@@ -138,17 +138,18 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
  : Build Google maps
 :)
 declare function maps:build-google-map($nodes as node()*){
+    let $key := doc($global:app-root || '/config.xml')//*:map-key/text()
+    return
     <div id="map-data" style="margin-bottom:3em;">
-        <script src="http://maps.googleapis.com/maps/api/js">//</script>
         <div id="map"/>
        <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
           <![CDATA[
+
             var map;
-                            
-            var bounds = new google.maps.LatLngBounds();
             
-            function initialize(){
+            function initMap(){
+                var bounds = new google.maps.LatLngBounds();
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: new google.maps.LatLng(0,0),
                     mapTypeId: google.maps.MapTypeId.TERRAIN
@@ -198,10 +199,11 @@ declare function maps:build-google-map($nodes as node()*){
                 map.fitBounds(bounds);
             }
 
-            google.maps.event.addDomListener(window, 'load', initialize)
+            //google.maps.event.addDomListener(window, 'load', initMap)
 
         ]]>
         </script>
+        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key={$key}&amp;callback=initMap"></script> 
          <div>
             <div class="modal fade" id="map-selection" tabindex="-1" role="dialog" aria-labelledby="map-selectionLabel" aria-hidden="true">
                 <div class="modal-dialog">
