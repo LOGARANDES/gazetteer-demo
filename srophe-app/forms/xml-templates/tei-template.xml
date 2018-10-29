@@ -1,22 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:functx="http://www.functx.com" xmlns:saxon="http://saxon.sf.net/" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title level="a" xml:lang="en"/>
-                <sponsor>Syriaca.org: The Syriac Reference Portal</sponsor>
-                <funder>The Andrew W. Mellon Foundation</funder>
+                <title level="m">LOGAR Linked Open Gazetteer of the Andean Region</title>
+                <sponsor>LOGAR Linked Open Gazetteer of the Andean Region</sponsor>
                 <funder>The National Endowment for the Humanities</funder>
-                <funder>The International Balzan Prize Foundation</funder>
-                <principal>David A. Michelson</principal>
-                <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-                <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
-                <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
+                <principal>Steven A. Wernke</principal>
+                <principal>Akira Saito</principal>
+                <editor role="creator">Steven A. Wernke</editor>
+                <editor role="creator">Jeremy Mumford</editor>
+                <respStmt>
+                    <resp>Editing, proofreading, data entry and revision by</resp>
+                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#swernke">Steven A. Wernke</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Editing, proofreading, data entry and revision by</resp>
+                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#jmumford">Jeremy Mumford</name>
+                </respStmt>
             </titleStmt>
             <editionStmt>
                 <edition n="1.0"/>
             </editionStmt>
             <publicationStmt>
-                <authority>Syriaca.org: The Syriac Reference Portal</authority>
+                <authority>LOGAR Linked Open Gazetteer of the Andean Region</authority>
                 <idno type="URI"/>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/3.0/">
@@ -25,48 +33,12 @@
                 </availability>
                 <date/>
             </publicationStmt>
-            <seriesStmt>
-                <title level="s">The Syriac Biographical Dictionary</title>
-                <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
-                <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-                <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
-                <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#dschwartz">Daniel L. Schwartz</editor>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</name>
-                </respStmt>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
-                </respStmt>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P.  Gibson</name>
-                </respStmt>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#dschwartz">Daniel L. Schwartz</name>
-                </respStmt>
-                <idno type="URI">http://syriaca.org/persons</idno>
-            </seriesStmt>
-            <seriesStmt>
-                <title level="s">Gateway to the Syriac Saints</title>
-                <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-                <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
-                </respStmt>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <name type="person" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</name>
-                </respStmt>
-                <idno type="URI">http://syriaca.org/saints</idno>
-                <biblScope unit="vol" from="1" to="1">
-                    <title level="m">Qadishe: A Guide to the Syriac Saints</title>
-                    <idno type="URI">http://syriaca.org/q</idno>
-                </biblScope>
-            </seriesStmt>
+            <encodingDesc>
+                <editorialDecl>
+                    <p>This record created following the LOGAR guidelines. 
+                        Documentation available at: <ref target="http://logarandes.org/documentation">http://logarandes.org/documentation</ref>.</p>
+                </editorialDecl>
+            </encodingDesc>
             <sourceDesc>
                 <p>Born digital.</p>
             </sourceDesc>

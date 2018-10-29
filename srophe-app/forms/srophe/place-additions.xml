@@ -1,4 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>Syriaca.org Place Editor</title>
         <meta name="author" content="wsalesky at gmail.com"/>
@@ -15,12 +16,11 @@
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"/>
         <script type="text/javascript">
             <![CDATA[
-                function getUrlParameter(name) {
-                     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                     var results = regex.exec(location.search);
-                     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+                function getUrlParameter(param) {
+                   return new URLSearchParams(window.location.search).get(param);
                  };
+                 
+                 //console.log(getUrlParameter('id'));
                  //to use: getUrlParameter('id'); 
             ]]>
         </script>
@@ -91,6 +91,10 @@
             <!-- Submissions -->
             <!-- Download -->
             <xf:submission id="s-download-xml" ref="instance('i-rec')" show="new" method="post" replace="all" action="form.xq?form=srophe/download.xml?type=download"/>
+            
+            <!-- Download -->
+            <xf:submission id="s-view-xml" ref="instance('i-rec')" show="new" method="post" replace="all" action="services/submit.xql?type=view"/>
+            
             <!-- Save -->
             <xf:submission id="s-save-old" resource="services/submit.xql?type=save" ref="instance('i-rec')" replace="instance" instance="i-submission" method="post">
                 <xf:action ev:event="xforms-submit-done">
@@ -110,6 +114,15 @@
                 </xf:action>
             </xf:submission>
              
+            <xf:submission id="s-github" ref="instance('i-rec')" replace="instance" instance="i-submission" action="services/submit.xql?type=github" method="post">
+                <xf:action ev:event="xforms-submit-done">
+                    <xf:message ref="instance('i-submission')//*:message"/>
+                </xf:action>
+                <xf:action ev:event="xforms-submit-error">
+                    <xf:message ref="instance('i-submission')//*:message"/>
+                </xf:action>
+            </xf:submission>
+            
             <!-- Get record for editing -->
             <xf:submission id="s-get-rec" method="get" ref="instance('i-rec')" replace="instance" instance="i-rec" serialization="none" mode="synchronous">
                 <xf:resource value="concat('services/get-rec.xql?id=',javascript:getUrlParameter('id'))"/>
@@ -468,10 +481,19 @@
                     <xf:label>
                         <span class="glyphicon glyphicon-save-file"/> Submit</xf:label>
                 </xf:submit>
+                <xf:submit class="btn btn-default" submission="s-github" appearance="minimal">
+                    <xf:label>
+                        <span class="glyphicon glyphicon-save-file"/> GitHub XML</xf:label>
+                </xf:submit>
                 <xf:submit class="btn btn-default" submission="s-download-xml" appearance="minimal">
                     <xf:label>
                         <span class="glyphicon glyphicon-save-file"/> Download XML</xf:label>
                 </xf:submit>
+                <xf:submit class="btn btn-default" submission="s-view-xml" appearance="minimal">
+                    <xf:label>
+                        <span class="glyphicon glyphicon-save-file"/> View XML</xf:label>
+                </xf:submit>
+                
             </div>
         </div>        
     </body>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="xsl/xsltforms.xsl" type="text/xsl"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsltforms="http://www.agencexml.com/xsltforms" xmlns:xf="http://www.w3.org/2002/xforms" xsltforms:dummy="dummy">
     <head>
@@ -9,7 +10,7 @@
             <xf:submission id="getinstance" method="get" replace="instance" instance="getter" action="opener://i-rec">
                 <xf:send ev:event="xforms-submit-done" submission="getback"/>
             </xf:submission>
-            <xf:submission id="getback" method="xml-urlencoded-post" replace="all" action="/exist/apps/srophe-admin/forms/services/submit.xql?type=download"/>
+            <xf:submission id="getback" method="post" replace="all" action="../forms/services/submit.xql?type=download"/>
             <xf:send ev:event="xforms-ready" submission="getinstance"/>
         </xf:model>
     </head>

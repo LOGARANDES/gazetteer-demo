@@ -16,7 +16,9 @@ declare variable $id {request:get-parameter('id', '')};
 
 if($id != '') then 
     let $record := collection($global:data-root)//tei:idno[@type='URI'][. = $id]
-    return if(not(empty($record))) then root($record) else doc('../xml-templates/tei-template.xml')
+    return 
+        if(not(empty($record))) then root($record) 
+        else doc('../xml-templates/tei-template.xml')
 else doc('../xml-templates/tei-template.xml')
 (:root(collection($global:data-root)//tei:idno[@type='URI'][. = $id]):)
 
