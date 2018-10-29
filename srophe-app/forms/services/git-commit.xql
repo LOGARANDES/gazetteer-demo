@@ -45,8 +45,11 @@ declare namespace output="http://www.w3.org/2010/xslt-xquery-serialization";
 declare namespace json = "http://www.json.org";
 
 (: Set up global varaibles :)
-declare variable $gitcommit:repo {'https://api.github.com/repos/wsalesky/blogs'};
-declare variable $gitcommit:authorization-token {'ec447cb4c82ce35b24faf8733b58004563bc5c4a'};
+(: Access git-api configuration file :) 
+
+declare variable $gitcommit:git-config := if(doc('../config.xml')) then doc('../config.xml') else <response status="fail"><message>Load config.xml file please.</message></response>;
+declare variable $gitcommit:repo := $git-config//git-submit-repository/text();
+declare variable $gitcommit:authorization-token := $git-config//git-submit-token/text();
     
 declare function gitcommit:step1($data as item()*,$path as xs:string?, $commit-message as xs:string?){
 (: 1. Get a reference to HEAD of branch, master:)
@@ -60,7 +63,7 @@ declare function gitcommit:step1($data as item()*,$path as xs:string?, $commit-m
     let $branch-sha := parse-json($branch-data)?object?sha
     return 
        if(starts-with(string($branch[1]/@status),'2')) then
-           ('Success, step1: ', gitcommit:step2($data,$path, $commit-message, $branch-sha))
+           (gitcommit:step2($data,$path, $commit-message, $branch-sha))
         else string($branch[1]/@message)   
 };
 
@@ -90,8 +93,8 @@ declare function gitcommit:step2($data as item()*,$path as xs:string?, $commit-m
     let $new-branch-url := parse-json($new-branch-data)?object?url
     return 
         if(starts-with(string($new-branch[1]/@status),'2')) then
-            ('Succeses, step2: ',gitcommit:step3($data,$path,$commit-message, $branch-name, $branch-sha, $new-branch-sha, $new-branch-url))
-        else ('Fail step2. ',$new-branch-data)
+            (gitcommit:step3($data,$path,$commit-message, $branch-name, $branch-sha, $new-branch-sha, $new-branch-url))
+        else ($new-branch-data)
 };
 
 declare function gitcommit:step3($data as item()*,
@@ -111,8 +114,8 @@ declare function gitcommit:step3($data as item()*,
     let $get-latest-commit-tree-url := parse-json($get-latest-commit-data)?tree?url
     return 
         if(starts-with(string($get-latest-commit[1]/@status),'2')) then
-            ('Succeses, step3: ',gitcommit:step4($data, $path, $commit-message, $branch-name, $get-latest-commit-sha, $get-latest-commit-tree-url))
-        else ('Fail step 3 ',string($get-latest-commit[1]/@message))
+            (gitcommit:step4($data, $path, $commit-message, $branch-name, $get-latest-commit-sha, $get-latest-commit-tree-url))
+        else (string($get-latest-commit[1]/@message))
     
 };
 
@@ -154,9 +157,9 @@ declare function gitcommit:step4($data as item()*,
             let $get-tree-sha := parse-json($get-tree-data)?sha 
             return 
                 if(starts-with(string($get-tree[1]/@status),'2')) then
-                    ('Succeses, step 4:', gitcommit:step5($path, $commit-message, $branch-name, $get-latest-commit-sha, $get-latest-commit-tree-url, $get-tree-sha, $blob-sha))
-                else ('Fail step 4.b ',string($get-tree[1]/@message))
-        else ('Fail step 4 ',string($new-blob[1]/@message), $new-blob-content)
+                    (gitcommit:step5($path, $commit-message, $branch-name, $get-latest-commit-sha, $get-latest-commit-tree-url, $get-tree-sha, $blob-sha))
+                else (string($get-tree[1]/@message))
+        else (string($new-blob[1]/@message), $new-blob-content)
 };
 
 declare function gitcommit:step5($path as xs:string?, 
@@ -192,8 +195,8 @@ declare function gitcommit:step5($path as xs:string?,
     let $get-new-tree-sha := parse-json($new-tree-data)?sha       
     return 
         if(starts-with(string($new-tree[1]/@status),'2')) then
-            ('Succeses, step5: ',gitcommit:step6($path, $commit-message, $branch-name, $get-latest-commit-sha, $get-new-tree-sha))
-        else ('Fail step 5 ',$new-tree[1], $new-tree-data)
+            (gitcommit:step6($path, $commit-message, $branch-name, $get-latest-commit-sha, $get-new-tree-sha))
+        else ($new-tree[1], $new-tree-data)
 };
 
 declare function gitcommit:step6($path as xs:string?, 
@@ -224,8 +227,8 @@ declare function gitcommit:step6($path as xs:string?,
     let $commit-sha := parse-json($commit-data)?sha        
     return 
         if(starts-with(string($commit[1]/@status),'2')) then
-            ('Succeses, step6: ',gitcommit:step7($path, $branch-name, $commit-sha))
-        else ('Fail step 6 ',string($commit[1]/@message))
+            (gitcommit:step7($path, $branch-name, $commit-sha))
+        else (string($commit[1]/@message))
 };
 
 declare function gitcommit:step7($path as xs:string?, $branch-name as xs:string?, $commit-sha as xs:string?){
@@ -268,11 +271,11 @@ declare function gitcommit:step7($path as xs:string?, $branch-name as xs:string?
                                 </http:request>)
         let $pull-request-data := util:base64-decode($pull-request[2])
         return string($pull-request[1]/@message)
-    else ('Fail, step 7',$commit-ref/@message)   
+    else ($commit-ref/@message)   
 };
 
 declare function gitcommit:run-commit($data as item()*, $path as xs:string?, $commit-message as xs:string?) {
     if(not(empty($data))) then  
       gitcommit:step1($data, $path, $commit-message)
-    else 'No data submitted' 
+    else 'Failed to submit, please download your changes and send via email. ' 
 };
