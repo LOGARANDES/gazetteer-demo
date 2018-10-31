@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>Syriaca.org Place Editor</title>
         <meta name="author" content="wsalesky at gmail.com"/>
@@ -118,7 +118,7 @@
                     <xf:message ref="instance('i-submission')//*:message"/>
                 </xf:action>
                 <xf:action ev:event="xforms-submit-error">
-                    <xf:message ref="instance('i-submission')//*:message"/>
+                    <xf:message ev:event="xforms-submit-error" level="modal">Unable to submit your additions at this time, you may download your changes and email them to us.</xf:message>
                 </xf:action>
             </xf:submission>
             
@@ -480,6 +480,12 @@
                     <xf:label>
                         <span class="glyphicon glyphicon-save-file"/> Submit</xf:label>
                 </xf:submit>
+                <!--
+                <xf:submit class="btn btn-default" submission="s-download-xml" appearance="minimal">
+                    <xf:label>
+                        <span class="glyphicon glyphicon-save-file"/> Download XML</xf:label>
+                </xf:submit>
+                -->
                 <xf:submit class="btn btn-default" submission="s-download-xml" appearance="minimal">
                     <xf:label>
                         <span class="glyphicon glyphicon-save-file"/> Download XML</xf:label>

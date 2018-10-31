@@ -111,101 +111,12 @@ declare function local:passthru($node as node()*) as item()* {
     element {local-name($node)} {($node/@*[. != ''], local:transform($node/node()))}
 };
 
-declare function local:update-github($new-content, $path){
-    let $repo := 'https://api.github.com/repos/wsalesky/blogs'
-    let $authorization-token := 'ec447cb4c82ce35b24faf8733b58004563bc5c4a'
-    let $commit := 'Online submission from webforms. Please review.'
 
-    let $headers := 
-    <httpclient:headers>
-        <httpclient:header name="Authorization" value="{concat('token ',$authorization-token)}"/>
-    </httpclient:headers>
-    
-    (: Get master branch of $repo :)
-    let $latest-commit := xqjson:parse-json(util:base64-decode(httpclient:get(xs:anyURI(concat($repo,'/git/refs/heads/master')),false(), $headers)/httpclient:body))
-    (: Get latest commit SHA from master branch  :)
-    let $get-latest-commit-sha := $latest-commit//pair[@name='sha']/text()
-    
-    (: Get latest commit tree using $get-latest-commit-sha :)
-    let $get-latest-commit := xqjson:parse-json(util:base64-decode(httpclient:get(xs:anyURI(concat($repo,'/git/commits/',$get-latest-commit-sha)),false(), $headers)/httpclient:body))
-    (: Get latest commit tree SHA :) 
-    let $latest-commit-tree-sha := $get-latest-commit//pair[@name='tree']/pair[@name='sha']/text()
-    
-    (: Get latest tree using $latest-commit-tree-sha :)
-    let $get-latest-tree := xqjson:parse-json(util:base64-decode(httpclient:get(xs:anyURI(concat($repo,'/git/trees/',$latest-commit-tree-sha)),false(), $headers)/httpclient:body))
-    
-    (: Create new blob with new content base64/utf-8 :)
-    let $new-blob-content := 
-    xqjson:serialize-json(
-        <pair name="object" type="object">
-            <pair name="content" type="string">{$new-content}</pair>
-            <pair name="encoding" type="string">utf-8</pair>
-        </pair>)
-    
-    (: Send new blob-content to Github API:)
-    let $new-blob := xqjson:parse-json(util:base64-decode(httpclient:post(xs:anyURI(concat($repo,'/git/blobs')), $new-blob-content, false(), $headers)/httpclient:body))    
-    (: New blob sha :)
-    let $new-blob-sha := $new-blob/pair[@name='sha']/text()
-    
-    (: 
-     : Create a new tree
-     : New tree includes
-     : base_tree: $latest-commit-tree-sha (the tree referenced in the latest commit, referenced in the master branch.)
-     : path: path to the new/updated file relative to app/repo root.
-     : sha: $new-blob-sha (SHA for the just created new content blob)
-    :)
-    let $new-tree-content := 
-    xqjson:serialize-json(
-        <pair name="object" type="object">
-            <pair name="base_tree" type="string">{$latest-commit-tree-sha}</pair>
-            <pair name="tree" type="array">
-                <pair name="object" type="object">
-                    <pair name="path" type="string">{$path}</pair>
-                    <pair name="mode" type="string">100644</pair>
-                    <pair name="type" type="string">blob</pair>
-                    <pair name="sha" type="string">{$new-blob-sha}</pair>
-                </pair>
-            </pair>
-        </pair>)
-    (: Send new tree to Github API:)    
-    let $new-tree := xqjson:parse-json(util:base64-decode(httpclient:post(xs:anyURI(concat($repo,'/git/trees')), $new-tree-content, false(), $headers)/httpclient:body))    
-    (: New tree SHA :)    
-    let $new-tree-sha := $new-tree/pair[@name='sha']/text()
-    
-    (: 
-     : Create new commit 
-     : message: commit message
-     : tree: $new-tree-sha (the SHA of the tree you have just created for your new content)
-     : parents: $get-latest-commit-sha (an array of parent SHA's, can be just one, should not be empty)
-     :)
-    let $new-commit-content :=
-    xqjson:serialize-json(
-        <pair name="object" type="object">
-            <pair name="message" type="string">{$commit}</pair>
-            <pair name="tree" type="string">{$new-tree-sha}</pair>
-            <pair name="parents" type="array"><item type="string">{$get-latest-commit-sha}</item></pair>
-        </pair>)
-    (: Send new commit to Github API:)  
-    let $new-commit := xqjson:parse-json(util:base64-decode(httpclient:post(xs:anyURI(concat($repo,'/git/commits')), $new-commit-content, false(), $headers)/httpclient:body))    
-    (: New commit SHA :)  
-    let $new-commit-sha := $new-commit/self::json[@type='object']/pair[@name='sha']/text()
-        
-    (: Update refs in repository to your new commit SHA :)
-    let $commit-ref-data :=
-    xqjson:serialize-json(
-        <pair name="object" type="object">
-            <pair name="sha" type="string">{$new-commit-sha}</pair>
-            <pair name="force" type="boolean">true</pair>
-        </pair>)    
-    let $commit-ref := httpclient:post(xs:anyURI(concat($repo,'/git/refs/heads/master')), $commit-ref-data, false(), $headers)
-    let $commit-ref-message := xqjson:parse-json(util:base64-decode($commit-ref//httpclient:body))
-    
-    (: Returns final commit message :)
-    return $commit-ref-message
-};
-
-let $data := request:get-data()
-let $record := $data//tei:TEI
+let $data := if(request:get-parameter('postdata','')) then request:get-parameter('postdata','') else request:get-data()
+let $record := 
+    if($data instance of node()) then
+        $data//tei:TEI
+    else fn:parse-xml($data)        
 let $post-processed-xml := local:transform($record)
 let $id := replace($post-processed-xml/descendant::tei:idno[1],'/tei','')
 let $file-name := if($id != '') then concat(tokenize($id,'/')[last()], '.xml') else 'form.xml'
@@ -213,14 +124,7 @@ let $document-uri := document-uri(root(collection($global:data-root)//tei:idno[@
 let $collection-uri := substring-before($document-uri,$file-name)
 let $github-path := substring-after($collection-uri,'logar-data/')
 return 
-    if(request:get-parameter('type', '') = 'view') then
-        (response:set-header("Content-type", 'text/xml'),
-        serialize($post-processed-xml, 
-        <output:serialization-parameters>
-            <output:method>xml</output:method>
-            <output:media-type>text/xml</output:media-type>
-        </output:serialization-parameters>))
-    else if(request:get-parameter('type', '') = 'save') then
+    if(request:get-parameter('type', '') = 'save') then
         try {
             let $save := xmldb:store($collection-uri, xmldb:encode-uri($file-name), $post-processed-xml)
             return 
@@ -231,20 +135,20 @@ return
                 <message>Failed to update resource {$id}: {concat($err:code, ": ", $err:description)}</message>
             </response>)
         }
-(:
-        <response code="400">
-            <message>Thanks for your submission, this feature is being tested and your data will not be saved to the database at this time, 
-            use the download button to save a local copy of the record. 
-            {$post-processed-xml}
-            </message>
-        </response>
-        :)
     else if(request:get-parameter('type', '') = 'github') then
-        <response status="okay" code="200"><message>{ 
-            gitcommit:run-commit($post-processed-xml, concat($github-path,$file-name), concat("User submitted content for ",$document-uri))
-        }</message></response>
-    else if(request:get-parameter('type', '') = 'download') then
-       (response:set-header("Content-Disposition", fn:concat("attachment; filename=", $file-name)),$post-processed-xml)     
+        try {
+            let $save := gitcommit:run-commit($post-processed-xml, concat($github-path,$file-name), concat("User submitted content for ",$document-uri))
+            return 
+             <response status="okay" code="200"><message>Thank you for your contribution.</message></response>  
+        } catch * {
+            (response:set-status-code( 500 ),
+            <response status="fail">
+                <message>Failed to submit, please download your changes and send via email. {concat($err:code, ": ", $err:description)}</message>
+            </response>)
+        }    
+    else if(request:get-parameter('type', '') = ('download','view')) then
+            (response:set-header("Content-Type", "application/xml; charset=utf-8"),
+             response:set-header("Content-Disposition", fn:concat("attachment; filename=", $file-name)),$post-processed-xml)     
     else 
         <response code="500">
             <message>General Error</message>
