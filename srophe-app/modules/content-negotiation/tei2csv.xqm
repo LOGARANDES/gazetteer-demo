@@ -32,7 +32,7 @@ let $data :=
     for $record in $nodes//tei:TEI
     let $n := $record/descendant::tei:listPlace/tei:place
     let $title := tei2csv:value($record/descendant::tei:title[1])
-    let $uri := tei2csv:value(replace($record/descendant::tei:idno[1],'/tei',''))
+    let $uri := replace($record/descendant::tei:idno[1],'/tei','')
     let $principal := tei2csv:value($record/descendant::tei:principal[1])
     let $principal2 := tei2csv:value($record/descendant::tei:principal[2])
     let $principal3 := tei2csv:value($record/descendant::tei:principal[3])
