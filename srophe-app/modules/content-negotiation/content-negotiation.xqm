@@ -25,6 +25,7 @@ import module namespace global="http://syriaca.org/global" at "../lib/global.xqm
 :)
 (:import module namespace tei2ttl="http://syriaca.org/tei2ttl" at "tei2ttl.xqm";:)
 import module namespace tei2rdf="http://syriaca.org/tei2rdf" at "tei2rdf.xqm";
+import module namespace tei2csv="http://syriaca.org/tei2csv" at "tei2csv.xqm";
 import module namespace tei2html="http://syriaca.org/tei2html" at "tei2html.xqm";
 import module namespace geojson="http://syriaca.org/geojson" at "geojson.xqm";
 import module namespace jsonld="http://syriaca.org/jsonld" at "jsonld.xqm";
@@ -75,6 +76,16 @@ declare function cntneg:content-negotiation($data as item()*, $content-type as x
                     <output:media-type value='text/xml'/>
                 </output:serialization-parameters>
              </rest:response>,$data)
+        else if($flag = 'csv') then 
+            (<rest:response> 
+                <http:response status="200"> 
+                    <http:header name="Content-Type" value="text/csv; charset=utf-8"/> 
+                </http:response> 
+                <output:serialization-parameters>
+                    <output:method value='csv'/>
+                    <output:media-type value='text/csv'/>
+                </output:serialization-parameters>
+             </rest:response>,tei2csv:tei2csv($data))             
         else if($flag = 'atom') then <message>Not an available data format.</message>
         else if($flag = 'rdf') then 
             (<rest:response> 
@@ -211,6 +222,7 @@ declare function cntneg:determine-extension($header){
     else if (contains(string-join($header),"application/atom+xml") or $header = 'atom') then "atom"
     else if (contains(string-join($header),"application/vnd.google-earth.kmz") or $header = 'kml') then "kml"
     else if (contains(string-join($header),"application/geo+json") or $header = 'geojson') then "geojson"
+    else if (contains(string-join($header),"text/csv") or $header = 'csv') then "csv"
     else "html"
 };
 
@@ -224,6 +236,7 @@ declare function cntneg:determine-media-type($extension){
     case "json" return "application/ld+json"
     case "kml" return "application/vnd.google-earth.kmz"
     case "geojson" return "application/geo+json"
+    case "csv" return "text/csv"
     default return "text/html"
 };
 
@@ -238,6 +251,7 @@ declare function cntneg:determine-type-flag($extension){
     case "json" return "json"
     case "kml" return "kml"
     case "geojson" return "geojson"
+    case "csv" return "csv"
     case "html" return "html"
     case "htm" return "html"
     default return "html"
