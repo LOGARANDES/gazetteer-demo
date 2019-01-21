@@ -10,7 +10,7 @@ declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace xlink = "http://www.w3.org/1999/xlink";
 declare namespace util="http://exist-db.org/xquery/util";
 
-declare function tei2csv:value($nodes as node()*){
+declare function tei2csv:value($nodes as item()*){
 let $q := codepoints-to-string(34)
 return concat('"',replace(normalize-space(string-join($nodes//text(),' ')),$q,concat($q,$q)),'"')
 };
