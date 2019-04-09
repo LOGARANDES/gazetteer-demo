@@ -52,7 +52,14 @@ let $series-path :=
         else ''
 return concat("collection('",$global:data-root,$collection-path,"')",$series-path)
 };
-
+(:
 return data:build-collection-path()
- 
+ :)
+let $collection :=  request:get-parameter("collection", ())
+let $format :=  request:get-parameter("format", ())
+let $data := if($collection != '') then
+                    collection($global:data-root || '/' || $collection)
+                 else collection($global:data-root)
+let $request-format := if($format != '') then $format  else if($content-type) then $content-type else 'xml'
+return cntneg:content-negotiation($data, $request-format,())
  

@@ -57,14 +57,36 @@ else if (contains($exist:path, "/$shared/")) then
 else if(replace($exist:path, $exist:resource,'') =  ($exist:record-uris) or ends-with($exist:path, ("/atom","/tei","/rdf","/ttl","/geojson",'.tei','.atom','.rdf','.ttl',".geojson"))) then
     (: Sends to restxql to handle /atom, /tei,/rdf:)
     if (ends-with($exist:path, ("/atom","/tei","/rdf","/ttl","/geojson",'.tei','.atom','.rdf','.ttl',".geojson"))) then
+        let $id := if($exist:resource = ('tei','xml','txt','pdf','json','geojson','kml','jsonld','rdf','ttl','atom')) then
+                        tokenize(replace($exist:path,'/tei|/xml|/txt|/pdf|/json|/geojson|/kml|/jsonld|/rdf|/ttl|/atom',''),'/')[last()]
+                   else replace(xmldb:decode($exist:resource), "^(.*)\..*$", "$1")
+        let $record-uri-root := substring-before($exist:path,$id)
+        let $id := if($global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)]) then
+                        concat($global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@record-URI-pattern,$id)
+                   else $id
+        let $html-path := concat($global:get-config//repo:collection[ends-with(@record-URI-pattern, $record-uri-root)][1]/@app-root,'record.html')
+        let $format := if($exist:resource = ('tei','xml','txt','pdf','json','geojson','kml','jsonld','rdf','ttl','atom')) then
+                            $exist:resource
+                       else if(request:get-parameter('format', '') != '') then request:get-parameter('format', '')                            
+                       else fn:tokenize($exist:resource, '\.')[fn:last()]
+        return 
+            <dispatch xmlns="http://exist.sourceforge.net/NS/exist">        
+                <forward url="{$exist:controller}/modules/content-negotiation/content-negotiation.xql">
+                    <add-parameter name="id" value="{$id}"/>
+                    <add-parameter name="format" value="{$format}"/>
+                </forward>
+            </dispatch>
+        (:
         let $path := 
             if(ends-with($exist:path, (".atom",".tei",".rdf",".ttl",".geojson"))) then 
                 replace($exist:path, "\.(atom|tei|rdf|ttl|geojson)", "/$1")
             else $exist:path
         return 
+        
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
                 <forward url="{concat('/restxq/logar', $path)}" absolute="yes"/>
             </dispatch>
+            :)
     (: Special handling for collections with app-root that matches record-URI-pattern sends html pages to html, others are assumed to be records :)
     else if($exist:resource = ('index.html','search.html','browse.html','about.html','aggregate.html','factoid.html')) then 
         <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -116,10 +138,15 @@ else if (contains($exist:path,'/api/')) then
      <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{replace($exist:path,'/api/sparql','/logar/sparql/run-sparql.xql')}"/>
      </dispatch>
-    else
+    else 
+        <dispatch xmlns="http://exist.sourceforge.net/NS/exist">        
+            <forward url="{$exist:controller}/modules/content-negotiation/content-negotiation.xql"/>
+        </dispatch>
+    (:
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{concat('/restxq/logar', $exist:path)}" absolute="yes"/>
     </dispatch>
+    :)
 
 else if ($exist:resource eq '' or ends-with($exist:path,"/")) then 
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
