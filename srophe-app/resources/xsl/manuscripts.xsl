@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:s="http://syriaca.org" xmlns:saxon="http://saxon.sf.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="http://syriaca.org/ns" xmlns:x="http://www.w3.org/1999/xhtml" exclude-result-prefixes="xs t s saxon" version="2.0">
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:saxon="http://saxon.sf.net/" xmlns:local="http://syriaca.org/ns" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:s="http://syriaca.org" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:x="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs t s saxon" version="2.0">
 
  <!-- ================================================================== 
        Copyright 2013 New York University
@@ -25,7 +24,7 @@
        ================================================================== --> 
  
  <!-- ================================================================== 
-       tei2html.xsl
+       manuscripts.xsl
        
        This XSLT transforms tei.xml to html.
        
@@ -54,6 +53,33 @@
  <!-- =================================================================== -->
 
     <!-- Manuscript templates -->
+    <xsl:template match="t:msDesc">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="well">
+                    <xsl:apply-templates select="descendant::t:textLang[@mainLang] | descendant::t:msIdentifier"/>
+                </div>
+                <div>
+                    <xsl:apply-templates select="descendant::t:physDesc | descendant::t:profileDesc/t:langUsager"/>
+                </div>
+                <div class="well">
+                    <xsl:apply-templates select="descendant::t:history | descendant::t:additional | descendant::t:encodingDesc"/>
+                </div>
+            </div>
+            <div class="col-md-8 column1">
+                <div>
+                    <h3>Manuscript Contents</h3>
+                    <p style="margin:0 2em;" class="well">This manuscript contains 
+                        <xsl:value-of select="count(descendant::t:msItem)"/>
+                         items 
+                        <xsl:if test="descendant::t:msItem/t:msItem">
+                            <xsl:text> including nested subsections</xsl:text>
+                        </xsl:if>. N.B. Items were re-numbered by Syriaca.org and may not reflect previous numeration.</p>
+                </div>
+                <xsl:apply-templates select="descendant::t:msContents | descendant::t:teiHeader/descendant::t:msPart"/>
+            </div>
+        </div>
+    </xsl:template>
     <xsl:template match="t:msPart">
         <div class="row">
             <xsl:if test="t:msIdentifier">
@@ -105,7 +131,7 @@
                     <div>
                         <strong>Wright number:</strong>
                         <xsl:value-of select="t:idno"/>
-                        (<xsl:value-of select="following-sibling::t:altIdentifier[child::t:idno[@type='Wright-BL-Roman']]/tei:idno"/>)
+                        (<xsl:value-of select="following-sibling::t:altIdentifier[child::t:idno[@type='Wright-BL-Roman']]/t:idno"/>)
                     </div>
                 </div>
             </xsl:when>
@@ -118,22 +144,44 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="t:history/t:origin">
-        <xsl:if test="t:origin">
-            <xsl:for-each select="t:origin">
-                <xsl:if test="t:origDate">
-                    <p>
-                        <strong>Date of Origin: </strong>
-                        <xsl:apply-templates select="t:origDate"/>
-                    </p>
-                </xsl:if>
-                <xsl:if test="t:origPlace">
-                    <p>
-                        <strong>Place of Origin: </strong>
-                        <xsl:apply-templates select="t:origPlace"/>
-                    </p>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:if>
+        <xsl:for-each select="t:origDate">
+            <p>
+                <span class="srp-label">Date of Origin: </span>
+                <xsl:variable name="range">
+                    <xsl:if test="@notBefore or @notAfter or @to or @from or @when">
+                        <xsl:text> (</xsl:text>
+                        <xsl:value-of select="@notBefore|@from|@when"/>
+                        <xsl:if test="@notAfter or @to">
+                            <xsl:text> - </xsl:text><xsl:value-of select="@notAfter|@to"/>
+                        </xsl:if>
+                        <xsl:text>)</xsl:text>
+                    </xsl:if>
+                </xsl:variable>
+                <xsl:choose>
+                    <xsl:when test="text()">
+                        <xsl:value-of select="."/>
+                        <xsl:sequence select="$range"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:sequence select="$range"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </p>
+        </xsl:for-each>
+        <xsl:for-each select="t:origPlace">
+            <p>
+                <span class="srp-label">Place of Origin: </span>
+                <xsl:choose>
+                    <xsl:when test="text()">
+                        <xsl:value-of select="."/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <!-- Add date range handling -->
+                    </xsl:otherwise>
+                </xsl:choose>
+            </p>
+        </xsl:for-each>
+        <!-- NOTE: Are there other children of origin that should be visualized? -->
     </xsl:template>
     <xsl:template match="t:textLang[@mainLang]">
         <xsl:if test="not(parent::*)">
@@ -145,9 +193,11 @@
     </xsl:template>
     <xsl:template match="t:origPlace">
         <xsl:choose>
-            <xsl:when test="string-length(.) &lt; 1">Not available</xsl:when>
+            <xsl:when test="string-length(text()) &lt; 1">Not available</xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates/>
+                <span>
+                    Place:  <xsl:apply-templates/>
+                </span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -223,10 +273,12 @@
         <!-- Have to pull in author via xquery? or just doc? -->
         <p>
             <strong>Author: </strong>
-            <xsl:variable name="author" select="string(t:author/@ref)"/>
-            <a href="{$author}">
-                <xsl:value-of select="string-join(/t:msAuthors/t:msAuthor[@id = $author][1],' ')"/>
-            </a>
+            <xsl:for-each select="t:author">
+                <xsl:variable name="author" select="string(@ref)"/>
+                <a href="{$author}">
+                    <xsl:value-of select="string-join(/t:msAuthors/t:msAuthor[@id = $author][1],' ')"/>
+                </a>
+            </xsl:for-each>
         </p>
         <xsl:apply-templates select="*[not(self::t:title or self::t:author or self::t:listBibl)]"/>
         <xsl:if test="t:listBibl">
@@ -280,30 +332,36 @@
             <xsl:apply-templates/>
         </p>
     </xsl:template>
-    <xsl:template match="t:locus"/>
-    <xsl:template match="t:locus" mode="locus">
-        <p>
-            <xsl:choose>
-                <xsl:when test="parent::t:msItem"/>
-                <xsl:otherwise>
-                    <xsl:attribute name="class">msItem</xsl:attribute>
-                </xsl:otherwise>
-            </xsl:choose>
-            <strong>Locus: </strong>
-            <xsl:choose>
-                <xsl:when test="string-length(.) &gt; 0">
-                    <xsl:apply-templates/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:if test="@from"> from <xsl:value-of select="@from"/>
-                    </xsl:if>
-                    <xsl:if test="@to"> to <xsl:value-of select="@to"/>
-                    </xsl:if>
-                </xsl:otherwise>
-            </xsl:choose>
-        </p>
+    <xsl:template match="t:locus">
+        <xsl:choose>
+            <xsl:when test="parent::t:msItem">
+                <p>
+                    <xsl:choose>
+                        <xsl:when test="parent::t:msItem"/>
+                        <xsl:otherwise>
+                            <xsl:attribute name="class">msItem</xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <strong>Locus: </strong>
+                    <xsl:choose>
+                        <xsl:when test="string-length(.) &gt; 0">
+                            <xsl:apply-templates/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:if test="@from"> from <xsl:value-of select="@from"/>
+                            </xsl:if>
+                            <xsl:if test="@to"> to <xsl:value-of select="@to"/>
+                            </xsl:if>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </p>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
-    <xsl:template match="t:msItem/t:quote">
+    <xsl:template match="t:quote[parent::t:msItem]">
         <p>
             <strong>Quote: </strong>
             <xsl:apply-templates/>
@@ -387,43 +445,43 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-
-    <!--
-    <xsl:template match="t:height">
-        <p>Height (<xsl:value-of select="t:measure/@unit"/>) <xsl:value-of select="t:measure/@quantity"/></p>
-    </xsl:template>
-    <xsl:template match="t:width">
-        <p>Width (<xsl:value-of select="t:measure/@unit"/>) <xsl:value-of select="t:measure/@quantity"/></p>
-    </xsl:template>
-    -->
     <xsl:template match="t:handNote">
         <div name="{string(@xml:id)}">
             Hand <xsl:value-of select="substring-after(string(@xml:id),'ote')"/>:
             <div class="msItem">
-                <div>
-                    Type: <xsl:value-of select="@scope"/>
-                </div>
-                <div>
-                    Script: <xsl:value-of select="ancestor::t:fileDesc/following-sibling::t:profileDesc/t:langUsage/t:language[@ident=string(./@script)]/text()"/>
-                </div>
-                <div>
-                    Medium: <xsl:value-of select="@medium"/>
-                </div>
+                <xsl:if test="@scope">
+                    Scope:  <xsl:value-of select="@scope"/>
+                </xsl:if>
+                <xsl:if test="@script">
+                    <xsl:variable name="script" select="@script"/>
+                    <div>
+                        Script: <xsl:value-of select="//t:langUsage/t:language[@ident = $script]/text()"/>
+                    </div>
+                </xsl:if>
+                <xsl:if test="@medium">
+                    <div>
+                        Medium: <xsl:value-of select="@medium"/>
+                    </div>
+                </xsl:if>
                 <xsl:apply-templates mode="plain"/>
             </div>
         </div>
     </xsl:template>
     <xsl:template match="t:decoNote">
-        <div class="msItem" name="{string(@xml:id)}">
+        <div name="{string(@xml:id)}">
             Decoration <xsl:value-of select="substring-after(string(@xml:id),'ote')"/>:
             <div class="msItem">
-                <div>
-                    Type: <xsl:value-of select="@type"/>
-                </div>
-                <div>
-                    Medium: <xsl:value-of select="@medium"/>
-                </div>
-                <xsl:apply-templates/>
+                <xsl:if test="@type">
+                    <div>
+                        Type: <xsl:value-of select="@type"/>
+                    </div>
+                </xsl:if>
+                <xsl:if test="@medium">
+                    <div>
+                        Medium: <xsl:value-of select="@medium"/>
+                    </div>
+                </xsl:if>
+                <xsl:apply-templates mode="plain"/>
             </div>
         </div>
     </xsl:template>
@@ -476,11 +534,6 @@
             Date:  <xsl:apply-templates/>
         </div>
     </xsl:template>
-    <xsl:template match="t:origPlace">
-        <div>
-            Place:  <xsl:apply-templates/>
-        </div>
-    </xsl:template>
     <xsl:template match="t:provenance">
         <div>Provenance: <xsl:apply-templates/>
         </div>
@@ -507,4 +560,15 @@
             </div>
         </div>
     </xsl:template>
+    
+    <!--
+    <xsl:template match="* | @*" mode="labeled">
+        <xsl:if test="not(empty(.))">
+            <span>
+                <span class="srp-label"><xsl:value-of select="name(.)"/>: </span>
+                <span class="note"><xsl:apply-templates/></span>
+            </span>            
+        </xsl:if>
+    </xsl:template>
+    -->
 </xsl:stylesheet>

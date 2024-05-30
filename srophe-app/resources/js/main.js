@@ -51,6 +51,19 @@ $("#email").validate({
 		}
 });
 
+//Expand works authored-by in persons page
+$('a.getData').click(function(event) {
+    event.preventDefault();
+    var title = $(this).data('label');
+    var URL = $(this).data('ref');
+    $("#moreInfoLabel").text(title);
+    $('#moreInfo-box').load(URL + " #search-results");
+});
+    
+$('#showSection').click(function(event) {
+    event.preventDefault();
+    $('#recComplete').load('/exist/apps/srophe/documentation/faq.html #selection');
+});
 
 //Changes text on toggle buttons, toggle funtion handled by Bootstrap
 $('.togglelink').click(function(e){
@@ -70,4 +83,22 @@ if (navigator.appVersion.indexOf("Mac") > -1 || navigator.appVersion.indexOf("Li
     $('.get-syriac').show();
 }
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+//Clipboard function for any buttons with clipboard class. Uses clipboard.js
+var clipboard = new Clipboard('.clipboard');
+
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
 });

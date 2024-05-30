@@ -1,0 +1,5515 @@
+<root>
+    <row>
+        <source/>
+        <fid/>
+        <title>Paucarbamba (L)</title>
+        <Ancient_Repartimiento>Hananguanca; [Guarocheri]; [Chaclla]; [Mama]; [Mancos y Laraos]; [Los Yauyos] </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Xauxa</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/190</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>190</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>190 and 561 are duplicates but both are in wrong locations</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>561</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>Wrong location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Cazma la Alta e Moche (L)</title>
+        <Ancient_Repartimiento>Cazma la Alta e Moche</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Sancta</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/82</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>82</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>This entry is a duplicate for a new entry being added to LOGAR and this one is incorrect</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Cochabamba (L)</title>
+        <Ancient_Repartimiento/>
+        <Ancient_Corregimiento/>
+        <Modern_Pueblo/>
+        <longitude> -78.06126</longitude>
+        <latitude> -6.57566</latitude>
+        <uri>http://logarandes.org/place/569</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>569</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>38 and 569 are duplicates, 38 gives the correct information</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Paroparo (L)</title>
+        <Ancient_Repartimiento>Los Cotaneras; Los Guamanpalpas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Cotabambas</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/545</uri>
+        <VillID>463</VillID>
+        <location/>
+        <Problem_1>Not a reduccion</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>545</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes/>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Puente del Arçobispo (L)</title>
+        <Ancient_Repartimiento>Camana</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Collaguas </Ancient_Corregimiento>
+        <Modern_Pueblo>Camaná</Modern_Pueblo>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/421</uri>
+        <VillID>341</VillID>
+        <location/>
+        <Problem_1>Not a reduccion</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>421</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes/>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Francisco de Sicllabamba (L)</title>
+        <Ancient_Repartimiento>Tayacaxa </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Asangaro</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/173</uri>
+        <VillID>81</VillID>
+        <location/>
+        <Problem_1>Not a reduccion</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>173</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Insufficient evidence that 173 is associated with the modern town of Salcabamba</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Pedro de Bayala (L)</title>
+        <Ancient_Repartimiento>Cazcayungas (de Muñoz)</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Pacllas</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/39</uri>
+        <VillID>306</VillID>
+        <location/>
+        <Problem_1>Not a reduccion</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>39</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Outside the jurisdication of the corregimiento</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Taulia (L)</title>
+        <Ancient_Repartimiento>Taulia</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Pacllas</Ancient_Corregimiento>
+        <Modern_Pueblo>Ciudadela de Taulía</Modern_Pueblo>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/22</uri>
+        <VillID>127</VillID>
+        <location/>
+        <Problem_1>Not a reduccion</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>22</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes/>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Cruz de Mayonpampa (L)</title>
+        <Ancient_Repartimiento>Hatunlucana y Laramati </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Lucanas y Andamarcas</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/254</uri>
+        <VillID>sd</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>254</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Outside the jurisdication of the corregimiento</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan de Colcapampa (L)</title>
+        <Ancient_Repartimiento>Los Lucanas Andamarcas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Lucanas y Andamarcas</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/179</uri>
+        <VillID>87</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>179</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Outside the jurisdication of the corregimiento</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Joan de Guayllapampa (L)</title>
+        <Ancient_Repartimiento>Los Soras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Lucanas y Andamarcas</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/222</uri>
+        <VillID>130</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>222</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Outside the jurisdication of the corregimiento</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Paucarbamba (L)</title>
+        <Ancient_Repartimiento>Los Papris</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Hananchilques</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/189</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>189</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Outside the jurisdication of the corregimiento</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Veronica de Jaen de Rircaspampa (L)</title>
+        <Ancient_Repartimiento>Marca, Guaraz</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Guailas</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/91</uri>
+        <VillID>525</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>91</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Insufficient evidence that this entry is associated with the modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Guambo (L)</title>
+        <Ancient_Repartimiento>Moro Quizquiz</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Sancta</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/58</uri>
+        <VillID>490</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>58</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Insufficient evidence that this entry is associated with the modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Xpoual (L)</title>
+        <Ancient_Repartimiento>La Xalca</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Luya y Chillao</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/41</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>41</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Insufficient evidence that this entry is associated with the modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Andres (L)</title>
+        <Ancient_Repartimiento>Trapollo</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Luya y Chillao</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/15</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Remove</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>15</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Insufficient evidence that this entry is associated with the modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Joan de Guaychat (L)</title>
+        <Ancient_Repartimiento>Quinua; [Los Cavinas]</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Asangaro</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/195</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Remove information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>195</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Remove information about modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Guanboy (L)</title>
+        <Ancient_Repartimiento>Checras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Arnedo</Ancient_Corregimiento>
+        <Modern_Pueblo/>
+        <longitude/>
+        <latitude/>
+        <uri>http://logarandes.org/place/124</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Remove information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>124</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Remove information about modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Marcos (L)</title>
+        <Ancient_Repartimiento>Collanatambo; Coyango</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Joyabamba</Modern_Pueblo>
+        <longitude>-71.95050333</longitude>
+        <latitude>-13.87320477</latitude>
+        <uri>http://logarandes.org/place/213</uri>
+        <VillID>121</VillID>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>540</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 540 with information from 213</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>213</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>213 and 540 are duplicates, 540 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Hatunyauyos (L)</title>
+        <Ancient_Repartimiento>Los Yauyos; Mancos y Laraos; [Mama]; [Chacalla]; [Guarocheri]</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yauyos</Ancient_Corregimiento>
+        <Modern_Pueblo>Yauyos</Modern_Pueblo>
+        <longitude>-75.91867689</longitude>
+        <latitude>-12.45969138</latitude>
+        <uri>http://logarandes.org/place/180</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>182</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Correct the name of town in 182 to Hatunyauyos</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>180</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>180 and 182 are the same but were split into two different names</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Tacobamba (L)(S) / San Pedro de Tacobanba (M)</title>
+        <Ancient_Repartimiento>Tacobamba; Chaqui</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Porco</Ancient_Corregimiento>
+        <Modern_Pueblo>Tacobamba</Modern_Pueblo>
+        <longitude>-65.55190874</longitude>
+        <latitude>-19.2008409</latitude>
+        <uri>http://logarandes.org/place/475</uri>
+        <VillID>391</VillID>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>490</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 490 with administrative information from 475</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>475</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>475 and 490 are duplicates, 490 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Nuestra Señora de Beplem de Tiquipaya (L) / Nuestra Señora de Belen de Tiquipaya (S) / Nuestra Señora de Belem de Tiquipayan (M)</title>
+        <Ancient_Repartimiento>Colo, y Caquina y Picachuri</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Porco</Ancient_Corregimiento>
+        <Modern_Pueblo>Tinguipaya</Modern_Pueblo>
+        <longitude>-65.82240457</longitude>
+        <latitude>-19.22023051</latitude>
+        <uri>http://logarandes.org/place/483</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>491</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 491 with administrative information from 483</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>483</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>483 and 491 are duplicates, 491 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sanctiago del Valle de Moxcari (L) / Santiago de Mascare (S) / Santiago del Valle de Moxcari (M)</title>
+        <Ancient_Repartimiento>Chayanta</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>Moscarí</Modern_Pueblo>
+        <longitude>-66.01469377</longitude>
+        <latitude>-18.36288852</latitude>
+        <uri>http://logarandes.org/place/458</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>493</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 493 with administrative information from 458</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>458</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>458 and 493 are duplicates, 493 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Almagro de Tomata (L)(S)(M)</title>
+        <Ancient_Repartimiento>Chayanta</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>San Pedro de Buena Vista</Modern_Pueblo>
+        <longitude>-65.98090196</longitude>
+        <latitude>-18.27031603</latitude>
+        <uri>http://logarandes.org/place/488</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>494</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 494 with administrative information from 488</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>488</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>488 and 494 are duplicates, 494 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Caracara (L)(S) / Guaraya (M)</title>
+        <Ancient_Repartimiento>Caracara; Macha</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>Khara Khara</Modern_Pueblo>
+        <longitude>-65.69858322</longitude>
+        <latitude>-18.80893984</latitude>
+        <uri>http://logarandes.org/place/459</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>496</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 496 with administrative information from 459</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>459</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>459 and 496 are duplicates, 496 is in wrong location</Soltuion_1B_Notes>
+        <Problem_2>Wrong location</Problem_2>
+        <Solution_2A>Update to the coordinates listed here</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>469</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Magdalena de Aymaya (L)(S)(M)</title>
+        <Ancient_Repartimiento>Macha</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>Aymaya</Modern_Pueblo>
+        <longitude>-66.46103925</longitude>
+        <latitude>-18.44853444</latitude>
+        <uri>http://logarandes.org/place/457</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>497</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 497 with administrative information from 457</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>457</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>457 and 497 are duplicates, 497 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Marcos de Miraflores (L) / San Marcos de Miraflores de Yaure (S) / San Marco de Miraflores de Iauriri (M)</title>
+        <Ancient_Repartimiento>Macha</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>San Marcos de Miraflores</Modern_Pueblo>
+        <longitude>-65.73706368</longitude>
+        <latitude>-18.49212246</latitude>
+        <uri>http://logarandes.org/place/479</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>498</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 498 with administrative information from 479</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>479</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>479 and 498 are duplicates, 498 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Villanueua de la Serena (L) / Villanuevba de la Serena (M)</title>
+        <Ancient_Repartimiento>Totora</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carangas</Ancient_Corregimiento>
+        <Modern_Pueblo>Totora</Modern_Pueblo>
+        <longitude>-68.14536315</longitude>
+        <latitude>-17.79274763</latitude>
+        <uri>http://logarandes.org/place/441</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>500</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 500 with administrative information from 441</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>441</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>441 and 500 are duplicates, 500 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santiago de Ycaca (L) / Santiago de Tallina (S) / Santiago de Calicha (M)</title>
+        <Ancient_Repartimiento>Chichas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de San Bernardo de Tarija</Ancient_Corregimiento>
+        <Modern_Pueblo>Santiago de Cotagaita</Modern_Pueblo>
+        <longitude>-65.65860944</longitude>
+        <latitude>-20.81788449</latitude>
+        <uri>http://logarandes.org/place/487</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>502</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 502 with administrative information from 487</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>487</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>487 and 502 are duplicates, 502 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan de Suri (L) / San Juan de Suri (S)</title>
+        <Ancient_Repartimiento>Los Yngas de Suri</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Suri</Modern_Pueblo>
+        <longitude>-67.19122632</longitude>
+        <latitude>-16.74765135</latitude>
+        <uri>http://logarandes.org/place/425</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>506</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 506 with administrative information from 425</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>425</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>425 and 506 are duplicates, 506 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan de Cauari (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Cavari</Modern_Pueblo>
+        <longitude>-66.99152265</longitude>
+        <latitude>-17.07910209</latitude>
+        <uri>http://logarandes.org/place/430</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>507</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 507 with administrative information from 430</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>430</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>430 and 507 are duplicates, 507 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Ynquisuie (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Inquisivi</Modern_Pueblo>
+        <longitude>-67.1376038</longitude>
+        <latitude>-16.90744302</latitude>
+        <uri>http://logarandes.org/place/428</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>509</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 509 with administrative information from 428</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>428</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>428 and 509 are duplicates, 509 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Chuma (L) / Aguilar (S)</title>
+        <Ancient_Repartimiento>Ambana; Ayata</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Chuma</Modern_Pueblo>
+        <longitude>-68.898238</longitude>
+        <latitude>-15.47975755</latitude>
+        <uri>http://logarandes.org/place/356</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>512</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 512 with administrative information from 356</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>356</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>356 and 512 are duplicates, 512 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Camata (L)</title>
+        <Ancient_Repartimiento>Camata; diversos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Camata</Modern_Pueblo>
+        <longitude>-68.74753531</longitude>
+        <latitude>-15.23947803</latitude>
+        <uri>http://logarandes.org/place/344</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>514</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 514 with administrative information from 344</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>344</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>344 and 514 are duplicates, 514 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Nuestra Señora de la Conçepcion (L)</title>
+        <Ancient_Repartimiento>Checacopi e Hilaue; Cangalla</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Çanas</Ancient_Corregimiento>
+        <Modern_Pueblo>Chacacupe</Modern_Pueblo>
+        <longitude>-71.45364153</longitude>
+        <latitude>-14.02523374</latitude>
+        <uri>http://logarandes.org/place/275</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>525</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 525 with administrative information from 275</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>275</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>275 and 525 are duplicates, 525 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Martin de Lurucache (L)</title>
+        <Ancient_Repartimiento>Singa Ansaybaba y Lurucache; Marangani </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Çanas</Ancient_Corregimiento>
+        <Modern_Pueblo>Marangani</Modern_Pueblo>
+        <longitude>-71.16868864</longitude>
+        <latitude>-14.35714682</latitude>
+        <uri>http://logarandes.org/place/307</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>529</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 529 with administrative information from 307</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>307</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>307 and 529 are duplicates, 529 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Josephe de Siquipa (L)</title>
+        <Ancient_Repartimiento>Guarocheri</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Guarocheri</Ancient_Corregimiento>
+        <Modern_Pueblo>San José de Los Chorillos</Modern_Pueblo>
+        <longitude>-76.43537346</longitude>
+        <latitude>-12.13222723</latitude>
+        <uri>http://logarandes.org/place/171</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>562</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 562 with administrative information from 171</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>171</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>171 and 562 are duplicates, 562 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title/>
+        <Ancient_Repartimiento/>
+        <Ancient_Corregimiento>La Ciudad de San Francisco de Buena Esperanza y Puerto de Paita / San Miguel de Piura </Ancient_Corregimiento>
+        <Modern_Pueblo>Paita</Modern_Pueblo>
+        <longitude>-81.11369699</longitude>
+        <latitude>-5.085110729</latitude>
+        <uri>http://logarandes.org/place/7</uri>
+        <VillID/>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>568</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 568 with administrative information from 7</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>7</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>7 and 568 are duplicates, 568 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Felipe de Coata (L)</title>
+        <Ancient_Repartimiento>Los Carumas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carumas y Ubinas </Ancient_Corregimiento>
+        <Modern_Pueblo>Carumas</Modern_Pueblo>
+        <longitude>-70.69476102</longitude>
+        <latitude>-16.80925823</latitude>
+        <uri>http://logarandes.org/place/368</uri>
+        <VillID>282</VillID>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>556</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 556 with administrative information from 368</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>368</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>368 and 556 are duplicates, 556 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Xpoval Saco (L)</title>
+        <Ancient_Repartimiento>Los Carumas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carumas y Ubinas </Ancient_Corregimiento>
+        <Modern_Pueblo>San Cristóbal</Modern_Pueblo>
+        <longitude>-70.70625563</longitude>
+        <latitude>-16.7402978</latitude>
+        <uri>http://logarandes.org/place/292</uri>
+        <VillID>204</VillID>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>557</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update 557 with administrative information from 292</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>292</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes>292 and 557 are duplicates, 557 is in correct location</Soltuion_1B_Notes>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Totora (L)(C)</title>
+        <Ancient_Repartimiento>Ayquile y Totora</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Mizque</Ancient_Corregimiento>
+        <Modern_Pueblo>Totora</Modern_Pueblo>
+        <longitude>-65.19120962</longitude>
+        <latitude>-17.73559262</latitude>
+        <uri>http://logarandes.org/place/489</uri>
+        <VillID>402</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>489</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Talabera de Puna (L) / Talabela de Puná (S) / Talauera de Puna (M)</title>
+        <Ancient_Repartimiento>Puna</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Porco</Ancient_Corregimiento>
+        <Modern_Pueblo>Villa Talavera</Modern_Pueblo>
+        <longitude>-65.50603119</longitude>
+        <latitude>-19.79496594</latitude>
+        <uri>http://logarandes.org/place/492</uri>
+        <VillID>406</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>492</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Moromoro (L) / Tambo de Mosomoso (S) / Tambo de Moromoro (M)</title>
+        <Ancient_Repartimiento>Moromoro </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>Ravelo</Modern_Pueblo>
+        <longitude>-65.51174874</longitude>
+        <latitude>-18.80647239</latitude>
+        <uri>http://logarandes.org/place/495</uri>
+        <VillID>409</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>495</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Joan del Pedrosso (L) / San Juan del Pedroso (S)</title>
+        <Ancient_Repartimiento>Los Quillacas y Asanaques</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Paria</Ancient_Corregimiento>
+        <Modern_Pueblo>Challapata</Modern_Pueblo>
+        <longitude>-66.76093203</longitude>
+        <latitude>-18.90358078</latitude>
+        <uri>http://logarandes.org/place/499</uri>
+        <VillID>413</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>499</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Los Uros de Sauaya (L)</title>
+        <Ancient_Repartimiento>Chuquicota y Sauaya</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carangas</Ancient_Corregimiento>
+        <Modern_Pueblo>Chipaya</Modern_Pueblo>
+        <longitude>-68.08961885</longitude>
+        <latitude>-19.04186986</latitude>
+        <uri>http://logarandes.org/place/501</uri>
+        <VillID>416</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>501</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan de la Frontera (L)(S) / San Juan de la Frontera (M)</title>
+        <Ancient_Repartimiento>Chichas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de San Bernardo de Tarija</Ancient_Corregimiento>
+        <Modern_Pueblo>Talina</Modern_Pueblo>
+        <longitude>-65.82489634</longitude>
+        <latitude>-21.75281216</latitude>
+        <uri>http://logarandes.org/place/503</uri>
+        <VillID>418</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>503</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan de Yaco (L)</title>
+        <Ancient_Repartimiento>Los Quiruas de Oyune</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Yaco</Modern_Pueblo>
+        <longitude>-67.41122244</longitude>
+        <latitude>-17.15865966</latitude>
+        <uri>http://logarandes.org/place/505</uri>
+        <VillID>420</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>505</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Capinata (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Capiñata</Modern_Pueblo>
+        <longitude>-67.07494585</longitude>
+        <latitude>-16.99530898</latitude>
+        <uri>http://logarandes.org/place/508</uri>
+        <VillID>423</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>508</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Antonio de Songo (L) / Santiago de Chongo (S)</title>
+        <Ancient_Repartimiento>Songochallana y Chacapa</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Zongo</Modern_Pueblo>
+        <longitude>-68.05259917</longitude>
+        <latitude>-16.10082687</latitude>
+        <uri>http://logarandes.org/place/510</uri>
+        <VillID>426</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>510</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Conbaya (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Combaya</Modern_Pueblo>
+        <longitude>-68.75417663</longitude>
+        <latitude>-15.80465839</latitude>
+        <uri>http://logarandes.org/place/511</uri>
+        <VillID>427</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>511</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Miguel de Vsadca (L) / San Miguel de Usadca (S)</title>
+        <Ancient_Repartimiento>Homanata; diversos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Italaque</Modern_Pueblo>
+        <longitude>-69.04436442</longitude>
+        <latitude>-15.4775675</latitude>
+        <uri>http://logarandes.org/place/513</uri>
+        <VillID>429</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>513</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Callapa (L)(S)</title>
+        <Ancient_Repartimiento>Callapa </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Pacaxes</Ancient_Corregimiento>
+        <Modern_Pueblo>Callapa</Modern_Pueblo>
+        <longitude>-68.35588291</longitude>
+        <latitude>-17.4793469</latitude>
+        <uri>http://logarandes.org/place/515</uri>
+        <VillID>431</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>515</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Barbola (L)</title>
+        <Ancient_Repartimiento>Caquingora</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Pacaxes</Ancient_Corregimiento>
+        <Modern_Pueblo>Caquingora</Modern_Pueblo>
+        <longitude>-68.49470729</longitude>
+        <latitude>-17.24623287</latitude>
+        <uri>http://logarandes.org/place/516</uri>
+        <VillID>432</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>516</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Villa de Cangas (L)</title>
+        <Ancient_Repartimiento>Guangasco; Los Ancoraymes</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Llacxa</Ancient_Corregimiento>
+        <Modern_Pueblo>Ancoraimes</Modern_Pueblo>
+        <longitude>-68.90567479</longitude>
+        <latitude>-15.89752893</latitude>
+        <uri>http://logarandes.org/place/517</uri>
+        <VillID>433</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>517</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Chucuyto (L) / Chucuito (S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Chucuito</Modern_Pueblo>
+        <longitude>-69.8899016</longitude>
+        <latitude>-15.89439729</latitude>
+        <uri>http://logarandes.org/place/518</uri>
+        <VillID>434</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>518</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Acora (L)(S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Acora</Modern_Pueblo>
+        <longitude>-69.79770447</longitude>
+        <latitude>-15.97356186</latitude>
+        <uri>http://logarandes.org/place/519</uri>
+        <VillID>435</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>516</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Hilaui (L) / Ylavi (S) / Hilavi (S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Ilave</Modern_Pueblo>
+        <longitude>-69.6385645</longitude>
+        <latitude>-16.08685153</latitude>
+        <uri>http://logarandes.org/place/520</uri>
+        <VillID>437</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>520</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Jule (L) / Xule (S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Juli</Modern_Pueblo>
+        <longitude>-69.45924095</longitude>
+        <latitude>-16.21336746</latitude>
+        <uri>http://logarandes.org/place/521</uri>
+        <VillID>438</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>521</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Pomata (L)(S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Pomata</Modern_Pueblo>
+        <longitude>-69.29227101</longitude>
+        <latitude>-16.27319149</latitude>
+        <uri>http://logarandes.org/place/522</uri>
+        <VillID>439</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>522</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Yunguyo (L)(S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Yunguyo</Modern_Pueblo>
+        <longitude>-69.09269677</longitude>
+        <latitude>-16.24435334</latitude>
+        <uri>http://logarandes.org/place/523</uri>
+        <VillID>440</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>523</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Çepita (L) / Cepita (S)</title>
+        <Ancient_Repartimiento>Chucuyto</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chucuyto</Ancient_Corregimiento>
+        <Modern_Pueblo>Zepita</Modern_Pueblo>
+        <longitude>-69.10330381</longitude>
+        <latitude>-16.49726364</latitude>
+        <uri>http://logarandes.org/place/524</uri>
+        <VillID>441</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>524</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Miguel de la Quebrada (L)</title>
+        <Ancient_Repartimiento>Checacopi e Hilaue; Cangalla</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Çanas</Ancient_Corregimiento>
+        <Modern_Pueblo>Pitumarca</Modern_Pueblo>
+        <longitude>-71.41739094</longitude>
+        <latitude>-13.98041702</latitude>
+        <uri>http://logarandes.org/place/526</uri>
+        <VillID>443</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>526</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pablo (L)</title>
+        <Ancient_Repartimiento>Cacha; Charrachape</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Çanas</Ancient_Corregimiento>
+        <Modern_Pueblo>San Pablo</Modern_Pueblo>
+        <longitude>-71.3147996</longitude>
+        <latitude>-14.20189115</latitude>
+        <uri>http://logarandes.org/place/527</uri>
+        <VillID>444</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>527</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Maria de Balbuena (L)</title>
+        <Ancient_Repartimiento>Sixana</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Çanas</Ancient_Corregimiento>
+        <Modern_Pueblo>Sicuani</Modern_Pueblo>
+        <longitude>-71.22652283</longitude>
+        <latitude>-14.2729536</latitude>
+        <uri>http://logarandes.org/place/528</uri>
+        <VillID>445</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>528</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Chuichon (L)  </title>
+        <Ancient_Repartimiento>Achambi; Cotaguaci</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Condesuyo e Chumbivilcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Achombi</Modern_Pueblo>
+        <longitude>-72.81001296</longitude>
+        <latitude>-15.193871</latitude>
+        <uri>http://logarandes.org/place/530</uri>
+        <VillID>448</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>530</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Toro (L)</title>
+        <Ancient_Repartimiento>Achambi; Cotaguaci</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Condesuyo e Chumbivilcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Toro</Modern_Pueblo>
+        <longitude>-72.92870312</longitude>
+        <latitude>-15.26444335</latitude>
+        <uri>http://logarandes.org/place/531</uri>
+        <VillID>449</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>531</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Caratopa (L)</title>
+        <Ancient_Repartimiento>Caratopa, Colquemarcas y Hilata</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Condesuyo e Chumbivilcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Colquemarca</Modern_Pueblo>
+        <longitude>-72.04024711</longitude>
+        <latitude>-14.2837337</latitude>
+        <uri>http://logarandes.org/place/532</uri>
+        <VillID>450</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>532</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Hilatas (L)</title>
+        <Ancient_Repartimiento>Caratopa, Colquemarcas y Hilata</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Condesuyo e Chumbivilcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Santo Tomás</Modern_Pueblo>
+        <longitude>-72.0820239</longitude>
+        <latitude>-14.45007766</latitude>
+        <uri>http://logarandes.org/place/533</uri>
+        <VillID>451</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>533</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Vilque (L)</title>
+        <Ancient_Repartimiento>Omacha</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Huillque</Modern_Pueblo>
+        <longitude>-71.86595891</longitude>
+        <latitude>-14.08112005</latitude>
+        <uri>http://logarandes.org/place/534</uri>
+        <VillID>452</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>534</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Villacastin de los Santos (L)</title>
+        <Ancient_Repartimiento>Guanoquite; diversos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Huanoquite</Modern_Pueblo>
+        <longitude>-72.01758239</longitude>
+        <latitude>-13.68157544</latitude>
+        <uri>http://logarandes.org/place/535</uri>
+        <VillID>453</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>535</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santiago Cuchiraypampa (L) </title>
+        <Ancient_Repartimiento>Acha; Pilpinto; Laurayvlpo</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Ccochirhuay</Modern_Pueblo>
+        <longitude>-71.84702119</longitude>
+        <latitude>-13.90931793</latitude>
+        <uri>http://logarandes.org/place/536</uri>
+        <VillID>454</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>536</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>El Nombre de Jesus de Accha (L)</title>
+        <Ancient_Repartimiento>Acha; Pilpinto; Laurayvlpo</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Accha</Modern_Pueblo>
+        <longitude>-71.83150655</longitude>
+        <latitude>-13.97123387</latitude>
+        <uri>http://logarandes.org/place/537</uri>
+        <VillID>455</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>537</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Pucaray (L)</title>
+        <Ancient_Repartimiento>Acha; Pilpinto; Laurayvlpo</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Poccorhuay</Modern_Pueblo>
+        <longitude>-71.90243506</longitude>
+        <latitude>-13.94736407</latitude>
+        <uri>http://logarandes.org/place/538</uri>
+        <VillID>456</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>538</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Cayaotambo (L)</title>
+        <Ancient_Repartimiento>Cayaotambo; Suti Cucuchera; Tanta</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Paruro</Modern_Pueblo>
+        <longitude>-71.84742045</longitude>
+        <latitude>-13.76133464</latitude>
+        <uri>http://logarandes.org/place/539</uri>
+        <VillID>457</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>539</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Martín del Nuevo Cuzco (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Chilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Capi</Modern_Pueblo>
+        <longitude>-72.0821482</longitude>
+        <latitude>-13.85318302</latitude>
+        <uri>http://logarandes.org/place/541</uri>
+        <VillID>459</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>541</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Çiudad Rrodrigo de Guaynacota (L)</title>
+        <Ancient_Repartimiento>Guaynacota</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Parinacocha</Ancient_Corregimiento>
+        <Modern_Pueblo>Huaynacotas</Modern_Pueblo>
+        <longitude>-72.81021132</longitude>
+        <latitude>-15.12878307</latitude>
+        <uri>http://logarandes.org/place/542</uri>
+        <VillID>460</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>542</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Llerena de Pampa (L)</title>
+        <Ancient_Repartimiento>Guaynacota</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Parinacocha</Ancient_Corregimiento>
+        <Modern_Pueblo>Pampamarca</Modern_Pueblo>
+        <longitude>-72.90472286</longitude>
+        <latitude>-15.1288661</latitude>
+        <uri>http://logarandes.org/place/543</uri>
+        <VillID>461</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>543</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Guillermo de Collurqui (L)</title>
+        <Ancient_Repartimiento>[Los Cotabambas]; [Los Omasayos]</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Cotabambas</Ancient_Corregimiento>
+        <Modern_Pueblo>Coyllurqui</Modern_Pueblo>
+        <longitude>-72.43208146</longitude>
+        <latitude>-13.83743675</latitude>
+        <uri>http://logarandes.org/place/544</uri>
+        <VillID>462</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>544</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Piteyanaguaras (L)</title>
+        <Ancient_Repartimiento>Piteyanaguaras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Cotabambas</Ancient_Corregimiento>
+        <Modern_Pueblo>Pitaj</Modern_Pueblo>
+        <longitude>-72.07545516</longitude>
+        <latitude>-14.05092426</latitude>
+        <uri>http://logarandes.org/place/546</uri>
+        <VillID>464</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>546</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Marayanaguaras (L)</title>
+        <Ancient_Repartimiento>Marayanaguaras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Cotabambas</Ancient_Corregimiento>
+        <Modern_Pueblo>Mara</Modern_Pueblo>
+        <longitude>-72.10210209</longitude>
+        <latitude>-14.08638042</latitude>
+        <uri>http://logarandes.org/place/547</uri>
+        <VillID>465</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>547</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Guasa (L)</title>
+        <Ancient_Repartimiento>Caycay</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Andes</Ancient_Corregimiento>
+        <Modern_Pueblo>Huasac</Modern_Pueblo>
+        <longitude>-71.70992246</longitude>
+        <latitude>-13.52038993</latitude>
+        <uri>http://logarandes.org/place/548</uri>
+        <VillID>466</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>548</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title> Atca (L)</title>
+        <Ancient_Repartimiento>Tonono y Colquepata; Ovay</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Andes</Ancient_Corregimiento>
+        <Modern_Pueblo>Catca</Modern_Pueblo>
+        <longitude>-71.56354092</longitude>
+        <latitude>-13.60508118</latitude>
+        <uri>http://logarandes.org/place/549</uri>
+        <VillID>467</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>549</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Magdalena de Lamay (L)</title>
+        <Ancient_Repartimiento>Lamay; sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Valle de Yucay</Ancient_Corregimiento>
+        <Modern_Pueblo>Lamay</Modern_Pueblo>
+        <longitude>-71.92048764</longitude>
+        <latitude>-13.3646199</latitude>
+        <uri>http://logarandes.org/place/550</uri>
+        <VillID>469</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>550</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Çamora (L)</title>
+        <Ancient_Repartimiento>Catca</Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Valle de Yucay</Ancient_Corregimiento>
+        <Modern_Pueblo>Calca</Modern_Pueblo>
+        <longitude>-71.95603081</longitude>
+        <latitude>-13.32167437</latitude>
+        <uri>http://logarandes.org/place/551</uri>
+        <VillID>470</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>551</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Saluador de Anduxa (L)</title>
+        <Ancient_Repartimiento>Puquiovra</Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Valle de Avancay</Ancient_Corregimiento>
+        <Modern_Pueblo>Pucyura</Modern_Pueblo>
+        <longitude>-72.11145771</longitude>
+        <latitude>-13.47928862</latitude>
+        <uri>http://logarandes.org/place/552</uri>
+        <VillID>471</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>552</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Martin de los Quelliscaches (L)</title>
+        <Ancient_Repartimiento>Canço; Pomaguanca y Anaguaçi</Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Valle de Avancay</Ancient_Corregimiento>
+        <Modern_Pueblo>Huarocondo</Modern_Pueblo>
+        <longitude>-72.20757427</longitude>
+        <latitude>-13.41535227</latitude>
+        <uri>http://logarandes.org/place/553</uri>
+        <VillID>472</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>553</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Geronimo (L)</title>
+        <Ancient_Repartimiento>Lluta</Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Puerto de Arica </Ancient_Corregimiento>
+        <Modern_Pueblo>Poconchile</Modern_Pueblo>
+        <longitude>-70.06626936</longitude>
+        <latitude>-18.45238062</latitude>
+        <uri>http://logarandes.org/place/554</uri>
+        <VillID>473</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>554</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Cuenca de Chiche (L)</title>
+        <Ancient_Repartimiento>Achanquillo y Ayanque; Achamarca </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Condesuyo </Ancient_Corregimiento>
+        <Modern_Pueblo>Chichas</Modern_Pueblo>
+        <longitude>-72.91861034</longitude>
+        <latitude>-15.5476743</latitude>
+        <uri>http://logarandes.org/place/555</uri>
+        <VillID>474</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>555</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Mateo de Çunilata (L)</title>
+        <Ancient_Repartimiento>Cochuna</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carumas y Ubinas </Ancient_Corregimiento>
+        <Modern_Pueblo>Torata</Modern_Pueblo>
+        <longitude>-70.84439342</longitude>
+        <latitude>-17.07650547</latitude>
+        <uri>http://logarandes.org/place/558</uri>
+        <VillID>477</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>558</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Wrong information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>558</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Mistake in name of town (town name should be "Çunilata", not "Çinilata"). </Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Saluador de Puquina (L)</title>
+        <Ancient_Repartimiento>[Puquina y otros indios]; [Yaravaya]; [Copoata]; [Chichas de Guasacache]; [Orejones Yuminas]</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carumas y Ubinas </Ancient_Corregimiento>
+        <Modern_Pueblo>Puquina</Modern_Pueblo>
+        <longitude>-71.18432728</longitude>
+        <latitude>-16.62545704</latitude>
+        <uri>http://logarandes.org/place/559</uri>
+        <VillID>478</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>559</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Maria de Matara (L)</title>
+        <Ancient_Repartimiento>Los Soras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Lucanas y Andamarcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Matara</Modern_Pueblo>
+        <longitude>-73.63359513</longitude>
+        <latitude>-14.08140927</latitude>
+        <uri>http://logarandes.org/place/560</uri>
+        <VillID>479</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>560</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Santa Trinidad de Collayca (L) </title>
+        <Ancient_Repartimiento>Los Angaraes (de Villalobos, Cabrera)</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Angaraes</Ancient_Corregimiento>
+        <Modern_Pueblo>Conayca</Modern_Pueblo>
+        <longitude>-75.00693313</longitude>
+        <latitude>-12.51990077</latitude>
+        <uri>http://logarandes.org/place/184</uri>
+        <VillID>92</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>184</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on modern town</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Ynes de Chichima (L)</title>
+        <Ancient_Repartimiento>Chacalla </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Guarocheri</Ancient_Corregimiento>
+        <Modern_Pueblo>Chaclacayo</Modern_Pueblo>
+        <longitude>-76.76977114</longitude>
+        <latitude>-11.97605358</latitude>
+        <uri>http://logarandes.org/place/563</uri>
+        <VillID>482</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>563</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Geronimo (L)</title>
+        <Ancient_Repartimiento>Chacalla </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Guarocheri</Ancient_Corregimiento>
+        <Modern_Pueblo>San Gerónimo de Punán</Modern_Pueblo>
+        <longitude>-76.6282482</longitude>
+        <latitude>-11.81292033</latitude>
+        <uri>http://logarandes.org/place/564</uri>
+        <VillID>483</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>564</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Caruayllo (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Cañete</Ancient_Corregimiento>
+        <Modern_Pueblo>San Pedro de Carabayllo</Modern_Pueblo>
+        <longitude>-77.03702185</longitude>
+        <latitude>-11.85366825</latitude>
+        <uri>http://logarandes.org/place/565</uri>
+        <VillID>484</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>565</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Caruasa (L)</title>
+        <Ancient_Repartimiento>Guailas; [Rrecuay]; [Moro Quizquiz] </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Guailas</Ancient_Corregimiento>
+        <Modern_Pueblo>Carhuaz</Modern_Pueblo>
+        <longitude>-77.64626488</longitude>
+        <latitude>-9.281749898</latitude>
+        <uri>http://logarandes.org/place/566</uri>
+        <VillID>485</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>566</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Lorente de la Vega (L)</title>
+        <Ancient_Repartimiento>Marca, Guaraz</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Guailas</Ancient_Corregimiento>
+        <Modern_Pueblo>Marca</Modern_Pueblo>
+        <longitude>-77.47429879</longitude>
+        <latitude>-10.08864806</latitude>
+        <uri>http://logarandes.org/place/567</uri>
+        <VillID>486</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>567</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Add information on administrative position</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Haquira Yanaguaras (L)</title>
+        <Ancient_Repartimiento>Haquira Yanaguaras; Piteyanaguaras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Cotabambas</Ancient_Corregimiento>
+        <Modern_Pueblo>Haquira</Modern_Pueblo>
+        <longitude>-72.18824589</longitude>
+        <latitude>-14.21412254</latitude>
+        <uri>http://logarandes.org/place/404</uri>
+        <VillID>322</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>404</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>The modern province and department name "Arequipa" is incorrect and it should be "Apurímac"</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Pedro de Toro (L)</title>
+        <Ancient_Repartimiento>Oripa</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Andaguailas</Ancient_Corregimiento>
+        <Modern_Pueblo>Uripa</Modern_Pueblo>
+        <longitude>-73.67394439</longitude>
+        <latitude>-13.52940543</latitude>
+        <uri>http://logarandes.org/place/349</uri>
+        <VillID>574</VillID>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>349</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>The name "San Juan de Toro" is incorrect and the correct name is "San Pedro de Toro"</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Wrong location</Problem_2>
+        <Solution_2A>Update to the coordinates listed here</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>349</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Bernardo de Omate (L)</title>
+        <Ancient_Repartimiento>[Puquina y otros indios]; [Yaravaya]; [Copoata]; [Chichas de Guasacache]; [Orejones Yuminas]</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carumas y Ubinas </Ancient_Corregimiento>
+        <Modern_Pueblo>Omate</Modern_Pueblo>
+        <longitude>-70.96999709</longitude>
+        <latitude>-16.67394948</latitude>
+        <uri>http://logarandes.org/place/419</uri>
+        <VillID>338</VillID>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>419</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>The name "San Bernardo" is incorrect and the correct name is "Sant Bernardo de Omate"</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>419</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on administrative position</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Parquin (L)</title>
+        <Ancient_Repartimiento>Checras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Arnedo</Ancient_Corregimiento>
+        <Modern_Pueblo>Parquin</Modern_Pueblo>
+        <longitude>-76.72008336</longitude>
+        <latitude>-10.96449046</latitude>
+        <uri>http://logarandes.org/place/120</uri>
+        <VillID>26</VillID>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>120</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>The modern town "San Miguel de Canchas Parquin" is incorrect and the correct name for the modern town is "Parquin"</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Matheo de Penachi (L)</title>
+        <Ancient_Repartimiento>Penachi y Salas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Çaña</Ancient_Corregimiento>
+        <Modern_Pueblo>Penachi</Modern_Pueblo>
+        <longitude>-79.47391845</longitude>
+        <latitude>-6.168087594</latitude>
+        <uri>http://logarandes.org/place/27</uri>
+        <VillID>181</VillID>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>27</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>The modern town "Salas" is incorrect and the correct name for the modern town is "Penachi"</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Antonio de Caxamarca (L)</title>
+        <Ancient_Repartimiento>Caxamarca (de Mexia); Caxamarca (de Ysasaga); diversos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caxamarca</Ancient_Corregimiento>
+        <Modern_Pueblo>Cajamarca</Modern_Pueblo>
+        <longitude>-78.51742191</longitude>
+        <latitude>-7.156980571</latitude>
+        <uri>http://logarandes.org/place/47</uri>
+        <VillID>385</VillID>
+        <location/>
+        <Problem_1>Wrong information</Problem_1>
+        <Solution_1A>Update information</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>47</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>The name "San Antonio de Mancha" is incorrect and the correct name is "San Antonio de Caxamarca"</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Fee de Chayrapata (L) / Santa Fee de Chayrapacta (S) / Sancta Fe de Chairapacta (M)</title>
+        <Ancient_Repartimiento>Macha</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>Chairapata</Modern_Pueblo>
+        <longitude>-65.90207721</longitude>
+        <latitude>-18.76316265</latitude>
+        <uri>http://logarandes.org/place/463</uri>
+        <VillID>378</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>463</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santiago de Mohosa (L) / Santiago de Mososa (S)</title>
+        <Ancient_Repartimiento>Caracollo</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Lanza</Modern_Pueblo>
+        <longitude>-66.94576128</longitude>
+        <latitude>-17.36109671</latitude>
+        <uri>http://logarandes.org/place/444</uri>
+        <VillID>361</VillID>
+        <location/>
+        <Problem_1>Duplicate</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>444</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Entry 444 is in the wrong location but has the correct information so update to coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Remove</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry>504</Solution_1B_applies_to_LOGAR_entry>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Arauate (L)(M) / Arabatte (S)</title>
+        <Ancient_Repartimiento>Los Condes de Arauate</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Amparaes</Ancient_Corregimiento>
+        <Modern_Pueblo>Arabate</Modern_Pueblo>
+        <longitude>-65.15145332</longitude>
+        <latitude>-19.07378551</latitude>
+        <uri>http://logarandes.org/place/469</uri>
+        <VillID>384</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>469</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>469</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Guata (L)(S)(M)</title>
+        <Ancient_Repartimiento>Los Yngas Gualparocas; Los Condes de Arauate</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Amparaes</Ancient_Corregimiento>
+        <Modern_Pueblo>Huata</Modern_Pueblo>
+        <longitude>-65.23432856</longitude>
+        <latitude>-18.96906747</latitude>
+        <uri>http://logarandes.org/place/470</uri>
+        <VillID>386</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>470</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>470</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Villauerde de la Fuente (L) / Villaverde de la Fuente (C)(M) / Villaberde de la Fuentte (S) </title>
+        <Ancient_Repartimiento>Churumatas y Moyos; Chaqui (en Curi); Tacobamba (en Curi)</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Amparaes</Ancient_Corregimiento>
+        <Modern_Pueblo>Copavilque</Modern_Pueblo>
+        <longitude>-65.28609733</longitude>
+        <latitude>-18.62403241</latitude>
+        <uri>http://logarandes.org/place/460</uri>
+        <VillID>sd</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>460</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>460</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Charamoco (L)(M) / Challamoco (M)</title>
+        <Ancient_Repartimiento>Paria</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Paria</Ancient_Corregimiento>
+        <Modern_Pueblo>Charamoco</Modern_Pueblo>
+        <longitude>-66.29026188</longitude>
+        <latitude>-17.61584318</latitude>
+        <uri>http://logarandes.org/place/442</uri>
+        <VillID>359</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>442</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>442</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Collana y Cocone (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caracollo</Ancient_Corregimiento>
+        <Modern_Pueblo>Santiago de Collana</Modern_Pueblo>
+        <longitude>-67.9663561</longitude>
+        <latitude>-16.66883463</latitude>
+        <uri>http://logarandes.org/place/426</uri>
+        <VillID>345</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>426</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>426</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Joan de Challana (L) / San Juan de Challana (S)</title>
+        <Ancient_Repartimiento>Songochallana y Chacapa</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Challana Pampa</Modern_Pueblo>
+        <longitude>-67.8682126</longitude>
+        <latitude>-15.50510821</latitude>
+        <uri>http://logarandes.org/place/396</uri>
+        <VillID>312</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>396</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>396</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Hilauaya (L) / sd (S)</title>
+        <Ancient_Repartimiento>sd (L) / Hilabaya (S)</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Ilabaya</Modern_Pueblo>
+        <longitude>-68.6559066</longitude>
+        <latitude>-15.80860456</latitude>
+        <uri>http://logarandes.org/place/393</uri>
+        <VillID>310</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>393</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>393</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Ambara (L)</title>
+        <Ancient_Repartimiento>Ambana</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Ambana</Modern_Pueblo>
+        <longitude>-68.93296136</longitude>
+        <latitude>-15.59488535</latitude>
+        <uri>http://logarandes.org/place/360</uri>
+        <VillID>274</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>360</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>360</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Carijana (L) / Calixana (S)</title>
+        <Ancient_Repartimiento>Calixana; diversos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Yungas</Ancient_Corregimiento>
+        <Modern_Pueblo>Carijana</Modern_Pueblo>
+        <longitude>-68.76980661</longitude>
+        <latitude>-15.22233204</latitude>
+        <uri>http://logarandes.org/place/341</uri>
+        <VillID>257</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>341</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>341</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Guaycho (L)</title>
+        <Ancient_Repartimiento>Guaycho</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Llacxa</Ancient_Corregimiento>
+        <Modern_Pueblo>Puerto Acosta</Modern_Pueblo>
+        <longitude>-69.25238622</longitude>
+        <latitude>-15.53307854</latitude>
+        <uri>http://logarandes.org/place/414</uri>
+        <VillID>333</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>414</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>414</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>sd (L)</title>
+        <Ancient_Repartimiento>Tucume</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Çaña</Ancient_Corregimiento>
+        <Modern_Pueblo>Túcume viejo</Modern_Pueblo>
+        <longitude>-79.83224065</longitude>
+        <latitude>-6.507465263</latitude>
+        <uri>http://logarandes.org/place/36</uri>
+        <VillID>647</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>36</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>36</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>sd (L)</title>
+        <Ancient_Repartimiento>Guamachuco</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Caxamarca</Ancient_Corregimiento>
+        <Modern_Pueblo>Huamachuco</Modern_Pueblo>
+        <longitude>-78.04867773</longitude>
+        <latitude>-7.815540165</latitude>
+        <uri>http://logarandes.org/place/54</uri>
+        <VillID>658</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>54</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>54</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Techo (L)</title>
+        <Ancient_Repartimiento>Santiago de Yamarasbamba</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Pacllas</Ancient_Corregimiento>
+        <Modern_Pueblo>Yambrasbamba</Modern_Pueblo>
+        <longitude>-77.90564833</longitude>
+        <latitude>-5.741537334</latitude>
+        <uri>http://logarandes.org/place/12</uri>
+        <VillID>sd</VillID>
+        <location/>
+        <Problem_1>Incomplete information</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>12</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B>Add a map</Solution_1B>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry>12</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Valuerde (L)</title>
+        <Ancient_Repartimiento>Molleguaca </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Camana </Ancient_Corregimiento>
+        <Modern_Pueblo>Mollehuaca</Modern_Pueblo>
+        <longitude>-74.03357919</longitude>
+        <latitude>-15.62727809</latitude>
+        <uri>http://logarandes.org/place/375</uri>
+        <VillID>290</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>375</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Ocororo (L)</title>
+        <Ancient_Repartimiento>Tayacaxa </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Asangaro</Ancient_Corregimiento>
+        <Modern_Pueblo>Ocoro</Modern_Pueblo>
+        <longitude>-74.72965294</longitude>
+        <latitude>-12.34914274</latitude>
+        <uri>http://logarandes.org/place/185</uri>
+        <VillID>93</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>185</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>185</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Antonio (L)</title>
+        <Ancient_Repartimiento>Luyaconilap</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Luya y Chillao</Ancient_Corregimiento>
+        <Modern_Pueblo>Cohechán</Modern_Pueblo>
+        <longitude>-78.01912501</longitude>
+        <latitude>-6.187402636</latitude>
+        <uri>http://logarandes.org/place/13</uri>
+        <VillID>35</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>13</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Andamarca (L)(M)</title>
+        <Ancient_Repartimiento>Colquemarca y Andamarca</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Carangas</Ancient_Corregimiento>
+        <Modern_Pueblo>Andamarca</Modern_Pueblo>
+        <longitude>-67.50743308</longitude>
+        <latitude>-18.77872661</latitude>
+        <uri>http://logarandes.org/place/464</uri>
+        <VillID>379</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>464</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>464 in wrong location; move to present-day Andamarca</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Chimba (L)(C)</title>
+        <Ancient_Repartimiento>Yanquecollagua; Chimba y Valle de Tiyavaya; un repartimiento de Luis Cornejo; Larrecollagua; La Rrecollagua</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Arequipa</Ancient_Corregimiento>
+        <Modern_Pueblo>Yanahuara</Modern_Pueblo>
+        <longitude>-71.54276103</longitude>
+        <latitude>-16.38709312</latitude>
+        <uri>http://logarandes.org/place/433</uri>
+        <VillID>576</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>433</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Wrong information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>433</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Modern town information is incorrect (modern town should be listed as Yanahuara)</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Matara (L)</title>
+        <Ancient_Repartimiento>Collanaaymara</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Aymaraes</Ancient_Corregimiento>
+        <Modern_Pueblo>Matara</Modern_Pueblo>
+        <longitude>-72.91761135</longitude>
+        <latitude>-14.35138581</latitude>
+        <uri>http://logarandes.org/place/284</uri>
+        <VillID>2</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>284</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santa Fee de Chayrapata (L) / Santa Fee de Chayrapacta (S) / Sancta Fe de Chairapacta (M)</title>
+        <Ancient_Repartimiento>Macha</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Chayanta</Ancient_Corregimiento>
+        <Modern_Pueblo>Chairapata</Modern_Pueblo>
+        <longitude>-65.90207721</longitude>
+        <latitude>-18.76316265</latitude>
+        <uri>http://logarandes.org/place/463</uri>
+        <VillID>378</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>463</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Puno (L)(S)</title>
+        <Ancient_Repartimiento>Puno </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Paucarcolla</Ancient_Corregimiento>
+        <Modern_Pueblo>Puno</Modern_Pueblo>
+        <longitude>-70.02795105</longitude>
+        <latitude>-15.8406096</latitude>
+        <uri>http://logarandes.org/place/394</uri>
+        <VillID>311</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>394</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Matara (L)</title>
+        <Ancient_Repartimiento>Collanaaymara</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Aymaraes</Ancient_Corregimiento>
+        <Modern_Pueblo>Matara</Modern_Pueblo>
+        <longitude>-72.91761135</longitude>
+        <latitude>-14.35138581</latitude>
+        <uri>http://logarandes.org/place/284</uri>
+        <VillID>2</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>284</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>284</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on administrative position</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Los Rreyes (L)</title>
+        <Ancient_Repartimiento>Auancay</Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Valle de Avancay</Ancient_Corregimiento>
+        <Modern_Pueblo>Abancay</Modern_Pueblo>
+        <longitude>-72.87888772</longitude>
+        <latitude>-13.63735187</latitude>
+        <uri>http://logarandes.org/place/236</uri>
+        <VillID>145</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>236</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Nuestra Señora de Encarnaçion de Chinchaypuquio (L)</title>
+        <Ancient_Repartimiento>Pantipata; Callaracay </Ancient_Repartimiento>
+        <Ancient_Corregimiento>El Valle de Avancay</Ancient_Corregimiento>
+        <Modern_Pueblo>Pantipata</Modern_Pueblo>
+        <longitude>-72.33446538</longitude>
+        <latitude>-13.58179849</latitude>
+        <uri>http://logarandes.org/place/230</uri>
+        <VillID>139</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>230</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>230</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Pedro de Cayara (L)</title>
+        <Ancient_Repartimiento>Cayara</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Andaguailas</Ancient_Corregimiento>
+        <Modern_Pueblo>Cayara</Modern_Pueblo>
+        <longitude>-73.72414193</longitude>
+        <latitude>-13.5627696</latitude>
+        <uri>http://logarandes.org/place/257</uri>
+        <VillID>167</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>257</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>257</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santtiago de Mollebamba (L)</title>
+        <Ancient_Repartimiento>Cayara</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Andaguailas</Ancient_Corregimiento>
+        <Modern_Pueblo>Santiago de Mollebamba</Modern_Pueblo>
+        <longitude>-73.68806622</longitude>
+        <latitude>-13.67231293</latitude>
+        <uri>http://logarandes.org/place/313</uri>
+        <VillID>227</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>313</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>313</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Tambo (L)</title>
+        <Ancient_Repartimiento>Hatunlucana y Laramati </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Lucanas y Andamarcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Tambo Quemado</Modern_Pueblo>
+        <longitude>-74.6702336</longitude>
+        <latitude>-14.72859467</latitude>
+        <uri>http://logarandes.org/place/202</uri>
+        <VillID>110</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>202</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>202</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Saysa (L)</title>
+        <Ancient_Repartimiento>Hatunlucana y Laramati </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Lucanas y Andamarcas</Ancient_Corregimiento>
+        <Modern_Pueblo>Saisa</Modern_Pueblo>
+        <longitude>-74.41677113</longitude>
+        <latitude>-14.94024721</latitude>
+        <uri>http://logarandes.org/place/282</uri>
+        <VillID>194</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>282</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Conçepcion de Antabamba (L)</title>
+        <Ancient_Repartimiento>Los Guaros</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Angaraes</Ancient_Corregimiento>
+        <Modern_Pueblo>Andabamba</Modern_Pueblo>
+        <longitude>-74.62381375</longitude>
+        <latitude>-12.69378724</latitude>
+        <uri>http://logarandes.org/place/210</uri>
+        <VillID>118</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>210</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>210</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Anton de Cocha (L)</title>
+        <Ancient_Repartimiento>Tanquiguas </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Hananchilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Cocha</Modern_Pueblo>
+        <longitude>-73.83453802</longitude>
+        <latitude>-13.7630911</latitude>
+        <uri>http://logarandes.org/place/246</uri>
+        <VillID>156</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>246</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Quicacha (L)</title>
+        <Ancient_Repartimiento>Totos </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Hananchilques</Ancient_Corregimiento>
+        <Modern_Pueblo>Totos</Modern_Pueblo>
+        <longitude>-74.52283388</longitude>
+        <latitude>-13.5678841</latitude>
+        <uri>http://logarandes.org/place/382</uri>
+        <VillID>298</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>382</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>382</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Alfonso de Chilcapampa (L)</title>
+        <Ancient_Repartimiento>Los Angaraes (de Hontiveros)</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Asangaro</Ancient_Corregimiento>
+        <Modern_Pueblo>Chilcapata</Modern_Pueblo>
+        <longitude>-74.69445456</longitude>
+        <latitude>-12.55623589</latitude>
+        <uri>http://logarandes.org/place/193</uri>
+        <VillID>100</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>193</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>193</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Francisco Higuare (L)</title>
+        <Ancient_Repartimiento>Checras</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Arnedo</Ancient_Corregimiento>
+        <Modern_Pueblo>Ihuari</Modern_Pueblo>
+        <longitude>-76.95206826</longitude>
+        <latitude>-11.18889814</latitude>
+        <uri>http://logarandes.org/place/123</uri>
+        <VillID>29</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>123</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>123</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan del Guaral (L)</title>
+        <Ancient_Repartimiento>Rrecuay; Guaraz</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Villa de Arnedo</Ancient_Corregimiento>
+        <Modern_Pueblo>Huaral</Modern_Pueblo>
+        <longitude>-77.20713496</longitude>
+        <latitude>-11.495425</latitude>
+        <uri>http://logarandes.org/place/139</uri>
+        <VillID>45</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>139</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2/>
+        <Solution_2A/>
+        <Solution_2A_applies_to_LOGAR_entry/>
+        <Solution_2A_Notes/>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santo Domingo de Copa (L)</title>
+        <Ancient_Repartimiento>Ocros</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Ambar y Caxatambo</Ancient_Corregimiento>
+        <Modern_Pueblo>Ocros</Modern_Pueblo>
+        <longitude>-77.39681928</longitude>
+        <latitude>-10.40348908</latitude>
+        <uri>http://logarandes.org/place/107</uri>
+        <VillID>12</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>107</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>107</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan de Yaquia (L)</title>
+        <Ancient_Repartimiento>Allauca Guari</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Conchucos</Ancient_Corregimiento>
+        <Modern_Pueblo>Yacya</Modern_Pueblo>
+        <longitude>-77.16912151</longitude>
+        <latitude>-9.385063964</latitude>
+        <uri>http://logarandes.org/place/99</uri>
+        <VillID>532</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>99</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>99</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Luis de Chuquibamba (L)</title>
+        <Ancient_Repartimiento>Ychoguari</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Conchucos</Ancient_Corregimiento>
+        <Modern_Pueblo>San Luis</Modern_Pueblo>
+        <longitude>-77.32915886</longitude>
+        <latitude>-9.094425921</latitude>
+        <uri>http://logarandes.org/place/83</uri>
+        <VillID>516</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>83</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>83</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Marcos de Chupan (L)</title>
+        <Ancient_Repartimiento>Allauca Pincos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Conchucos</Ancient_Corregimiento>
+        <Modern_Pueblo>Chupan</Modern_Pueblo>
+        <longitude>-77.05505118</longitude>
+        <latitude>-9.376601633</latitude>
+        <uri>http://logarandes.org/place/89</uri>
+        <VillID>522</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>89</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>89</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Santo Domingo de Guachi (L)</title>
+        <Ancient_Repartimiento>Ychos Pincos</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Conchucos</Ancient_Corregimiento>
+        <Modern_Pueblo>Huacchis</Modern_Pueblo>
+        <longitude>-76.78682559</longitude>
+        <latitude>-9.200841653</latitude>
+        <uri>http://logarandes.org/place/81</uri>
+        <VillID>515</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>81</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>81</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Lorenzo de Chachas (L)</title>
+        <Ancient_Repartimiento>Ycho Guanuco (de Mendoza)</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Guamalies</Ancient_Corregimiento>
+        <Modern_Pueblo>Pachas</Modern_Pueblo>
+        <longitude>-76.77147444</longitude>
+        <latitude>-9.706972358</latitude>
+        <uri>http://logarandes.org/place/67</uri>
+        <VillID>500</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>67</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>67</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>La Concepcion de Conic (L)</title>
+        <Ancient_Repartimiento>Los Ancas y Yacas </Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Guamalies</Ancient_Corregimiento>
+        <Modern_Pueblo>Baños</Modern_Pueblo>
+        <longitude>-76.73577962</longitude>
+        <latitude>-10.07607681</latitude>
+        <uri>http://logarandes.org/place/119</uri>
+        <VillID>25</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>119</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>119</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>San Joan Baptista de Guarcaca (L)</title>
+        <Ancient_Repartimiento>Los Yaros Chaupe Guarangas</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Jarama e Chinchacocha</Ancient_Corregimiento>
+        <Modern_Pueblo>Huariaca</Modern_Pueblo>
+        <longitude>-76.18953972</longitude>
+        <latitude>-10.44204195</latitude>
+        <uri>http://logarandes.org/place/116</uri>
+        <VillID>22</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>116</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>116</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Sant Sebastian del Valle (L)</title>
+        <Ancient_Repartimiento>sd</Ancient_Repartimiento>
+        <Ancient_Corregimiento>La Ciudad de San Francisco de Buena Esperanza y Puerto de Paita / San Miguel de Piura </Ancient_Corregimiento>
+        <Modern_Pueblo>Malingas</Modern_Pueblo>
+        <longitude>-80.25060252</longitude>
+        <latitude>-4.952752111</latitude>
+        <uri>http://logarandes.org/place/5</uri>
+        <VillID>325</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>5</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>5</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+    <row>
+        <source/>
+        <fid/>
+        <title>Oromina (L)</title>
+        <Ancient_Repartimiento>Oromina</Ancient_Repartimiento>
+        <Ancient_Corregimiento>Los Pacllas</Ancient_Corregimiento>
+        <Modern_Pueblo>Santa Rosa de Oromina</Modern_Pueblo>
+        <longitude>-77.03375229</longitude>
+        <latitude>-6.099123943</latitude>
+        <uri>http://logarandes.org/place/14</uri>
+        <VillID>46</VillID>
+        <location/>
+        <Problem_1>Wrong location</Problem_1>
+        <Solution_1A>Update location</Solution_1A>
+        <Solution_1A_applies_to_LOGAR_entry>14</Solution_1A_applies_to_LOGAR_entry>
+        <Solution_1A_Notes>Update to the coordinates listed here</Solution_1A_Notes>
+        <Solution_1B/>
+        <Solution_1B_applies_to_LOGAR_entry/>
+        <Soltuion_1B_Notes/>
+        <Problem_2>Incomplete information</Problem_2>
+        <Solution_2A>Update information</Solution_2A>
+        <Solution_2A_applies_to_LOGAR_entry>14</Solution_2A_applies_to_LOGAR_entry>
+        <Solution_2A_Notes>Add information on modern town</Solution_2A_Notes>
+        <Solution_Notes/>
+        <bibl1/>
+        <bibl2/>
+        <bibl3/>
+        <bibl4/>
+        <bibl5/>
+        <note_admin/>
+        <note_adm_1/>
+        <note_adm_2/>
+        <note_adm_3/>
+        <note_adm_4/>
+        <note_other/>
+        <note_oth_1/>
+    </row>
+</root>

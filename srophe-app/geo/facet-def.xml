@@ -1,0 +1,47 @@
+<facets xmlns="http://expath.org/ns/facet">
+    <!-- hierarchical-logar -->
+    <facet-definition name="Audiencia">
+        <group-by function="facet:hierarchical-logar">
+            <sub-path>descendant::tei:location/tei:region[@type='audiencia'][1]</sub-path>
+        </group-by>
+        <max-values show="100">150</max-values>
+        <order-by direction="ascending">count</order-by>
+    </facet-definition>
+    <!-- 
+    <facet-definition name="Location">
+        <group-by>
+            <sub-path>descendant::tei:location/tei:region[@type='audiencia'][1]</sub-path>
+        </group-by>
+        <facet-definition name="corregimiento">
+            <group-by>
+                <sub-path>descendant::tei:location/tei:region[@type='ciudad'][1]</sub-path>
+            </group-by>
+            <facet-definition name="repartimiento">
+                <group-by>
+                    <sub-path>descendant::tei:location/tei:region[@type='corregimiento'][1]</sub-path>
+                </group-by>
+                <facet-definition name="ciudad">
+                    <group-by>
+                        <sub-path>descendant::tei:location/tei:region[@type='repartimiento'][1]/tei:placeName[@type='standardized'][1]</sub-path>
+                    </group-by>
+                    <facet-definition name="pueblo">
+                        <group-by>
+                            <sub-path>descendant::tei:location/tei:settlement[@type='pueblo'][1]</sub-path>
+                        </group-by>
+                        <max-values show="20">40</max-values>
+                        <order-by direction="descending">count</order-by>
+                    </facet-definition>
+                    <max-values show="20">40</max-values>
+                    <order-by direction="descending">count</order-by>
+                </facet-definition>
+                <max-values show="20">40</max-values>
+                <order-by direction="descending">count</order-by>
+            </facet-definition>
+            <max-values show="20">40</max-values>
+            <order-by direction="descending">count</order-by>
+        </facet-definition>
+        <max-values show="20">40</max-values>
+        <order-by direction="ascending">count</order-by>
+    </facet-definition>
+    -->
+</facets>

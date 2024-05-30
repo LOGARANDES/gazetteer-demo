@@ -1,12 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://expath.org/ns/pkg" name="http://syriaca.org/geo" abbrev="geo" version="0.60" spec="1.0">
-    <title>Syriaca.org: Gazetteer Demo App</title>
-    <!-- TEI data -->
-    <dependency package="http://syriaca.org/srophe-data"/>
-    <!-- eXist shared resources -->
-    <dependency package="http://exist-db.org/apps/shared"/>
-    <!-- JSON Parser and Serializer for XQuery -->
-    <dependency package="http://xqilla.sourceforge.net/pkg/xqjson"/>
-    <!-- Functx  -->
-    <dependency package="http://www.functx.com"/>
+<package xmlns="http://expath.org/ns/pkg" name="http://syriaca.org/geo" abbrev="logar" version="2.02" spec="1.0">
+    <title>Logar: Linked Open Gazetteer of the Andean Region</title>
 </package>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:s="http://syriaca.org" xmlns:saxon="http://saxon.sf.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="http://syriaca.org/ns" xmlns:fo="http://www.w3.org/1999/XSL/Format" exclude-result-prefixes="xs t s saxon" version="2.0">
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:saxon="http://saxon.sf.net/" xmlns:local="http://syriaca.org/ns" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:s="http://syriaca.org" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs t s saxon" version="2.0">
 
  <!-- ================================================================== 
        Copyright 2015 Vanderbilt University
@@ -64,8 +63,7 @@
  <!-- set output so we get (mostly) indented HTML -->
  <!-- =================================================================== -->
     <xsl:output name="xml" encoding="UTF-8" indent="yes"/>
-
-    <!-- Local functions-->
+   <!-- Local functions-->
     <xsl:function name="local:do-refs-pdf" as="node()">
         <xsl:param name="refs"/>
         <xsl:param name="lang"/>
@@ -316,11 +314,20 @@
  <!-- =================================================================== -->
     
     <!-- Parameters passed from app.xql default values if params are empty -->
+    <!-- Parameters passed from global.xqm (set in config.xml) default values if params are empty -->
+    <!-- eXist data app root for gazetteer data -->
+    <xsl:param name="mode" select="'#all'"/>
     <xsl:param name="data-root" select="'/db/apps/srophe-data'"/>
+    <!-- eXist app root for app deployment-->
     <xsl:param name="app-root" select="'/db/apps/srophe'"/>
+    <!-- Root of app for building dynamic links. Default is eXist app root -->
+    <xsl:param name="nav-base" select="'/db/apps/srophe'"/>
+    <!-- Base URI for identifiers in app data -->
+    <xsl:param name="base-uri" select="'/db/apps/srophe'"/>
+    <!-- Hard coded values-->
     <xsl:param name="normalization">NFKC</xsl:param>
-    <xsl:param name="editoruriprefix">http://syriaca.org/editors.xml#</xsl:param>
-    <xsl:variable name="editorssourcedoc" select="concat($app-root,'/documentation/editors.xml')"/>
+    <xsl:param name="editoruriprefix">http://syriaca.org/documentation/editors.xml#</xsl:param>
+    <xsl:variable name="editorssourcedoc" select="concat('xmldb:exist://',$app-root,'/documentation/editors.xml')"/>
     <xsl:variable name="resource-id">
         <xsl:choose>
             <xsl:when test="string(/*/@id)">

@@ -1,32 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/geo.html" data-template-at="content">
-    <div class="section">
-        <h1 class="title about">Index of Places</h1>
-        <p style="margin:1em;">Listings of places registered in the Syriac Gazetteer.</p>
-               
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="container browse">
+        <h1 class="title about">Browse Places</h1>
         <!-- Calls xquery functions -->
-        <div data-template="browse:get-all" data-template-coll="places">
-            <div class="tabbable">
+        <div data-template="browse:get-all" data-template-collection="places">
+            <div class="tabbable"> 
                 <!-- Browse Tabs -->
                 <ul class="nav nav-tabs" id="nametabs">
-                    <li data-template="browse:build-tabs-en"/>
-                    <li data-template="browse:build-tabs-syr"/>
-                    <li data-template="browse:build-tabs-type"/>
-                    <li data-template="browse:build-tabs-map"/>
+                    <li data-template="browse:tabs" data-template-text="Title" data-template-param="view" data-template-value="title" data-template-alpha-filter-value="A" data-template-default="true"/>
+                    <li data-template="browse:tabs" data-template-text="Map" data-template-param="view" data-template-value="map"/>
                 </ul>
                 <!-- Browse Content -->
-                <div class="tab-content" data-template="browse:get-narrow" data-template-coll="places">
+                <div class="tab-content">
                     <div class="tab-pane active">
                         <div class="row">
-                            <div data-template="browse:results-panel" data-template-coll="places"/>
+                            <div data-template="browse:results-panel" data-template-collection="places"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="externals">
-            <h3>Other formats</h3>
-            <div data-template="browse:other-formats" data-template-coll="places"/>
+            <h3>Download LOGAR data</h3>
+            <ul>
+                <li><a href="/exist/restxq/logar/api/data?format=geojson" rel="alternate" type="application/json" title="full set of records from the Syriac Gazetteer in GeoJSON">GeoJSON</a></li>
+                <li><a href="/exist/restxq/logar/api/data?format=kml" rel="alternate" type="application/vnd.google-earth.kmz" title="full set of records from the Syriac Gazetteer in KML format">KML</a></li>
+            </ul>
         </div>
     </div>
 </div>

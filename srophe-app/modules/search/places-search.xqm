@@ -1,7 +1,7 @@
 xquery version "3.0";
 
 module namespace places="http://syriaca.org/places";
-import module namespace common="http://syriaca.org/common" at "common.xqm";
+import module namespace data="http://syriaca.org/data" at "lib/data.xqm";
 import module namespace templates="http://exist-db.org/xquery/templates" ;
 import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
 
@@ -45,7 +45,7 @@ declare variable $places:ar {request:get-parameter('ar', '')};
  
 :)
 declare function places:keyword(){
-    if(exists($places:q) and $places:q != '') then concat("[ft:query(.,'",common:clean-string($places:q),"',common:options()) or ft:query(descendant::tei:placeName,'",common:clean-string($places:q),"',common:options()) or ft:query(descendant::tei:persName,'",common:clean-string($places:q),"',common:options()) or ft:query(ancestor::tei:TEI/descendant::tei:teiHeader/descendant::tei:title,'",common:clean-string($places:q),"',common:options()) or ft:query(descendant::tei:desc,'",common:clean-string($places:q),"',common:options())]")
+    if(exists($places:q) and $places:q != '') then concat("[ft:query(.,'",data:clean-string($places:q),"',data:search-options()) or ft:query(descendant::tei:placeName,'",data:clean-string($places:q),"',data:search-options()) or ft:query(descendant::tei:persName,'",data:clean-string($places:q),"',data:search-options()) or ft:query(ancestor::tei:TEI/descendant::tei:teiHeader/descendant::tei:title,'",data:clean-string($places:q),"',data:search-options()) or ft:query(descendant::tei:desc,'",data:clean-string($places:q),"',data:search-options())]")
     else ''    
 };
 
@@ -54,7 +54,7 @@ declare function places:keyword(){
  : @p full text query
 :)
 declare function places:place-name(){
-    if(exists($places:p) and $places:p != '') then concat("[ft:query(descendant::tei:place/tei:placeName,'",common:clean-string($places:p),"',common:options())]")
+    if(exists($places:p) and $places:p != '') then concat("[ft:query(descendant::tei:place/tei:placeName,'",data:clean-string($places:p),"',data:search-options())]")
     else ''    
 };
 
@@ -63,7 +63,7 @@ declare function places:place-name(){
  : @type full text query
 :)
 declare function places:type(){
-    if(exists($places:type) and $places:type != '') then string(concat("[descendant::tei:place/@type = '",common:clean-string($places:type),"']"))
+    if(exists($places:type) and $places:type != '') then string(concat("[descendant::tei:place/@type = '",data:clean-string($places:type),"']"))
     else '' 
 };
 
@@ -73,7 +73,7 @@ declare function places:type(){
  : NOTE: need to understand location search better. 
 :)
 declare function places:location(){
-    if(exists($places:loc) and $places:loc != '') then concat("[ft:query(descendant::tei:place/tei:location,'",common:clean-string($places:loc),"',common:options())]")
+    if(exists($places:loc) and $places:loc != '') then concat("[ft:query(descendant::tei:place/tei:location,'",data:clean-string($places:loc),"',data:search-options())]")
     else ''
 };
 
@@ -83,7 +83,7 @@ declare function places:location(){
  : @e full text query
 :)
 declare function places:event(){
-    if(exists($places:e) and $places:e != '') then concat("[ft:query(descendant::tei:place/tei:event[@type != 'attestation' or not(@type)],'",common:clean-string($places:e),"',common:options())]")
+    if(exists($places:e) and $places:e != '') then concat("[ft:query(descendant::tei:place/tei:event[@type != 'attestation' or not(@type)],'",data:clean-string($places:e),"',data:search-options())]")
     else ''
 };
 
@@ -121,7 +121,7 @@ declare function places:event-dates(){
  : @e full text query
 :)
 declare function places:attestation(){
-    if(exists($places:a) and $places:a != '') then concat("[ft:query(descendant::tei:place/tei:event[@type = 'attestation'],'",common:clean-string($places:a),"',common:options())]")
+    if(exists($places:a) and $places:a != '') then concat("[ft:query(descendant::tei:place/tei:event[@type = 'attestation'],'",data:clean-string($places:a),"',data:search-options())]")
     else ''
 };
 
@@ -226,7 +226,7 @@ if(exists($places:cds) and $places:cds != '') then
  : @e full text query
 :)
 declare function places:existence(){
-    if(exists($places:exist) and $places:exist != '') then concat("[ft:query(descendant::tei:state[@type = 'existence'],'",common:clean-string($places:exist),"',common:options())]")
+    if(exists($places:exist) and $places:exist != '') then concat("[ft:query(descendant::tei:state[@type = 'existence'],'",data:clean-string($places:exist),"',data:search-options())]")
     else ''
 };
 
@@ -312,6 +312,9 @@ declare function places:query-string() as xs:string?{
     places:attestation(), places:attestation-dates(), 
     places:existence(),places:existence-dates(),
     places:confession(),
+    data:related-places(),
+    data:related-persons(),
+    data:mentioned(),
     places:limit-by-lang-en(),places:limit-by-lang-syr(),places:limit-by-lang-ar()
     )
 };
@@ -320,44 +323,54 @@ declare function places:query-string() as xs:string?{
  : Build search parameter string for search results page
 :)
 declare function places:search-string(){
-    let $q-string := if(exists($places:q) and $places:q != '') then (<span class="param">Keyword: </span>,<span class="match">{common:clean-string($places:q)}&#160;</span>)
-                     else ''
-    let $p-string := if(exists($places:p) and $places:p != '') then (<span class="param">Place Name: </span>,<span class="match">{common:clean-string($places:p)} &#160;</span>)
-                        else ''                            
-    let $type-string := if(exists($places:type) and $places:type != '') then (<span class="param">Type: </span>,<span class="match">{common:clean-string($places:type)} &#160;</span>)
-                        else ''     
-    let $loc-string := if(exists($places:loc) and $places:loc != '') then (<span class="param">Location: </span>,<span class="match">{common:clean-string($places:loc)} &#160;</span>)
-                        else ''     
-    let $e-string := if(exists($places:e) and $places:e != '') then (<span class="param">Event: </span>, <span class="match">{common:clean-string($places:e)} &#160;</span>)
-                     else ''                             
-    let $eds-string := if(exists($places:eds) and $places:eds != '') then (<span class="param">Event Start Date: </span>, <span class="match">{common:clean-string($places:eds)} &#160;</span>)
-                     else ''     
-    let $ede-string := if(exists($places:ede) and $places:ede != '') then (<span class="param">Event End Date: </span>, <span class="match">{common:clean-string($places:ede)} &#160;</span>)
-                     else ''                   
-    let $a-string := if(exists($places:a) and $places:a != '') then (<span class="param">Attestations: </span>, <span class="match">{common:clean-string($places:a)}&#160; </span>)
-                     else ''     
-    let $ads-string := if(exists($places:ads) and $places:ads != '') then (<span class="param">Attestations Start Date: </span>, <span class="match">{common:clean-string($places:ads)}&#160;</span>)
-                     else ''     
-    let $ade-string := if(exists($places:ade) and $places:ade != '') then (<span class="param">Attestations End Date: </span>, <span class="match">{common:clean-string($places:ade)} &#160;</span>)
-                     else ''                   
-    let $c-string := if(exists($places:c) and $places:c != '') then (<span class="param">Religious Communities: </span>, <span class="match">{common:clean-string($places:c)} &#160;</span>)
-                     else ''     
-    let $cds-string := if(exists($places:cds) and $places:cds != '') then (<span class="param">Religious Communities Start Date: </span>, <span class="match">{common:clean-string($places:cds)} &#160;</span>)
-                     else ''     
-    let $cde-string := if(exists($places:cde) and $places:cde != '') then (<span class="param">Religious Communities End Date: </span>, <span class="match">{common:clean-string($places:cde)} &#160;</span>)
-                     else ''                       
-    let $existds-string := if(exists($places:existds) and $places:existds != '') then (<span class="param">Existence Start Date: </span>, <span class="match">{common:clean-string($places:existds)}&#160; </span>)
-                     else ''     
-    let $existde-string := if(exists($places:existde) and $places:existde != '') then (<span class="param">Existence End Date: </span>, <span class="match">{common:clean-string($places:existde)}&#160; </span>)
-                     else ''                    
-    let $en-lang-string := if(exists($places:en) and $places:en != '') then <span class="param">English </span>
-                     else ''
-    let $syr-lang-string := if(exists($places:syr) and $places:syr != '') then <span class="param">Syriac </span>
-                     else ''
-    let $ar-lang-string := if(exists($places:ar) and $places:ar != '') then <span class="param">Arabic </span>
-                     else ''           
-
-    return ($q-string,$p-string,$type-string,$loc-string,$e-string,$eds-string,$ede-string,$a-string,$ads-string,$ade-string,$c-string,$cds-string,$cde-string,$existds-string,$existde-string,$en-lang-string,$ar-lang-string,$syr-lang-string)                                          
+<span xmlns="http://www.w3.org/1999/xhtml">
+{(
+    let $parameters :=  request:get-parameter-names()
+    for  $parameter in $parameters
+    return 
+        if(request:get-parameter($parameter, '') != '') then
+            if($parameter = 'start' or $parameter = 'sort-element') then ()
+            else if($parameter = 'q') then 
+                (<span class="param">Keyword: </span>,<span class="match">{$places:q}&#160; </span>)
+            else if($parameter = 'p') then 
+                (<span class="param">Place Name: </span>,<span class="match">{$places:p}&#160; </span>)
+            else if($parameter = 'type') then 
+                (<span class="param">Type: </span>,<span class="match">{$places:type}&#160; </span>)
+            else if($parameter = 'loc') then 
+                (<span class="param">Location: </span>,<span class="match">{$places:loc}&#160; </span>)
+            else if($parameter = 'e') then 
+                (<span class="param">Event: </span>,<span class="match">{$places:e}&#160; </span>)
+            else if($parameter = 'eds') then 
+                (<span class="param">Event Start Date: </span>,<span class="match">{$places:eds}&#160; </span>)
+            else if($parameter = 'ede') then 
+                (<span class="param">Event End Date: </span>,<span class="match">{$places:ede}&#160; </span>)
+            else if($parameter = 'a') then 
+                (<span class="param">Attestations: </span>,<span class="match">{$places:a}&#160; </span>)
+            else if($parameter = 'ads') then 
+                (<span class="param">Attestations Start Date: </span>,<span class="match">{$places:ads}&#160; </span>)
+            else if($parameter = 'ade') then 
+                (<span class="param">Attestations End Date: </span>,<span class="match">{$places:ade}&#160; </span>)
+            else if($parameter = 'c') then 
+                (<span class="param">Religious Communities: </span>,<span class="match">{$places:c}&#160; </span>)
+            else if($parameter = 'cds') then 
+                (<span class="param">Religious Communities Start Date: </span>,<span class="match">{$places:cds}&#160; </span>)
+            else if($parameter = 'cde') then 
+                (<span class="param">Religious Communities End Date: </span>,<span class="match">{$places:cde}&#160; </span>)            
+            else if($parameter = 'existds') then 
+                (<span class="param">Existence Start Date: </span>,<span class="match">{$places:existds}&#160; </span>)
+            else if($parameter = 'existde') then 
+                (<span class="param">Existence End Date: </span>,<span class="match">{$places:existde}&#160; </span>)        
+            
+            else if($parameter = 'en' and $places:en != '') then 
+                (<span class="param">English </span>)  
+            else if($parameter = 'syr' and $places:syr != '') then 
+                (<span class="param">Syriac </span>)
+            else if($parameter = 'ar' and $places:ar != '') then 
+                (<span class="param">Arabic </span>)    
+            else (<span class="param"> {replace(concat(upper-case(substring($parameter,1,1)),substring($parameter,2)),'-',' ')}: </span>,<span class="match">{request:get-parameter($parameter, '')}&#160; </span>)    
+        else ())
+        }
+</span>                                            
 };
 
 declare function places:results-node($hit){
@@ -387,38 +400,73 @@ declare function places:results-node($hit){
  : Builds advanced search form
  :)
 declare function places:search-form() {   
-<form method="get" action="search.html" style="margin-top:2em;" class="form-horizontal" role="form">
-<h1>Advanced Search</h1>
+<form method="get" action="search.html" xmlns:xi="http://www.w3.org/2001/XInclude"  class="form-horizontal" role="form">
     <div class="well well-small">
-        <div class="well well-small" style="background-color:white;">
+             <button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#searchTips">
+                Search Help <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+            </button>&#160;
+            <xi:include href="{$global:app-root}/searchTips.html"/>
+        <div class="well well-small search-inner well-white">
             <div class="row">
                 <div class="col-md-7" style="border-right:1px solid #ccc;">
                 <!-- Keyword -->
                  <div class="form-group">
                     <label for="q" class="col-sm-2 col-md-3  control-label">Keyword: </label>
                     <div class="col-sm-10 col-md-9 ">
-                        <input type="text" id="q" name="q" class="form-control"/>
+                       <div class="input-group">
+                        <input type="text" id="qs" name="q" class="form-control keyboard"/>
+                            <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
+                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
+                                    </button>
+                                {global:keyboard-select-menu('qs')}
+                            </div>
+                    </div> 
                     </div>
                   </div>
                     <!-- Place Name-->
                   <div class="form-group">
                     <label for="p" class="col-sm-2 col-md-3  control-label">Place Name: </label>
                     <div class="col-sm-10 col-md-9 ">
-                        <input type="text" id="p" name="p" class="form-control"/>
+                       <div class="input-group">
+                            <input type="text" id="p" name="p" class="form-control keyboard"/>
+                            <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
+                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
+                                    </button>
+                                    {global:keyboard-select-menu('p')}
+                            </div>
+                        </div> 
                     </div>
                   </div>
                     <!-- Location --> 
                     <div class="form-group">
                         <label for="loc" class="col-sm-2 col-md-3  control-label">Location: </label>
                         <div class="col-sm-10 col-md-9 ">
-                            <input type="text" id="loc" name="loc" class="form-control"/>
+                           <div class="input-group">
+                                <input type="text" id="loc" name="loc" class="form-control keyboard"/>
+                            <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
+                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
+                                    </button>
+                                    {global:keyboard-select-menu('loc')}
+                            </div>
+                            </div>                         
                         </div>
                     </div>
                     <hr/>
                     <div class="form-group">
                         <label for="e" class="col-sm-2 col-md-3  control-label">Events: </label>
                         <div class="col-sm-10 col-md-9 ">
-                            <input type="text" id="e" name="e" class="form-control"/>
+                           <div class="input-group">
+                            <input type="text" id="e" name="e" class="form-control keyboard"/>
+                            <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
+                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
+                                    </button>
+                                    {global:keyboard-select-menu('e')}
+                            </div>
+                            </div>                              
                         </div>
                     </div>
                     <div class="form-group">
@@ -434,7 +482,15 @@ declare function places:search-form() {
                      <div class="form-group">
                         <label for="a" class="col-sm-2 col-md-3  control-label">Attestations: </label>
                         <div class="col-sm-10 col-md-9 ">
-                            <input type="text" id="a" name="a" class="form-control"/>
+                           <div class="input-group">
+                            <input type="text" id="a" name="a" class="form-control keyboard"/>
+                            <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Select Keyboard">
+                                        &#160;<span class="syriaca-icon syriaca-keyboard">&#160; </span><span class="caret"/>
+                                    </button>
+                                    {global:keyboard-select-menu('a')}
+                            </div>
+                            </div>                             
                         </div>
                     </div>
                     <div class="form-group">
@@ -482,6 +538,30 @@ declare function places:search-form() {
                             <p class="hint" style="margin:.5em; color: grey; font-style:italic;">* Dates should be entered as YYYY or YYYY-MM-DD</p>
                         </div>
                     </div>
+            <!-- Associated Places-->
+            <div class="form-group">            
+                <label for="related-place" class="col-sm-2 col-md-3  control-label">Related Places: </label>
+                <div class="col-sm-10 col-md-6">
+                    <input type="text" id="related-place" name="related-place" placeholder="Related Places" class="form-control"/>&#160;
+                    <p class="hint small">* Enter syriaca.org URI, ex: http://syriaca.org/place/78</p>
+                </div>
+            </div>
+            <!-- Related persons-->
+            <div class="form-group">            
+                <label for="related-persons" class="col-sm-2 col-md-3  control-label">Related Persons: </label>
+                <div class="col-sm-10 col-md-6">
+                    <input type="text" id="related-persons" name="related-persons" class="form-control" placeholder="Related Persons"/>
+                    <p class="hint small">* Enter syriaca.org URI, ex: http://syriaca.org/person/13</p>
+                </div>
+            </div>
+            <!--Associated Texts:-->
+            <div class="form-group">            
+                <label for="mentioned" class="col-sm-2 col-md-3  control-label">Related Works: </label>
+                <div class="col-sm-10 col-md-6">
+                    <input type="text" id="mentioned" name="mentioned" class="form-control" placeholder="Related Works"/>
+                    <p class="hint small">* Enter syriaca.org URI, ex: http://syriaca.org/work/429</p>
+                </div>
+            </div>                    
                 </div>
                 <div class="col-md-5">
                       <!-- Place Type -->
@@ -523,7 +603,7 @@ declare function places:search-form() {
                 </div>
             </div>
         </div>
-        <div class="pull-right">
+        <div class="pull-right">        
             <button type="submit" class="btn btn-info">Search</button>&#160;
             <button type="reset" class="btn">Clear</button>
         </div>
