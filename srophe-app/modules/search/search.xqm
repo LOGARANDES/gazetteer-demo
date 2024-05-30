@@ -41,7 +41,7 @@ declare %templates:wrap function search:get-results($node as node(), $model as m
     let $eval-string := search:query-string($collection)
     let $hits := data:search($eval-string)
     let $path := concat("$hits",facet:facet-filter(facet-defs:facet-definition($collection)))
-    return map {"hits" := util:eval($path) }  
+    return map {"hits" : util:eval($path) }  
 };
 
 (: for debugging :)

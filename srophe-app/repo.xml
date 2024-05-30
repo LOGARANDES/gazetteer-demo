@@ -8,5 +8,5 @@
     <type>application</type>
     <target>logar</target>
     <prepare>pre-install.xql</prepare>
-    <deployed>2018-04-19T14:52:33.617-04:00</deployed>
-</meta>
+    
+<deployed>2024-03-27T10:32:13.926-04:00</deployed></meta>

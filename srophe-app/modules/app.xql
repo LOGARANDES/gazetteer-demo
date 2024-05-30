@@ -4,7 +4,6 @@ module namespace app="http://syriaca.org/templates";
 (: eXist modules :)
 import module namespace templates="http://exist-db.org/xquery/templates" ;
 import module namespace config="http://syriaca.org/config" at "config.xqm";
-import module namespace functx="http://www.functx.com";
 (: Srophe modules :)
 import module namespace data="http://syriaca.org/data" at "lib/data.xqm";
 import module namespace teiDocs="http://syriaca.org/teiDocs" at "teiDocs/teiDocs.xqm";
@@ -40,8 +39,8 @@ if(request:get-parameter('id', '') != '') then
                             else concat($global:nav-base,'/',$collection,'/','browse.html')
                     return 
                     response:redirect-to(xs:anyURI(concat($global:nav-base, '/301.html?redirect=',$redirect)))
-                else map {"data" := $rec }  
-else map {"data" := <div>'Page data'</div>}    
+                else map {"data" : $rec }  
+else map {"data" : <div>'Page data'</div>}    
 };
 
 (:~   

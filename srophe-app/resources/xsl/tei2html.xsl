@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:x="http://www.w3.org/1999/xhtml" xmlns:saxon="http://saxon.sf.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="http://syriaca.org/ns" exclude-result-prefixes="xs t x saxon local" version="2.0">
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:saxon="http://saxon.sf.net/" xmlns:local="http://syriaca.org/ns" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:x="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs t x saxon local" version="2.0">
 
  <!-- ================================================================== 
        Copyright 2013 New York University  
@@ -87,7 +87,7 @@
     <xsl:param name="normalization">NFKC</xsl:param>
     <xsl:param name="editoruriprefix">http://syriaca.org/documentation/editors.xml#</xsl:param>
     <!--<xsl:variable name="editorssourcedoc" select="concat('xmldb:exist://',$app-root,'/documentation/editors.xml')"/>-->
-    <xsl:variable name="editorssourcedoc"></xsl:variable>
+    <xsl:variable name="editorssourcedoc"/>
     <!-- Resource id -->
     <xsl:variable name="resource-id">
         <xsl:choose>
@@ -515,7 +515,7 @@
     </xsl:template>
 
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
-     handle  output of  locations 
+     LOGAR handle  output of  locations 
      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <xsl:template match="t:location[not(@type='nested' or @type='gps')]">
         <li>
@@ -523,16 +523,15 @@
                 <xsl:when test="@subtype='quote'">"<xsl:apply-templates/>"</xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
-                        <xsl:when test="t:geo">Coordinates: </xsl:when>
-                        <xsl:when test="@type">
-                            <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: </xsl:when>
+                        <xsl:when test="t:geo">Coordinates (DMS): <xsl:value-of select="t:geo"/><xsl:sequence select="local:do-refs(@source,'eng')"/></xsl:when>
+                        <xsl:when test="@type"><xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: </xsl:when>
                     </xsl:choose>
                     <ul>
-                        <xsl:for-each select="child::*[not(self::t:note)]">
+                        <xsl:for-each select="child::*[not(self::t:note) and not(self::t:geo)]">
                             <li>
                                 <xsl:choose>
                                     <xsl:when test="self::t:geo"/>
-                                    <xsl:when test="t:country">
+                                    <xsl:when test="self::t:country">
                                         <span class="srp-label">Country: </span>
                                     </xsl:when>
                                     <xsl:when test="@type='municipality'">
@@ -594,17 +593,8 @@
         </li>
     </xsl:template>
     <xsl:template match="t:location[@type='gps' and t:geo]">
-        <li>Coordinates: 
-            <ul class="unstyled offset1">
-                <li>
-                    <xsl:value-of select="concat('Lat. ',tokenize(t:geo,' ')[1],'°')"/>
-                </li>
-                <li>
-                    <xsl:value-of select="concat('Long. ',tokenize(t:geo,' ')[2],'°')"/>
-                    <!--            <xsl:value-of select="t:geo"/>-->
-                    <xsl:sequence select="local:do-refs(@source,'eng')"/>
-                </li>
-            </ul>
+        <li>Coordinates (lat, long): 
+            <xsl:value-of select="concat(tokenize(t:geo,' ')[1],', ', tokenize(t:geo,' ')[2])"/><xsl:sequence select="local:do-refs(@source,'eng')"/> 
         </li>
     </xsl:template>
     <xsl:template match="t:offset | t:measure | t:source ">
