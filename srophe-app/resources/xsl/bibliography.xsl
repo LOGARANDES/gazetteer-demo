@@ -1,4 +1,4 @@
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:x="http://www.w3.org/1999/xhtml" xmlns:saxon="http://saxon.sf.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="http://syriaca.org/ns" exclude-result-prefixes="xs t x saxon local" version="2.0">
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:saxon="http://saxon.sf.net/" xmlns:local="http://syriaca.org/ns" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:t="http://www.tei-c.org/ns/1.0" xmlns:x="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs t x saxon local" version="2.0">
 
     <!-- ================================================================== 
        Copyright 2013 New York University
@@ -243,6 +243,27 @@
                             </xsl:if>
                         </xsl:otherwise>
                     </xsl:choose>
+                </xsl:when>
+                <!-- LOGAR addition -->
+                <xsl:when test="descendant::t:ptr[@target and starts-with(@target, 'https://archive.org/')]">
+                    <xsl:call-template name="persons"/>
+                    <xsl:text> </xsl:text>
+                    <xsl:for-each select="t:title">
+                        <xsl:apply-templates select="self::*" mode="footnote"/>
+                        <xsl:if test="following-sibling::t:title[@level = 'j']">
+                            <xsl:text> In</xsl:text>
+                        </xsl:if>
+                        <xsl:if test="position() != last()">
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:for-each>
+                    <xsl:apply-templates select="text()"/>
+                    <xsl:sequence select="$passThrough"/> 
+                        <span class="footnote-links">
+                            <xsl:apply-templates select="descendant::t:idno[@type='URI']" mode="links"/>
+                            <xsl:apply-templates select="descendant::t:ref[not(ancestor::note)]" mode="links"/>
+                            <xsl:apply-templates select="descendant::t:ptr[@target and starts-with(@target, 'https://archive.org/')]" mode="links"/>
+                        </span>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:choose>
@@ -1081,6 +1102,9 @@
         <xsl:variable name="ref">
             <xsl:choose>
                 <xsl:when test="self::t:ref/@target">
+                    <xsl:value-of select="@target"/>
+                </xsl:when>
+                <xsl:when test="self::t:ptr/@target">
                     <xsl:value-of select="@target"/>
                 </xsl:when>
                 <xsl:otherwise>

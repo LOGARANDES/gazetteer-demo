@@ -125,7 +125,7 @@ let $data :=
     where $sort != ''
     order by $sort
     return concat($id, 'headword:=', $headword)
-return  map { "cited" := $data}    
+return  map { "cited" : $data}    
 };
 
 (:~ 

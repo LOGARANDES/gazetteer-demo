@@ -8,7 +8,6 @@ module namespace place="http://syriaca.org/place";
 import module namespace global="http://syriaca.org/global" at "lib/global.xqm";
 import module namespace app="http://syriaca.org/templates" at "app.xql";
 import module namespace maps="http://syriaca.org/maps" at "lib/maps.xqm";
-import module namespace xqjson="http://xqilla.sourceforge.net/lib/xqjson";
 
 import module namespace templates="http://exist-db.org/xquery/templates" ;
 

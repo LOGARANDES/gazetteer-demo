@@ -64,7 +64,7 @@ declare variable $browse:computed-lang{
  : Calls data function data:get-browse-data($collection as xs:string*, $series as xs:string*, $element as xs:string?)
 :)  
 declare function browse:get-all($node as node(), $model as map(*), $collection as xs:string*, $element as xs:string?){
-    map{"browse-data" := data:get-browse-data($collection, $element) }
+    map{"browse-data" : data:get-browse-data($collection, $element) }
 };
 
 (:~
