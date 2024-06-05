@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-module namespace jsonld="http://syriaca.org/jsonld";
+module namespace jsonld="http://srophe.org/srophe/jsonld";
 (:~
  : Module returns coordinates as geoJSON
  : Formats include geoJSON 

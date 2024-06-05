@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-module namespace cntneg="http://syriaca.org/cntneg";
+module namespace cntneg="http://srophe.org/srophe/cntneg";
 (:~
  : Module for content negotiation based on work done by Steve Baskauf
  : https://github.com/baskaufs/guid-o-matic
@@ -18,20 +18,20 @@ module namespace cntneg="http://syriaca.org/cntneg";
  : @authored 2018-04-12
 :)
 
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
 (:
  : Syriaca.org content serialization modules.
  : Additional modules can be added. 
 :)
 (:import module namespace tei2ttl="http://syriaca.org/tei2ttl" at "tei2ttl.xqm";:)
-import module namespace tei2rdf="http://syriaca.org/tei2rdf" at "tei2rdf.xqm";
-import module namespace tei2csv="http://syriaca.org/tei2csv" at "tei2csv.xqm";
-import module namespace tei2html="http://syriaca.org/tei2html" at "tei2html.xqm";
-import module namespace tei2tsv="http://syriaca.org/tei2tsv" at "tei2tsv.xqm";
-import module namespace geojson="http://syriaca.org/geojson" at "geojson.xqm";
-import module namespace jsonld="http://syriaca.org/jsonld" at "jsonld.xqm";
-import module namespace geokml="http://syriaca.org/geokml" at "geokml.xqm";
-import module namespace feed="http://syriaca.org/atom" at "atom.xqm";
+import module namespace tei2rdf="http://srophe.org/srophe/tei2rdf" at "tei2rdf.xqm";
+import module namespace tei2csv="http://srophe.org/srophe/tei2csv" at "tei2csv.xqm";
+import module namespace tei2html="http://srophe.org/srophe/tei2html" at "tei2html.xqm";
+import module namespace tei2tsv="http://srophe.org/srophe/tei2tsv" at "tei2tsv.xqm";
+import module namespace geojson="http://srophe.org/srophe/geojson" at "geojson.xqm";
+import module namespace jsonld="http://srophe.org/srophe/jsonld" at "jsonld.xqm";
+import module namespace geokml="http://srophe.org/srophe/geokml" at "geokml.xqm";
+import module namespace feed="http://srophe.org/srophe/atom" at "atom.xqm";
 
 (:eXist modules :)
 import module namespace req="http://exquery.org/ns/request";

@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-module namespace geojson="http://syriaca.org/geojson";
+module namespace geojson="http://srophe.org/srophe/geojson";
 (:~
  : Module returns coordinates as geoJSON
  : Formats include geoJSON 
@@ -8,7 +8,7 @@ module namespace geojson="http://syriaca.org/geojson";
  : @authored 2014-06-25
 :)
 
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
 declare namespace output="http://www.w3.org/2010/xslt-xquery-serialization";
 
 declare namespace json = "http://www.json.org";

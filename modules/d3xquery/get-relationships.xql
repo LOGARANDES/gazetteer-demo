@@ -1,7 +1,7 @@
 xquery version "3.0";
 
-import module namespace rel="http://syriaca.org/related" at "../lib/get-related.xqm";
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
+import module namespace rel="http://srophe.org/srophe/related" at "../lib/get-related.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
 import module namespace xqjson="http://xqilla.sourceforge.net/lib/xqjson";
 import module namespace functx="http://www.functx.com";
 declare namespace tei="http://www.tei-c.org/ns/1.0";

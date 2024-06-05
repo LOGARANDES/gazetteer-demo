@@ -5,10 +5,10 @@ xquery version "3.0";
  : https://github.com/srophe/srophe-app-data/issues/702#issuecomment-280301046 
 :)
 
-module namespace tei2ttl="http://syriaca.org/tei2ttl";
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
-import module namespace bibl2html="http://syriaca.org/bibl2html" at "bibl2html.xqm";
-import module namespace rel="http://syriaca.org/related" at "../lib/get-related.xqm";
+module namespace tei2ttl="http://srophe.org/srophe/tei2ttl";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
+import module namespace bibl2html="http://srophe.org/srophe/bibl2html" at "bibl2html.xqm";
+import module namespace rel="http://srophe.org/srophe/related" at "../lib/get-related.xqm";
 import module namespace functx="http://www.functx.com";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 

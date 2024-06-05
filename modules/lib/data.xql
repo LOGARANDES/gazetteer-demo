@@ -9,10 +9,10 @@ xquery version "3.1";
  :)
  
 
-import module namespace global="http://syriaca.org/global" at "global.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "global.xqm";
 import module namespace facet="http://expath.org/ns/facet" at "facet.xqm";
 import module namespace facet-defs="http://syriaca.org/facet-defs" at "../facet-defs.xqm";
-import module namespace page="http://syriaca.org/page" at "paging.xqm";
+import module namespace page="http://srophe.org/srophe/page" at "paging.xqm";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 

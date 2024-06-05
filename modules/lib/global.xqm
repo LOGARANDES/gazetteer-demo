@@ -1,6 +1,6 @@
 xquery version "3.0";
 (: Global app variables and functions. :)
-module namespace global="http://syriaca.org/global";
+module namespace global="http://srophe.org/srophe/global";
 declare namespace http="http://expath.org/ns/http-client";
 declare namespace repo="http://exist-db.org/xquery/repo";
 declare namespace tei="http://www.tei-c.org/ns/1.0";

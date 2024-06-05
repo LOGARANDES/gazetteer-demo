@@ -3,11 +3,10 @@
  :)
 xquery version "3.0";
 
-module namespace place="http://syriaca.org/place";
-
-import module namespace global="http://syriaca.org/global" at "lib/global.xqm";
-import module namespace app="http://syriaca.org/templates" at "app.xql";
-import module namespace maps="http://syriaca.org/maps" at "lib/maps.xqm";
+module namespace place="http://srophe.org/srophe/place";
+import module namespace data="http://srophe.org/srophe/data" at "lib/data.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "lib/global.xqm";
+import module namespace maps="http://srophe.org/srophe/maps" at "lib/maps.xqm";
 
 import module namespace templates="http://exist-db.org/xquery/templates" ;
 
@@ -30,7 +29,22 @@ declare variable $place:status {request:get-parameter('status', '')};
 declare 
     %templates:wrap 
 function place:get-rec($node as node(), $model as map(*), $collection) {
-    app:get-rec($node, $model, $collection)
+if(request:get-parameter('id', '') != '') then 
+    let $id := global:resolve-id()   
+    return 
+        let $rec := data:get-rec($id)
+        return 
+            if(empty($rec)) then response:redirect-to(xs:anyURI(concat($global:nav-base, '/404.html')))
+            else 
+                if($rec/descendant::tei:idno[@type='redirect']) then 
+                    let $redirect := 
+                            if($rec/descendant::tei:idno[@type='redirect']) then 
+                                replace(replace($rec/descendant::tei:idno[@type='redirect'][1],'/tei',''),$global:base-uri,$global:nav-base)
+                            else concat($global:nav-base,'/',$collection,'/','browse.html')
+                    return 
+                    response:redirect-to(xs:anyURI(concat($global:nav-base, '/301.html?redirect=',$redirect)))
+                else map {"data" : $rec }  
+else map {"data" : <div>'Page data'</div>} 
 (:
 if($place:id) then 
     let $id :=
@@ -47,7 +61,18 @@ else map {"data" := 'Page data'}
  : @param $place:id if id is present find TEI title, otherwise use title of sub-module
 :)
 declare %templates:wrap function place:app-title($node as node(), $model as map(*), $coll){
-    app:app-title($node, $model, $coll)
+if(request:get-parameter('id', '')) then
+   if(contains($model("data")/descendant::tei:titleStmt[1]/tei:title[1]/text(),' — ')) then
+        substring-before($model("data")/descendant::tei:titleStmt[1]/tei:title[1],' — ')
+   else $model("data")/descendant::tei:titleStmt[1]/tei:title[1]/text()
+else if($collection = 'places') then 'The Syriac Gazetteer'  
+else if($collection = 'persons') then 'The Syriac Biographical Dictionary'
+else if($collection = 'saints')then 'Gateway to the Syriac Saints'
+else if($collection = 'q') then 'Gateway to the Syriac Saints: Volume II: Qadishe'
+else if($collection = 'bhse') then 'Gateway to the Syriac Saints: Volume I: Bibliotheca Hagiographica Syriaca Electronica'
+else if($collection = 'spear') then 'A Digital Catalogue of Syriac Manuscripts in the British Library'
+else if($collection = 'mss') then concat('http://syriaca.org/manuscript/',request:get-parameter('id', ''))
+else $global:app-title
 };  
 
 (:

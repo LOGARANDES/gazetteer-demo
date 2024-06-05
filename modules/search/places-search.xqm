@@ -1,9 +1,9 @@
 xquery version "3.0";
 
-module namespace places="http://syriaca.org/places";
-import module namespace data="http://syriaca.org/data" at "lib/data.xqm";
+module namespace places="http://srophe.org/srophe/places";
+import module namespace data="http://srophe.org/srophe/data" at "lib/data.xqm";
 import module namespace templates="http://exist-db.org/xquery/templates" ;
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
 
 import module namespace kwic="http://exist-db.org/xquery/kwic" at "resource:org/exist/xquery/lib/kwic.xql";
 declare namespace util="http://exist-db.org/xquery/util";

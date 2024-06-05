@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-import module namespace rel="http://syriaca.org/related" at "../lib/get-related.xqm";
+import module namespace rel="http://srophe.org/srophe/related" at "../lib/get-related.xqm";
 import module namespace xqjson="http://xqilla.sourceforge.net/lib/xqjson";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare option exist:serialize "method=html5 media-type=text/html omit-xml-declaration=yes indent=yes";
