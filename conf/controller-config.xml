@@ -54,8 +54,8 @@
   	++ attribute.
     -->
  
-  <root pattern="/apps/britishLibrary/apps" path="xmldb:exist:///db/apps/"/>
-  <root pattern=".*" path="xmldb:exist:///db/apps/britishLibrary"/>
+  <root pattern="/apps/logar/apps" path="xmldb:exist:///db/apps/"/>
+  <root pattern=".*" path="xmldb:exist:///db/apps/logar"/>
 
   <!-- 
     <root server-name="site1.example.com" pattern="/*" path="xmldb:exist:///db/org/site1/"/>
