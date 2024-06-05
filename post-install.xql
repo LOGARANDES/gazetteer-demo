@@ -5,7 +5,7 @@ import module namespace xdb="http://exist-db.org/xquery/xmldb";
 import module namespace xrest="http://exquery.org/ns/restxq/exist" at "java:org.exist.extensions.exquery.restxq.impl.xquery.exist.ExistRestXqModule";
 
 import module namespace config="http://srophe.org/srophe/config" at "modules/config.xqm";
-import module namespace sf="http://srophe.org/srophe/facets" at "modules/lib/facets.xql";
+
 
 (: The following external variables are set by the repo:deploy function :)
 
