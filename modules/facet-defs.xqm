@@ -3,8 +3,8 @@
  :)
 xquery version "3.0";
 
-module namespace facet-defs="http://syriaca.org/facet-defs";
-import module namespace global="http://syriaca.org/global" at "lib/global.xqm";
+module namespace facet-defs="http://srophe.org/srophe/facet-defs";
+import module namespace global="http://srophe.org/srophe/global" at "lib/global.xqm";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace facet = "http://expath.org/ns/facet";
 

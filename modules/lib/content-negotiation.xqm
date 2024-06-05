@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-module namespace cntneg="http://syriaca.org/cntneg";
+module namespace cntneg="http://srophe.org/srophe/cntneg";
 (:~
  : Module for content negotiation based on work done by Steve Baskauf
  : @see: https://github.com/baskaufs/guid-o-matic

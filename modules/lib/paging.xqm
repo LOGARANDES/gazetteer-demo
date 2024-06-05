@@ -3,8 +3,8 @@ xquery version "3.0";
  : Paging module for reuse by search and browse pages 
  :)
  
-module namespace page="http://syriaca.org/page";
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
+module namespace page="http://srophe.org/srophe/page";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
 import module namespace functx="http://www.functx.com";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace xi = "http://www.w3.org/2001/XInclude";

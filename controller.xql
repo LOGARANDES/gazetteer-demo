@@ -1,5 +1,5 @@
 xquery version "3.0";
-import module namespace global="http://syriaca.org/global" at "modules/lib/global.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "modules/lib/global.xqm";
 declare variable $exist:path external;
 declare variable $exist:resource external;
 declare variable $exist:controller external;

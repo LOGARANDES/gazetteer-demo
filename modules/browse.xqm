@@ -10,14 +10,14 @@ xquery version "3.0";
  : @see browse-spear.xqm for additional SPEAR browse functions 
  :)
 
-module namespace browse="http://syriaca.org/browse";
-import module namespace global="http://syriaca.org/global" at "lib/global.xqm";
-import module namespace data="http://syriaca.org/data" at "lib/data.xqm";
+module namespace browse="http://srophe.org/srophe/browse";
+import module namespace global="http://srophe.org/srophe/global" at "lib/global.xqm";
+import module namespace data="http://srophe.org/srophe/data" at "lib/data.xqm";
 import module namespace facet="http://expath.org/ns/facet" at "lib/facet.xqm";
-import module namespace facet-defs="http://syriaca.org/facet-defs" at "facet-defs.xqm";
-import module namespace page="http://syriaca.org/page" at "lib/paging.xqm";
-import module namespace maps="http://syriaca.org/maps" at "lib/maps.xqm";
-import module namespace tei2html="http://syriaca.org/tei2html" at "content-negotiation//tei2html.xqm";
+import module namespace facet-defs="http://srophe.org/srophe/facet-defs" at "facet-defs.xqm";
+import module namespace page="http://srophe.org/srophe/page" at "lib/paging.xqm";
+import module namespace maps="http://srophe.org/srophe/maps" at "lib/maps.xqm";
+import module namespace tei2html="http://srophe.org/srophe/tei2html" at "content-negotiation/tei2html.xqm";
 import module namespace functx="http://www.functx.com";
 import module namespace templates="http://exist-db.org/xquery/templates";
 

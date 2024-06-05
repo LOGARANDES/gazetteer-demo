@@ -8,11 +8,11 @@ xquery version "3.1";
  : @see lib/global.xqm for global variables 
  :)
 
-module namespace data="http://syriaca.org/data";
-import module namespace global="http://syriaca.org/global" at "global.xqm";
+module namespace data="http://srophe.org/srophe/data";
+import module namespace global="http://srophe.org/srophe/global" at "global.xqm";
 import module namespace facet="http://expath.org/ns/facet" at "facet.xqm";
-import module namespace facet-defs="http://syriaca.org/facet-defs" at "../facet-defs.xqm";
-import module namespace page="http://syriaca.org/page" at "paging.xqm";
+import module namespace facet-defs="http://srophe.org/srophe/facet-defs" at "../facet-defs.xqm";
+import module namespace page="http://srophe.org/srophe/page" at "paging.xqm";
 import module namespace functx="http://www.functx.com";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";

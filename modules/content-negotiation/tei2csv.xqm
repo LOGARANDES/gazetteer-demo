@@ -4,7 +4,7 @@ xquery version "3.0";
  : Used by oai, can be plugged into other outputs as well.
  :)
  
-module namespace tei2csv="http://syriaca.org/tei2csv";
+module namespace tei2csv="http://srophe.org/srophe/tei2csv";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace xlink = "http://www.w3.org/1999/xlink";

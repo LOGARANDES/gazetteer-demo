@@ -3,18 +3,22 @@
  : to process any URI ending with ".html". It receives the HTML from
  : the controller and passes it to the templating system.
  :)
-xquery version "3.0";
+xquery version "3.1";
 
 import module namespace templates="http://exist-db.org/xquery/templates" ;
+
 (: 
  : The following modules provide functions which will be called by the 
  : templating.
  :)
-import module namespace config="http://syriaca.org/config" at "config.xqm";
-import module namespace app="http://syriaca.org/templates" at "app.xql";
-import module namespace place="http://syriaca.org/place" at "place.xqm";
-import module namespace browse="http://syriaca.org/browse" at "browse.xqm";
-import module namespace search="http://syriaca.org/search" at "search/search.xqm";
+import module namespace config="http://srophe.org/srophe/config" at "config.xqm";
+import module namespace app="http://srophe.org/srophe/templates" at "app.xql";
+
+(: Srophe specific modules :)
+import module namespace browse="http://srophe.org/srophe/browse" at "browse.xqm";
+import module namespace search="http://srophe.org/srophe/search" at "search/search.xqm";
+
+import module namespace place="http://srophe.org/srophe/place" at "place.xqm";
 
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 

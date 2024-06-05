@@ -1,10 +1,10 @@
 xquery version "3.0";
 (: Build relationships. :)
-module namespace rel="http://syriaca.org/related";
-import module namespace page="http://syriaca.org/page" at "paging.xqm";
-import module namespace global="http://syriaca.org/global" at "global.xqm";
-import module namespace data="http://syriaca.org/data" at "data.xqm";
-import module namespace tei2html="http://syriaca.org/tei2html" at "content-negotiation/tei2html.xqm";
+module namespace rel="http://srophe.org/srophe/related";
+import module namespace page="http://srophe.org/srophe/page" at "paging.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "global.xqm";
+import module namespace data="http://srophe.org/srophe/data" at "data.xqm";
+import module namespace tei2html="http://srophe.org/srophe/tei2html" at "content-negotiation/tei2html.xqm";
 import module namespace functx="http://www.functx.com";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace html="http://www.w3.org/1999/xhtml";

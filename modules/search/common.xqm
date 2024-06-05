@@ -2,8 +2,8 @@ xquery version "3.0";
 (:~
  : Shared functions for search modules 
  :)
-module namespace common="http://syriaca.org/common";
-import module namespace global="http://syriaca.org/global" at "../lib/global.xqm";
+module namespace common="http://srophe.org/srophe/common";
+import module namespace global="http://srophe.org/srophe/global" at "../lib/global.xqm";
 import module namespace kwic="http://exist-db.org/xquery/kwic" at "resource:org/exist/xquery/lib/kwic.xql";
 import module namespace functx="http://www.functx.com";
 declare namespace tei="http://www.tei-c.org/ns/1.0";

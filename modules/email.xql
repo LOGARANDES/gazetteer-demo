@@ -4,8 +4,8 @@ xquery version "3.1";
  : Build email form returns. error or sucess message to ajax function.
  : Use reCaptcha to filter out spam. 
  :)
-import module namespace config="http://syriaca.org/config" at "config.xqm";
-import module namespace global="http://syriaca.org/global" at "lib/global.xqm";
+import module namespace config="http://srophe.org/srophe/config" at "config.xqm";
+import module namespace global="http://srophe.org/srophe/global" at "lib/global.xqm";
 import module namespace http="http://expath.org/ns/http-client";
 declare namespace httpclient = "http://exist-db.org/xquery/httpclient";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
