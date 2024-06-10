@@ -39,7 +39,7 @@
                 record-URI-pattern="URI for building links to record views."
                 app-root="folder name in app" 
                 data-root="folder name in data"/>-->
-            <collection name="places" app-root="geo" data-root="places" record-URI-pattern="http://logarandes.org/place/"/>
+            <collection name="places" app-root="/geo/" data-root="places" record-URI-pattern="http://logarandes.org/place/"/>
         </collections>
     </config>
 </meta>
