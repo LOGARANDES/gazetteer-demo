@@ -133,8 +133,8 @@ else if (contains($exist:path,'/api/')) then
             </forward>
         </dispatch>
     else
-        <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-            <redirect url="{concat($config:nav-base,'/api-documentation/index.html')}"/>
+        <dispatch xmlns="http://exist.sourceforge.net/NS/exist">        
+            <forward url="{$exist:controller}/modules/content-negotiation/content-negotiation.xql"/>
         </dispatch>
 (: Passes data to content negotiation module:)
 else if(request:get-parameter('format', '') != '' and request:get-parameter('format', '') != 'html') then
