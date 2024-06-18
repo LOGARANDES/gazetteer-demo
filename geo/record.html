@@ -1,6 +1,35 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="main-content-block">
+        <div class="interior-content">
+            <div data-template="app:h1"/>
+            <div data-template="app:other-data-formats" data-template-formats="print,tei,rdf,geojson"/>
+            <!--
+            <div class="pull-right">
+                <p>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#corrections">Corrections/Additions?</button> 
+                    <button class="btn btn-default" data-toggle="modal" data-target="#feedback">Comments</button> 
+                </p>
+            </div>
+            -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well">
+                        <div data-template="app:display-map"/>
+                        <div data-template="app:display-nodes" data-template-paths="descendant-or-self::tei:place"/>                    
+                    </div>
+                    <div class="well">
+                        <div data-template="app:display-sources"/>                    
+                    </div>
+                </div>
+            </div>
+           
+            <br/>
+            <div data-template="app:display-citation"/>
+           <!-- <div data-template="app:corrections"/>-->
+        </div>
+    </div>
+    <!--
     <div class="container interior-content white">
-        <!-- NOTE: remove/suppress uri? -->
         <div data-template="app:h1"/>
         <div data-template="app:other-data-formats" data-template-formats="print,tei,rdf,geojson"/>
         <div class="row">
@@ -22,4 +51,5 @@
     </div>
     <div data-template="app:display-citation"/>
     <div data-template="app:corrections"/>
+    -->
 </div>
