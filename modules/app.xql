@@ -169,19 +169,17 @@ return
  : Used by templating module, defaults to tei:body if no nodes are passed. 
  : @param $paths comma separated list of xpaths for display. Passed from html page  
 :)
-declare function app:display-nodes($node as node(), $model as map(*), $paths as xs:string?, $wrap as xs:string?){
-    let $data := $model("data")
+declare function app:display-nodes($node as node(), $model as map(*), $paths as xs:string?, $collection as xs:string?){
+    let $record := $model("data")                 
     return 
-        if($paths != '') then
-            if($wrap != '') then 
-                global:tei2html(element{xs:QName($wrap)} {
-                    for $p in $paths
-                    return util:eval(concat('$data',$p))
-                    })
-            else global:tei2html(
-                    for $p in $paths
-                    return util:eval(concat('$data',$p)))
-        else global:tei2html($model("data")/descendant::tei:body)       
+        if($paths = 'descendant-or-self::tei:place') then 
+            global:tei2html($record/descendant-or-self::tei:place, $collection)
+        else global:tei2html($record, $collection)
+    (:
+        if($config:get-config//repo:html-render/@type='xslt') then
+            global:tei2html($record, $collection)
+        else tei2html:tei2html($record)
+    :)        
 }; 
 
 (:
