@@ -101,17 +101,32 @@ declare function browse:results-panel($node as node(), $model as map(*), $collec
     return 
        if($browse:view = 'map') then 
             <div class="col-md-12 map-lg">
-                <div class="browse-map">
-                <div id="map-filters" class="map-overlay">
-                    <span class="filter-label">Filter Map
-                        <a class="pull-right small togglelink text-info" data-toggle="collapse" data-target="#filterMap" href="#filterMap" data-text-swap="+ Show"> - Hide </a>
-                    </span>
-                    <div class="collapse in" id="filterMap">
-                    {browse:display-facets($node, $model,$collection, $facets)} 
+                <div >
+                    <div class="browse-map">
+                    <div id="map-filters" class="map-overlay">
+                        <span class="filter-label">Filter Map
+                            <a class="pull-right small togglelink text-info" data-toggle="collapse" data-target="#filterMap" href="#filterMap" data-text-swap="+ Show"> - Hide </a>
+                        </span>
+                        <div class="collapse in" id="filterMap">
+                        {browse:display-facets($node, $model,$collection, $facets)} 
+                        </div>
                     </div>
+                    {browse:get-map($hits)}
+                    </div>
+                </div>  
+            <!--
+                <div class="browse-map">
+                    <div id="map-filters" class="map-overlay">
+                        <span class="filter-label">Filter Map
+                            <a class="pull-right small togglelink text-info" data-toggle="collapse" data-target="#filterMap" href="#filterMap" data-text-swap="+ Show"> - Hide </a>
+                        </span>
+                        <div class="collapse in" id="filterMap">
+                        {browse:display-facets($node, $model,$collection, $facets)} 
+                        </div>
+                    </div>
+                    {browse:get-map($hits)}
                 </div>
-                {browse:get-map($hits)}
-                </div>
+                -->
             </div>           
         else if($browse:view = 'all' or $browse:view = 'ܐ-ܬ' or $browse:view = 'ا-ي' or $browse:view = 'other') then 
             <div class="col-md-12">

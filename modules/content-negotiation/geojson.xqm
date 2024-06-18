@@ -52,8 +52,7 @@ declare function geojson:json-wrapper($nodes as node()*) as element()*{
   </place>
 :)
 declare function geojson:geojson-object($node as node()*, $count as xs:integer?) as element()*{
-let $id := if($node/descendant::tei:idno[@type='URI']) then $node/descendant::tei:idno[@type='URI'][1]
-           else $node/descendant::tei:idno[1]
+let $id := ($node/descendant::tei:idno[@type='URI'], $node/descendant::tei:idno)[1]
 let $title := root($node)/descendant::tei:titleStmt/tei:title[1]
 let $desc := if($node/descendant::tei:desc[1]/tei:quote) then 
                 concat('"',$node/descendant::tei:desc[1]/tei:quote,'"')
