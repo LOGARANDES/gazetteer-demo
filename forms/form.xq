@@ -79,7 +79,7 @@ let $form-doc := doc($form-path)
 let $form-description := <div class="description">Form Place Holder</div>
 let $form-doc := local:insert-element($form-doc, $form-description, 'iframe', 'remove')
 let $dummy := request:set-attribute("betterform.filter.ignoreResponseBody", "true")
-let $xslt-pi := processing-instruction xml-stylesheet {'type="text/xsl" href="/exist/rest/db/apps/xsltforms/xsltforms.xsl"'}
+let $xslt-pi := processing-instruction xml-stylesheet {'type="text/xsl" href="xsltforms/xsltforms.xsl"'}
 let $css-pi := processing-instruction css-conversion {'no'}
 let $debug := processing-instruction xsltforms-options {'debug="no"'}
 (: Server side variables :)
