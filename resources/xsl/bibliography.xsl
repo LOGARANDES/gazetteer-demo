@@ -314,10 +314,11 @@
                             </xsl:for-each>
                             <xsl:apply-templates select="text()"/>
                             <xsl:sequence select="$passThrough"/>
-                            <xsl:if test="descendant::t:idno[@type='URI']">
+                            <xsl:if test="descendant::t:idno[@type='URI'] or descendant::t:ptr[@target!='']">
                                 <span class="footnote-links">
                                     <xsl:apply-templates select="descendant::t:idno[@type='URI']" mode="links"/>
                                     <xsl:apply-templates select="descendant::t:ref[not(ancestor::note)]" mode="links"/>
+                                    <xsl:apply-templates select="descendant::t:ptr" mode="links"/>
                                 </span>
                             </xsl:if>
                         </xsl:when>
@@ -1184,6 +1185,9 @@
     <xsl:template match="t:idno | t:ref | t:ptr" mode="links">
         <xsl:variable name="ref">
             <xsl:choose>
+                <xsl:when test="self::t:ptr/@target">
+                    <xsl:value-of select="@target"/>
+                </xsl:when>
                 <xsl:when test="self::t:ref/@target">
                     <xsl:value-of select="@target"/>
                 </xsl:when>
@@ -1220,9 +1224,9 @@
                     <xsl:text>External link to bibliographic record</xsl:text>
                 </xsl:otherwise>
             </xsl:choose>
-        </xsl:variable>
+        </xsl:variable>  
         <span class="footnote-icon">
-            <a href="{$ref}" title="{$title}" data-toggle="tooltip" data-placement="top" class="bibl-links">
+            <a target="_blank" href="{$ref}" title="{$title}" data-toggle="tooltip" data-placement="top" class="bibl-links">
                 <xsl:call-template name="ref-icons">
                     <xsl:with-param name="ref" select="$ref"/>
                 </xsl:call-template>
@@ -1233,20 +1237,20 @@
         <xsl:param name="ref"/>
         <xsl:choose>
             <xsl:when test="@type='zotero' or contains($ref,'zotero.org/')">
-                <img src="{$nav-base}/resources/images/zotero.png" alt="Link to Zotero Bibliographic Record" height="18px"/>
+                <img src="{$nav-base}/resources/img/zotero.png" alt="Link to Zotero Bibliographic Record" height="18px"/>
             </xsl:when>
             <xsl:when test="starts-with($ref,$base-uri)">
-                <img src="{$nav-base}/resources/images/icons-syriaca-sm.png" alt="{concat('Link to ',$repository-title,' Bibliographic Record.')}" height="18px"/>
+                <img src="{$nav-base}/resources/img/icons-syriaca-sm.png" alt="{concat('Link to ',$repository-title,' Bibliographic Record.')}" height="18px"/>
             </xsl:when>
             <!-- glyphicon glyphicon-book -->
             <xsl:when test="contains($ref,'worldcat.org/')">
-                <img src="{$nav-base}/resources/images/worldCat-logo.png" alt="Link to Worldcat Bibliographic record" height="18px"/>
+                <img src="{$nav-base}/resources/img/worldCat-logo.png" alt="Link to Worldcat Bibliographic record" height="18px"/>
             </xsl:when>
             <xsl:when test="contains($ref,'hathitrust.org/')">
-                <img src="{$nav-base}/resources/images/htrc_logo.png" alt="Link to HathiTrust Bibliographic record" height="18px"/>
+                <img src="{$nav-base}/resources/img/htrc_logo.png" alt="Link to HathiTrust Bibliographic record" height="18px"/>
             </xsl:when>
             <xsl:when test="contains($ref,'archive.org')">
-                <img src="{$nav-base}/resources/images/ialogo.jpg" alt="Link to Archive.org Bibliographic record" height="18px"/>
+                <img src="{$nav-base}/resources/img/ialogo.jpg" alt="Link to Archive.org Bibliographic record" height="18px"/>
             </xsl:when>
             <xsl:otherwise>
                 <span class="glyphicon glyphicon-book"/>

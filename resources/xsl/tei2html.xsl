@@ -753,6 +753,15 @@
             <div class="col-md-4 noprint">
                 <h3>Names</h3>
                 <xsl:apply-templates select="t:placeName" mode="list"/>
+                <xsl:if test="@type[. != '']">
+                    <h3>Place Type</h3>
+                    <p>
+                        <xsl:choose>
+                            <xsl:when test="@type='reduccion'">Toledan reducción</xsl:when>
+                            <xsl:otherwise><xsl:value-of select="@type"/></xsl:otherwise>
+                        </xsl:choose>
+                    </p>
+                </xsl:if>
             </div>
         </div>
         <xsl:apply-templates select="child::*[not(self::t:placeName) and not(self::t:location) and not(self::t:note[@type='administrative']) and not(self::t:bibl) and not(self::t:idno)]"/>
@@ -1634,22 +1643,8 @@
         <div class="content-block">
             <!-- Sources -->
             <div id="sources">
-                <h3>Works Cited</h3>
-                <p>
-                    <small>Any information without attribution has been created following the Syriaca.org <a href="http://syriaca.org/documentation/">editorial guidelines</a>.</small>
-                </p>
+                <h3>Related Primary and Secondary Sources</h3>
                 <ul>
-                    <!-- Bibliography elements are processed by bibliography.xsl -->
-                    <!-- Old works model 
-                    <xsl:choose>
-                        <xsl:when test="t:bibl[@type='lawd:Citation']">
-                            <xsl:apply-templates select="t:bibl[@type='lawd:Citation']" mode="footnote"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:apply-templates select="t:bibl" mode="footnote"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    -->
                     <xsl:for-each select="t:bibl">
                         <xsl:sort select="xs:integer(translate(substring-after(@xml:id,'-'),translate(substring-after(@xml:id,'-'), '0123456789', ''), ''))"/>
                         <xsl:apply-templates select="." mode="footnote"/>
