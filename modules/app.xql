@@ -131,6 +131,10 @@ return
                         (<a href="{concat(replace($id,$global:base-uri,$global:nav-base),'.tei')}" class="btn btn-default btn-xs" id="teiBtn" data-toggle="tooltip" title="Click to view the TEI XML data for this record." >
                              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> TEI/XML
                         </a>, '&#160;')
+                    else if($f = 'email') then                        
+                        (<a href="mailto:s.wernke@vanderbilt.edu?subject={$id}" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Click to report a correction via e-mail." >
+                             <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Corrections
+                        </a>, '&#160;')    
                     else if($f = 'print') then                        
                         (<a href="javascript:window.print();" type="button" class="btn btn-default btn-xs" id="teiBtn" data-toggle="tooltip" title="Click to send this page to the printer." >
                              <span class="glyphicon glyphicon-print" aria-hidden="true"></span>

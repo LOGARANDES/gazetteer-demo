@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<git-config>
+    <!-- Collection in eXistdb to sync app to. example: /db/apps/tcadrt -->
+    <exist-collection>/db/apps/logar</exist-collection>
+    <!-- Github repository name. example: srophe-eXist-app -->
+    <repo-name>logar-app</repo-name>
+    <!-- Google map key -->
+    <map-key></map-key>
+</git-config>

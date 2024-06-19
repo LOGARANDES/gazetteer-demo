@@ -1,5 +1,5 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
-    <div class="container browse">
+    <div class="container browse home-page">
         <h1 class="title about">Browse Places</h1>
         <!-- Calls xquery functions -->
         <div data-template="browse:get-all" data-template-collection="places">
@@ -22,8 +22,12 @@
         <div id="externals">
             <h3>Download LOGAR data</h3>
             <ul>
-                <li><a href="/exist/restxq/logar/api/data?format=geojson" rel="alternate" type="application/json" title="full set of records from the Syriac Gazetteer in GeoJSON">GeoJSON</a></li>
-                <li><a href="/exist/restxq/logar/api/data?format=kml" rel="alternate" type="application/vnd.google-earth.kmz" title="full set of records from the Syriac Gazetteer in KML format">KML</a></li>
+                <li>
+                    <a href="api/data?format=geojson" rel="alternate" type="application/json" title="full set of records from the LOGAR Gazetteer in GeoJSON">GeoJSON</a>
+                </li>
+                <li>
+                    <a href="api/data?format=kml" rel="alternate" type="application/vnd.google-earth.kmz" title="full set of records from the LOGAR Gazetteer in KML format">KML</a>
+                </li>
             </ul>
         </div>
     </div>

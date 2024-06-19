@@ -141,7 +141,7 @@ declare function maps:build-google-map($nodes as node()*){
     let $key := doc($global:app-root || '/config.xml')//*:map-key/text()
     return
     <div id="map-data" style="margin-bottom:3em;">
-        <div id="map"/>
+       <div id="map" class="map-lg"/>
        <div class="hint map pull-right">* {count($nodes)} places have coordinates and are shown on this map.</div>
         <script type="text/javascript">
           <![CDATA[
