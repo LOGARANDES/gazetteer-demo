@@ -4,7 +4,7 @@
     <!-- Github repository name. example: srophe-eXist-app -->
     <repo-name>logar-app</repo-name>
     <!-- Google map key -->
-    <map-key>AIzaSyAs8jOx_En8T6PkWZ_ijGAGGZMXkoSj1QE</map-key>
+    <map-key></map-key>
     <email>
         <smtp>library.vanderbilt.edu</smtp>
         <contact>
