@@ -1,0 +1,26 @@
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/map.html" data-template-at="content">
+    <div data-template="browse:get-all" data-template-collection="places">
+        <div style="height:100%;">
+            <div id="map-filters" class="map-overlay">
+                <span class="filter-label">Filter Map
+                    <a class="pull-right small togglelink text-info" data-toggle="collapse" data-target="#filterMap" href="#filterMap" data-text-swap="+ Show"> - Hide </a>
+                </span>
+                <div class="collapse in" id="filterMap">
+                    <div data-template="browse:display-facets" data-template-collection="places" data-template-facets="facet-def.xml"/> 
+                </div>
+                <div id="externals">
+                    <h5>Download LOGAR data</h5>
+                    <ul>
+                        <li>
+                            <a href="api/data?format=geojson" rel="alternate" type="application/json" title="full set of records from the Syriac Gazetteer in GeoJSON">GeoJSON</a>
+                        </li>
+                        <li>
+                            <a href="api/data?format=kml" rel="alternate" type="application/vnd.google-earth.kmz" title="full set of records from the Syriac Gazetteer in KML format">KML</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-template="browse:display-map" data-template-collection="places"/>
+        </div>    
+    </div>
+</div>

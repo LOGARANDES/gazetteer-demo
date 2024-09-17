@@ -3,19 +3,17 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title data-template="app:app-title">Syriaca.org: Full page map</title>
-        <link data-template="app:metadata"/>
+        <title data-template="app:app-title">Syriaca.org: The Syriac Reference Portal</title>
         <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
-        <meta name="DC.subject" property="dc.subject" content="Geography, Ancient"/>
         <meta name="DC.type" property="dc.type" content="Text"/>
-        <meta name="DC.isPartOf" property="dc.ispartof" content="Logar: Linked Open Gazetteer of the Andean Region"/>
-        <meta name="DC.isPartOf" property="dc.ispartof" content="The Syriac Gazetteer"/>
+        <meta name="DC.isPartOf" property="dc.ispartof" content="Syriaca.org"/>
+        <link data-template="app:metadata"/>
+        <link rel="shortcut icon" href="$app-root/resources/img/fav-icons/syriaca-favicon.ico"/>
         <!-- Syriaca.org css -->
         <link rel="stylesheet" href="$app-root/resources/css/syr-icon-fonts.css"/>
         <link rel="stylesheet" type="text/css" href="$app-root/resources/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="$app-root/resources/css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="$app-root/resources/css/map.css"/>
         <link rel="stylesheet" type="text/css" href="$app-root/resources/css/sm-core-css.css"/>
         <link rel="stylesheet" type="text/css" media="print" href="$app-root/resources/css/print.css"/>
         <!-- jquery -->
@@ -37,6 +35,7 @@
                 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
             <![endif]-->
         <!-- Fixed navbar -->
+        <div data-template="app:shared-content" data-template-path="/templates/draft-info.html"/>
         <div class="navbar navbar-default navbar-fixed-top" role="navigation" data-template="app:fix-links">
             <div class="container">
                 <div class="navbar-header">
@@ -46,12 +45,12 @@
                         <span class="icon-bar"/>
                         <span class="icon-bar"/>
                     </button>
-                    <a class="navbar-brand" href="$app-root/index.html">
+                    <a class="navbar-brand banner-container" href="$app-root/index.html"> 
                         <img class="img-responsive" alt="Logar: Linked Open Gazetteer of the Andean Region" src="$app-root/resources/img/logar.png"/>
                     </a>
                 </div>
                 <div class="navbar-collapse collapse pull-right">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav sm sm-vertical" id="main-menu">
                         <li>
                             <a href="$app-root/map.html">Map</a>
                         </li>
@@ -63,7 +62,7 @@
                         </li>
                         <li>
                             <a href="$app-root/documentation/index.html">Documentation</a>
-                        </li>
+                        </li>    
                     </ul>
                     <form class="navbar-form navbar-right navbar-input-group" role="search" action="$app-root/geo/search.html" method="get">
                         <div class="input-group">
@@ -83,8 +82,12 @@
             </div>
         </div>
         <div id="main">
-            <div id="content"/>
+            <div id="content" typeof="Place" class="container well well-white"/>
         </div>
+        <!-- Footer -->
+        <!-- Footer -->
+        <footer data-template="app:shared-content" data-template-path="/templates/footer.html"/>
+        
         <!-- Additional Javascript -->
         <script type="text/javascript" src="$app-root/resources/js/bootstrap.min.js"/>
         <script type="text/javascript" src="$app-root/resources/js/jquery.validate.min.js"/>
