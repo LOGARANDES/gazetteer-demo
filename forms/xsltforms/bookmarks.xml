@@ -1,8 +1,4 @@
-﻿<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xf="http://www.w3.org/2002/xforms"
-    xmlns:ev="http://www.w3.org/2001/xml-events">
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>Bookmarks</title>
     	<meta name="description" content="Bookmarks management sample."/>
@@ -45,25 +41,21 @@
                 </xf:input>
                 <xf:trigger>
                     <xf:label>X</xf:label>
-                    <xf:delete nodeset="." at="1" ev:event="DOMActivate"
-                        if="count(nodeindex('repeatSections')/bookmark) > 1" />
+                    <xf:delete nodeset="." at="1" ev:event="DOMActivate" if="count(nodeindex('repeatSections')/bookmark) &gt; 1"/>
                 </xf:trigger>
             </xf:repeat>
             <xf:trigger>
                 <xf:label>New link</xf:label>
-                <xf:insert nodeset="bookmark" at="index('repeatBookmarks')"
-                    position="after" ev:event="DOMActivate" />
+                <xf:insert nodeset="bookmark" at="index('repeatBookmarks')" position="after" ev:event="DOMActivate"/>
             </xf:trigger>
             <xf:trigger>
                 <xf:label>Delete</xf:label>
-                <xf:delete nodeset="." at="1" ev:event="DOMActivate"
-                	if="count(//section) > 1" />
+                <xf:delete nodeset="." at="1" ev:event="DOMActivate" if="count(//section) &gt; 1"/>
             </xf:trigger>
         </xf:repeat>
         <xf:trigger>
             <xf:label>New section</xf:label>
-            <xf:insert nodeset="section" at="last()"
-                position="after" ev:event="DOMActivate" />
+            <xf:insert nodeset="section" at="last()" position="after" ev:event="DOMActivate"/>
         </xf:trigger>
 				<xf:submit submission="s01">
 					<xf:label>View</xf:label>
@@ -73,7 +65,7 @@
 				</xf:submit>
         <xf:trigger>
             <xf:label>Reset</xf:label>
-            <xf:reset ev:event="DOMActivate" />
+            <xf:reset ev:event="DOMActivate"/>
         </xf:trigger>
     </body>
 </html>

@@ -18,10 +18,8 @@ Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
--->
-
-<xsl:stylesheet xmlns:xhtml='http://www.w3.org/1999/xhtml' xmlns:ajx='http://www.ajaxforms.net/2006/ajx' xmlns:xforms='http://www.w3.org/2002/xforms' xmlns:ev='http://www.w3.org/2001/xml-events' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:msxsl='urn:schemas-microsoft-com:xslt' xmlns:exslt='http://exslt.org/common' xmlns:txs='http://www.agencexml.com/txs' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:dcterms='http://purl.org/dc/terms/' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0' exclude-result-prefixes='xhtml xforms ev exslt msxsl'><rdf:RDF>
-<rdf:Description rdf:about='http://www.agencexml.com/xsltforms/xsltforms.xsl'>
+--><xsl:stylesheet xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:ajx="http://www.ajaxforms.net/2006/ajx" xmlns:txs="http://www.agencexml.com/txs" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exslt="http://exslt.org/common" version="1.0" exclude-result-prefixes="xhtml xforms ev exslt msxsl"><rdf:RDF>
+<rdf:Description rdf:about="http://www.agencexml.com/xsltforms/xsltforms.xsl">
 <dcterms:title>XSLT 1.0 Stylesheet for XSLTForms</dcterms:title>
 <dcterms:hasVersion>1.3 (652)</dcterms:hasVersion>
 <dcterms:creator>Alain Couthures - agenceXML</dcterms:creator>
@@ -30,18 +28,18 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 <dcterms:description>XForms 1.1+ with XPath 1.0+ Engine</dcterms:description>
 <dcterms:format>text/xsl</dcterms:format>
 </rdf:Description>
-</rdf:RDF><xsl:output method='html' encoding='utf-8' omit-xml-declaration='yes' indent='no' doctype-public='-//W3C//DTD HTML 4.01 Transitional//EN' doctype-system='http://www.w3.org/TR/html4/loose.dtd'/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="baseuri"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="pwd"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_home"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_caller"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_chain"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_config"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_debug"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_domengine"/>
-<xsl:param xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltforms_lang"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="xsltformspivalue" select="translate(normalize-space(/processing-instruction('xsltforms-options')[1]), ' ', '')"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="lang">
+</rdf:RDF><xsl:output method="html" encoding="utf-8" omit-xml-declaration="yes" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN" doctype-system="http://www.w3.org/TR/html4/loose.dtd"/>
+<xsl:param name="baseuri"/>
+<xsl:param name="pwd"/>
+<xsl:param name="xsltforms_home"/>
+<xsl:param name="xsltforms_caller"/>
+<xsl:param name="xsltforms_chain"/>
+<xsl:param name="xsltforms_config"/>
+<xsl:param name="xsltforms_debug"/>
+<xsl:param name="xsltforms_domengine"/>
+<xsl:param name="xsltforms_lang"/>
+<xsl:variable name="xsltformspivalue" select="translate(normalize-space(/processing-instruction('xsltforms-options')[1]), ' ', '')"/>
+<xsl:variable name="lang">
 	<xsl:choose>
 		<xsl:when test="$xsltforms_lang != ''"><xsl:value-of select="$xsltforms_lang"/></xsl:when>
 		<xsl:when test="substring(substring-after($xsltformspivalue, 'lang='), 1, 1) != ''">
@@ -50,19 +48,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:when>
 	</xsl:choose>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="langextension">
+<xsl:variable name="langextension">
 	<xsl:choose>
 		<xsl:when test="$lang != '' and $lang != 'navigator'">_<xsl:value-of select="$lang"/></xsl:when>
 	</xsl:choose>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="configdoc" select="document(concat($xsltforms_home,'config',$langextension,'.xsl'))/xsl:stylesheet/xsl:template[@name='config']"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="configlang">
+<xsl:variable name="configdoc" select="document(concat($xsltforms_home,'config',$langextension,'.xsl'))/xsl:stylesheet/xsl:template[@name='config']"/>
+<xsl:variable name="configlang">
 	<xsl:choose>
 		<xsl:when test="$xsltforms_lang != ''"><xsl:value-of select="$xsltforms_lang"/></xsl:when>
 		<xsl:otherwise><xsl:value-of select="$configdoc/properties/language"/></xsl:otherwise>
 	</xsl:choose>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="domengine">
+<xsl:variable name="domengine">
 	<xsl:choose>
 		<xsl:when test="$xsltforms_domengine != ''"><xsl:value-of select="$xsltforms_domengine"/></xsl:when>
 		<xsl:when test="substring(substring-after($xsltformspivalue, 'domengine='), 1, 1) != ''">
@@ -72,22 +70,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:when test="$configdoc/properties/domengine"><xsl:value-of select="concat('name=',$configdoc/properties/domengine/@name,';url=',$configdoc/properties/domengine/@url,';uri=',$configdoc/properties/domengine/@uri,';version=',$configdoc/properties/domengine/@version)"/></xsl:when>
 	</xsl:choose>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="doc_id" select="'xsltforms-mainform'"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="id_pf" select="'xsltforms-mainform-'"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="jsid_pf" select="'xsltforms_subform.id + &quot;-'"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="vn_pf" select="'xsltforms_'"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="vn_subform" select="concat($vn_pf, 'subform')"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="piform" select="processing-instruction('xml-form')"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="piforminstanceid">
-	<xsl:if test="contains($piform, ' instance=&quot;')">
-		<xsl:value-of select="substring-before(substring-after($piform, ' instance=&quot;'), '&quot;')"/>
+<xsl:variable name="doc_id" select="'xsltforms-mainform'"/>
+<xsl:variable name="id_pf" select="'xsltforms-mainform-'"/>
+<xsl:variable name="jsid_pf" select="'xsltforms_subform.id + &#34;-'"/>
+<xsl:variable name="vn_pf" select="'xsltforms_'"/>
+<xsl:variable name="vn_subform" select="concat($vn_pf, 'subform')"/>
+<xsl:variable name="piform" select="processing-instruction('xml-form')"/>
+<xsl:variable name="piforminstanceid">
+	<xsl:if test="contains($piform, ' instance=&#34;')">
+		<xsl:value-of select="substring-before(substring-after($piform, ' instance=&#34;'), '&#34;')"/>
 	</xsl:if>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="piforminstance" select="/"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="piformhref"><xsl:if test="contains($piform, ' href=&quot;')"><xsl:value-of select="substring-before(substring-after($piform, ' href=&quot;'), '&quot;')"/></xsl:if></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="piformdoc" select="document(concat($pwd, $piformhref))"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="script0">
-	<script xmlns="">
+<xsl:variable name="piforminstance" select="/"/>
+<xsl:variable name="piformhref"><xsl:if test="contains($piform, ' href=&#34;')"><xsl:value-of select="substring-before(substring-after($piform, ' href=&#34;'), '&#34;')"/></xsl:if></xsl:variable>
+<xsl:variable name="piformdoc" select="document(concat($pwd, $piformhref))"/>
+<xsl:variable name="script0">
+	<script>
 		<collect>
 			<xsl:choose>
 				<xsl:when test="$piform != '' and count($piformdoc/*) != 0">
@@ -143,7 +141,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</config>
 	</script>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="required-position">
+<xsl:variable name="required-position">
 	<xsl:choose>
 		<xsl:when test="$configdoc/properties/required-position">
 			<xsl:value-of select="$configdoc/config/properties/required-position"/>
@@ -154,20 +152,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="main" select="/"/>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="amp"><xsl:text>&amp;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="apos"><xsl:text>'</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="lt"><xsl:text>&lt;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="gt"><xsl:text>&gt;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="quot"><xsl:text>"</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="backslash"><xsl:text>\</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="lineseparator"><xsl:text>&#8232;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="newline"><xsl:text>&#10;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="carriagereturn"><xsl:text>&#13;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="tab"><xsl:text>&#9;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="nbsp"><xsl:text>&#160;</xsl:text></xsl:variable>
-<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="profiler">
-<html xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xsltforms="http://www.agencexml.com/xsltforms">
+<xsl:variable name="main" select="/"/>
+<xsl:variable name="amp"><xsl:text>&amp;</xsl:text></xsl:variable>
+<xsl:variable name="apos"><xsl:text>'</xsl:text></xsl:variable>
+<xsl:variable name="lt"><xsl:text>&lt;</xsl:text></xsl:variable>
+<xsl:variable name="gt"><xsl:text>&gt;</xsl:text></xsl:variable>
+<xsl:variable name="quot"><xsl:text>"</xsl:text></xsl:variable>
+<xsl:variable name="backslash"><xsl:text>\</xsl:text></xsl:variable>
+<xsl:variable name="lineseparator"><xsl:text> </xsl:text></xsl:variable>
+<xsl:variable name="newline"><xsl:text>
+</xsl:text></xsl:variable>
+<xsl:variable name="carriagereturn"><xsl:text></xsl:text></xsl:variable>
+<xsl:variable name="tab"><xsl:text>	</xsl:text></xsl:variable>
+<xsl:variable name="nbsp"><xsl:text> </xsl:text></xsl:variable>
+<xsl:variable name="profiler">
+<html xmlns:xsltforms="http://www.agencexml.com/xsltforms" xmlns:xf="http://www.w3.org/2002/xforms">
 	<head>
 <title>XSLTForms Profiler</title>
 <xf:model>
@@ -188,7 +187,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	<h3><xf:output value="xsltforms:location"/></h3>
 	<p>Environment:
 		<ul>
-			<li>Browser: <xf:output value="xsltforms:appname"/>&#160;<xf:output value="xsltforms:appcodename"/>&#160;<xf:output value="xsltforms:appversion"/></li>
+			<li>Browser: <xf:output value="xsltforms:appname"/> <xf:output value="xsltforms:appcodename"/> <xf:output value="xsltforms:appversion"/></li>
 			<li>User-Agent: <xf:output value="xsltforms:useragent"/></li>
 			<li>Initial XSLT Engine: <xf:output value="xsltforms:xsltengine"/></li>
 			<li>Current XSLT Engine: <xf:output value="xsltforms:xsltengine2"/></li>
@@ -198,7 +197,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	<table>
 		<tr>
 			<td>Instances:</td>
-			<td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+			<td>               </td>
 			<td>Controls:</td>
 		</tr>
 		<tr valign="top">
@@ -209,7 +208,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 					</xf:repeat>
 				</ul>
 			</td>
-			<td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+			<td>               </td>
 			<td>
 				<ul>
 					<xf:repeat nodeset="xsltforms:controls/xsltforms:control">
@@ -225,7 +224,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				HTML Parsing Time: <xf:output value="xsltforms:htmltime"/>ms<br/>
 				HTML Creation Time: <xf:output value="xsltforms:creatingtime"/>ms
 			</td>
-			<td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+			<td>          </td>
 			<td>XForms Init Time: <xf:output value="xsltforms:inittime"/>ms<br/>
 				XForms Refresh Count: <xf:output value="xsltforms:refreshcount"/><br/>
 				XForms Cumulative Refresh Time: <xf:output value="xsltforms:refreshtime"/>ms
@@ -236,7 +235,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<p>XPath Expressions Cumulative Evaluation Time:
 			<ul>
 				<xf:repeat nodeset="xsltforms:xpaths/xsltforms:xpath | xsltforms:xpaths/xsltforms:others">
-					<li><xf:output value="choose(local-name()='others', 'Others', concat('&quot;',@expr,'&quot;'))"/>: <xf:output value="."/>ms</li>
+					<li><xf:output value="choose(local-name()='others', 'Others', concat('&#34;',@expr,'&#34;'))"/>: <xf:output value="."/>ms</li>
 				</xf:repeat>
 				<li>Total: <xf:output value="xsltforms:xpaths/xsltforms:total"/>ms</li>
 			</ul>
@@ -246,7 +245,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	</body>
 </html>
 </xsl:variable>
-<xsl:template match="/" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:exslt="http://exslt.org/common" xmlns:xalan="http://xml.apache.org/xalan">
+<xsl:template xmlns:xalan="http://xml.apache.org/xalan" match="/">
 	<xsl:choose>
 		<xsl:when test="$piform != ''">
 			<xsl:choose>
@@ -277,7 +276,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xhtml:html | html" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:exslt="http://exslt.org/common" xmlns:xalan="http://xml.apache.org/xalan">
+<xsl:template xmlns:xalan="http://xml.apache.org/xalan" match="xhtml:html | html">
 	<xsl:choose>
 		<xsl:when test="function-available('xalan:nodeset')">
 			<xsl:call-template name="html">
@@ -302,7 +301,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="html" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:exslt="http://exslt.org/common" xmlns:xalan="http://xml.apache.org/xalan">
+<xsl:template xmlns:xalan="http://xml.apache.org/xalan" name="html">
 	<xsl:param name="script"/>
 	<xsl:variable name="pivalue" select="translate(normalize-space(/processing-instruction('xml-stylesheet')[1]), ' ', '')"/>
 	<xsl:variable name="hrefquote" select="substring(substring-after($pivalue, 'href='), 1, 1)"/>
@@ -722,7 +721,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</body>
 	</html>
 </xsl:template>
-<xsl:template match="*[@*[contains(.,'{') and contains(substring-after(.,'{'),'}')] and not(@id)]" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="*[@*[contains(.,'{') and contains(substring-after(.,'{'),'}')] and not(@id)]" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:copy>
@@ -737,7 +736,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:apply-templates>
 	</xsl:copy>
 </xsl:template>
-<xsl:template match="xforms:choices" mode="item" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:choices" mode="item" priority="2">
 	<xsl:param name="type" select="false()"/> 
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -776,7 +775,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xforms:component" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:component" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -786,7 +785,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="body"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:dialog" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:dialog" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<div>
@@ -799,22 +798,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:apply-templates>
 	</div>
 </xsl:template>
-<xsl:template match="xforms:group" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:group" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:call-template name="group">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="processing-instruction()" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:template match="comment()" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:template match="text()" mode="item" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:template match="xforms:setvalue|xforms:insert|xforms:delete|xforms:dispatch|xforms:action|xforms:load|xforms:toggle|xforms:send|xforms:setfocus|xforms:wrap|xforms:setselection" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms"/>
-<xsl:template match="xforms:setindex|xforms:setnode|xforms:reset|xforms:refresh|xforms:rebuild|xforms:recalculate|xforms:revalidate|xforms:unload" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms"/>
-<xsl:template match="xforms:hint|xforms:alert|xforms:help|xforms:value|xforms:item|xforms:itemset|xforms:copy|xforms:choices|xforms:filename" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms"/>
-<xsl:template match="xforms:model|xforms:show|xforms:hide" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms"/>
-<xsl:template match="xforms:resource|xforms:header|xforms:mediatype" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms"/>
-<xsl:template match="xforms:*" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="processing-instruction()"/>
+<xsl:template match="comment()"/>
+<xsl:template match="text()" mode="item"/>
+<xsl:template match="xforms:setvalue|xforms:insert|xforms:delete|xforms:dispatch|xforms:action|xforms:load|xforms:toggle|xforms:send|xforms:setfocus|xforms:wrap|xforms:setselection" priority="2"/>
+<xsl:template match="xforms:setindex|xforms:setnode|xforms:reset|xforms:refresh|xforms:rebuild|xforms:recalculate|xforms:revalidate|xforms:unload" priority="2"/>
+<xsl:template match="xforms:hint|xforms:alert|xforms:help|xforms:value|xforms:item|xforms:itemset|xforms:copy|xforms:choices|xforms:filename" priority="2"/>
+<xsl:template match="xforms:model|xforms:show|xforms:hide" priority="2"/>
+<xsl:template match="xforms:resource|xforms:header|xforms:mediatype" priority="2"/>
+<xsl:template match="xforms:*" priority="1">
 	<script type="text/javascript">
 		<xsl:text>XsltForms_browser.dialog.hide('statusPanel');
 </xsl:text>
@@ -832,16 +831,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 </xsl:text>
 	</script>
 </xsl:template>
-<xsl:template match="ajx:start|ajx:stop" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ajx="http://www.ajaxforms.net/2006/ajx"/>
-<xsl:template match="xhtml:br | br" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xhtml="http://www.w3.org/1999/xhtml"><br xmlns=""/></xsl:template>
-<xsl:template match="xforms:include" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="ajx:start|ajx:stop"/>
+<xsl:template match="xhtml:br | br"><br/></xsl:template>
+<xsl:template match="xforms:include" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="document(@src,/)/*">
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:input" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:input" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -858,7 +857,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="inputid" select="$inputid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:item" mode="item" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:item" mode="item" priority="2">
 	<xsl:param name="type" select="false()"/> 
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -892,7 +891,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xforms:itemset" mode="item" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:itemset" mode="item" priority="2">
 	<xsl:param name="type" select="false()"/> 
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -922,7 +921,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xforms:label" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:label" priority="2">
 	<xsl:param name="appearance" select="'undefined'"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1214,9 +1213,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xforms:message|ajx:confirm" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ajx="http://www.ajaxforms.net/2006/ajx" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:message|ajx:confirm" priority="2">
 </xsl:template>
-<xsl:template match="*" priority="-2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="*" priority="-2">
 	<xsl:param name="appearance" select="@appearance"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1241,10 +1240,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="@*" priority="-2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="@*" priority="-2">
 	<xsl:copy/>
 </xsl:template>
-<xsl:template match="node()" priority="-3" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="node()" priority="-3">
 	<xsl:param name="appearance" select="@appearance"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1255,7 +1254,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:apply-templates>
 	</xsl:copy>
 </xsl:template>
-<xsl:template match="*" mode="nons" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="*" mode="nons">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:element name="{local-name()}">
@@ -1265,10 +1264,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:apply-templates>
 	</xsl:element>
 </xsl:template>
-<xsl:template match="@*" mode="nons" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="@*" mode="nons">
 	<xsl:attribute name="{local-name()}"><xsl:value-of select="."/></xsl:attribute>
 </xsl:template>
-<xsl:template match="xforms:output" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:output" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1289,7 +1288,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:range" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:range" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1306,7 +1305,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:repeat[count(xhtml:tr | tr | xhtml:td | td | xhtml:th | th) &lt; 2 and not(parent::*[local-name() = 'tr'] and ancestor::*[2][local-name() = 'repeat' and namespace-uri() = 'http://www.w3.org/2002/xforms']) and ((not(following-sibling::*) and not(preceding-sibling::*)) or not(xhtml:tr | tr | xhtml:td | td | xhtml:th | th))]" priority="3" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="xforms:repeat[count(xhtml:tr | tr | xhtml:td | td | xhtml:th | th) &lt; 2 and not(parent::*[local-name() = 'tr'] and ancestor::*[2][local-name() = 'repeat' and namespace-uri() = 'http://www.w3.org/2002/xforms']) and ((not(following-sibling::*) and not(preceding-sibling::*)) or not(xhtml:tr | tr | xhtml:td | td | xhtml:th | th))]" priority="3">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:call-template name="group">
@@ -1314,14 +1313,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="type" select="'repeat'"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:repeat" priority="2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="xforms:repeat" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(count(preceding-sibling::node()) + 1,'_',$parentworkid)"/>
 	<xsl:apply-templates select="node()">
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xhtml:script[not(@type) or @type = 'text/javascript' or @type = 'text/javascript-runonce'] | script[not(@type) or @type = 'text/javascript' or @type = 'text/javascript-runonce']" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xhtml:script[not(@type) or @type = 'text/javascript' or @type = 'text/javascript-runonce'] | script[not(@type) or @type = 'text/javascript' or @type = 'text/javascript-runonce']">
 	<script type="text/javascript">
 		<xsl:apply-templates select="@*[local-name() != 'type']"/>
 		<xsl:text disable-output-escaping="yes">/* &lt;![CDATA[ */
@@ -1333,7 +1332,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 </xsl:text>
 	</script>
 </xsl:template>
-<xsl:template match="xhtml:script[@type = 'text/turtle'] | script[@type = 'text/turtle']" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xhtml:script[@type = 'text/turtle'] | script[@type = 'text/turtle']">
 	<script type="text/turtle">
 		<xsl:apply-templates select="@*"/>
 		<xsl:text disable-output-escaping="yes"># &lt;![CDATA[
@@ -1345,7 +1344,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 </xsl:text>
 	</script>
 </xsl:template>
-<xsl:template match="xforms:secret" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:secret" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1360,7 +1359,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:select1|xforms:select" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:select1|xforms:select" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1417,7 +1416,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="body" select="$body"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:switch" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:switch" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:variable name="elt">
@@ -1460,7 +1459,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:for-each>
 	</xsl:element>
 </xsl:template>
-<xsl:template match="xhtml:thead[count(xforms:repeat) = 1] | thead[count(xforms:repeat) = 1] | xhtml:tbody[count(xforms:repeat) = 1] | tbody[count(xforms:repeat) = 1] | xhtml:tfoot[count(xforms:repeat) = 1] | tfoot[count(xforms:repeat) = 1] | xhtml:tr[count(xforms:repeat) = 1 and not(parent::xforms:repeat)] | tr[count(xforms:repeat) = 1 and not(parent::xforms:repeat)]" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xhtml:thead[count(xforms:repeat) = 1] | thead[count(xforms:repeat) = 1] | xhtml:tbody[count(xforms:repeat) = 1] | tbody[count(xforms:repeat) = 1] | xhtml:tfoot[count(xforms:repeat) = 1] | tfoot[count(xforms:repeat) = 1] | xhtml:tr[count(xforms:repeat) = 1 and not(parent::xforms:repeat)] | tr[count(xforms:repeat) = 1 and not(parent::xforms:repeat)]">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:choose>
@@ -1479,7 +1478,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xhtml:table[count(xforms:repeat) = 1] | table[count(xforms:repeat) = 1]" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xhtml:table[count(xforms:repeat) = 1] | table[count(xforms:repeat) = 1]">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<table>
@@ -1508,7 +1507,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:if>
 	</table>
 </xsl:template>
-<xsl:template match="ajx:tabs" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ajx="http://www.ajaxforms.net/2006/ajx">
+<xsl:template match="ajx:tabs">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<div>
@@ -1556,8 +1555,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:for-each>
 	</div>
 </xsl:template>
-<xsl:template match="text()[normalize-space(.)='']" priority="-1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:template match="xforms:textarea" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="text()[normalize-space(.)='']" priority="-1"/>
+<xsl:template match="xforms:textarea" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1569,7 +1568,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xhtml:tr[parent::xforms:repeat] | tr[parent::xforms:repeat] | xhtml:td[parent::xforms:repeat] | td[parent::xforms:repeat]" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xhtml:tr[parent::xforms:repeat] | tr[parent::xforms:repeat] | xhtml:td[parent::xforms:repeat] | td[parent::xforms:repeat]">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:choose>
@@ -1593,7 +1592,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xforms:tree" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:tree">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<div>
@@ -1615,7 +1614,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</ul>
 	</div>
 </xsl:template>
-<xsl:template match="xforms:trigger|xforms:submit" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:trigger|xforms:submit" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:variable name="innerbody">
@@ -1650,7 +1649,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:upload" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:upload" priority="2">
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
@@ -1674,7 +1673,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:var" priority="2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:var" priority="2">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:call-template name="field">
@@ -1683,7 +1682,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="body"><span><xsl:value-of select="$nbsp"/></span></xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template name="field" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template name="field">
 	<xsl:param name="workid"/>
 	<xsl:param name="appearance" select="false()"/>
 	<xsl:param name="body"/>
@@ -1864,7 +1863,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="group" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template xmlns:svg="http://www.w3.org/2000/svg" name="group">
 	<xsl:param name="workid"/>
 	<xsl:param name="type" select="'group'"/>
 	<xsl:param name="appearance" select="@appearance"/>
@@ -2077,10 +2076,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="comun" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="comun">
 	<xsl:attribute name="class">xforms-value</xsl:attribute>
 </xsl:template>
-<xsl:template name="comunLabel" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="comunLabel">
 	<xsl:param name="workid"/>
 	<xsl:param name="class"/>
 	<xsl:call-template name="genid">
@@ -2090,7 +2089,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="class">xforms-label <xsl:value-of select="$class"/></xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template name="style" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="style">
 	<xsl:param name="class"/>
 	<xsl:if test="@id">
 		<xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
@@ -2104,13 +2103,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="genid" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="genid">
 	<xsl:param name="workid"/>
 	<xsl:variable name="lname" select="local-name()"/>
 	<xsl:attribute name="id"><xsl:choose><xsl:when test="@id"><xsl:value-of select="@id"/></xsl:when><xsl:otherwise><xsl:value-of select="$id_pf"/><xsl:value-of select="$lname"/>-<xsl:value-of select="$workid"/></xsl:otherwise></xsl:choose>
 	</xsl:attribute>
 </xsl:template>
-<xsl:template name="toScriptParam" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="toScriptParam">
 	<xsl:param name="p"/>
 	<xsl:param name="default"/>
 	<xsl:choose>
@@ -2129,9 +2128,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:otherwise>null</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="toScriptBinding" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="toScriptBinding">
 	<xsl:param name="p"/>
-	<xsl:param name="model" select="concat('&quot;',string(@model),'&quot;')"/>
+	<xsl:param name="model" select="concat('&#34;',string(@model),'&#34;')"/>
 	<xsl:param name="type" select="'null'"/>
 	<xsl:param name="mip"/>
 	<xsl:variable name="xpath">
@@ -2150,7 +2149,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	</xsl:variable>
 	<xsl:choose>
 		<xsl:when test="@bind">new XsltForms_<xsl:value-of select="$mip"/>binding(null, null, null, "<xsl:call-template name="toXPathExpr"><xsl:with-param name="p" select="@bind"/></xsl:call-template>")</xsl:when>
-		<xsl:when test="$xpath != '' and $model != '&quot;&quot;'">new XsltForms_<xsl:value-of select="$mip"/>binding(<xsl:value-of select="$type2"/>, "<xsl:call-template name="toXPathExpr"><xsl:with-param name="p" select="$xpath"/></xsl:call-template>", <xsl:value-of select="$model"/>)</xsl:when>
+		<xsl:when test="$xpath != '' and $model != '&#34;&#34;'">new XsltForms_<xsl:value-of select="$mip"/>binding(<xsl:value-of select="$type2"/>, "<xsl:call-template name="toXPathExpr"><xsl:with-param name="p" select="$xpath"/></xsl:call-template>", <xsl:value-of select="$model"/>)</xsl:when>
 		<xsl:when test="$xpath != ''">new XsltForms_<xsl:value-of select="$mip"/>binding(<xsl:value-of select="$type2"/>, "<xsl:call-template name="toXPathExpr"><xsl:with-param name="p" select="$xpath"/></xsl:call-template>")</xsl:when>
 		<xsl:when test="@mediatype">"<xsl:call-template name="escapeJS">
 			<xsl:with-param name="text" select="."/>
@@ -2159,14 +2158,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:otherwise>null</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="toXPathExpr" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="toXPathExpr">
 	<xsl:param name="p"/>
 	<xsl:call-template name="escapeJS">
 		<xsl:with-param name="text" select="$p"/>
-		<xsl:with-param name="trtext" select="translate($p,concat(' ',$newline,$carriagereturn,'&quot;'),concat($tab,$tab,$tab,$tab))"/>
+		<xsl:with-param name="trtext" select="translate($p,concat(' ',$newline,$carriagereturn,'&#34;'),concat($tab,$tab,$tab,$tab))"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template name="xps" xmlns="" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="xps">
 	<xsl:param name="ps"/>
 	<xsl:variable name="nms">
 		<xsl:for-each select="$ps/namespace">
@@ -2181,14 +2180,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:if>
 	</xsl:for-each>
 </xsl:template>
-<xsl:template name="xpath" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="xpath">
 	<xsl:param name="xp"/>
 	<xsl:param name="nms"/>
 	<xsl:param name="main"/>
 	<xsl:variable name="xp2jsres"><xsl:call-template name="xp2js"><xsl:with-param name="xp" select="$xp"/></xsl:call-template></xsl:variable>
 	<xsl:variable name="xp2jsres2">
 		<xsl:choose>
-			<xsl:when test="contains($xp2jsres,'~~~~')">"<xsl:value-of select="substring-after(translate(substring-before(concat($xp2jsres,'~#~#'),'~#~#'),'&quot;',''),'~~~~')"/> in '<xsl:value-of select="$xp"/>'"</xsl:when>
+			<xsl:when test="contains($xp2jsres,'~~~~')">"<xsl:value-of select="substring-after(translate(substring-before(concat($xp2jsres,'~#~#'),'~#~#'),'&#34;',''),'~~~~')"/> in '<xsl:value-of select="$xp"/>'"</xsl:when>
 			<xsl:when test="$xp2jsres != ''"><xsl:value-of select="$xp2jsres"/></xsl:when>
 			<xsl:otherwise>"Unrecognized expression '<xsl:value-of select="$xp"/>'"</xsl:otherwise>
 		</xsl:choose>
@@ -2197,7 +2196,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	<xsl:value-of select="$result"/><xsl:text>
 </xsl:text>
 	  </xsl:template>
-<xsl:template name="unordered" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="unordered">
 	<xsl:param name="js"/>
 	<xsl:variable name="pipe">,'|',</xsl:variable>
 	<xsl:variable name="ancestor">new XsltForms_stepExpr('ancestor',</xsl:variable>
@@ -2210,16 +2209,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:otherwise>false</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="js2ns" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="js2ns">
 	<xsl:param name="js"/>
 	<xsl:param name="nms"/>
-	<xsl:if test="contains($js,&quot;,new XsltForms_nodeTestName(&apos;&quot;)">
+	<xsl:if test="contains($js,&#34;,new XsltForms_nodeTestName('&#34;)">
 		<xsl:variable name="js2" select="substring-after($js,',new XsltForms_nodeTestName(')"/>
 		<xsl:if test="string-length(substring-before($js2,',')) != 2 and not(starts-with($js2,'null')) and substring($js2,2,1) != '*'">
 			<xsl:text>,</xsl:text>
 			<xsl:value-of select="substring-before($js2,',')"/>
 			<xsl:text>,'</xsl:text>
-			<xsl:variable name="p" select="substring-before(substring($js2,2),&quot;&apos;&quot;)"/>
+			<xsl:variable name="p" select="substring-before(substring($js2,2),&#34;'&#34;)"/>
 			<xsl:variable name="pmin" select="translate($p,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')"/>
 			<xsl:choose>
 				<xsl:when test="$p = 'xml'">http://www.w3.org/XML/1998/namespace</xsl:when>
@@ -2269,8 +2268,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
-<xsl:variable name="precedence" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">./.;0.|.;1.div.mod.*.;2.+.-.;3.&lt;.&gt;.&lt;=.&gt;=.;4.=.!=.;5.and.;6.or.;7.,.;8.</xsl:variable>
-<xsl:template name="xp2js" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:variable name="precedence">./.;0.|.;1.div.mod.*.;2.+.-.;3.&lt;.&gt;.&lt;=.&gt;=.;4.=.!=.;5.and.;6.or.;7.,.;8.</xsl:variable>
+<xsl:template name="xp2js">
 	<xsl:param name="xp"/>
 	<xsl:param name="args"/>
 	<xsl:param name="ops"/>
@@ -2298,7 +2297,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				</xsl:variable>
 				<xsl:variable name="t1">
 					<xsl:call-template name="useEntity">
-						<xsl:with-param name="double" select='"&apos;&apos;"'/>
+						<xsl:with-param name="double" select="&#34;''&#34;"/>
 						<xsl:with-param name="simple" select="$apos"/>
 						<xsl:with-param name="s" select="$t"/>
 					</xsl:call-template>
@@ -2322,7 +2321,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				</xsl:variable>
 				<xsl:variable name="t1">
 					<xsl:call-template name="useEntity">
-						<xsl:with-param name="double" select="'&quot;&quot;'"/>
+						<xsl:with-param name="double" select="'&#34;&#34;'"/>
 						<xsl:with-param name="simple" select="$quot"/>
 						<xsl:with-param name="s" select="$t"/>
 					</xsl:call-template>
@@ -2355,7 +2354,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			</xsl:when>
 			<xsl:when test="$c = '$'">		
 				<xsl:variable name="t"><xsl:call-template name="getName"><xsl:with-param name="s" select="$d"/></xsl:call-template></xsl:variable>
-				<xsl:value-of select="concat(string-length($t)+1,'.new XsltForms_varRef(&quot;',$t,'&quot;)')"/>
+				<xsl:value-of select="concat(string-length($t)+1,'.new XsltForms_varRef(&#34;',$t,'&#34;)')"/>
 			</xsl:when>
 			<xsl:when test="contains('0123456789',$c)">
 				<xsl:variable name="t"><xsl:call-template name="getNumber"><xsl:with-param name="s" select="concat($c,$d)"/></xsl:call-template></xsl:variable>
@@ -2484,7 +2483,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="avt2xexpr" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="avt2xexpr">
 	<xsl:param name="a"/>
 	<xsl:variable name="avt" select="substring-before(substring-after($a,'{'),'}')"/>
 	<xsl:if test="$avt != ''">
@@ -2494,7 +2493,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
-<xsl:template name="closepar" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="closepar">
 	<xsl:param name="s"/>
 	<xsl:param name="args"/>
 	<xsl:param name="ops"/>
@@ -2546,7 +2545,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:otherwise><xsl:value-of select="concat(string-length($s),'.',$s,string-length($args),'.',$args,string-length($ops),'.',$ops)"/></xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="calc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="calc">
 	<xsl:param name="args"/>
 	<xsl:param name="ops"/>
 	<xsl:param name="opprec"/>
@@ -2602,7 +2601,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="getNumber" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="getNumber">
 	<xsl:param name="s"/>
 	<xsl:param name="r"/>
 	<xsl:choose>
@@ -2621,7 +2620,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="getName" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="getName">
 	<xsl:param name="s"/>
 	<xsl:variable name="o">
 		<xsl:if test="not(starts-with($s,'`'))">
@@ -2642,7 +2641,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:otherwise><xsl:value-of select="$r"/></xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="getString" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="getString">
 	<xsl:param name="delim"/>
 	<xsl:param name="s"/>
 	<xsl:param name="r"/>
@@ -2671,7 +2670,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="useEntity" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="useEntity">
 	<xsl:param name="double"/>
 	<xsl:param name="simple"/>
 	<xsl:param name="s"/>
@@ -2701,7 +2700,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="getLocationPath" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="getLocationPath">
 	<xsl:param name="s"/>
 	<xsl:param name="r"/>
 	<xsl:param name="l" select="0"/>
@@ -2831,7 +2830,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="getPredicates" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="getPredicates">
 	<xsl:param name="s"/>
 	<xsl:param name="r"/>
 	<xsl:param name="l" select="0"/>
@@ -2839,7 +2838,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:variable name="t"><xsl:call-template name="xp2js"><xsl:with-param name="xp" select="$s"/></xsl:call-template></xsl:variable>
 		<xsl:choose>
 			<xsl:when test="contains($t,'~~~~')">
-				<xsl:variable name="msg">"~~~~<xsl:value-of select="substring-after(translate(substring-before(concat($t,'~#~#'),'~#~#'),'&quot;',''),'~~~~')"/> in '<xsl:value-of select="$s"/>'~#~#"</xsl:variable>
+				<xsl:variable name="msg">"~~~~<xsl:value-of select="substring-after(translate(substring-before(concat($t,'~#~#'),'~#~#'),'&#34;',''),'~~~~')"/> in '<xsl:value-of select="$s"/>'~#~#"</xsl:variable>
 				<xsl:value-of select="string-length($s)-number(substring-before($t,'.'))+1"/>.<xsl:value-of select="$msg"/>
 			</xsl:when>
 			<xsl:when test="$t != ''">
@@ -2864,7 +2863,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="fctfullname" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="fctfullname">
 	<xsl:param name="fctname"/>
 	<xsl:choose>
 		<xsl:when test="contains($fctname,':')">
@@ -2889,24 +2888,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="escapeJS" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="escapeJS">
 	<xsl:param name="text"/>
 	<xsl:param name="trtext"/>
 	<xsl:choose>
-		<xsl:when test="function-available('msxsl:node-set') and contains($trtext, '&#9;')">
-			<xsl:value-of select="substring-before($trtext, '&#9;')"/>
-			<xsl:variable name="c" select="substring($text, string-length(substring-before($trtext, '&#9;'))+1, 1)"/>
+		<xsl:when test="function-available('msxsl:node-set') and contains($trtext, '&#x9;')">
+			<xsl:value-of select="substring-before($trtext, '&#x9;')"/>
+			<xsl:variable name="c" select="substring($text, string-length(substring-before($trtext, '&#x9;'))+1, 1)"/>
 			<xsl:choose>
 				<xsl:when test="$c = $newline">\n</xsl:when>
 				<xsl:when test="$c = $carriagereturn">\r</xsl:when>
-				<xsl:when test="$c = '&#9;'">\t</xsl:when>
+				<xsl:when test="$c = '&#x9;'">\t</xsl:when>
 				<xsl:when test="$c = $quot">\"</xsl:when>
 				<xsl:when test="$c = $apos">\'</xsl:when>
 				<xsl:when test="$c = '\'">\\</xsl:when>
 				<xsl:when test="$c = ' '">\x20</xsl:when>
 			</xsl:choose>
 			<xsl:variable name="text2" select="substring-after($text, $c)"/>
-			<xsl:variable name="trtext2" select="substring-after($trtext, '&#9;')"/>
+			<xsl:variable name="trtext2" select="substring-after($trtext, '&#x9;')"/>
 			<xsl:variable name="text3" select="substring($text2, 1, string-length($text2) div 2)"/>
 			<xsl:variable name="trtext3" select="substring($trtext2, 1, string-length($trtext2) div 2)"/>
 			<xsl:variable name="text4" select="substring($text2, string-length($text2) div 2 + 1)"/>
@@ -2952,7 +2951,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xhtml:link[@rel='stylesheet'] | link[@rel='stylesheet']" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="xhtml:link[@rel='stylesheet'] | link[@rel='stylesheet']">
 	<xsl:param name="config"/>
 	<xsl:choose>
 		<xsl:when test="translate(normalize-space(/processing-instruction('css-conversion')[1]), 'YESNO ', 'yesno')='no'">
@@ -2976,7 +2975,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xhtml:style | style" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="xhtml:style | style">
 	<xsl:param name="config"/>
 	<xsl:variable name="option"> css="no" </xsl:variable>
 	<xsl:choose>
@@ -2999,7 +2998,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="addsel" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="addsel">
 	<xsl:param name="sels"/>
 	<xsl:param name="xformscontext"/>
 	<xsl:param name="xhtmlcontext"/>
@@ -3033,7 +3032,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
-<xsl:template name="cssconv" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="cssconv">
 	<xsl:param name="input"/>
 	<xsl:param name="xformscontext" select="'|'"/>
 	<xsl:param name="xhtmlcontext" select="'|'"/>
@@ -3049,8 +3048,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:when>
 		<xsl:when test="translate(substring($input, 1, 11),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz') = '@namespace '">
 			<xsl:variable name="prefix" select="substring-before(substring-after($input,' '),' ')"/>
-			<xsl:variable name="url" select="translate(substring-before(translate(substring-after(substring-after($input,' '),' '),';',' '),' '),'&quot;','')"/>
-			<xsl:variable name="url2" select="translate($url,'&quot;',&quot;&quot;)"/>
+			<xsl:variable name="url" select="translate(substring-before(translate(substring-after(substring-after($input,' '),' '),';',' '),' '),'&#34;','')"/>
+			<xsl:variable name="url2" select="translate($url,'&#34;',&#34;&#34;)"/>
 			<xsl:variable name="xformsprefix">
 				<xsl:if test="$url2 = 'url(http://www.w3.org/2002/xforms)' or $url2 = 'http://www.w3.org/2002/xforms'">
 					<xsl:value-of select="concat($prefix,'|')"/>
@@ -3073,7 +3072,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			<xsl:variable name="url2">
 				<xsl:choose>
 					<xsl:when test="starts-with($url,'url(')"><xsl:value-of select="substring-before(substring-after($url,'url('),')')"/></xsl:when>
-					<xsl:otherwise><xsl:value-of select="substring-before(substring-after($url,'&quot;'),'&quot;')"/></xsl:otherwise>
+					<xsl:otherwise><xsl:value-of select="substring-before(substring-after($url,'&#34;'),'&#34;')"/></xsl:otherwise>
 				</xsl:choose>
 			</xsl:variable>
 			<xsl:call-template name="cssconv">
@@ -3119,7 +3118,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template match="xsd:schema" mode="schema" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsl:template match="xsd:schema" mode="schema" priority="1">
 	<xsl:param name="filename"/>
 	<xsl:param name="namespaces" select="'{}'"/>
 	<xsl:param name="targetNamespace"/>
@@ -3141,16 +3140,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:apply-templates>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xsd:include" mode="schema" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsl:template match="xsd:include" mode="schema" priority="1">
 	<xsl:param name="targetNamespace"/>
 	<xsl:apply-templates select="document(@schemaLocation,/)/*" mode="schema">
 		<xsl:with-param name="targetNamespace" select="$targetNamespace"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xsd:simpleType" mode="schema" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsl:template match="xsd:simpleType" mode="schema" priority="1">
 	<xsl:apply-templates mode="schema"/>
 </xsl:template>
-<xsl:template match="xsd:restriction" mode="schema" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsltforms="http://www.agencexml.com/xsltforms">
+<xsl:template xmlns:xsltforms="http://www.agencexml.com/xsltforms" match="xsd:restriction" mode="schema" priority="1">
 	<xsl:text>new XsltForms_atomicType().setSchema(schema)</xsl:text>
 	<xsl:if test="local-name(../..) = 'schema'">
 		<xsl:text>.setName("</xsl:text>
@@ -3196,7 +3195,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 </xsl:text>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xsd:list" mode="schema" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="xsd:list" mode="schema" priority="1">
 	<xsl:text>new XsltForms_listType().setSchema(schema)</xsl:text>
 	<xsl:if test="local-name(../..) = 'schema'">
 		<xsl:text>.setName("</xsl:text>
@@ -3218,7 +3217,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 </xsl:text>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xsd:union" mode="schema" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsl:template match="xsd:union" mode="schema" priority="1">
 	<xsl:text>new XsltForms_unionType(</xsl:text>
 	<xsl:if test="@memberTypes">
 		<xsl:text>"</xsl:text>
@@ -3242,15 +3241,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 </xsl:text>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="node()" mode="schema" priority="0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:template name="escapeslash" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="node()" mode="schema" priority="0"/>
+<xsl:template name="escapeslash">
 	<xsl:param name="p"/>
 	<xsl:choose>
 		<xsl:when test="contains($p, '/')"><xsl:value-of select="substring-before($p, '/')"/>\/<xsl:call-template name="escapeslash"><xsl:with-param name="p" select="substring-after($p, '/')"/></xsl:call-template></xsl:when>
 		<xsl:otherwise><xsl:value-of select="$p"/></xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="loadschemas" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="loadschemas">
 	<xsl:param name="schemas"/>
 	<xsl:variable name="schema">
 		<xsl:choose>
@@ -3271,14 +3270,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:call-template>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xforms:action" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:action" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
 	<xsl:apply-templates select="node()" mode="script">
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>action_</xsl:text>
@@ -3305,33 +3304,33 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:text>;</xsl:text>
 	</js>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@at | @calculate | @caseref | @changed | @constraint | @context | @if | @index | @inner | @iterate | @nodeset | @origin | @outer | @readonly | @ref | @relevant | @required | @target | @targetref | @value | @while" mode="scriptattr" priority="2">
-	<xexpr xmlns=""><xsl:value-of select="."/></xexpr>
+<xsl:template match="@at | @calculate | @caseref | @changed | @constraint | @context | @if | @index | @inner | @iterate | @nodeset | @origin | @outer | @readonly | @ref | @relevant | @required | @target | @targetref | @value | @while" mode="scriptattr" priority="2">
+	<xexpr><xsl:value-of select="."/></xexpr>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@model[not(../@ref)]" mode="scriptattr" priority="1">
-	<xexpr xmlns="">.</xexpr>
+<xsl:template match="@model[not(../@ref)]" mode="scriptattr" priority="1">
+	<xexpr>.</xexpr>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@schema" mode="scriptattr" priority="1">
-	<schema xmlns=""><xsl:value-of select="."/></schema>
+<xsl:template match="@schema" mode="scriptattr" priority="1">
+	<schema><xsl:value-of select="."/></schema>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@type" mode="scriptattr" priority="1">
+<xsl:template match="@type" mode="scriptattr" priority="1">
 	<xsl:if test="contains(.,':')">
-		<type xmlns=""><xsl:value-of select="."/></type>
+		<type><xsl:value-of select="."/></type>
 	</xsl:if>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@class | @style" mode="scriptattr" priority="1">
+<xsl:template match="@class | @style" mode="scriptattr" priority="1">
 	<xsl:param name="workid"/>
 	<xsl:apply-templates select="." mode="script">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@name[../@targetNamespace]" mode="script" priority="1">
-	<namespace xmlns="" name="{.}"><xsl:value-of select="../@targetNamespace"/></namespace>
+<xsl:template match="@name[../@targetNamespace]" mode="script" priority="1">
+	<namespace name="{.}"><xsl:value-of select="../@targetNamespace"/></namespace>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" match="@xsi:type" mode="script" priority="1">
-	<type xmlns=""><xsl:value-of select="."/></type>
+<xsl:template match="@xsi:type" mode="script" priority="1">
+	<type><xsl:value-of select="."/></type>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@*[contains(.,'{') and (namespace-uri(parent::*) != 'http://www.w3.org/2002/xforms' or local-name() = 'class' or local-name() = 'style')]" mode="script" priority="1">
+<xsl:template match="@*[contains(.,'{') and (namespace-uri(parent::*) != 'http://www.w3.org/2002/xforms' or local-name() = 'class' or local-name() = 'style')]" mode="script" priority="1">
 	<xsl:param name="workid"/>
 	<xsl:variable name="avt">
 		<xsl:call-template name="avtparser">
@@ -3339,8 +3338,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:call-template>
 	</xsl:variable>
 	<xsl:if test="starts-with($avt,'1:')">
-		<xexpr xmlns=""><xsl:value-of select="substring($avt,3)"/></xexpr>
-		<js xmlns="">
+		<xexpr><xsl:value-of select="substring($avt,3)"/></xexpr>
+		<js>
 			<xsl:variable name="lname" select="local-name(parent::*)"/>
 			<xsl:variable name="nsuri" select="namespace-uri(parent::*)"/>
 			<xsl:variable name="idparent"><xsl:choose><xsl:when test="parent::*/@id">"<xsl:value-of select="parent::*/@id"/></xsl:when><xsl:otherwise><xsl:value-of select="$jsid_pf"/><xsl:value-of select="$lname"/>-<xsl:value-of select="$workid"/></xsl:otherwise></xsl:choose></xsl:variable>
@@ -3356,7 +3355,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</js>
 	</xsl:if>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@*[contains(.,'{') and (namespace-uri(parent::*) = 'http://www.w3.org/2002/xforms' and local-name() != 'class' and local-name() != 'style')]" mode="scriptattr" priority="1">
+<xsl:template match="@*[contains(.,'{') and (namespace-uri(parent::*) = 'http://www.w3.org/2002/xforms' and local-name() != 'class' and local-name() != 'style')]" mode="scriptattr" priority="1">
 	<xsl:param name="workid"/>
 	<xsl:variable name="avt">
 		<xsl:call-template name="avtparser">
@@ -3364,17 +3363,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:call-template>
 	</xsl:variable>
 	<xsl:if test="starts-with($avt,'1:')">
-		<xexpr xmlns=""><xsl:value-of select="substring($avt,3)"/></xexpr>
+		<xexpr><xsl:value-of select="substring($avt,3)"/></xexpr>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xforms:bind" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:bind" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:if test="not(@nodeset) and not(@ref)">
 		<xexpr>.</xexpr>
 	</xsl:if>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>bind_</xsl:text>
@@ -3424,7 +3423,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:case" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:case" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
@@ -3437,7 +3436,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 	<xsl:if test="parent::xforms:switch and not(parent::xforms:switch/@caseref)">
-		<case xmlns="">
+		<case>
 			<xsl:variable name="noselected" select="count(../xforms:case[@selected='true']) = 0"/>
 			<xsl:variable name="nopreviousselected" select="count(preceding-sibling::xforms:case[@selected='true']) = 0"/>
 			<xsl:if test="($noselected and count(preceding-sibling::xforms:case) = 0) or (@selected = 'true' and $nopreviousselected)">
@@ -3459,11 +3458,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</case>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xforms:choices[xforms:label[@ref or @bind]]" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:choices[xforms:label[@ref or @bind]]" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:text>new XsltForms_label(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
@@ -3488,13 +3487,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:component" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:component" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:text>new XsltForms_component(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
@@ -3527,11 +3526,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:delete" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:delete" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>delete_</xsl:text>
@@ -3560,7 +3559,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:dialog" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:dialog" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
@@ -3569,16 +3568,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	<xsl:apply-templates select="node()" mode="script">
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
-	<dialog xmlns=""/>
+	<dialog/>
 	<xsl:call-template name="listeners">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:dispatch" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:dispatch" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>dispatch_</xsl:text>
@@ -3658,7 +3657,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="node()|@*" mode="script" priority="0">
+<xsl:template match="node()|@*" mode="script" priority="0">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:for-each select="namespace::*">
@@ -3701,14 +3700,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" match="@*" mode="scriptattr" priority="0"/>
-<xsl:template match="xforms:group" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="@*" mode="scriptattr" priority="0"/>
+<xsl:template match="xforms:group" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>group_</xsl:text>
@@ -3735,20 +3734,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:include" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:include" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="document(@src,/)/*" mode="script">
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:input | xforms:secret | xforms:textarea" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:input | xforms:secret | xforms:textarea" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:text>new XsltForms_input(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
@@ -3795,11 +3794,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:insert" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:insert" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>insert_</xsl:text>
@@ -3832,11 +3831,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:instance" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:instance" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>XsltForms_instance.create(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
 		<xsl:text>,</xsl:text>
@@ -3884,7 +3883,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 						<xsl:text>"</xsl:text>
 						<xsl:call-template name="escapeJS">
 							<xsl:with-param name="text" select="."/>
-							<xsl:with-param name="trtext" select="translate(.,concat(' ',$newline,$carriagereturn,'\&quot;'),concat($tab,$tab,$tab,$tab,$tab))"/>
+							<xsl:with-param name="trtext" select="translate(.,concat(' ',$newline,$carriagereturn,'\&#34;'),concat($tab,$tab,$tab,$tab,$tab))"/>
 						</xsl:call-template>
 						<xsl:text>"</xsl:text>
 					</xsl:when>
@@ -3914,11 +3913,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:item | xforms:itemset[ancestor::xforms:*[1][@appearance='full']]" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:item | xforms:itemset[ancestor::xforms:*[1][@appearance='full']]" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:if test="local-name() = 'itemset'">
 			<xsl:text>var </xsl:text>
@@ -3998,11 +3997,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:itemset[ancestor::xforms:*[1][string(@appearance)!='full']]" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:itemset[ancestor::xforms:*[1][string(@appearance)!='full']]" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>itemset_</xsl:text>
@@ -4062,14 +4061,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:itext" mode="itext" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:itext" mode="itext" priority="1">
 	<xsl:text>.additext({defaultlang:"</xsl:text>
 	<xsl:value-of select="xforms:translation[1]/@lang"/>
 	<xsl:text>",</xsl:text>
 	<xsl:apply-templates mode="itext"/>
 	<xsl:text>})</xsl:text>
 </xsl:template>
-<xsl:template match="xforms:translation" mode="itext" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:translation" mode="itext" priority="1">
 	<xsl:text>"</xsl:text>
 	<xsl:value-of select="@lang"/>
 	<xsl:text>": {</xsl:text>
@@ -4079,24 +4078,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:text>,</xsl:text>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xforms:text" mode="itext" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:text" mode="itext" priority="1">
 	<xsl:text>"</xsl:text>
 	<xsl:value-of select="@id"/>
 	<xsl:text>": "</xsl:text>
 	<xsl:call-template name="escapeJS">
 		<xsl:with-param name="text" select="xforms:value"/>
-		<xsl:with-param name="trtext" select="translate(xforms:value,concat(' ',$newline,'&quot;'),concat($tab,$tab,$tab))"/>
+		<xsl:with-param name="trtext" select="translate(xforms:value,concat(' ',$newline,'&#34;'),concat($tab,$tab,$tab))"/>
 	</xsl:call-template>
 	<xsl:text>"</xsl:text>
 	<xsl:if test="following-sibling::*">
 		<xsl:text>,</xsl:text>
 	</xsl:if>
 </xsl:template>
-<xsl:template match="xforms:load" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:load" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>load_</xsl:text>
@@ -4137,11 +4136,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 	</xsl:template>
-<xsl:template match="xforms:message" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:message" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>message_</xsl:text>
@@ -4172,7 +4171,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	<xsl:apply-templates select="node()" mode="script">
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
-	<message xmlns="">
+	<message>
 		<span class="xforms-message">
 			<xsl:call-template name="genid">
 				<xsl:with-param name="workid" select="$workid"/>
@@ -4183,11 +4182,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</span>
 	</message>
 </xsl:template>
-<xsl:template match="xforms:model" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:model" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>model_</xsl:text>
@@ -4234,7 +4233,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			<xsl:text>&lt;/data&gt;');</xsl:text>
 		</xsl:if>
 	</js>
-	<js xmlns="">
+	<js>
 		<xsl:apply-templates select="xsd:schema" mode="schema"/>
 	</js>
 	<xsl:apply-templates select="node()" mode="script">
@@ -4245,13 +4244,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:output | xforms:label[(@ref or @bind or @mediatype) and not(parent::xforms:item) and not(parent::xforms:itemset) and not(parent::xforms:choices)]" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:output | xforms:label[(@ref or @bind or @mediatype) and not(parent::xforms:item) and not(parent::xforms:itemset) and not(parent::xforms:choices)]" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:text>new XsltForms_output(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
@@ -4292,13 +4291,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:range" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:range" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>new XsltForms_range(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
 		<xsl:text>,</xsl:text>
@@ -4337,7 +4336,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:repeat" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:repeat" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
@@ -4362,9 +4361,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:choose>
 	</xsl:variable>
 	<xsl:if test="@from and @to">
-		<xexpr xmlns=""><xsl:value-of select="$nodeset"/></xexpr>
+		<xexpr><xsl:value-of select="$nodeset"/></xexpr>
 	</xsl:if>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>repeat_</xsl:text>
@@ -4417,11 +4416,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:rebuild | xforms:recalculate | xforms:refresh | xforms:reset | xforms:revalidate" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xforms:rebuild | xforms:recalculate | xforms:refresh | xforms:reset | xforms:revalidate" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:choose>
 			<xsl:when test="parent::xforms:action">
 				<xsl:text>var </xsl:text>
@@ -4489,8 +4488,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xhtml:script[@data-uri] | script[@data-uri]" mode="script" priority="1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
-	<js xmlns="">
+<xsl:template match="xhtml:script[@data-uri] | script[@data-uri]" mode="script" priority="1">
+	<js>
 		<xsl:text>XsltForms_globals.jslibraries["</xsl:text>
 		<xsl:value-of select="@data-uri"/>
 		<xsl:text>"] = "</xsl:text>
@@ -4498,13 +4497,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:text>";</xsl:text>
 	</js>
 </xsl:template>
-<xsl:template match="xforms:select" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:select" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>select_</xsl:text>
@@ -4539,13 +4538,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:select1" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:select1" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>select1_</xsl:text>
@@ -4578,11 +4577,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:send" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:send" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>send_</xsl:text>
@@ -4603,11 +4602,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:setfocus" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:setfocus" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>setfocus_</xsl:text>
@@ -4643,11 +4642,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:setindex" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:setindex" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>setindex_</xsl:text>
@@ -4670,11 +4669,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:setnode" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:setnode" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>setnode_</xsl:text>
@@ -4702,11 +4701,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:setselection" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:setselection" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>setselection_</xsl:text>
@@ -4731,11 +4730,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:setvalue" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:setvalue" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>setvalue_</xsl:text>
@@ -4762,11 +4761,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:var[ancestor::xforms:action]" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:var[ancestor::xforms:action]" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>var_</xsl:text>
@@ -4783,11 +4782,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:show | xforms:hide" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:show | xforms:hide" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
@@ -4815,14 +4814,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xsd:simpleType" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<simpleType xmlns="" targetNamespace="{ancestor::xsd:schema/@targetNamespace}" name="{@name}"/>
+<xsl:template match="xsd:simpleType" mode="script" priority="1">
+	<simpleType targetNamespace="{ancestor::xsd:schema/@targetNamespace}" name="{@name}"/>
 </xsl:template>
-<xsl:template match="xforms:split" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:split" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>split_</xsl:text>
@@ -4863,11 +4862,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:submission" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:submission" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>new XsltForms_submission(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
 		<xsl:text>,</xsl:text>
@@ -5048,11 +5047,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:submit" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ajx="http://www.ajaxforms.net/2006/ajx" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template match="xforms:submit" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>submit_</xsl:text>
@@ -5114,13 +5113,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:switch" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:switch" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>switch_</xsl:text>
@@ -5154,11 +5153,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:toggle" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:toggle" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>toggle_</xsl:text>
@@ -5191,13 +5190,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:trigger" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:trigger" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>trigger_</xsl:text>
@@ -5227,11 +5226,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:unload" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:unload" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>unload_</xsl:text>
@@ -5252,11 +5251,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 	</xsl:template>
-<xsl:template match="xforms:upload" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:upload" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>new XsltForms_upload(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
 		<xsl:text>,</xsl:text>
@@ -5356,13 +5355,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:var[not(ancestor::xforms:action)]" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:var[not(ancestor::xforms:action)]" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr">
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:apply-templates>
-	<js xmlns="">
+	<js>
 		<xsl:variable name="lname" select="local-name()"/>
 		<xsl:text>new XsltForms_var(</xsl:text>
 		<xsl:value-of select="$vn_subform"/>
@@ -5389,11 +5388,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="workid" select="$workid"/>
 	</xsl:call-template>
 </xsl:template>
-<xsl:template match="xforms:wrap" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:wrap" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>wrap_</xsl:text>
@@ -5420,11 +5419,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 </xsl:template>
-<xsl:template match="xforms:script" mode="script" priority="1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms">
+<xsl:template match="xforms:script" mode="script" priority="1">
 	<xsl:param name="parentworkid"/>
 	<xsl:param name="workid" select="concat(position(),'_',$parentworkid)"/>
 	<xsl:apply-templates select="@*" mode="scriptattr"/>
-	<js xmlns="">
+	<js>
 		<xsl:text>var </xsl:text>
 		<xsl:value-of select="$vn_pf"/>
 		<xsl:text>script_</xsl:text>
@@ -5457,27 +5456,27 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:with-param name="parentworkid" select="$workid"/>
 	</xsl:apply-templates>
 	</xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="avtparser">
+<xsl:template name="avtparser">
 	<xsl:param name="s"/>
 	<xsl:param name="t" select="'0:'"/>
 	<xsl:param name="state" select="0"/>
 	<xsl:variable name="l" select="string-length($s)"/>
-	<xsl:variable name="la" select="string-length(substring-before(concat($s,&quot;'&quot;),&quot;'&quot;))"/>
+	<xsl:variable name="la" select="string-length(substring-before(concat($s,&#34;'&#34;),&#34;'&#34;))"/>
 	<xsl:variable name="lb" select="string-length(substring-before(concat($s,'{'),'{'))"/>
 	<xsl:variable name="loo" select="string-length(substring-before(concat($s,'{{'),'{{'))"/>
 	<xsl:variable name="lcc" select="string-length(substring-before(concat($s,'}}'),'}}'))"/>
 	<xsl:choose>
 		<xsl:when test="$la &lt; $l and $la &lt; $lcc and $la &lt; $loo and $la &lt; $lb">
 			<xsl:call-template name="avtparser">
-				<xsl:with-param name="s" select="substring-after($s,&quot;'&quot;)"/>
+				<xsl:with-param name="s" select="substring-after($s,&#34;'&#34;)"/>
 				<xsl:with-param name="t">
 					<xsl:value-of select="substring($t,1,2)"/>
-					<xsl:if test="(substring-before($s,&quot;'&quot;)!= &quot;&quot; or $state != 0) and not(starts-with(substring($t,3),&quot;concat(&quot;))">concat(</xsl:if>
+					<xsl:if test="(substring-before($s,&#34;'&#34;)!= &#34;&#34; or $state != 0) and not(starts-with(substring($t,3),&#34;concat(&#34;))">concat(</xsl:if>
 					<xsl:value-of select="substring($t,3)"/>
 					<xsl:if test="$state = 2">,</xsl:if>
-					<xsl:if test="$state != 1 and substring-before($s,&quot;'&quot;) != ''">'</xsl:if>
-					<xsl:value-of select="substring-before($s,&quot;'&quot;)"/>
-					<xsl:if test="substring-before($s,&quot;'&quot;)">',</xsl:if>
+					<xsl:if test="$state != 1 and substring-before($s,&#34;'&#34;) != ''">'</xsl:if>
+					<xsl:value-of select="substring-before($s,&#34;'&#34;)"/>
+					<xsl:if test="substring-before($s,&#34;'&#34;)">',</xsl:if>
 					<xsl:text>"'"</xsl:text>
 				</xsl:with-param>
 				<xsl:with-param name="state" select="2"/>
@@ -5536,14 +5535,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				</xsl:when>
 				<xsl:when test="$state = 1">
 					<xsl:choose>
-						<xsl:when test="starts-with(substring($t,3),&quot;'&quot;)">
+						<xsl:when test="starts-with(substring($t,3),&#34;'&#34;)">
 							<xsl:text>0:</xsl:text>
 							<xsl:value-of select="concat(substring($t,4),$s)"/>
 						</xsl:when>
 						<xsl:when test="starts-with($t,'0:')">
 							<xsl:text>0:</xsl:text>
 							<xsl:call-template name="avtconcat">
-								<xsl:with-param name="s" select="concat(substring($t,10),$s,&quot;'&quot;)"/>
+								<xsl:with-param name="s" select="concat(substring($t,10),$s,&#34;'&#34;)"/>
 							</xsl:call-template>
 						</xsl:when>
 						<xsl:otherwise>
@@ -5565,7 +5564,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 							<xsl:value-of select="$s"/>
 							<xsl:text>')</xsl:text>
 						</xsl:when>
-						<xsl:when test="starts-with(substring($t,3),'&quot;')">
+						<xsl:when test="starts-with(substring($t,3),'&#34;')">
 							<xsl:text>'</xsl:text>
 						</xsl:when>
 						<xsl:when test="starts-with($t,'0:')">
@@ -5585,10 +5584,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="avtconcat">
+<xsl:template name="avtconcat">
 	<xsl:param name="s"/>
 	<xsl:choose>
-		<xsl:when test="starts-with($s,'&quot;')">
+		<xsl:when test="starts-with($s,'&#34;')">
 			<xsl:text>'</xsl:text>
 			<xsl:if test="starts-with(substring($s,4),',')">
 				<xsl:call-template name="avtconcat">
@@ -5597,16 +5596,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 			</xsl:if>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:value-of select="substring-before(substring($s,2),&quot;'&quot;)"/>
-			<xsl:if test="starts-with(substring-after(substring($s,2),&quot;'&quot;),&quot;,&quot;)">
+			<xsl:value-of select="substring-before(substring($s,2),&#34;'&#34;)"/>
+			<xsl:if test="starts-with(substring-after(substring($s,2),&#34;'&#34;),&#34;,&#34;)">
 				<xsl:call-template name="avtconcat">
-					<xsl:with-param name="s" select="substring-after(substring($s,2),&quot;',&quot;)"/>
+					<xsl:with-param name="s" select="substring-after(substring($s,2),&#34;',&#34;)"/>
 				</xsl:call-template>
 			</xsl:if>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="listeners" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+<xsl:template name="listeners">
 	<xsl:param name="current"/>
 	<xsl:param name="workid"/>
 	<xsl:variable name="lname" select="local-name()"/>
@@ -5624,7 +5623,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	</xsl:variable>
 	<xsl:for-each select="node()">
 		<xsl:if test="namespace-uri() = 'http://www.w3.org/2002/xforms' and contains(':setvalue:split:insert:load:delete:action:toggle:send:setfocus:setnode:dispatch:message:show:hide:script:unload:wrap:setselection:',concat(':',local-name(),':'))">
-			<js xmlns="">
+			<js>
 				<xsl:text>new XsltForms_listener(</xsl:text>
 				<xsl:value-of select="$vn_subform"/>
 				<xsl:text>,document.getElementById(</xsl:text>
@@ -5674,14 +5673,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:if>
 </xsl:for-each>
 	</xsl:template>
-<xsl:template match="processing-instruction()" mode="xml2string" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="processing-instruction()" mode="xml2string">
 	<xsl:text>&lt;?</xsl:text> 
 	<xsl:value-of select="name()"/> 
 	<xsl:text> </xsl:text> 
 	<xsl:value-of select="."/> 
 	<xsl:text>?&gt;</xsl:text>
 </xsl:template>
-<xsl:template match="comment()" mode="xml2string" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="comment()" mode="xml2string">
 	<xsl:text>&lt;!--</xsl:text>
 	<xsl:variable name="msxslver">
 		<xsl:choose>
@@ -5701,13 +5700,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		<xsl:otherwise>
 			<xsl:call-template name="escapeJS">
 				<xsl:with-param name="text" select="."/>
-				<xsl:with-param name="trtext" select="translate(.,concat(' ',$carriagereturn,$newline,'\&quot;', &quot;\&apos;&quot;),concat($tab,$tab,$tab,$tab,$tab,$tab))"/>
+				<xsl:with-param name="trtext" select="translate(.,concat(' ',$carriagereturn,$newline,'\&#34;', &#34;\'&#34;),concat($tab,$tab,$tab,$tab,$tab,$tab))"/>
 			</xsl:call-template> 
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:text>--&gt;</xsl:text>
 </xsl:template>
-<xsl:template match="*" mode="xml2string" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="*" mode="xml2string">
 	<xsl:param name="root"/>
 	<xsl:text>&lt;</xsl:text>
 	<xsl:value-of select="name()"/>
@@ -5734,10 +5733,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	</xsl:choose>
 	<xsl:text/>
 </xsl:template>
-<xsl:template match="text()" mode="xml2string" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="text()" mode="xml2string">
 	<xsl:if test="normalize-space(.)!=''"><xsl:variable name="textvalue"><xsl:call-template name="escapeEntities"><xsl:with-param name="text" select="."/><xsl:with-param name="trtext" select="translate(., $trEntities1, $trEntities2)"/></xsl:call-template></xsl:variable><xsl:call-template name="escapeJS"><xsl:with-param name="text" select="$textvalue"/><xsl:with-param name="trtext" select="translate($textvalue,concat(' ',$newline,$carriagereturn,$quot,$apos),concat($tab,$tab,$tab,$tab,$tab))"/></xsl:call-template></xsl:if>
 </xsl:template>
-<xsl:template match="@*" mode="xml2string" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="@*" mode="xml2string">
 	<xsl:text>\x20</xsl:text>
 	<xsl:value-of select="name()"/>
 	<xsl:text>="</xsl:text>
@@ -5748,15 +5747,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	</xsl:call-template>
 	<xsl:text>"</xsl:text>
 </xsl:template>
-<xsl:variable name="trEntities1" select="concat($amp,$apos,$lt,$gt,$quot,$backslash,$newline,$lineseparator,$carriagereturn)" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:variable name="trEntities2" select="concat($tab,$tab,$tab,$tab,$tab,$tab,$tab,$tab,$tab)" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"/>
-<xsl:template name="escapeEntities" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:variable name="trEntities1" select="concat($amp,$apos,$lt,$gt,$quot,$backslash,$newline,$lineseparator,$carriagereturn)"/>
+<xsl:variable name="trEntities2" select="concat($tab,$tab,$tab,$tab,$tab,$tab,$tab,$tab,$tab)"/>
+<xsl:template name="escapeEntities">
 	<xsl:param name="text"/>
 	<xsl:param name="trtext"/>
 	<xsl:choose>
-		<xsl:when test="function-available('msxsl:node-set') and contains($trtext, '&#9;')">
-			<xsl:value-of select="substring-before($trtext, '&#9;')"/>
-			<xsl:variable name="c" select="substring($text, string-length(substring-before($trtext, '&#9;'))+1, 1)"/>
+		<xsl:when test="function-available('msxsl:node-set') and contains($trtext, '&#x9;')">
+			<xsl:value-of select="substring-before($trtext, '&#x9;')"/>
+			<xsl:variable name="c" select="substring($text, string-length(substring-before($trtext, '&#x9;'))+1, 1)"/>
 			<xsl:choose>
 				<xsl:when test="$c = $amp">&amp;amp;</xsl:when>
 				<xsl:when test="$c = $apos">&amp;apos;</xsl:when>
@@ -5767,10 +5766,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 				<xsl:when test="$c = $newline">&amp;#10;</xsl:when>
 				<xsl:when test="$c = $lineseparator">&amp;#10;</xsl:when>
 				<xsl:when test="$c = $carriagereturn">&amp;#13;</xsl:when>
-				<xsl:when test="$c = '&#9;'">&amp;#9;</xsl:when>
+				<xsl:when test="$c = '&#x9;'">&amp;#9;</xsl:when>
 			</xsl:choose>
 			<xsl:variable name="text2" select="substring-after($text, $c)"/>
-			<xsl:variable name="trtext2" select="substring-after($trtext, '&#9;')"/>
+			<xsl:variable name="trtext2" select="substring-after($trtext, '&#x9;')"/>
 			<xsl:variable name="text3" select="substring($text2, 1, string-length($text2) div 2)"/>
 			<xsl:variable name="trtext3" select="substring($trtext2, 1, string-length($trtext2) div 2)"/>
 			<xsl:variable name="text4" select="substring($text2, string-length($text2) div 2 + 1)"/>
@@ -5819,7 +5818,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-<xsl:template name="nmdecls" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template name="nmdecls">
 	<xsl:param name="prev"/>
 	<xsl:param name="pfs"/>
 	<xsl:if test="contains($pfs, '|')">

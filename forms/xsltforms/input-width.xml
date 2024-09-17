@@ -1,11 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html
-   xmlns="http://www.w3.org/1999/xhtml"
-   xmlns:xf="http://www.w3.org/2002/xforms" 
-   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 >
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <head>
       <title>Controlling Input Field Width</title>
       <style type="text/css">
@@ -52,7 +45,7 @@
        <xf:input class="PersonGivenName" ref="PersonGivenName" incremental="true">
          <xf:label>First:</xf:label>
        </xf:input>
-       <xf:input class="PersonMiddleName"  ref="PersonMiddleName" incremental="true">
+       <xf:input class="PersonMiddleName" ref="PersonMiddleName" incremental="true">
          <xf:label>Middle:</xf:label>
        </xf:input>
        <xf:input class="PersonSurName" ref="PersonSurName" incremental="true">

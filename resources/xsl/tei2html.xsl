@@ -580,7 +580,8 @@
                 </div>
             </xsl:when>
             <xsl:otherwise>
-                <div class="tei-note">  
+                <div class="tei-note">
+                    <strong>Note: </strong>
                     <xsl:choose>
                         <xsl:when test="t:quote">
                             <xsl:apply-templates/>

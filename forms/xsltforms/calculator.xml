@@ -1,8 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:xf="http://www.w3.org/2002/xforms"
-      xmlns:ev="http://www.w3.org/2001/xml-events">
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>Calculator</title>
     	<meta name="description" content="XForms calculator."/>
@@ -35,7 +31,7 @@
                 <td>
                     <xf:output ref="memory"><xf:label>M:</xf:label></xf:output>
                 </td>
-                <td colspan="3"></td>
+                <td colspan="3"/>
                 <td colspan="2">
                     <xf:trigger>
                         <xf:label>Clear</xf:label>
@@ -94,7 +90,7 @@
                         </xf:action>
                     </xf:trigger>
                 </td>
-                <td></td>
+                <td/>
             </tr>
             <tr>
                 <td>

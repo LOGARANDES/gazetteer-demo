@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
 Copyright (C) 2008-2012 agenceXML - Alain COUTHURES
 Contact at : info@agencexml.com
@@ -16,20 +15,19 @@ Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-	-->
-<xsl:stylesheet xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" exclude-result-prefixes="xhtml"><rdf:RDF>
+	--><xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="1.0" exclude-result-prefixes="xhtml"><rdf:RDF>
 		<rdf:Description rdf:about="http://www.agencexml.com/xsltforms/xsltchain.xsl">
 			<dcterms:title>XSLT 1.0 Stylesheet for chaining XSLT 1.0 transformations in browser</dcterms:title>
 			<dcterms:hasVersion>1</dcterms:hasVersion>
 			<dcterms:creator>Alain Couthures - agenceXML</dcterms:creator>
-			<dcterms:conformsTo></dcterms:conformsTo>
+			<dcterms:conformsTo/>
 			<dcterms:created>2012-10-09</dcterms:created>
 			<dcterms:description>Processing instructions to be used: xml-stylesheet-chain instead of xml-stylesheet. Transformations are performed in the processing instructions order.</dcterms:description>
 			<dcterms:format>text/xsl</dcterms:format>
 		</rdf:Description>
 	</rdf:RDF><xsl:output method="html" encoding="utf-8" omit-xml-declaration="yes" indent="no" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
 		<xsl:template match="/">
-			<html xmlns="http://www.w3.org/1999/xhtml">
+			<html>
 				<xsl:comment>XSLT Chain - Copyright (C) 2012 &lt;agenceXML&gt; - Alain COUTHURES - http://www.agencexml.com</xsl:comment>
 				<head>
 					<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
@@ -261,14 +259,15 @@ function chain() {
 		</xsl:template>
 		<xsl:template name="escapeEntities">
 			<xsl:param name="text"/>
-			<xsl:param name="entities">&amp;.&amp;amp;.&apos;.&amp;apos;.&lt;.&amp;lt;.&gt;.&amp;gt;.&quot;.&amp;quot;.\.\\.&#xA;.\n.&#8232;.\n.&#xD;.\r.</xsl:param>
+			<xsl:param name="entities">&amp;.&amp;amp;.'.&amp;apos;.&lt;.&amp;lt;.&gt;.&amp;gt;.".&amp;quot;.\.\\.
+.\n. .\n..\r.</xsl:param>
 			<xsl:variable name="entity" select="substring-before($entities,'.')"/>
 			<xsl:choose>
 				<xsl:when test="contains($text, $entity)">
 					<xsl:variable name="text2" select="substring-before($text,$entity)"/>
 					<xsl:variable name="last" select="substring($text2, string-length($text2), 1)"/>
 					<xsl:variable name="lastn" select="substring(normalize-space($text2), string-length(normalize-space($text2)), 1)"/>
-					<xsl:variable name="text3"><xsl:choose><xsl:when test="$entity = '&#10;' and $last != $lastn and $last != ' ' and $last != '&#9;'"><xsl:value-of select="substring($text2,1,string-length($text2)-1)"/></xsl:when><xsl:otherwise><xsl:value-of select="$text2"/></xsl:otherwise></xsl:choose></xsl:variable>
+					<xsl:variable name="text3"><xsl:choose><xsl:when test="$entity = '&#xA;' and $last != $lastn and $last != ' ' and $last != '&#x9;'"><xsl:value-of select="substring($text2,1,string-length($text2)-1)"/></xsl:when><xsl:otherwise><xsl:value-of select="$text2"/></xsl:otherwise></xsl:choose></xsl:variable>
 					<xsl:call-template name="escapeEntities">
 						<xsl:with-param name="text" select="$text3"/>
 						<xsl:with-param name="entities" select="substring-after(substring-after($entities,'.'),'.')"/>
