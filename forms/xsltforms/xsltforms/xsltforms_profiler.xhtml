@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xsltforms="http://www.agencexml.com/xsltforms" xmlns:ev="http://www.w3.org/2001/xml-events" xsltforms:dummy="dummy">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsltforms="http://www.agencexml.com/xsltforms" xmlns:xf="http://www.w3.org/2002/xforms" xsltforms:dummy="dummy">
 	<head>
 		<title>XSLTForms Profiler</title>
         <style type="text/css">
@@ -33,7 +33,7 @@
 			<h3><xf:output value="xsltforms:location"/></h3>
 			<p>Environment:
 				<ul>
-					<li>Browser: <xf:output value="xsltforms:appname"/>&#160;<xf:output value="xsltforms:appcodename"/>&#160;<xf:output value="xsltforms:appversion"/></li>
+					<li>Browser: <xf:output value="xsltforms:appname"/> <xf:output value="xsltforms:appcodename"/> <xf:output value="xsltforms:appversion"/></li>
 					<li>User-Agent: <xf:output value="xsltforms:useragent"/></li>
 					<li>Initial XSLT Engine: <xf:output value="xsltforms:xsltengine"/></li>
 					<li>Current XSLT Engine: <xf:output value="xsltforms:xsltengine2"/></li>
@@ -43,7 +43,7 @@
 			<table>
 				<tr>
 					<td>Instances:</td>
-					<td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+					<td>               </td>
 					<td>Controls:</td>
 				</tr>
 				<tr valign="top">
@@ -54,7 +54,7 @@
 							</xf:repeat>
 						</ul>
 					</td>
-					<td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+					<td>               </td>
 					<td>
 						<ul>
 							<xf:repeat nodeset="xsltforms:controls/xsltforms:control">
@@ -85,7 +85,7 @@
 						HTML Parsing Time: <xf:output value="xsltforms:htmltime"/>ms<br/>
 						HTML Creation Time: <xf:output value="xsltforms:creatingtime"/>ms
 					</td>
-					<td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+					<td>          </td>
 					<td>XForms Init Time: <xf:output value="xsltforms:inittime"/>ms<br/>
 						XForms Refresh Count: <xf:output value="xsltforms:refreshcount"/><br/>
 						XForms Cumulative Refresh Time: <xf:output value="xsltforms:refreshtime"/>ms
@@ -96,7 +96,7 @@
 				<p>XPath Expressions Cumulative Evaluation Time:
 					<ul>
 						<xf:repeat nodeset="xsltforms:xpaths/xsltforms:xpath | xsltforms:xpaths/xsltforms:others">
-							<li><span class="code"><xf:output value="choose(local-name()='others', 'Others', concat('&quot;',@expr,'&quot;'))"/></span>: <xf:output value="."/>ms</li>
+							<li><span class="code"><xf:output value="choose(local-name()='others', 'Others', concat('&#34;',@expr,'&#34;'))"/></span>: <xf:output value="."/>ms</li>
 						</xf:repeat>
 						<li>Total: <xf:output value="xsltforms:xpaths/xsltforms:total"/>ms</li>
 					</ul>

@@ -37,7 +37,7 @@
 			<format-number.minus-sign>-</format-number.minus-sign>
 			<format-number.NaN>Non numérique</format-number.NaN>
 			<format-number.percent-sign>%</format-number.percent-sign>
-			<format-number.per-mille-sign>&#x2030;</format-number.per-mille-sign>
+			<format-number.per-mille-sign>‰</format-number.per-mille-sign>
 			<status>Traitement en cours</status>
 		</properties>
 		<extensions/> <!-- HTML elements to be added just after xsltforms.js and xsltforms.css loading -->

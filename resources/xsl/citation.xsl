@@ -28,7 +28,7 @@
     <xsl:template match="t:titleStmt" mode="cite-foot">
         <!-- creator(s) of the entry -->
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',1)"/>
+        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'footnote',4)"/>
         <xsl:text>, </xsl:text>
         
         <!-- title of the entry -->
@@ -68,7 +68,7 @@
     <xsl:template match="t:titleStmt" mode="cite-biblist">
         <!-- creator(s) of the entry -->
         <!-- Process editors/authors using local function in helper-functions.xsl local:emit-responsible-persons -->
-        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',1)"/>
+        <xsl:sequence select="local:emit-responsible-persons(t:editor[@role='creator'],'biblist',4)"/>
         <xsl:text>, </xsl:text>
         
         <!-- title of the entry -->

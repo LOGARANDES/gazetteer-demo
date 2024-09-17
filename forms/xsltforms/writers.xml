@@ -1,6 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<head>
 		<title>Writers (Subforms)</title>
 		<xforms:model>
@@ -39,7 +37,7 @@
 		<h3>Writers (Subforms)</h3>
 		<xforms:repeat nodeset="writer" appearance="compact">
 			<p>
-				<xforms:output ref="@firstname"/>&#160;<xforms:output ref="@lastname"/>&#160;
+				<xforms:output ref="@firstname"/> <xforms:output ref="@lastname"/> 
 				<xforms:trigger>
 					<xforms:label><xforms:output value="choose(@selected != 'true','Show','Hide')"/> Books</xforms:label>
 					<xforms:action ev:event="DOMActivate">

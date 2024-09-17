@@ -1,9 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html
-    xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xf="http://www.w3.org/2002/xforms"
-		>
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>Demonstration of XForms Select1</title>
         <style type="text/css">body {font-family: Helvetica, sans-serif;}</style>

@@ -1,9 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:xf="http://www.w3.org/2002/xforms"
-      xmlns:ev="http://www.w3.org/2001/xml-events"
-      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms">
 	<head>
 		<title>Contact</title>
 		<xf:model>
@@ -71,14 +66,12 @@
 					</input>
 					<trigger>
 						<label>X</label>
-						<delete nodeset="." at="1" if="count(//telephone) > 1"
-                                ev:event="DOMActivate" />
+						<delete nodeset="." at="1" if="count(//telephone) &gt; 1" ev:event="DOMActivate"/>
 						</trigger>
 					</repeat>
 				<trigger>
 					<label>New</label>
-					<insert nodeset="telephones/telephone" at="index('repeat')"
-                        position="after" ev:event="DOMActivate" />
+					<insert nodeset="telephones/telephone" at="index('repeat')" position="after" ev:event="DOMActivate"/>
 					</trigger>
 				</group>
 			</group>

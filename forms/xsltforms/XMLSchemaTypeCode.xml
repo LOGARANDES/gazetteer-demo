@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<XMLSchemaTypeCode xmlns="">
+<XMLSchemaTypeCode>
    <label>XML Schema Type:</label>
    <item>
       <label>Date and Time</label>

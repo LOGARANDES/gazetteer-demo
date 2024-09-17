@@ -1,11 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html
-     xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:ev="http://www.w3.org/2001/xml-events"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-     xmlns:xf="http://www.w3.org/2002/xforms"
-		 >
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms">
      <head>
           <title>Using Origin to do a Deep Copy between instances</title>
           <style type="text/css">
@@ -46,9 +39,7 @@
           <xf:trigger>
                <xf:label>Copy data from source to destination</xf:label>     
                <xf:action ev:event="DOMActivate">
-                        <xf:insert
-                             origin="instance('source')"                        
-                             nodeset="instance('destination')"/>
+                        <xf:insert origin="instance('source')" nodeset="instance('destination')"/>
                </xf:action>
           </xf:trigger>
      </body>

@@ -1,11 +1,4 @@
-<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
-<?xsltforms-options debug="yes"?>
-<html
-   xmlns="http://www.w3.org/1999/xhtml"
-   xmlns:xf="http://www.w3.org/2002/xforms" 
-   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-   xmlns:ev="http://www.w3.org/2001/xml-events"
-	 >
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?><?xsltforms-options debug="yes"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms">
    <head>
       <title>Initial Cursor Positioning</title>
       <xf:model>
@@ -16,7 +9,7 @@
           </xf:instance>
  
       <xf:action ev:event="xforms-ready">
-         <xf:setfocus control="first-field" />
+         <xf:setfocus control="first-field"/>
       </xf:action>
       </xf:model>
    </head>
