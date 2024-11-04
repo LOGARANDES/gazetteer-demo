@@ -774,48 +774,151 @@
                 <xsl:otherwise>
                     <xsl:choose>
                         <xsl:when test="t:geo">Coordinates (DMS): <xsl:value-of select="t:geo"/><xsl:sequence select="local:add-footnotes(@source,'eng')"/></xsl:when>
-                        <xsl:when test="@type"><xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: </xsl:when>
+                        <xsl:when test="@type">
+                            <xsl:choose>
+                                <xsl:when test="@type = 'ancient'">Colonial Jurisdictions: </xsl:when>
+                                <xsl:when test="@type = 'modern'">Modern Jurisdictions: </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>:
+                                </xsl:otherwise>
+                            </xsl:choose>
+                             
+                        </xsl:when>
                     </xsl:choose>
                     <ul>
-                        <xsl:for-each select="child::*[not(self::t:note) and not(self::t:geo)]">
-                            <li>
-                                <xsl:choose>
-                                    <xsl:when test="self::t:geo"/>
-                                    <xsl:when test="self::t:country">
-                                        <span class="srp-label">Country: </span>
-                                    </xsl:when>
-                                    <xsl:when test="@type='municipality'">
-                                        <span class="srp-label">Pueblo: </span>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:if test="@type">
-                                            <span class="srp-label">
-                                                <xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: 
-                                            </span>
-                                        </xsl:if>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                                <xsl:choose>
-                                    <xsl:when test="parent::*[@type='ancient'] and self::*[@type != 'pueblo'] ">
-                                        <xsl:variable name="name" select="text()"/>
-                                        <xsl:variable name="type">
+                        <xsl:choose>
+                            <xsl:when test="@type = 'modern'">
+                                    <xsl:for-each select="t:country">
+                                        <li><span class="srp-label">Country: </span> 
                                             <xsl:choose>
-                                                <xsl:when test="self::t:country">country</xsl:when>
+                                                <xsl:when test="parent::*[@type='ancient'] and self::*[@type != 'pueblo'] ">
+                                                    <xsl:variable name="name" select="text()"/>
+                                                    <xsl:variable name="type">
+                                                        <xsl:choose>
+                                                            <xsl:when test="self::t:country">country</xsl:when>
+                                                            <xsl:otherwise>
+                                                                <xsl:value-of select="@type"/>
+                                                            </xsl:otherwise>
+                                                        </xsl:choose>
+                                                    </xsl:variable>
+                                                    <a href="{$nav-base}/geo/search.html?fq=fq-{$type}:{$name}">
+                                                        <xsl:apply-templates/>
+                                                    </a>
+                                                </xsl:when>
                                                 <xsl:otherwise>
-                                                    <xsl:value-of select="@type"/>
+                                                    <xsl:apply-templates/>
                                                 </xsl:otherwise>
                                             </xsl:choose>
-                                        </xsl:variable>
-                                        <a href="{$nav-base}/geo/search.html?fq=fq-{$type}:{$name}">
-                                            <xsl:apply-templates/>
-                                        </a>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:apply-templates/>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </li>
-                        </xsl:for-each>
+                                        </li>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="t:region[@type='department']">
+                                    <li><span class="srp-label">Department: </span> 
+                                        <xsl:choose>
+                                            <xsl:when test="parent::*[@type='ancient'] and self::*[@type != 'pueblo'] ">
+                                                <xsl:variable name="name" select="text()"/>
+                                                <xsl:variable name="type">
+                                                    <xsl:choose>
+                                                        <xsl:when test="self::t:country">country</xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="@type"/>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </xsl:variable>
+                                                <a href="{$nav-base}/geo/search.html?fq=fq-{$type}:{$name}">
+                                                    <xsl:apply-templates/>
+                                                </a>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:apply-templates/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </li>
+                                    </xsl:for-each>
+                                <xsl:for-each select="t:region[@type='province']">
+                                    <li><span class="srp-label">Province: </span> 
+                                        <xsl:choose>
+                                            <xsl:when test="parent::*[@type='ancient'] and self::*[@type != 'pueblo'] ">
+                                                <xsl:variable name="name" select="text()"/>
+                                                <xsl:variable name="type">
+                                                    <xsl:choose>
+                                                        <xsl:when test="self::t:country">country</xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="@type"/>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </xsl:variable>
+                                                <a href="{$nav-base}/geo/search.html?fq=fq-{$type}:{$name}">
+                                                    <xsl:apply-templates/>
+                                                </a>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:apply-templates/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </li>
+                                </xsl:for-each>
+                                <xsl:for-each select="t:settlement[@type='pueblo']">
+                                    <li><span class="srp-label">Pueblo: </span> 
+                                        <xsl:choose>
+                                            <xsl:when test="parent::*[@type='ancient'] and self::*[@type != 'pueblo'] ">
+                                                <xsl:variable name="name" select="text()"/>
+                                                <xsl:variable name="type">
+                                                    <xsl:choose>
+                                                        <xsl:when test="self::t:country">country</xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="@type"/>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </xsl:variable>
+                                                <a href="{$nav-base}/geo/search.html?fq=fq-{$type}:{$name}">
+                                                    <xsl:apply-templates/>
+                                                </a>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:apply-templates/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </li>
+                                </xsl:for-each>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:for-each select="child::*[not(self::t:note) and not(self::t:geo)]">
+                                    <li>
+                                        <xsl:choose>
+                                            <xsl:when test="self::t:geo"/>
+                                            <xsl:when test="self::t:country">
+                                                <span class="srp-label">Country: </span>
+                                            </xsl:when>
+                                            <xsl:when test="@type='municipality'">
+                                                <span class="srp-label">Pueblo: </span>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:if test="@type"><span class="srp-label"><xsl:value-of select="concat(upper-case(substring(@type,1,1)), substring(@type,2))"/>: </span></xsl:if>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                        <xsl:choose>
+                                            <xsl:when test="parent::*[@type='ancient'] and self::*[@type != 'pueblo'] ">
+                                                <xsl:variable name="name" select="text()"/>
+                                                <xsl:variable name="type">
+                                                    <xsl:choose>
+                                                        <xsl:when test="self::t:country">country</xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:value-of select="@type"/>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                </xsl:variable>
+                                                <a href="{$nav-base}/geo/search.html?fq=fq-{$type}:{$name}">
+                                                    <xsl:apply-templates/>
+                                                </a>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:apply-templates/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </li>
+                                </xsl:for-each>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </ul>
                     <xsl:if test="t:note">
                         <xsl:for-each select="t:note">
