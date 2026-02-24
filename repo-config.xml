@@ -29,8 +29,8 @@
         <base_uri>http://logarandes.org</base_uri>
         <!-- Map rendering -->
         <maps>
-            <option selected="true">google</option>
-            <option>leaflet</option>
+            <option>google</option>
+            <option selected="true">leaflet</option>
         </maps>
         <collections>
             <!--<collection name="Short-name used in html pages to reference collection, module name" 

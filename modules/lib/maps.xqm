@@ -27,10 +27,12 @@ else maps:build-leaflet-map($nodes,$total-count)
 :)
 declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:integer?){
     <div id="map-data" style="margin-bottom:3em;">
-        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"/>
+         <script type="text/javascript" src="{$config:nav-base}/resources/leaflet/leaflet.js"/>
+        <script type="text/javascript" src="{$config:nav-base}/resources/leaflet/leaflet.awesome-markers.min.js"/>
+        <!--
         <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js" type="text/javascript"/>
         <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"/>
-        <script type="text/javascript" src="{$global:nav-base}/resources/leaflet/leaflet.awesome-markers.js"/>
+        -->
         <div id="map"/>
         {
             if($total-count gt 0) then 
@@ -41,12 +43,12 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
             }
         <script type="text/javascript">
             <![CDATA[
-            var terrain = L.tileLayer('http://api.tiles.mapbox.com/v3/sgillies.map-ac5eaoks/{z}/{x}/{y}.png', {attribution: "ISAW, 2012"});
+            var terrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
                                 
             /* Not added by default, only through user control action */
-            var streets = L.tileLayer('http://api.tiles.mapbox.com/v3/sgillies.map-pmfv2yqx/{z}/{x}/{y}.png', {attribution: "ISAW, 2012"});
+            //var streets = L.tileLayer('http://api.tiles.mapbox.com/v3/sgillies.map-pmfv2yqx/{z}/{x}/{y}.png', {attribution: "ISAW, 2012"});
                                 
-            var imperium = L.tileLayer('http://pelagios.dme.ait.ac.at/tilesets/imperium//{z}/{x}/{y}.png', {attribution: 'Tiles: &lt;a href="http://pelagios-project.blogspot.com/2012/09/a-digital-map-of-roman-empire.html"&gt;Pelagios&lt;/a&gt;, 2012; Data: NASA, OSM, Pleiades, DARMC', maxZoom: 11 });
+            //var imperium = L.tileLayer('http://pelagios.dme.ait.ac.at/tilesets/imperium//{z}/{x}/{y}.png', {attribution: 'Tiles: &lt;a href="http://pelagios-project.blogspot.com/2012/09/a-digital-map-of-roman-empire.html"&gt;Pelagios&lt;/a&gt;, 2012; Data: NASA, OSM, Pleiades, DARMC', maxZoom: 11 });
                                 
             var placesgeo = ]]>{geojson:geojson($nodes)}
             <![CDATA[                                
@@ -95,11 +97,10 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
         var map = L.map('map').fitBounds(geojson.getBounds(),{maxZoom: 5});     
         terrain.addTo(map);
                                         
-        L.control.layers({
+       L.control.layers({
                         "Terrain (default)": terrain,
-                        "Streets": streets,
-                        "Imperium": imperium }).addTo(map);
-        geojson.addTo(map);     
+                        "Streets": streets }).addTo(map);
+        geojson.addTo(map);   
         ]]>
         </script>
          <div>
@@ -138,7 +139,7 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
  : Build Google maps
 :)
 declare function maps:build-google-map($nodes as node()*){
-    let $key := (:doc($global:app-root || '/config.xml')//*:map-key/text():) 'AIzaSyAs8jOx_En8T6PkWZ_ijGAGGZMXkoSj1QE'
+    let $key := doc($global:app-root || '/config.xml')//*:map-key/text()
     return
     <div id="map-data" style="margin-bottom:3em;">
        <div id="map" class="map-lg"/>
