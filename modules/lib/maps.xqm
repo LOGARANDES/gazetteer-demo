@@ -27,8 +27,8 @@ else maps:build-leaflet-map($nodes,$total-count)
 :)
 declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:integer?){
     <div id="map-data" style="margin-bottom:3em;">
-         <script type="text/javascript" src="/resources/leaflet/leaflet.js"/>
-        <script type="text/javascript" src="/resources/leaflet/leaflet.awesome-markers.min.js"/>
+         <script type="text/javascript" src="{$global:nav-base}/resources/leaflet/leaflet.js"/>
+        <script type="text/javascript" src="{$global:nav-base}/resources/leaflet/leaflet.awesome-markers.min.js"/>
         <!--
         <script src="http://isawnyu.github.com/awld-js/lib/requirejs/require.min.js" type="text/javascript"/>
         <script src="http://isawnyu.github.com/awld-js/awld.js?autoinit" type="text/javascript"/>
@@ -46,10 +46,7 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
             var terrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
                                 
             /* Not added by default, only through user control action */
-            //var streets = L.tileLayer('http://api.tiles.mapbox.com/v3/sgillies.map-pmfv2yqx/{z}/{x}/{y}.png', {attribution: "ISAW, 2012"});
-                                
-            //var imperium = L.tileLayer('http://pelagios.dme.ait.ac.at/tilesets/imperium//{z}/{x}/{y}.png', {attribution: 'Tiles: &lt;a href="http://pelagios-project.blogspot.com/2012/09/a-digital-map-of-roman-empire.html"&gt;Pelagios&lt;/a&gt;, 2012; Data: NASA, OSM, Pleiades, DARMC', maxZoom: 11 });
-                                
+                                 
             var placesgeo = ]]>{geojson:geojson($nodes)}
             <![CDATA[                                
             var sropheIcon = L.Icon.extend({
@@ -98,8 +95,7 @@ declare function maps:build-leaflet-map($nodes as node()*, $total-count as xs:in
         terrain.addTo(map);
                                         
        L.control.layers({
-                        "Terrain (default)": terrain,
-                        "Streets": streets }).addTo(map);
+                        "Terrain (default)": terrain}).addTo(map);
         geojson.addTo(map);   
         ]]>
         </script>
